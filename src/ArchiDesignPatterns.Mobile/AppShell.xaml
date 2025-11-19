@@ -11,9 +11,6 @@
         <ShellContent Title="Accueil" 
           ContentTemplate="{DataTemplate local:MainPage}" 
           Route="MainPage" />
-        <ShellContent Title="Design Patterns" 
-          ContentTemplate="{DataTemplate pages:DesignPatternsPage}" 
-          Route="DesignPatternsPage" />
     </TabBar>
 
 </Shell>
