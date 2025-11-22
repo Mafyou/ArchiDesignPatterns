@@ -5,7 +5,7 @@ ArchiDesignPatterns is a .NET MAUI mobile application demonstrating various soft
 ## Project Details
 - **Project Type:** .NET MAUI (Multi-platform App UI)
 - **Target Framework:** .NET 10 (Android)
-- **Output Type:** Exe
+- **Output Type:** APK / AAB
 - **Root Namespace:** ArchiDesignPatterns.Mobile
 - **App Identifier:** fr.mafyou.archidesignpatterns
 - **Version:** 1.0
@@ -42,11 +42,11 @@ ArchiDesignPatterns is a .NET MAUI mobile application demonstrating various soft
    ```sh
    git clone https://github.com/Mafyou/ArchiDesignPatterns.git
    ```
-3. Open the solution in Visual Studio 2022 or later.
+3. Open the solution in Visual Studio 2026.
 4. Set `ArchiDesignPatterns.Mobile` as the startup project.
 5. Build and run the app on an Android emulator or device.
 
-**Important:** To make the project work, you must add your OpenAI API key in `src/ArchiDesignPatterns.Mobile/appsettings.json` under the `OpenAI:ApiKey` property.
+**Important:** To make the Quizz work, you must add your OpenAI API key in `src/ArchiDesignPatterns.Mobile/appsettings.json` under the `OpenAI:ApiKey` property.
 
 ## License
 This project is licensed under the MIT License.
