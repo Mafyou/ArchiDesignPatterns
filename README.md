@@ -4,7 +4,7 @@ ArchiDesignPatterns is a .NET MAUI mobile application demonstrating various soft
 
 ## Project Details
 - **Project Type:** .NET MAUI (Multi-platform App UI)
-- **Target Framework:** .NET 9 (Android)
+- **Target Framework:** .NET 10 (Android)
 - **Output Type:** Exe
 - **Root Namespace:** ArchiDesignPatterns.Mobile
 - **App Identifier:** fr.mafyou.archidesignpatterns
@@ -37,7 +37,7 @@ ArchiDesignPatterns is a .NET MAUI mobile application demonstrating various soft
 - [Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel)
 
 ## Getting Started
-1. Ensure you have the latest .NET 9 SDK and Android development tools installed.
+1. Ensure you have the latest .NET 10 SDK and Android development tools installed.
 2. Clone the repository:
    ```sh
    git clone https://github.com/Mafyou/ArchiDesignPatterns.git
