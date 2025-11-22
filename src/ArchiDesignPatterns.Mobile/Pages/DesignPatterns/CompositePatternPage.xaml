@@ -29,22 +29,141 @@
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </Border>
-        <!-- Body -->
+
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Composite" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern Composite permet de composer des objets en structures arborescentes pour representer des hierarchies." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Afficher la structure" Clicked="OnShowStructureClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern Composite permet de composer des objets en structures arborescentes pour représenter des hiérarchies partie-tout. Il traite les objets individuels et leurs compositions de manière uniforme."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public interface IComponent { string Display(); }\npublic class Leaf : IComponent { public string Display() =&gt; 'Feuille'; }\npublic class Composite : IComponent { public List&lt;IComponent&gt; Children = new(); public string Display() =&gt; string.Join(',', Children.Select(c =&gt; c.Display())); }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Représenter des hiérarchies partie-tout d'objets"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Traiter uniformément objets individuels et compositions"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Structures arborescentes complexes avec opérations récursives"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple Interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Construisez une structure arborescente composite :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Afficher la Structure"
+                                Clicked="OnShowStructureClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Component interface&#x0a;public interface IComponent&#x0a;{&#x0a;    string Display();&#x0a;}&#x0a;&#x0a;// Leaf (individual object)&#x0a;public class Leaf : IComponent&#x0a;{&#x0a;    private readonly string _name;&#x0a;&#x0a;    public Leaf(string name)&#x0a;    {&#x0a;        _name = name;&#x0a;    }&#x0a;&#x0a;    public string Display() => $&quot;- {_name}&quot;;&#x0a;}&#x0a;&#x0a;// Composite (container of components)&#x0a;public class Composite : IComponent&#x0a;{&#x0a;    private readonly string _name;&#x0a;    private readonly List&lt;IComponent&gt; _children = new();&#x0a;&#x0a;    public Composite(string name)&#x0a;    {&#x0a;        _name = name;&#x0a;    }&#x0a;&#x0a;    public void Add(IComponent component)&#x0a;    {&#x0a;        _children.Add(component);&#x0a;    }&#x0a;&#x0a;    public string Display()&#x0a;    {&#x0a;        var result = $&quot;+ {_name}\n&quot;;&#x0a;        foreach (var child in _children)&#x0a;        {&#x0a;            result += $&quot;  {child.Display()}\n&quot;;&#x0a;        }&#x0a;        return result;&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="Exemple Concret"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="Système de fichiers : dossiers peuvent contenir fichiers ou autres dossiers. Même interface pour lister le contenu, que ce soit un fichier simple ou un dossier avec sous-éléments."
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Interface uniforme"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Structures récursives naturelles"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Facilite l'ajout d'éléments"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Interface peut être trop générale"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Difficile de limiter les composants"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Complexité pour types simples"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

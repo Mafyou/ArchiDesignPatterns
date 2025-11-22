@@ -28,8 +28,8 @@ public partial class CommandPatternPage : ContentPage
     // Receiver
     private class Light
     {
-        public string TurnOn() => "Light is ON";
-        public string TurnOff() => "Light is OFF";
+        public string TurnOn() => "Lumière ALLUMÉE";
+        public string TurnOff() => "Lumière ÉTEINTE";
     }
 
     // Command interface
@@ -75,7 +75,7 @@ public partial class CommandPatternPage : ContentPage
 
         public string PressButton()
         {
-            return _command?.Execute() ?? "No command set";
+            return _command?.Execute() ?? "Aucune commande définie";
         }
     }
 }

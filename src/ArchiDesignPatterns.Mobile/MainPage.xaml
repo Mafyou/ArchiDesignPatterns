@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ArchiDesignPatterns.Mobile.MainPage"
              Shell.NavBarIsVisible="True"
-             Title="Welcome">
+             Title="Bienvenue">
 
     <ScrollView>
         <VerticalStackLayout Spacing="0">
@@ -16,7 +16,7 @@
                     <Image Source="dotnet_bot.png"
                            HeightRequest="120"
                            Aspect="AspectFit"
-                           SemanticProperties.Description="Design Patterns Learning App" />
+                           SemanticProperties.Description="Application d'apprentissage des Design Patterns" />
                     
                     <Label Text="Design Patterns"
                            FontSize="36"
@@ -24,7 +24,7 @@
                            TextColor="White"
                            HorizontalTextAlignment="Center" />
                     
-                    <Label Text="Master Software Architecture &amp; Patterns"
+                    <Label Text="Maîtrisez l'Architecture Logicielle &amp; les Patterns"
                            FontSize="18"
                            TextColor="White"
                            Opacity="0.9"
@@ -38,16 +38,16 @@
                 
                 <!-- Welcome Message -->
                 <VerticalStackLayout Spacing="8">
-                    <Label Text="Welcome! 👋"
+                    <Label Text="Bienvenue ! 👋"
                            Style="{StaticResource Title}" />
-                    <Label Text="Explore comprehensive design patterns and architectural styles used in modern software development. Learn through interactive examples and practical code demonstrations."
+                    <Label Text="Explorez les design patterns et styles architecturaux complets utilisés dans le développement logiciel moderne. Apprenez à travers des exemples interactifs et des démonstrations de code pratiques."
                            Style="{StaticResource BodyLarge}"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
 
                 <!-- Quick Access Navigation Cards -->
                 <VerticalStackLayout Spacing="16">
-                    <Label Text="Quick Access"
+                    <Label Text="Accès Rapide"
                            Style="{StaticResource SubTitle}" />
                     
                     <!-- Design Patterns Card -->
@@ -71,7 +71,7 @@
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
                                 <Label Text="Design Patterns"
                                        Style="{StaticResource SubTitle}" />
-                                <Label Text="23 proven software design solutions"
+                                <Label Text="23 solutions de conception logicielle éprouvées"
                                        Style="{StaticResource BodySmall}"
                                        TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
                             </VerticalStackLayout>
@@ -101,9 +101,9 @@
                             </Border>
                             
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
-                                <Label Text="Software Architectures"
+                                <Label Text="Architectures Logicielles"
                                        Style="{StaticResource SubTitle}" />
-                                <Label Text="10 architectural patterns for scalable systems"
+                                <Label Text="10 patterns architecturaux pour systèmes évolutifs"
                                        Style="{StaticResource BodySmall}"
                                        TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
                             </VerticalStackLayout>
@@ -133,9 +133,9 @@
                             </Border>
                             
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
-                                <Label Text="Test Your Knowledge"
+                                <Label Text="Testez vos Connaissances"
                                        Style="{StaticResource SubTitle}" />
-                                <Label Text="Interactive quizzes and challenges"
+                                <Label Text="Quiz interactifs et défis"
                                        Style="{StaticResource BodySmall}"
                                        TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
                             </VerticalStackLayout>
@@ -183,7 +183,7 @@
 
                 <!-- What You'll Learn Section -->
                 <VerticalStackLayout Spacing="12">
-                    <Label Text="What You'll Learn"
+                    <Label Text="Ce que vous allez apprendre"
                            Style="{StaticResource SubTitle}" />
                     
                     <!-- Learning Item 1 -->
@@ -196,10 +196,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Creational Patterns"
+                            <Label Text="Patterns Créationnels"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Object creation mechanisms"
+                            <Label Text="Mécanismes de création d'objets"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>
@@ -214,10 +214,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Structural Patterns"
+                            <Label Text="Patterns Structurels"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Class and object composition"
+                            <Label Text="Composition de classes et objets"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>
@@ -232,10 +232,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Behavioral Patterns"
+                            <Label Text="Patterns Comportementaux"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Object collaboration &amp; responsibilities"
+                            <Label Text="Collaboration et responsabilités d'objets"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>
@@ -250,10 +250,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Software Architectures"
+                            <Label Text="Architectures Logicielles"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Large-scale system organization"
+                            <Label Text="Organisation de systèmes à grande échelle"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>

@@ -29,22 +29,141 @@
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </Border>
-        <!-- Content -->
+
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Chain of Responsibility" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern Chain of Responsibility permet a plusieurs objets de traiter une requete sans connaitre le gestionnaire final." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Traiter la requete" Clicked="OnHandleRequestClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern Chain of Responsibility permet de traiter des requêtes le long d'une chaîne de gestionnaires. Chaque gestionnaire décide soit de traiter la requête soit de la transmettre au suivant."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                        Text="public abstract class Handler { public Handler Next; public abstract string Handle(string req); }\npublic class ConcreteHandlerA : Handler { public override string Handle(string req) => req == 'A' ? 'A traite' : Next?.Handle(req); }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand plusieurs objets peuvent traiter une requête"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Le gestionnaire n'est pas connu à l'avance"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Découpler l'expéditeur du récepteur"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple Interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Testez différentes requêtes dans la chaîne de responsabilité :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Traiter les Requêtes"
+                                Clicked="OnHandleRequestClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Base handler&#x0a;public abstract class RequestHandler&#x0a;{&#x0a;    private RequestHandler _nextHandler;&#x0a;&#x0a;    public void SetNext(RequestHandler handler)&#x0a;    {&#x0a;        _nextHandler = handler;&#x0a;    }&#x0a;&#x0a;    public virtual string Handle(string request)&#x0a;    {&#x0a;        if (_nextHandler != null)&#x0a;        {&#x0a;            return _nextHandler.Handle(request);&#x0a;        }&#x0a;        return &quot;Request not handled&quot;;&#x0a;    }&#x0a;}&#x0a;&#x0a;// Concrete handler&#x0a;public class LowPriorityHandler : RequestHandler&#x0a;{&#x0a;    public override string Handle(string request)&#x0a;    {&#x0a;        if (request.Contains(&quot;low&quot;))&#x0a;        {&#x0a;            return $&quot;LowPriorityHandler: Handled '{request}'&quot;;&#x0a;        }&#x0a;        return base.Handle(request);&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="Exemple Concret"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="Service client : ticket → support niveau 1 → niveau 2 → manager. Chaque niveau peut résoudre ou escalader selon la complexité."
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Découplage flexible"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Chaîne dynamique"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Responsabilité unique"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Pas de garantie de traitement"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Performance impactée"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Débogage difficile"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

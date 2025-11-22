@@ -37,7 +37,7 @@
                     <VerticalStackLayout Spacing="12">
                         <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="The Bridge pattern separates an abstraction from its implementation so that the two can vary independently. It uses composition over inheritance."
+                        <Label Text="Le pattern Bridge sépare une abstraction de son implémentation pour que les deux puissent varier indépendamment. Il utilise la composition plutôt que l'héritage."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -45,22 +45,22 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 When to Use" Style="{StaticResource SubTitle}" />
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Avoid permanent binding between abstraction and implementation"
+                                <Label Grid.Column="1" Text="Éviter une liaison permanente entre abstraction et implémentation"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Both abstraction and implementation should be extensible"
+                                <Label Grid.Column="1" Text="L'abstraction et l'implémentation doivent être extensibles"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Changes in implementation shouldn't affect clients"
+                                <Label Grid.Column="1" Text="Les changements d'implémentation ne doivent pas affecter les clients"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -71,15 +71,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Draw shapes with different rendering implementations:"
+                        <Label Text="Dessinez des formes avec différentes implémentations de rendu :"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Draw with Bridge"
+                        <Button Text="Dessiner avec Bridge"
                                 Clicked="OnDrawClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -92,7 +92,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
@@ -108,11 +108,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🌍" FontSize="20" />
-                            <Label Text="Real-World Example"
+                            <Label Text="Exemple Concret"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="GUI frameworks: Separate window abstractions (Window, Dialog) from platform implementations (Windows API, macOS API, Linux X11) - same window types work across all platforms."
+                        <Label Text="Frameworks GUI : Séparer les abstractions de fenêtres (Window, Dialog) des implémentations de plateformes (API Windows, API macOS, Linux X11) - les mêmes types de fenêtres fonctionnent sur toutes les plateformes."
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -123,15 +123,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Decouples interface from implementation"
+                                <Label Text="• Découple l'interface de l'implémentation"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Runtime binding"
+                                <Label Text="• Liaison à l'exécution"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Independent extensions"
+                                <Label Text="• Extensions indépendantes"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -141,15 +141,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Drawbacks" FontAttributes="Bold"
+                                <Label Text="Inconvénients" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Increased complexity"
+                                <Label Text="• Complexité accrue"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• More classes"
+                                <Label Text="• Plus de classes"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Indirection overhead"
+                                <Label Text="• Surcharge d'indirection"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

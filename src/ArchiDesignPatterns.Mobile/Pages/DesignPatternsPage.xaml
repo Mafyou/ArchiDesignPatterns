@@ -20,11 +20,11 @@
                        FontAttributes="Bold"
                        TextColor="White"
                        SemanticProperties.HeadingLevel="Level1" />
-                <Label Text="23 proven solutions to common software design problems"
+                <Label Text="23 solutions éprouvées aux problèmes courants de conception logicielle"
                        FontSize="14"
                        TextColor="White"
                        Opacity="0.9" />
-                <SearchBar Placeholder="Search patterns..."
+                <SearchBar Placeholder="Rechercher des patterns..."
                            Text="{Binding SearchTerm}"
                            BackgroundColor="White"
                            PlaceholderColor="{StaticResource Gray400}"
@@ -111,10 +111,10 @@
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center">
                             <Label Text="🔍" FontSize="64" HorizontalOptions="Center" />
-                            <Label Text="No patterns found"
+                            <Label Text="Aucun pattern trouvé"
                                    Style="{StaticResource Title}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Try adjusting your search term"
+                            <Label Text="Essayez d'ajuster votre terme de recherche"
                                    Style="{StaticResource BodyMedium}"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{StaticResource Gray500}" />

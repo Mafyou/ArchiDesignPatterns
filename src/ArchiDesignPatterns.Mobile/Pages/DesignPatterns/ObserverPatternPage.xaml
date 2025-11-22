@@ -13,7 +13,7 @@
                 StrokeThickness="0">
             <VerticalStackLayout Spacing="8">
                 <HorizontalStackLayout Spacing="12">
-                    <Label Text="📝" FontSize="32" VerticalOptions="Center" />
+                    <Label Text="👁️" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Observer Pattern"
                                FontSize="28" FontAttributes="Bold"
@@ -30,15 +30,140 @@
             </VerticalStackLayout>
         </Border>
 
-        <!-- Main Content -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Observer" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern Observer permet a un objet de notifier des changements a d'autres objets." FontSize="16" />
-                <!-- Exemple interactif a ajouter -->
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor Text="public class Observer { ... }" IsReadOnly="True" HeightRequest="120" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern Observer définit une dépendance un-à-plusieurs entre objets de façon que lorsqu'un objet change d'état, tous ses dépendants sont notifiés et mis à jour automatiquement."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Un changement d'objet nécessite de changer plusieurs autres objets"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Découpler l'objet qui change de ceux qui en dépendent"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Communications de type broadcast dans un système"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple Interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Simulez une newsletter avec des abonnés qui reçoivent les notifications :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Publier une News"
+                                Clicked="OnPublishNewsClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Observer interface&#x0a;public interface IObserver&#x0a;{&#x0a;    void Update(string message);&#x0a;}&#x0a;&#x0a;// Subject interface&#x0a;public interface ISubject&#x0a;{&#x0a;    void Attach(IObserver observer);&#x0a;    void Detach(IObserver observer);&#x0a;    void Notify(string message);&#x0a;}&#x0a;&#x0a;// Concrete Subject&#x0a;public class Newsletter : ISubject&#x0a;{&#x0a;    private List&lt;IObserver&gt; _observers = new();&#x0a;&#x0a;    public void Attach(IObserver observer)&#x0a;    {&#x0a;        _observers.Add(observer);&#x0a;    }&#x0a;&#x0a;    public void Detach(IObserver observer)&#x0a;    {&#x0a;        _observers.Remove(observer);&#x0a;    }&#x0a;&#x0a;    public void Notify(string message)&#x0a;    {&#x0a;        foreach (var observer in _observers)&#x0a;        {&#x0a;            observer.Update(message);&#x0a;        }&#x0a;    }&#x0a;}&#x0a;&#x0a;// Concrete Observer&#x0a;public class Subscriber : IObserver&#x0a;{&#x0a;    private string _name;&#x0a;&#x0a;    public Subscriber(string name) => _name = name;&#x0a;&#x0a;    public void Update(string message)&#x0a;    {&#x0a;        Console.WriteLine($&quot;{_name} a reçu: {message}&quot;);&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="Exemple Concret"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="Réseaux sociaux : quand vous publiez un post, tous vos followers sont notifiés automatiquement. Le système ne connaît pas à l'avance qui suivra quoi."
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Couplage faible"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Support de communication broadcast"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Ajout dynamique d'observateurs"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Notifications inattendues"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Complexité augmentée"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Possible fuite mémoire"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

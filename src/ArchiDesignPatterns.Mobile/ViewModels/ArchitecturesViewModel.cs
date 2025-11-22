@@ -9,16 +9,16 @@ public partial class ArchitecturesViewModel : ObservableObject
     private ObservableCollection<ArchitectureInfo> _architectures = new(
         new[]
         {
-            new ArchitectureInfo("MVC","Model-View-Controller pattern.","Architectural Pattern"),
-            new ArchitectureInfo("MVVM","Model-View-ViewModel pattern.","Architectural Pattern"),
-            new ArchitectureInfo("Clean","Strict separation of concerns.","Architecture"),
-            new ArchitectureInfo("Layered","Layered architecture pattern.","Architecture"),
-            new ArchitectureInfo("Hexagonal","Ports & Adapters architecture.","Architecture"),
-            new ArchitectureInfo("Microservices","Independent distributed services.","Architecture"),
-            new ArchitectureInfo("Event-Driven","Event-based communication.","Architecture"),
-            new ArchitectureInfo("CQRS","Command Query Responsibility Segregation.","Architecture"),
-            new ArchitectureInfo("Onion","Concentric layers architecture.","Architecture"),
-            new ArchitectureInfo("DDD","Domain-Driven Design.","Architecture"),
+            new ArchitectureInfo("MVC","Modèle Modèle-Vue-Contrôleur.","Architectural Pattern"),
+            new ArchitectureInfo("MVVM","Modèle Modèle-Vue-VueModèle.","Architectural Pattern"),
+            new ArchitectureInfo("Clean","Séparation stricte des responsabilités.","Architecture"),
+            new ArchitectureInfo("Layered","Architecture en couches.","Architecture"),
+            new ArchitectureInfo("Hexagonal","Architecture Ports et Adaptateurs.","Architecture"),
+            new ArchitectureInfo("Microservices","Services distribués indépendants.","Architecture"),
+            new ArchitectureInfo("Event-Driven","Communication basée sur les événements.","Architecture"),
+            new ArchitectureInfo("CQRS","Ségrégation des responsabilités Commande-Requête.","Architecture"),
+            new ArchitectureInfo("Onion","Architecture en couches concentriques.","Architecture"),
+            new ArchitectureInfo("DDD","Conception pilotée par le domaine.","Architecture"),
         });
 
     [ObservableProperty]

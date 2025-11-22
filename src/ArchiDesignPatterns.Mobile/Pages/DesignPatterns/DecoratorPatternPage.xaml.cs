@@ -13,20 +13,20 @@ public partial class DecoratorPatternPage : ContentPage
         ICoffee coffee = new SimpleCoffee();
         var result = new System.Text.StringBuilder();
 
-        result.AppendLine($"Simple Coffee: {coffee.GetDescription()}");
-        result.AppendLine($"Cost: ${coffee.GetCost()}");
+        result.AppendLine($"Café simple : {coffee.GetDescription()}");
+        result.AppendLine($"Coût : {coffee.GetCost()}€");
         result.AppendLine();
 
         // Add milk
         coffee = new MilkDecorator(coffee);
-        result.AppendLine($"With Milk: {coffee.GetDescription()}");
-        result.AppendLine($"Cost: ${coffee.GetCost()}");
+        result.AppendLine($"Avec du lait : {coffee.GetDescription()}");
+        result.AppendLine($"Coût : {coffee.GetCost()}€");
         result.AppendLine();
 
         // Add sugar
         coffee = new SugarDecorator(coffee);
-        result.AppendLine($"With Milk & Sugar: {coffee.GetDescription()}");
-        result.AppendLine($"Cost: ${coffee.GetCost()}");
+        result.AppendLine($"Avec du lait et du sucre : {coffee.GetDescription()}");
+        result.AppendLine($"Coût : {coffee.GetCost()}€");
 
         ResultLabel.Text = result.ToString();
     }
@@ -41,7 +41,7 @@ public partial class DecoratorPatternPage : ContentPage
     // Concrete component
     private class SimpleCoffee : ICoffee
     {
-        public string GetDescription() => "Simple Coffee";
+        public string GetDescription() => "Café simple";
         public double GetCost() => 2.0;
     }
 
@@ -64,7 +64,7 @@ public partial class DecoratorPatternPage : ContentPage
     {
         public MilkDecorator(ICoffee coffee) : base(coffee) { }
 
-        public override string GetDescription() => _coffee.GetDescription() + ", Milk";
+        public override string GetDescription() => _coffee.GetDescription() + ", Lait";
         public override double GetCost() => _coffee.GetCost() + 0.5;
     }
 
@@ -72,7 +72,7 @@ public partial class DecoratorPatternPage : ContentPage
     {
         public SugarDecorator(ICoffee coffee) : base(coffee) { }
 
-        public override string GetDescription() => _coffee.GetDescription() + ", Sugar";
+        public override string GetDescription() => _coffee.GetDescription() + ", Sucre";
         public override double GetCost() => _coffee.GetCost() + 0.2;
     }
 }

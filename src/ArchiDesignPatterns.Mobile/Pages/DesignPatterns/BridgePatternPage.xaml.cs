@@ -19,10 +19,10 @@ public partial class BridgePatternPage : ContentPage
         var vectorCircle = new Circle(vectorRenderer, 5);
         var rasterCircle = new Circle(rasterRenderer, 5);
         
-        results.AppendLine("Vector Rendering:");
+        results.AppendLine("Rendu Vectoriel :");
         results.AppendLine(vectorCircle.Draw());
         results.AppendLine();
-        results.AppendLine("Raster Rendering:");
+        results.AppendLine("Rendu Matriciel :");
         results.AppendLine(rasterCircle.Draw());
         
         ResultLabel.Text = results.ToString();
@@ -38,13 +38,13 @@ public partial class BridgePatternPage : ContentPage
     private class VectorRenderer : IRenderer
     {
         public string RenderCircle(int radius)
-            => $"Drawing circle (vector) with radius {radius}";
+            => $"Dessin d'un cercle (vectoriel) avec rayon {radius}";
     }
 
     private class RasterRenderer : IRenderer
     {
         public string RenderCircle(int radius)
-            => $"Drawing pixels for circle with radius {radius}";
+            => $"Dessin des pixels pour cercle avec rayon {radius}";
     }
 
     // Abstraction

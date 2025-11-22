@@ -17,25 +17,25 @@ public partial class FacadePatternPage : ContentPage
     // Complex subsystems
     private class DVDPlayer
     {
-        public string On() => "DVD Player: On";
-        public string Play() => "DVD Player: Playing movie";
+        public string On() => "Lecteur DVD : Allumé";
+        public string Play() => "Lecteur DVD : Lecture du film";
     }
 
     private class Projector
     {
-        public string On() => "Projector: On";
-        public string SetInput(string input) => $"Projector: Input set to {input}";
+        public string On() => "Projecteur : Allumé";
+        public string SetInput(string input) => $"Projecteur : Entrée définie sur {input}";
     }
 
     private class SoundSystem
     {
-        public string On() => "Sound System: On";
-        public string SetVolume(int level) => $"Sound System: Volume set to {level}";
+        public string On() => "Système audio : Allumé";
+        public string SetVolume(int level) => $"Système audio : Volume réglé sur {level}";
     }
 
     private class Lights
     {
-        public string Dim(int level) => $"Lights: Dimmed to {level}%";
+        public string Dim(int level) => $"Éclairage : Atténué à {level}%";
     }
 
     // Facade
@@ -64,7 +64,7 @@ public partial class FacadePatternPage : ContentPage
             result.AppendLine(_soundSystem.SetVolume(5));
             result.AppendLine(_dvd.On());
             result.AppendLine(_dvd.Play());
-            result.AppendLine("\nEnjoy your movie!");
+            result.AppendLine("\nProfitez de votre film !");
             return result.ToString();
         }
     }

@@ -23,16 +23,16 @@
                 </LinearGradientBrush>
             </Border.Background>
             <VerticalStackLayout Spacing="12">
-                <Label Text="Software Architectures"
+                <Label Text="Architectures Logicielles"
                        FontSize="32"
                        FontAttributes="Bold"
                        TextColor="White"
                        SemanticProperties.HeadingLevel="Level1" />
-                <Label Text="10 architectural patterns for scalable systems"
+                <Label Text="10 patterns architecturaux pour des systèmes évolutifs"
                        FontSize="14"
                        TextColor="White"
                        Opacity="0.9" />
-                <SearchBar Placeholder="Search architectures..."
+                <SearchBar Placeholder="Rechercher des architectures..."
                            Text="{Binding SearchTerm}"
                            BackgroundColor="White"
                            PlaceholderColor="{StaticResource Gray400}"
@@ -114,10 +114,10 @@
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center">
                             <Label Text="🔍" FontSize="64" HorizontalOptions="Center" />
-                            <Label Text="No architectures found"
+                            <Label Text="Aucune architecture trouvée"
                                    Style="{StaticResource Title}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Try adjusting your search term"
+                            <Label Text="Essayez d'ajuster votre terme de recherche"
                                    Style="{StaticResource BodyMedium}"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{StaticResource Gray500}" />

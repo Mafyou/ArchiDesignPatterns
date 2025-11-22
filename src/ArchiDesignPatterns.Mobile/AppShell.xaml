@@ -24,7 +24,7 @@
                            FontAttributes="Bold"
                            TextColor="White"
                            HorizontalTextAlignment="Center" />
-                    <Label Text="Learn by Example"
+                    <Label Text="Apprendre par l'exemple"
                            FontSize="13"
                            TextColor="White"
                            Opacity="0.9"
@@ -47,16 +47,16 @@
     </Shell.FlyoutFooterTemplate>
 
     <!-- Main Navigation -->
-    <FlyoutItem Title="🏠 Home" Route="MainPage">
+    <FlyoutItem Title="🏠 Accueil" Route="MainPage">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="📋 All Patterns" Route="DesignPatternsPage">
+    <FlyoutItem Title="📋 Tous les Patterns" Route="DesignPatternsPage">
         <ShellContent ContentTemplate="{DataTemplate pages:DesignPatternsPage}" />
     </FlyoutItem>
 
     <!-- Creational Patterns -->
-    <FlyoutItem Title="Creational Patterns" FlyoutDisplayOptions="AsMultipleItems">
+    <FlyoutItem Title="Patterns Créationnels" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="  Singleton" ContentTemplate="{DataTemplate dp:SingletonPatternPage}" Route="SingletonPatternPage" />
         <ShellContent Title="  Factory" ContentTemplate="{DataTemplate dp:FactoryPatternPage}" Route="FactoryPatternPage" />
         <ShellContent Title="  Abstract Factory" ContentTemplate="{DataTemplate dp:AbstractFactoryPatternPage}" Route="AbstractFactoryPatternPage" />
@@ -65,7 +65,7 @@
     </FlyoutItem>
 
     <!-- Structural Patterns -->
-    <FlyoutItem Title="Structural Patterns" FlyoutDisplayOptions="AsMultipleItems">
+    <FlyoutItem Title="Patterns Structurels" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="  Adapter" ContentTemplate="{DataTemplate dp:AdapterPatternPage}" Route="AdapterPatternPage" />
         <ShellContent Title="  Bridge" ContentTemplate="{DataTemplate dp:BridgePatternPage}" Route="BridgePatternPage" />
         <ShellContent Title="  Composite" ContentTemplate="{DataTemplate dp:CompositePatternPage}" Route="CompositePatternPage" />
@@ -76,7 +76,7 @@
     </FlyoutItem>
 
     <!-- Behavioral Patterns -->
-    <FlyoutItem Title="Behavioral Patterns" FlyoutDisplayOptions="AsMultipleItems">
+    <FlyoutItem Title="Patterns Comportementaux" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="  Chain of Responsibility" ContentTemplate="{DataTemplate dp:ChainOfResponsibilityPatternPage}" Route="ChainOfResponsibilityPatternPage" />
         <ShellContent Title="  Command" ContentTemplate="{DataTemplate dp:CommandPatternPage}" Route="CommandPatternPage" />
         <ShellContent Title="  Interpreter" ContentTemplate="{DataTemplate dp:InterpreterPatternPage}" Route="InterpreterPatternPage" />
@@ -90,12 +90,12 @@
         <ShellContent Title="  Visitor" ContentTemplate="{DataTemplate dp:VisitorPatternPage}" Route="VisitorPatternPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="🏛️ All Architectures" Route="ArchitecturesPage">
+    <FlyoutItem Title="🏛️ Toutes les Architectures" Route="ArchitecturesPage">
         <ShellContent ContentTemplate="{DataTemplate pages:ArchitecturesPage}" />
     </FlyoutItem>
 
     <!-- Architecture Patterns -->
-    <FlyoutItem Title="Architecture Patterns" FlyoutDisplayOptions="AsMultipleItems">
+    <FlyoutItem Title="Patterns Architecturaux" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="  MVC" ContentTemplate="{DataTemplate arch:MVCArchitecturePage}" Route="MVCArchitecturePage" />
         <ShellContent Title="  MVVM" ContentTemplate="{DataTemplate arch:MVVMArchitecturePage}" Route="MVVMArchitecturePage" />
         <ShellContent Title="  Clean Architecture" ContentTemplate="{DataTemplate arch:CleanArchitecturePage}" Route="CleanArchitecturePage" />

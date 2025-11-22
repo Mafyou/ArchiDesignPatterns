@@ -30,12 +30,12 @@
 
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
-                
+
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
                         <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="The Builder pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations."
+                        <Label Text="Le pattern Builder sépare la construction d'un objet complexe de sa représentation, permettant au même processus de construction de créer différentes représentations."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -43,22 +43,22 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 When to Use" Style="{StaticResource SubTitle}" />
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="When creating complex objects with many parameters"
+                                <Label Grid.Column="1" Text="Lors de la création d'objets complexes avec de nombreux paramètres"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="When object construction requires multiple steps"
+                                <Label Grid.Column="1" Text="Quand la construction d'objet nécessite plusieurs étapes"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="To avoid telescoping constructors"
+                                <Label Grid.Column="1" Text="Pour éviter les constructeurs télescopiques"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -69,15 +69,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Build a product step by step:"
+                        <Label Text="Construisez un produit étape par étape :"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Build Product"
+                        <Button Text="Construire un Produit"
                                 Clicked="OnBuildProductClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -90,7 +90,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
@@ -103,33 +103,33 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Fluent interface"
+                                <Label Text="• Interface fluide"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Immutability support"
+                                <Label Text="• Support de l'immuabilité"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Clear construction"
+                                <Label Text="• Construction claire"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
                     </Border>
-                    
+
                     <Border Style="{StaticResource ConCard}">
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Drawbacks" FontAttributes="Bold"
+                                <Label Text="Inconvénients" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• More code"
+                                <Label Text="• Plus de code"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Overkill for simple objects"
+                                <Label Text="• Excessif pour des objets simples"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Builder class needed"
+                                <Label Text="• Classe builder nécessaire"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

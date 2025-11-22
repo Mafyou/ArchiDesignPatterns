@@ -39,7 +39,7 @@
                         <Label Text="📖 Description"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Clean Architecture organizes code into independent layers with clear boundaries and dependencies pointing inward. The inner layers contain business logic and are independent of frameworks, UI, and databases."
+                        <Label Text="Clean Architecture organise le code en couches indépendantes avec des frontières claires et des dépendances pointant vers l'intérieur. Les couches internes contiennent la logique métier et sont indépendantes des frameworks, de l'UI et des bases de données."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -47,7 +47,7 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Core Principles"
+                        <Label Text="🎯 Principes Fondamentaux"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="10">
@@ -60,10 +60,10 @@
                                            HorizontalOptions="Center" VerticalOptions="Center" />
                                 </Border>
                                 <VerticalStackLayout Grid.Column="1" Spacing="4">
-                                    <Label Text="Independence"
+                                    <Label Text="Indépendance"
                                            FontAttributes="Bold"
                                            Style="{StaticResource BodyMedium}" />
-                                    <Label Text="Business logic independent of frameworks"
+                                    <Label Text="Logique métier indépendante des frameworks"
                                            Style="{StaticResource BodySmall}"
                                            TextColor="{StaticResource Gray600}" />
                                 </VerticalStackLayout>
@@ -78,10 +78,10 @@
                                            HorizontalOptions="Center" VerticalOptions="Center" />
                                 </Border>
                                 <VerticalStackLayout Grid.Column="1" Spacing="4">
-                                    <Label Text="Testability"
+                                    <Label Text="Testabilité"
                                            FontAttributes="Bold"
                                            Style="{StaticResource BodyMedium}" />
-                                    <Label Text="Easy to test without UI or database"
+                                    <Label Text="Facile à tester sans UI ou base de données"
                                            Style="{StaticResource BodySmall}"
                                            TextColor="{StaticResource Gray600}" />
                                 </VerticalStackLayout>
@@ -96,10 +96,10 @@
                                            HorizontalOptions="Center" VerticalOptions="Center" />
                                 </Border>
                                 <VerticalStackLayout Grid.Column="1" Spacing="4">
-                                    <Label Text="Dependency Rule"
+                                    <Label Text="Règle de Dépendance"
                                            FontAttributes="Bold"
                                            Style="{StaticResource BodyMedium}" />
-                                    <Label Text="Dependencies point inward only"
+                                    <Label Text="Dépendances pointent seulement vers l'intérieur"
                                            Style="{StaticResource BodySmall}"
                                            TextColor="{StaticResource Gray600}" />
                                 </VerticalStackLayout>
@@ -110,7 +110,7 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🔄 Architecture Layers"
+                        <Label Text="🔄 Couches Architecturales"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         
@@ -120,7 +120,7 @@
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="Core" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ Entities, Business Rules"
+                                <Label Text="→ Entités, Règles Métier"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -131,7 +131,7 @@
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="Application" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ Use Cases, Interfaces"
+                                <Label Text="→ Cas d'usage, Interfaces"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -142,7 +142,7 @@
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="Infrastructure" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ Database, External Services"
+                                <Label Text="→ Base de données, Services externes"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -151,9 +151,9 @@
                                 Padding="16,12" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 12">
                             <HorizontalStackLayout Spacing="8">
-                                <Label Text="Presentation" TextColor="White"
+                                <Label Text="Présentation" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ UI, Controllers, ViewModels"
+                                <Label Text="→ UI, Contrôleurs, ViewModels"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -164,16 +164,16 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Simulate a service call through the layers:"
+                        <Label Text="Simulez un appel de service à travers les couches :"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Execute Service Call"
+                        <Button Text="Exécuter l'Appel de Service"
                                 Clicked="OnSimulateServiceClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -186,7 +186,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Structure"
+                            <Label Text="Structure du Code"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -200,17 +200,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Highly testable"
+                                <Label Text="• Hautement testable"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Technology independent"
+                                <Label Text="• Indépendant des technologies"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Clear boundaries"
+                                <Label Text="• Frontières claires"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Easy to maintain"
+                                <Label Text="• Facile à maintenir"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -220,17 +220,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Challenges" FontAttributes="Bold"
+                                <Label Text="Défis" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Learning curve"
+                                <Label Text="• Courbe d'apprentissage"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• More boilerplate"
+                                <Label Text="• Plus de code standard"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Overkill for small apps"
+                                <Label Text="• Excessif pour petites apps"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Initial complexity"
+                                <Label Text="• Complexité initiale"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -245,11 +245,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💡" FontSize="24" />
-                            <Label Text="Key Takeaway"
+                            <Label Text="Point Clé"
                                    FontAttributes="Bold"
                                    Style="{StaticResource Title}" />
                         </HorizontalStackLayout>
-                        <Label Text="Clean Architecture prioritizes separation of concerns and independence from external dependencies, making your codebase more maintainable, testable, and adaptable to change."
+                        <Label Text="Clean Architecture privilégie la séparation des préoccupations et l'indépendance des dépendances externes, rendant votre base de code plus maintenable, testable et adaptable aux changements."
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>

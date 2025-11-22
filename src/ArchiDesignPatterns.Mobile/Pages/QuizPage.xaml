@@ -17,12 +17,12 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🎯" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Knowledge Quiz"
+                        <Label Text="Quiz de Connaissances"
                                FontSize="28"
                                FontAttributes="Bold"
                                TextColor="White"
                                SemanticProperties.HeadingLevel="Level1" />
-                        <Label Text="Test your understanding"
+                        <Label Text="Testez votre compréhension"
                                FontSize="14"
                                TextColor="White"
                                Opacity="0.9" />
@@ -40,7 +40,7 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="📚" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Choose a Topic"
+                            <Label Text="Choisissez un Sujet"
                                    Style="{StaticResource SubTitle}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
@@ -48,16 +48,16 @@
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         
                         <VerticalStackLayout Spacing="8">
-                            <Label Text="Enter a pattern or architecture name:"
+                            <Label Text="Entrez le nom d'un pattern ou d'une architecture :"
                                    Style="{StaticResource BodyMedium}"
                                    TextColor="{StaticResource Gray600}" />
                             <Entry Keyboard="Chat"
-                                   Placeholder="e.g., Singleton, MVC, Clean Architecture..."
+                                   Placeholder="ex: Singleton, MVC, Clean Architecture..."
                                    Text="{Binding Topic}"
                                    HeightRequest="50" />
                         </VerticalStackLayout>
                         
-                        <Button Text="🎲 Generate Question"
+                        <Button Text="🎲 Générer une Question"
                                 Command="{Binding GenerateCommand}"
                                 HorizontalOptions="Fill" />
                     </VerticalStackLayout>
@@ -72,7 +72,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💡" FontSize="16" VerticalOptions="Center" />
-                            <Label Text="Quick Topics"
+                            <Label Text="Sujets Rapides"
                                    FontSize="14" FontAttributes="Bold"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
@@ -137,17 +137,17 @@
                                MinimumHeightRequest="60" />
                         
                         <VerticalStackLayout Spacing="12">
-                            <Label Text="Your Answer:"
+                            <Label Text="Votre Réponse :"
                                    Style="{StaticResource BodyMedium}"
                                    TextColor="{StaticResource Gray600}" />
                             <Entry Keyboard="Chat"
-                                   Placeholder="Enter A, B, C, or D"
+                                   Placeholder="Entrez A, B, C, ou D"
                                    Text="{Binding Answer}"
                                    HeightRequest="50"
                                    MaxLength="1" />
                         </VerticalStackLayout>
                         
-                        <Button Text="✓ Submit Answer"
+                        <Button Text="✓ Soumettre la Réponse"
                                 Command="{Binding EvaluateCommand}"
                                 BackgroundColor="{StaticResource Success}"
                                 HorizontalOptions="Fill" />
@@ -161,7 +161,7 @@
                             <VerticalStackLayout Spacing="8">
                                 <HorizontalStackLayout Spacing="8">
                                     <Label Text="📊" FontSize="20" VerticalOptions="Center" />
-                                    <Label Text="Result"
+                                    <Label Text="Résultat"
                                            FontSize="16" FontAttributes="Bold"
                                            VerticalOptions="Center" />
                                 </HorizontalStackLayout>
@@ -182,9 +182,9 @@
                     <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                         <Label Text="💡" FontSize="24" VerticalOptions="Start" />
                         <VerticalStackLayout Grid.Column="1" Spacing="8">
-                            <Label Text="Quiz Tips"
+                            <Label Text="Conseils pour le Quiz"
                                    FontSize="14" FontAttributes="Bold" />
-                            <Label Text="• Read each question carefully&#10;• Think about real-world applications&#10;• Review the pattern details if unsure&#10;• Practice makes perfect!"
+                            <Label Text="• Lisez chaque question attentivement&#10;• Pensez aux applications du monde réel&#10;• Révisez les détails des patterns si vous êtes incertain&#10;• La pratique rend parfait !"
                                    Style="{StaticResource BodySmall}"
                                    LineBreakMode="WordWrap" />
                         </VerticalStackLayout>

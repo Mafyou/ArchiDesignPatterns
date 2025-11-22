@@ -18,10 +18,10 @@ public partial class FlyweightPatternPage : ContentPage
         var char2 = factory.GetCharacter('B');
         var char3 = factory.GetCharacter('A'); // Reuses existing 'A'
 
-        result.AppendLine(char1.Display(12, "Red"));
-        result.AppendLine(char2.Display(14, "Blue"));
-        result.AppendLine(char3.Display(16, "Green"));
-        result.AppendLine($"\nTotal unique characters created: {factory.GetTotalCharacters()}");
+        result.AppendLine(char1.Display(12, "Rouge"));
+        result.AppendLine(char2.Display(14, "Bleu"));
+        result.AppendLine(char3.Display(16, "Vert"));
+        result.AppendLine($"\nNombre total de caractères uniques créés : {factory.GetTotalCharacters()}");
 
         ResultLabel.Text = result.ToString();
     }
@@ -38,7 +38,7 @@ public partial class FlyweightPatternPage : ContentPage
 
         public string Display(int size, string color)
         {
-            return $"Character '{_symbol}' with size {size} and color {color}";
+            return $"Caractère '{_symbol}' avec taille {size} et couleur {color}";
         }
     }
 

@@ -40,7 +40,7 @@
                         <Label Text="📖 Description"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance."
+                        <Label Text="Le pattern Singleton assure qu'une classe n'ait qu'une seule instance et fournit un point d'accès global à cette instance."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -49,23 +49,23 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 When to Use"
+                        <Label Text="🎯 Quand l'utiliser"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="When exactly one instance of a class is needed"
+                                <Label Grid.Column="1" Text="Quand exactement une instance d'une classe est nécessaire"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="For configuration managers or logging services"
+                                <Label Grid.Column="1" Text="Pour les gestionnaires de configuration ou services de journalisation"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="To control access to shared resources"
+                                <Label Grid.Column="1" Text="Pour contrôler l'accès aux ressources partagées"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -77,16 +77,16 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Click the button to create a Singleton instance. Notice that multiple clicks always return the same instance!"
+                        <Label Text="Cliquez sur le bouton pour créer une instance Singleton. Remarquez que plusieurs clics retournent toujours la même instance !"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Create Singleton Instance"
+                        <Button Text="Créer une Instance Singleton"
                                 Clicked="OnCreateSingletonClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -100,7 +100,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example"
+                            <Label Text="Exemple de Code"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -116,15 +116,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Single instance guarantee"
+                                <Label Text="• Garantie d'instance unique"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Global access point"
+                                <Label Text="• Point d'accès global"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Lazy initialization"
+                                <Label Text="• Initialisation paresseuse"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -135,15 +135,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Drawbacks" FontAttributes="Bold"
+                                <Label Text="Inconvénients" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Difficult to test"
+                                <Label Text="• Difficile à tester"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Global state issues"
+                                <Label Text="• Problèmes d'état global"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Thread-safety concerns"
+                                <Label Text="• Préoccupations de sécurité de thread"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

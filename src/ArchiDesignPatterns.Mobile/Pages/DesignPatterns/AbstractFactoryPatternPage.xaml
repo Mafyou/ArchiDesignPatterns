@@ -37,7 +37,7 @@
                     <VerticalStackLayout Spacing="12">
                         <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="The Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes."
+                        <Label Text="Le pattern Abstract Factory fournit une interface pour créer des familles d'objets liés ou dépendants sans spécifier leurs classes concrètes."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -45,22 +45,22 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 When to Use" Style="{StaticResource SubTitle}" />
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Creating families of related products"
+                                <Label Grid.Column="1" Text="Créer des familles de produits liés"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Supporting multiple UI themes or platforms"
+                                <Label Grid.Column="1" Text="Supporter plusieurs thèmes UI ou plateformes"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Ensuring product compatibility"
+                                <Label Grid.Column="1" Text="Garantir la compatibilité des produits"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -71,15 +71,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Create a family of UI components for different platforms:"
+                        <Label Text="Créez une famille de composants UI pour différentes plateformes :"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Create Windows UI Family"
+                        <Button Text="Créer une Famille UI Windows"
                                 Clicked="OnCreateFamilyClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -92,7 +92,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
@@ -108,11 +108,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🌍" FontSize="20" />
-                            <Label Text="Real-World Example"
+                            <Label Text="Exemple Concret"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="Cross-platform UI frameworks: Creating Windows, Mac, and Linux UI components that look native on each platform while using the same creation interface."
+                        <Label Text="Frameworks UI multi-plateformes : Créer des composants UI pour Windows, Mac et Linux qui s'intègrent parfaitement à chaque plateforme tout en utilisant la même interface de création."
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -123,15 +123,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Product compatibility"
+                                <Label Text="• Compatibilité des produits"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Easy family swapping"
+                                <Label Text="• Échange facile de familles"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Consistent interface"
+                                <Label Text="• Interface cohérente"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -141,15 +141,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Drawbacks" FontAttributes="Bold"
+                                <Label Text="Inconvénients" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Complex structure"
+                                <Label Text="• Structure complexe"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Many classes"
+                                <Label Text="• Nombreuses classes"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Hard to extend"
+                                <Label Text="• Difficile à étendre"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

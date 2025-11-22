@@ -20,9 +20,9 @@ public partial class ChainOfResponsibilityPatternPage : ContentPage
 
         // Test requests
         var results = new System.Text.StringBuilder();
-        results.AppendLine(lowHandler.Handle("Low priority request"));
-        results.AppendLine(lowHandler.Handle("Medium priority request"));
-        results.AppendLine(lowHandler.Handle("High priority request"));
+        results.AppendLine(lowHandler.Handle("Demande priorité faible"));
+        results.AppendLine(lowHandler.Handle("Demande priorité moyenne"));
+        results.AppendLine(lowHandler.Handle("Demande priorité élevée"));
 
         ResultLabel.Text = results.ToString();
     }
@@ -43,7 +43,7 @@ public partial class ChainOfResponsibilityPatternPage : ContentPage
             {
                 return _nextHandler.Handle(request);
             }
-            return "Request not handled";
+            return "Demande non traitée";
         }
     }
 
@@ -52,9 +52,9 @@ public partial class ChainOfResponsibilityPatternPage : ContentPage
     {
         public override string Handle(string request)
         {
-            if (request.Contains("Low"))
+            if (request.Contains("faible"))
             {
-                return $"LowPriorityHandler: Handled '{request}'";
+                return $"GestionnairePrioritéFaible : Traité '{request}'";
             }
             return base.Handle(request);
         }
@@ -64,9 +64,9 @@ public partial class ChainOfResponsibilityPatternPage : ContentPage
     {
         public override string Handle(string request)
         {
-            if (request.Contains("Medium"))
+            if (request.Contains("moyenne"))
             {
-                return $"MediumPriorityHandler: Handled '{request}'";
+                return $"GestionnairePrioritéMoyenne : Traité '{request}'";
             }
             return base.Handle(request);
         }
@@ -76,9 +76,9 @@ public partial class ChainOfResponsibilityPatternPage : ContentPage
     {
         public override string Handle(string request)
         {
-            if (request.Contains("High"))
+            if (request.Contains("élevée"))
             {
-                return $"HighPriorityHandler: Handled '{request}'";
+                return $"GestionnairePrioritéÉlevée : Traité '{request}'";
             }
             return base.Handle(request);
         }

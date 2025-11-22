@@ -19,9 +19,9 @@ public partial class BuilderPatternPage : ContentPage
         var fullProduct = builder.GetProduct();
 
         var result = new System.Text.StringBuilder();
-        result.AppendLine("Basic Product:");
+        result.AppendLine("Produit de base :");
         result.AppendLine(basicProduct.ListParts());
-        result.AppendLine("\nFull Product:");
+        result.AppendLine("\nProduit complet :");
         result.AppendLine(fullProduct.ListParts());
 
         ResultLabel.Text = result.ToString();
@@ -39,7 +39,7 @@ public partial class BuilderPatternPage : ContentPage
 
         public string ListParts()
         {
-            return "Parts: " + string.Join(", ", _parts);
+            return "Pièces : " + string.Join(", ", _parts);
         }
     }
 
@@ -65,17 +65,17 @@ public partial class BuilderPatternPage : ContentPage
 
         public void BuildPartA()
         {
-            _product.Add("Part A");
+            _product.Add("Pièce A");
         }
 
         public void BuildPartB()
         {
-            _product.Add("Part B");
+            _product.Add("Pièce B");
         }
 
         public void BuildPartC()
         {
-            _product.Add("Part C");
+            _product.Add("Pièce C");
         }
 
         public Product GetProduct()

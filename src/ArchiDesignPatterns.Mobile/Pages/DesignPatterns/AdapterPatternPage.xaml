@@ -37,7 +37,7 @@
                     <VerticalStackLayout Spacing="12">
                         <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="The Adapter pattern converts the interface of a class into another interface that clients expect. It allows incompatible interfaces to work together."
+                        <Label Text="Le pattern Adapter convertit l'interface d'une classe en une autre interface que les clients attendent. Il permet aux interfaces incompatibles de fonctionner ensemble."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -45,22 +45,22 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 When to Use" Style="{StaticResource SubTitle}" />
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Integrating legacy code with new systems"
+                                <Label Grid.Column="1" Text="Intégrer du code legacy avec de nouveaux systèmes"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Making incompatible interfaces work together"
+                                <Label Grid.Column="1" Text="Faire fonctionner ensemble des interfaces incompatibles"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Using third-party libraries with different interfaces"
+                                <Label Grid.Column="1" Text="Utiliser des bibliothèques tierces avec des interfaces différentes"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -71,15 +71,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Use an adapter to make incompatible interfaces work together:"
+                        <Label Text="Utilisez un adapter pour faire fonctionner ensemble des interfaces incompatibles :"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Use Adapter"
+                        <Button Text="Utiliser l'Adapter"
                                 Clicked="OnUseAdapterClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -92,7 +92,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
@@ -108,11 +108,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🌍" FontSize="20" />
-                            <Label Text="Real-World Example"
+                            <Label Text="Exemple Concret"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="Power plug adapters: European devices (220V) can work with American outlets (110V) through an adapter that converts the interface while maintaining functionality."
+                        <Label Text="Adaptateurs de prise électrique : les appareils européens (220V) peuvent fonctionner avec des prises américaines (110V) grâce à un adaptateur qui convertit l'interface tout en maintenant la fonctionnalité."
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -123,15 +123,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Reuse existing code"
+                                <Label Text="• Réutilise le code existant"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Single Responsibility"
+                                <Label Text="• Responsabilité unique"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Open/Closed Principle"
+                                <Label Text="• Principe ouvert/fermé"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -141,15 +141,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Drawbacks" FontAttributes="Bold"
+                                <Label Text="Inconvénients" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Complexity increase"
+                                <Label Text="• Augmentation de la complexité"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Performance overhead"
+                                <Label Text="• Surcharge de performance"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• May be simpler to refactor"
+                                <Label Text="• Peut être plus simple de refactoriser"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

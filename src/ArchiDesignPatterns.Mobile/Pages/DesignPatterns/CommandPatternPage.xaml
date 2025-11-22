@@ -31,46 +31,141 @@
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </Border>
+
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
                         <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Command encapsule une requete en tant qu'objet, permettant de parametrer des actions."
-                               Style="{StaticResource BodyLarge}" LineBreakMode="WordWrap" />
+                        <Label Text="Le pattern Command encapsule une requête en tant qu'objet, permettant de paramétrer des actions, de les mettre en file d'attente et de supporter les opérations d'annulation."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Découpler l'expéditeur du récepteur d'une requête"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Supporter les opérations d'annulation (undo/redo)"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Journaliser ou mettre en file d'attente les requêtes"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
                 <!-- Interactive Example -->
                 <Border Style="{StaticResource InteractiveSection}">
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Executer la commande sur un objet :"
+                        <Label Text="Contrôlez une lumière avec des commandes :"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Executer la commande" Clicked="OnExecuteCommandClicked" HorizontalOptions="Fill" />
-                        <Label x:Name="ResultLabel" Style="{StaticResource ResultLabel}" LineBreakMode="WordWrap" />
+                        <Button Text="Exécuter les Commandes"
+                                Clicked="OnExecuteCommandClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
+
                 <!-- Code Example -->
                 <Border Style="{StaticResource CodeSection}">
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
-                                Text="public interface ICommand { void Execute(); }\npublic class LightOnCommand : ICommand { public void Execute() => Console.WriteLine('Lumiere allumee'); }" />
+                                Text="// Command interface&#x0a;public interface ICommand&#x0a;{&#x0a;    string Execute();&#x0a;}&#x0a;&#x0a;// Receiver&#x0a;public class Light&#x0a;{&#x0a;    public string TurnOn() => &quot;Lumière ALLUMÉE&quot;;&#x0a;    public string TurnOff() => &quot;Lumière ÉTEINTE&quot;;&#x0a;}&#x0a;&#x0a;// Concrete commands&#x0a;public class TurnOnCommand : ICommand&#x0a;{&#x0a;    private readonly Light _light;&#x0a;&#x0a;    public TurnOnCommand(Light light)&#x0a;    {&#x0a;        _light = light;&#x0a;    }&#x0a;&#x0a;    public string Execute() => _light.TurnOn();&#x0a;}&#x0a;&#x0a;// Invoker&#x0a;public class RemoteControl&#x0a;{&#x0a;    private ICommand _command;&#x0a;&#x0a;    public void SetCommand(ICommand command)&#x0a;    {&#x0a;        _command = command;&#x0a;    }&#x0a;&#x0a;    public string PressButton()&#x0a;    {&#x0a;        return _command?.Execute() ?? &quot;Aucune commande définie&quot;;&#x0a;    }&#x0a;}" />
                     </VerticalStackLayout>
                 </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="Exemple Concret"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="Télécommande universelle : chaque bouton encapsule une commande (allumer TV, changer chaîne, ajuster volume) sans connaître les détails des appareils."
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Découplage complet"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Support undo/redo"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Composition de commandes"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Nombre de classes accru"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Complexité additionnelle"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Indirection"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

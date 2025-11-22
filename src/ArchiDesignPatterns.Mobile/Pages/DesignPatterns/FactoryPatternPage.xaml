@@ -41,7 +41,7 @@
                         <Label Text="📖 Description"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="The Factory pattern provides an interface for creating objects without exposing the creation logic to the client. It delegates the instantiation to specialized factory classes."
+                        <Label Text="Le pattern Factory fournit une interface pour créer des objets sans exposer la logique de création au client. Il délègue l'instanciation à des classes factory spécialisées."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -50,23 +50,23 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 When to Use"
+                        <Label Text="🎯 Quand l'utiliser"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="When object creation logic is complex"
+                                <Label Grid.Column="1" Text="Quand la logique de création d'objet est complexe"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="When you need to decouple object creation from usage"
+                                <Label Grid.Column="1" Text="Quand vous devez découpler la création d'objet de l'utilisation"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="For creating families of related objects"
+                                <Label Grid.Column="1" Text="Pour créer des familles d'objets liés"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -78,17 +78,17 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple Interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Select a vehicle type and create it using the factory:"
+                        <Label Text="Sélectionnez un type de véhicule et créez-le en utilisant la factory :"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                         <Picker x:Name="TypePicker"
-                                Title="Choose a vehicle type"
+                                Title="Choisissez un type de véhicule"
                                 SelectedIndexChanged="OnTypeSelected"
                                 BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}"
                                 HeightRequest="50">
@@ -98,7 +98,7 @@
                                 <x:String>Avion (Plane)</x:String>
                             </Picker.Items>
                         </Picker>
-                        <Button Text="Create Vehicle"
+                        <Button Text="Créer un Véhicule"
                                 Clicked="OnCreateObjectClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -112,7 +112,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example"
+                            <Label Text="Exemple de Code"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -130,11 +130,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🌍" FontSize="20" />
-                            <Label Text="Real-World Scenario"
+                            <Label Text="Scénario Réel"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="Document creation in office software: WordFactory creates .docx, SpreadsheetFactory creates .xlsx - same interface, different implementations."
+                        <Label Text="Création de documents dans un logiciel de bureautique : WordFactory crée des .docx, SpreadsheetFactory crée des .xlsx - même interface, implémentations différentes."
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -147,15 +147,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Loose coupling"
+                                <Label Text="• Couplage faible"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Easy to extend"
+                                <Label Text="• Facile à étendre"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Centralized creation"
+                                <Label Text="• Création centralisée"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -166,15 +166,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Drawbacks" FontAttributes="Bold"
+                                <Label Text="Inconvénients" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• More classes"
+                                <Label Text="• Plus de classes"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Complexity increases"
+                                <Label Text="• Complexité augmente"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Factory can grow large"
+                                <Label Text="• Factory peut devenir grande"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
