@@ -4,75 +4,75 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <!-- Primary Brand Colors -->
-    <Color x:Key="Primary">#6366F1</Color>
-    <Color x:Key="PrimaryDark">#4338CA</Color>
-    <Color x:Key="PrimaryLight">#A5B4FC</Color>
-    <Color x:Key="PrimaryDarkText">#242424</Color>
+    <Color x:Key="Primary">#5048E5</Color>
+    <Color x:Key="PrimaryDark">#3730A3</Color>
+    <Color x:Key="PrimaryLight">#9F7AEA</Color>
+    <Color x:Key="PrimaryDarkText">#1A202C</Color>
     
-    <Color x:Key="Secondary">#8B5CF6</Color>
-    <Color x:Key="SecondaryDark">#6D28D9</Color>
-    <Color x:Key="SecondaryLight">#C4B5FD</Color>
-    <Color x:Key="SecondaryDarkText">#9880e5</Color>
+    <Color x:Key="Secondary">#7C3AED</Color>
+    <Color x:Key="SecondaryDark">#5521B5</Color>
+    <Color x:Key="SecondaryLight">#A78BFA</Color>
+    <Color x:Key="SecondaryDarkText">#805AD5</Color>
     
-    <Color x:Key="Tertiary">#EC4899</Color>
-    <Color x:Key="TertiaryDark">#BE185D</Color>
-    <Color x:Key="TertiaryLight">#F9A8D4</Color>
+    <Color x:Key="Tertiary">#E53E3E</Color>
+    <Color x:Key="TertiaryDark">#C53030</Color>
+    <Color x:Key="TertiaryLight">#FBB6CE</Color>
 
-    <!-- Pattern Category Colors -->
-    <Color x:Key="CreationalPattern">#10B981</Color>
-    <Color x:Key="StructuralPattern">#3B82F6</Color>
-    <Color x:Key="BehavioralPattern">#F59E0B</Color>
-    <Color x:Key="ArchitecturePattern">#8B5CF6</Color>
+    <!-- Pattern Category Colors with better contrast -->
+    <Color x:Key="CreationalPattern">#059669</Color>
+    <Color x:Key="StructuralPattern">#2563EB</Color>
+    <Color x:Key="BehavioralPattern">#D97706</Color>
+    <Color x:Key="ArchitecturePattern">#7C3AED</Color>
     
     <!-- Semantic Colors -->
-    <Color x:Key="Success">#10B981</Color>
-    <Color x:Key="SuccessDark">#059669</Color>
-    <Color x:Key="Warning">#F59E0B</Color>
-    <Color x:Key="WarningDark">#D97706</Color>
-    <Color x:Key="Error">#EF4444</Color>
-    <Color x:Key="ErrorDark">#DC2626</Color>
-    <Color x:Key="Info">#3B82F6</Color>
-    <Color x:Key="InfoDark">#2563EB</Color>
+    <Color x:Key="Success">#059669</Color>
+    <Color x:Key="SuccessDark">#047857</Color>
+    <Color x:Key="Warning">#D97706</Color>
+    <Color x:Key="WarningDark">#B45309</Color>
+    <Color x:Key="Error">#DC2626</Color>
+    <Color x:Key="ErrorDark">#B91C1C</Color>
+    <Color x:Key="Info">#2563EB</Color>
+    <Color x:Key="InfoDark">#1D4ED8</Color>
 
     <!-- Neutral Colors -->
     <Color x:Key="White">#FFFFFF</Color>
     <Color x:Key="Black">#000000</Color>
-    <Color x:Key="OffBlack">#1F1F1F</Color>
-    <Color x:Key="OffWhite">#FAFAFA</Color>
+    <Color x:Key="OffBlack">#0F172A</Color>
+    <Color x:Key="OffWhite">#F8FAFC</Color>
     
-    <!-- Gray Scale -->
-    <Color x:Key="Gray50">#F9FAFB</Color>
-    <Color x:Key="Gray100">#F3F4F6</Color>
-    <Color x:Key="Gray200">#E5E7EB</Color>
-    <Color x:Key="Gray300">#D1D5DB</Color>
-    <Color x:Key="Gray400">#9CA3AF</Color>
-    <Color x:Key="Gray500">#6B7280</Color>
-    <Color x:Key="Gray600">#4B5563</Color>
-    <Color x:Key="Gray700">#374151</Color>
-    <Color x:Key="Gray800">#1F2937</Color>
-    <Color x:Key="Gray900">#111827</Color>
-    <Color x:Key="Gray950">#030712</Color>
+    <!-- Gray Scale with improved contrast ratios -->
+    <Color x:Key="Gray50">#F8FAFC</Color>
+    <Color x:Key="Gray100">#F1F5F9</Color>
+    <Color x:Key="Gray200">#E2E8F0</Color>
+    <Color x:Key="Gray300">#CBD5E1</Color>
+    <Color x:Key="Gray400">#94A3B8</Color>
+    <Color x:Key="Gray500">#64748B</Color>
+    <Color x:Key="Gray600">#475569</Color>
+    <Color x:Key="Gray700">#334155</Color>
+    <Color x:Key="Gray800">#1E293B</Color>
+    <Color x:Key="Gray900">#0F172A</Color>
+    <Color x:Key="Gray950">#020617</Color>
 
     <!-- Background Colors -->
-    <Color x:Key="PageBackgroundLight">#F9FAFB</Color>
-    <Color x:Key="PageBackgroundDark">#111827</Color>
+    <Color x:Key="PageBackgroundLight">#F8FAFC</Color>
+    <Color x:Key="PageBackgroundDark">#0F172A</Color>
     <Color x:Key="CardBackgroundLight">#FFFFFF</Color>
-    <Color x:Key="CardBackgroundDark">#1F2937</Color>
-    <Color x:Key="SurfaceBackgroundLight">#F3F4F6</Color>
-    <Color x:Key="SurfaceBackgroundDark">#030712</Color>
+    <Color x:Key="CardBackgroundDark">#1E293B</Color>
+    <Color x:Key="SurfaceBackgroundLight">#F1F5F9</Color>
+    <Color x:Key="SurfaceBackgroundDark">#020617</Color>
 
-    <!-- Text Colors -->
-    <Color x:Key="TextPrimaryLight">#111827</Color>
-    <Color x:Key="TextPrimaryDark">#F9FAFB</Color>
-    <Color x:Key="TextSecondaryLight">#4B5563</Color>
-    <Color x:Key="TextSecondaryDark">#9CA3AF</Color>
-    <Color x:Key="TextTertiaryLight">#6B7280</Color>
-    <Color x:Key="TextTertiaryDark">#6B7280</Color>
+    <!-- Text Colors with AA/AAA compliance -->
+    <Color x:Key="TextPrimaryLight">#0F172A</Color>
+    <Color x:Key="TextPrimaryDark">#F8FAFC</Color>
+    <Color x:Key="TextSecondaryLight">#334155</Color>
+    <Color x:Key="TextSecondaryDark">#CBD5E1</Color>
+    <Color x:Key="TextTertiaryLight">#475569</Color>
+    <Color x:Key="TextTertiaryDark">#94A3B8</Color>
 
     <!-- Border Colors -->
-    <Color x:Key="BorderLight">#D1D5DB</Color>
-    <Color x:Key="BorderMedium">#9CA3AF</Color>
-    <Color x:Key="BorderDark">#6B7280</Color>
+    <Color x:Key="BorderLight">#CBD5E1</Color>
+    <Color x:Key="BorderMedium">#94A3B8</Color>
+    <Color x:Key="BorderDark">#64748B</Color>
 
     <!-- Solid Color Brushes -->
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>

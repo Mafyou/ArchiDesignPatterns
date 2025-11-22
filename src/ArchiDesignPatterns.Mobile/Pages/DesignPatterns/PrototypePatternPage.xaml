@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
@@ -22,7 +21,7 @@
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Creational" FontSize="11"
+                            <Label Text="Créationnel" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -37,7 +36,7 @@
                     <VerticalStackLayout Spacing="12">
                         <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="The Prototype pattern creates new objects by copying an existing object, known as the prototype. This is useful when object creation is expensive or complex."
+                        <Label Text="Le patron Prototype crée de nouveaux objets en copiant un objet existant, appelé prototype. Ceci est utile lorsque la création d'objet est coûteuse ou complexe."
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -45,22 +44,22 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 When to Use" Style="{StaticResource SubTitle}" />
+                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="?" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Object creation is expensive"
+                                <Label Grid.Column="1" Text="La création d'objet est coûteuse"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="?" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="You need to create many similar objects"
+                                <Label Grid.Column="1" Text="Vous devez créer de nombreux objets similaires"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="?" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Avoiding subclasses for object creation"
+                                <Label Grid.Column="1" Text="Éviter les sous-classes pour la création d'objets"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -71,15 +70,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Clone an object instead of creating a new one:"
+                        <Label Text="Cloner un objet au lieu d'en créer un nouveau :"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Clone Object"
+                        <Button Text="Cloner l'objet"
                                 Clicked="OnCloneObjectClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -108,11 +107,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💡" FontSize="20" />
-                            <Label Text="Real-World Example"
+                            <Label Text="Exemple réel"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="Document templates: Clone a template document with preset formatting and styles instead of creating from scratch each time."
+                        <Label Text="Modèles de documents : Cloner un document modèle avec une mise en forme et des styles prédéfinis au lieu de repartir de zéro à chaque fois."
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -123,15 +122,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Benefits" FontAttributes="Bold"
+                                <Label Text="Bénéfices" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Fast object creation"
+                                <Label Text="• Création d'objet rapide"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Reduces subclassing"
+                                <Label Text="• Réduit le recours aux sous-classes"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Runtime flexibility"
+                                <Label Text="• Flexibilité à l'exécution"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -141,15 +140,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Drawbacks" FontAttributes="Bold"
+                                <Label Text="Inconvénients" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Deep copy complexity"
+                                <Label Text="• Complexité de la copie profonde"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Circular references"
+                                <Label Text="• Références circulaires"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Clone method maintenance"
+                                <Label Text="• Maintenance de la méthode de clonage"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

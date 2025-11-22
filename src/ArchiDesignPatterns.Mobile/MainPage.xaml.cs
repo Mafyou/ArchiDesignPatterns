@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
         var pageType = Type.GetType("ArchiDesignPatterns.Mobile.Pages.DesignPatternsPage");
         if (pageType is null)
         {
-            await DisplayAlert("Navigation Error", "Could not find DesignPatternsPage type.", "OK");
+            await DisplayAlertAsync("Navigation Error", "Could not find DesignPatternsPage type.", "OK");
             return;
         }
         Page? page = null;
@@ -52,7 +52,7 @@ public partial class MainPage : ContentPage
         var pageType = Type.GetType("ArchiDesignPatterns.Mobile.Pages.QuizPage");
         if (pageType is null)
         {
-            await DisplayAlert("Navigation Error", "Could not find QuizPage type.", "OK");
+            await DisplayAlertAsync("Navigation Error", "Could not find QuizPage type.", "OK");
             return;
         }
         Page? page = null;

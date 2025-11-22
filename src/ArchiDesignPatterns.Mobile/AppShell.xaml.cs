@@ -1,5 +1,4 @@
-﻿using Microsoft.Maui.Devices.Sensors;
-namespace ArchiDesignPatterns.Mobile;
+﻿namespace ArchiDesignPatterns.Mobile;
 
 public partial class AppShell : Shell
 {
@@ -53,7 +52,7 @@ public partial class AppShell : Shell
 
     private async Task ConfirmExitAsync()
     {
-        bool shouldExit = await Application.Current!.MainPage!.DisplayAlert(
+        bool shouldExit = await Application.Current!.MainPage!.DisplayAlertAsync(
             "Exit App",
             "Do you want to exit the application?",
             "Yes",

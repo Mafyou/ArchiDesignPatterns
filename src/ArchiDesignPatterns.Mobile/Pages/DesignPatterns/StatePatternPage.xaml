@@ -22,7 +22,7 @@
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Behavioral" FontSize="11"
+                            <Label Text="Comportemental" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -44,7 +44,7 @@
                 <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
                 <Label Text="Exemple de code :" FontAttributes="Bold" />
                 <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public interface IState { string Handle(); }\npublic class StateA : IState { public string Handle() => 'A'; }\npublic class StateB : IState { public string Handle() => 'B'; }\npublic class Context { public IState State; public string Request() => State.Handle(); }" />
+                    Text="// State interface&#x0a;public interface IState&#x0a;{&#x0a;    string Handle();&#x0a;}&#x0a;&#x0a;// Concrete States&#x0a;public class StateA : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;A&quot;;&#x0a;}&#x0a;public class StateB : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;B&quot;;&#x0a;}&#x0a;&#x0a;// Context&#x0a;public class Context&#x0a;{&#x0a;    public IState State;&#x0a;    public string Request() =&gt; State.Handle();&#x0a;}" />
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

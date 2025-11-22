@@ -7,7 +7,7 @@
     <!-- =============================================== -->
     
     <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource PageBackgroundLight}, Dark={StaticResource PageBackgroundDark}}" />
     </Style>
 
     <!-- =============================================== -->
@@ -17,54 +17,54 @@
     <Style x:Key="DisplayLarge" TargetType="Label">
         <Setter Property="FontSize" Value="36" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
         <Setter Property="LineBreakMode" Value="WordWrap" />
     </Style>
 
     <Style x:Key="DisplayMedium" TargetType="Label">
         <Setter Property="FontSize" Value="32" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
     </Style>
 
     <Style x:Key="Headline" TargetType="Label">
         <Setter Property="FontSize" Value="28" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
     </Style>
 
     <Style x:Key="Title" TargetType="Label">
         <Setter Property="FontSize" Value="22" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray100}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
     </Style>
 
     <Style x:Key="SubTitle" TargetType="Label">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray200}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextSecondaryLight}, Dark={StaticResource TextSecondaryDark}}" />
     </Style>
 
     <Style x:Key="BodyLarge" TargetType="Label">
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextSecondaryLight}, Dark={StaticResource TextSecondaryDark}}" />
         <Setter Property="LineHeight" Value="1.5" />
     </Style>
 
     <Style x:Key="BodyMedium" TargetType="Label">
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextSecondaryLight}, Dark={StaticResource TextSecondaryDark}}" />
         <Setter Property="LineHeight" Value="1.5" />
     </Style>
 
     <Style x:Key="BodySmall" TargetType="Label">
         <Setter Property="FontSize" Value="12" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextTertiaryLight}, Dark={StaticResource TextTertiaryDark}}" />
     </Style>
 
     <Style x:Key="Caption" TargetType="Label">
         <Setter Property="FontSize" Value="12" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray400}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextTertiaryLight}, Dark={StaticResource TextTertiaryDark}}" />
         <Setter Property="FontAttributes" Value="Italic" />
     </Style>
 
@@ -148,39 +148,39 @@
     
     <Style x:Key="Card" TargetType="Border">
         <Setter Property="StrokeThickness" Value="0" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
         <Setter Property="Padding" Value="16" />
         <Setter Property="StrokeShape" Value="RoundRectangle 16" />
         <Setter Property="Shadow">
-            <Shadow Brush="Black" Opacity="0.1" Radius="16" Offset="0,4" />
+            <Shadow Brush="Black" Opacity="0.12" Radius="16" Offset="0,4" />
         </Setter>
     </Style>
 
     <Style x:Key="ElevatedCard" TargetType="Border">
         <Setter Property="StrokeThickness" Value="0" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
         <Setter Property="Padding" Value="20" />
         <Setter Property="StrokeShape" Value="RoundRectangle 20" />
         <Setter Property="Shadow">
-            <Shadow Brush="Black" Opacity="0.15" Radius="24" Offset="0,8" />
+            <Shadow Brush="Black" Opacity="0.18" Radius="24" Offset="0,8" />
         </Setter>
     </Style>
 
     <Style x:Key="OutlineCard" TargetType="Border">
         <Setter Property="StrokeThickness" Value="1" />
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource BorderLight}, Dark={StaticResource BorderDark}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
         <Setter Property="Padding" Value="16" />
         <Setter Property="StrokeShape" Value="RoundRectangle 16" />
     </Style>
 
     <Style x:Key="InteractiveCard" TargetType="Border">
         <Setter Property="StrokeThickness" Value="0" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
         <Setter Property="Padding" Value="16" />
         <Setter Property="StrokeShape" Value="RoundRectangle 16" />
         <Setter Property="Shadow">
-            <Shadow Brush="Black" Opacity="0.1" Radius="12" Offset="0,2" />
+            <Shadow Brush="Black" Opacity="0.12" Radius="12" Offset="0,2" />
         </Setter>
     </Style>
 
@@ -230,25 +230,25 @@
     <!-- =============================================== -->
     
     <Style TargetType="Entry">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource Gray400}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource TextTertiaryLight}, Dark={StaticResource TextTertiaryDark}}" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="HeightRequest" Value="50" />
         <Setter Property="Margin" Value="0,4" />
     </Style>
 
     <Style TargetType="Editor">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource Gray400}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SurfaceBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource TextTertiaryLight}, Dark={StaticResource TextTertiaryDark}}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="Margin" Value="0,4" />
     </Style>
 
     <Style x:Key="CodeEditor" TargetType="Editor">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray800}, Dark={StaticResource Gray200}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextSecondaryLight}, Dark={StaticResource TextSecondaryDark}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SurfaceBackgroundLight}, Dark={StaticResource SurfaceBackgroundDark}}" />
         <Setter Property="FontSize" Value="13" />
         <Setter Property="IsReadOnly" Value="True" />
         <Setter Property="AutoSize" Value="TextChanges" />
@@ -256,9 +256,9 @@
     </Style>
 
     <Style TargetType="SearchBar">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource Gray400}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource TextTertiaryLight}, Dark={StaticResource TextTertiaryDark}}" />
         <Setter Property="CancelButtonColor" Value="{StaticResource Primary}" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="HeightRequest" Value="50" />
@@ -266,9 +266,9 @@
     </Style>
 
     <Style TargetType="Picker">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
-        <Setter Property="TitleColor" Value="{StaticResource Gray400}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
+        <Setter Property="TitleColor" Value="{AppThemeBinding Light={StaticResource TextTertiaryLight}, Dark={StaticResource TextTertiaryDark}}" />
         <Setter Property="FontSize" Value="16" />
     </Style>
 
@@ -299,14 +299,14 @@
     
     <Style x:Key="Divider" TargetType="BoxView">
         <Setter Property="HeightRequest" Value="1" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource BorderLight}, Dark={StaticResource BorderDark}}" />
         <Setter Property="Margin" Value="0,16" />
         <Setter Property="HorizontalOptions" Value="Fill" />
     </Style>
 
     <Style x:Key="ThickDivider" TargetType="BoxView">
         <Setter Property="HeightRequest" Value="4" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SurfaceBackgroundLight}, Dark={StaticResource SurfaceBackgroundDark}}" />
         <Setter Property="Margin" Value="-20,20,-20,20" />
         <Setter Property="HorizontalOptions" Value="Fill" />
     </Style>
@@ -316,15 +316,15 @@
     <!-- =============================================== -->
     
     <Style TargetType="Label" ApplyToDerivedTypes="True">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="LineBreakMode" Value="WordWrap" />
     </Style>
 
     <Style TargetType="Border">
         <Setter Property="StrokeThickness" Value="1" />
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource BorderLight}, Dark={StaticResource BorderDark}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
     </Style>
 
     <Style TargetType="ScrollView">
@@ -336,7 +336,7 @@
     </Style>
 
     <Style TargetType="BoxView">
-        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}" />
+        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource BorderLight}, Dark={StaticResource BorderDark}}" />
     </Style>
 
     <!-- =============================================== -->
@@ -344,7 +344,7 @@
     <!-- =============================================== -->
     
     <Style x:Key="InteractiveSection" TargetType="Border">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SurfaceBackgroundLight}, Dark={StaticResource SurfaceBackgroundDark}}" />
         <Setter Property="Stroke" Value="{StaticResource Primary}" />
         <Setter Property="StrokeThickness" Value="2" />
         <Setter Property="Padding" Value="20" />
@@ -353,8 +353,9 @@
     </Style>
 
     <Style x:Key="CodeSection" TargetType="Border">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}" />
-        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SurfaceBackgroundLight}, Dark={StaticResource SurfaceBackgroundDark}}" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource BorderLight}, Dark={StaticResource BorderDark}}" />
         <Setter Property="Padding" Value="16" />
         <Setter Property="Margin" Value="0,8" />
         <Setter Property="StrokeShape" Value="RoundRectangle 12" />
@@ -374,12 +375,12 @@
     
     <Style x:Key="ListItemBorder" TargetType="Border">
         <Setter Property="StrokeThickness" Value="0" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBackgroundLight}, Dark={StaticResource CardBackgroundDark}}" />
         <Setter Property="Padding" Value="16" />
         <Setter Property="Margin" Value="0,6" />
         <Setter Property="StrokeShape" Value="RoundRectangle 12" />
         <Setter Property="Shadow">
-            <Shadow Brush="Black" Opacity="0.08" Radius="8" Offset="0,2" />
+            <Shadow Brush="Black" Opacity="0.1" Radius="8" Offset="0,2" />
         </Setter>
     </Style>
 </ResourceDictionary>

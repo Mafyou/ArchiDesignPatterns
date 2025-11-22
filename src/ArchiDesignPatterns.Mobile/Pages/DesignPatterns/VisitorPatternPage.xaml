@@ -21,7 +21,7 @@
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Behavioral" FontSize="11"
+                            <Label Text="Comportemental" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -46,7 +46,7 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Interactive Example"
+                            <Label Text="Exemple interactif"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
@@ -68,7 +68,7 @@
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
-                                Text="public interface IVisitor { string Visit(Element e); }\npublic class Element { public string Accept(IVisitor v) => v.Visit(this); }\npublic class ConcreteVisitor : IVisitor { public string Visit(Element e) => 'Visité'; }" />
+                                Text="// Visitor interface&#x0a;public interface IVisitor&#x0a;{&#x0a;    string Visit(Element e);&#x0a;}&#x0a;&#x0a;// Element&#x0a;public class Element&#x0a;{&#x0a;    public string Accept(IVisitor v) =&gt; v.Visit(this);&#x0a;}&#x0a;&#x0a;// Concrete Visitor&#x0a;public class ConcreteVisitor : IVisitor&#x0a;{&#x0a;    public string Visit(Element e) =&gt; &quot;Visited&quot;;&#x0a;}" />
                     </VerticalStackLayout>
                 </Border>
             </VerticalStackLayout>

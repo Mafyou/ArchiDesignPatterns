@@ -22,7 +22,7 @@
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Behavioral" FontSize="11"
+                            <Label Text="Comportemental" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -100,7 +100,7 @@
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
-                                Text="// Observer interface&#x0a;public interface IObserver&#x0a;{&#x0a;    void Update(string message);&#x0a;}&#x0a;&#x0a;// Subject interface&#x0a;public interface ISubject&#x0a;{&#x0a;    void Attach(IObserver observer);&#x0a;    void Detach(IObserver observer);&#x0a;    void Notify(string message);&#x0a;}&#x0a;&#x0a;// Concrete Subject&#x0a;public class Newsletter : ISubject&#x0a;{&#x0a;    private List&lt;IObserver&gt; _observers = new();&#x0a;&#x0a;    public void Attach(IObserver observer)&#x0a;    {&#x0a;        _observers.Add(observer);&#x0a;    }&#x0a;&#x0a;    public void Detach(IObserver observer)&#x0a;    {&#x0a;        _observers.Remove(observer);&#x0a;    }&#x0a;&#x0a;    public void Notify(string message)&#x0a;    {&#x0a;        foreach (var observer in _observers)&#x0a;        {&#x0a;            observer.Update(message);&#x0a;        }&#x0a;    }&#x0a;}&#x0a;&#x0a;// Concrete Observer&#x0a;public class Subscriber : IObserver&#x0a;{&#x0a;    private string _name;&#x0a;&#x0a;    public Subscriber(string name) => _name = name;&#x0a;&#x0a;    public void Update(string message)&#x0a;    {&#x0a;        Console.WriteLine($&quot;{_name} a reçu: {message}&quot;);&#x0a;    }&#x0a;}" />
+                                Text="// Interface Observer&#x0a;public interface IObserver&#x0a;{&#x0a;    void Update(string message);&#x0a;}&#x0a;&#x0a;// Interface Subject&#x0a;public interface ISubject&#x0a;{&#x0a;    void Attach(IObserver observer);&#x0a;    void Detach(IObserver observer);&#x0a;    void Notify(string message);&#x0a;}&#x0a;&#x0a;// Sujet concret&#x0a;public class Newsletter : ISubject&#x0a;{&#x0a;    private List&lt;IObserver&gt; _observers = new();&#x0a;&#x0a;    public void Attach(IObserver observer)&#x0a;    {&#x0a;        _observers.Add(observer);&#x0a;    }&#x0a;&#x0a;    public void Detach(IObserver observer)&#x0a;    {&#x0a;        _observers.Remove(observer);&#x0a;    }&#x0a;&#x0a;    public void Notify(string message)&#x0a;    {&#x0a;        foreach (var observer in _observers)&#x0a;        {&#x0a;            observer.Update(message);&#x0a;        }&#x0a;    }&#x0a;}&#x0a;&#x0a;// Observateur concret&#x0a;public class Subscriber : IObserver&#x0a;{&#x0a;    private string _name;&#x0a;&#x0a;    public Subscriber(string name) => _name = name;&#x0a;&#x0a;    public void Update(string message)&#x0a;    {&#x0a;        Console.WriteLine($&quot;{_name} a reçu: {message}&quot;);&#x0a;    }&#x0a;}" />
                     </VerticalStackLayout>
                 </Border>
 

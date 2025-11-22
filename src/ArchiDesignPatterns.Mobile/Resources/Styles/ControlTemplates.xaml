@@ -33,14 +33,15 @@
 
                 <!-- Category Badge -->
                 <Border Grid.Column="1" Grid.Row="1"
-                        BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource SurfaceBackgroundLight}, Dark={StaticResource SurfaceBackgroundDark}}"
                         Padding="8,4" Margin="0,4,0,0"
-                        StrokeThickness="0"
+                        StrokeThickness="1"
+                        Stroke="{AppThemeBinding Light={StaticResource BorderLight}, Dark={StaticResource BorderDark}}"
                         StrokeShape="RoundRectangle 6"
                         HorizontalOptions="Start">
                     <Label Text="{Binding Category}"
                            FontSize="11" FontAttributes="Bold"
-                           TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}" />
+                           TextColor="{AppThemeBinding Light={StaticResource TextSecondaryLight}, Dark={StaticResource TextSecondaryDark}}" />
                 </Border>
 
                 <!-- Arrow -->
@@ -82,14 +83,15 @@
 
                 <!-- Type Badge -->
                 <Border Grid.Column="1" Grid.Row="1"
-                        BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource SurfaceBackgroundLight}, Dark={StaticResource SurfaceBackgroundDark}}"
                         Padding="8,4" Margin="0,4,0,0"
-                        StrokeThickness="0"
+                        StrokeThickness="1"
+                        Stroke="{AppThemeBinding Light={StaticResource BorderLight}, Dark={StaticResource BorderDark}}"
                         StrokeShape="RoundRectangle 6"
                         HorizontalOptions="Start">
                     <Label Text="{Binding Type}"
                            FontSize="11" FontAttributes="Bold"
-                           TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}" />
+                           TextColor="{AppThemeBinding Light={StaticResource TextSecondaryLight}, Dark={StaticResource TextSecondaryDark}}" />
                 </Border>
 
                 <!-- Arrow -->
@@ -120,9 +122,9 @@
     <!-- =============================================== -->
     
     <ControlTemplate x:Key="InfoBoxTemplate">
-        <Border BackgroundColor="{AppThemeBinding Light=#EFF6FF, Dark=#1E3A8A}"
+        <Border BackgroundColor="{AppThemeBinding Light=#E0F2FE, Dark=#0C4A6E}"
                 Stroke="{StaticResource Info}"
-                StrokeThickness="1"
+                StrokeThickness="2"
                 Padding="16"
                 StrokeShape="RoundRectangle 12"
                 Margin="0,8">
@@ -138,9 +140,9 @@
     <!-- =============================================== -->
     
     <ControlTemplate x:Key="WarningBoxTemplate">
-        <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+        <Border BackgroundColor="{AppThemeBinding Light=#FEFCE8, Dark=#422006}"
                 Stroke="{StaticResource Warning}"
-                StrokeThickness="1"
+                StrokeThickness="2"
                 Padding="16"
                 StrokeShape="RoundRectangle 12"
                 Margin="0,8">
@@ -156,9 +158,9 @@
     <!-- =============================================== -->
     
     <ControlTemplate x:Key="SuccessBoxTemplate">
-        <Border BackgroundColor="{AppThemeBinding Light=#F0FDF4, Dark=#14532D}"
+        <Border BackgroundColor="{AppThemeBinding Light=#ECFDF5, Dark=#052E16}"
                 Stroke="{StaticResource Success}"
-                StrokeThickness="1"
+                StrokeThickness="2"
                 Padding="16"
                 StrokeShape="RoundRectangle 12"
                 Margin="0,8">
@@ -179,7 +181,7 @@
                 <Grid ColumnDefinitions="*,Auto">
                     <Label Text="Code Example" 
                            FontSize="12" FontAttributes="Bold"
-                           TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                           TextColor="{AppThemeBinding Light={StaticResource TextSecondaryLight}, Dark={StaticResource TextSecondaryDark}}" />
                     <Label Grid.Column="1" Text="📋" FontSize="16" />
                 </Grid>
                 <BoxView Style="{StaticResource Divider}" Margin="0,4" />
