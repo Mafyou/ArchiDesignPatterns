@@ -1,4 +1,5 @@
-﻿namespace ArchiDesignPatterns.Mobile;
+﻿using Microsoft.Maui.Devices.Sensors;
+namespace ArchiDesignPatterns.Mobile;
 
 public partial class AppShell : Shell
 {
