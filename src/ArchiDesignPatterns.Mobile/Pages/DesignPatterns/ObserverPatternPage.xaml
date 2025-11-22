@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.ObserverPatternPage"
+             x:DataType="viewmodels:ObserverPatternViewModel"
+             Title="Observer">
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource BehavioralPattern}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="📝" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Observer Pattern"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="Behavioral" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Observer" FontSize="24" FontAttributes="Bold" />
+                <Label Text="Le pattern Observer permet a un objet de notifier des changements a d'autres objets." FontSize="16" />
+                <!-- Exemple interactif a ajouter -->
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
+                <Label Text="Exemple de code :" FontAttributes="Bold" />
+                <Editor Text="public class Observer { ... }" IsReadOnly="True" HeightRequest="120" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -2,22 +2,68 @@
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
-
     public MainPage()
     {
         InitializeComponent();
     }
 
-    private void OnCounterClicked(object? sender, EventArgs e)
+    private async void OnDesignPatternsClicked(object? sender, EventArgs e)
     {
-        count++;
-
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
+        var pageType = Type.GetType("ArchiDesignPatterns.Mobile.Pages.DesignPatternsPage");
+        if (pageType is null)
+        {
+            await DisplayAlert("Navigation Error", "Could not find DesignPatternsPage type.", "OK");
+            return;
+        }
+        Page? page = null;
+        if (App.Current.Handler?.MauiContext?.Services is IServiceProvider services)
+        {
+            page = services.GetService(pageType) as Page;
+        }
+        page ??= Activator.CreateInstance(pageType) as Page;
+        if (page is not null && Shell.Current.Navigation is not null)
+            await Shell.Current.Navigation.PushAsync(page);
         else
-            CounterBtn.Text = $"Clicked {count} times";
+            await Shell.Current.GoToAsync("//DesignPatternsPage");
+    }
 
-        SemanticScreenReader.Announce(CounterBtn.Text);
+    private async void OnArchitecturesClicked(object? sender, EventArgs e)
+    {
+        var pageType = Type.GetType("ArchiDesignPatterns.Mobile.Pages.ArchitecturesPage");
+        if (pageType is null)
+        {
+            await DisplayAlert("Navigation Error", "Could not find ArchitecturesPage type.", "OK");
+            return;
+        }
+        Page? page = null;
+        if (App.Current.Handler?.MauiContext?.Services is IServiceProvider services)
+        {
+            page = services.GetService(pageType) as Page;
+        }
+        page ??= Activator.CreateInstance(pageType) as Page;
+        if (page is not null && Shell.Current.Navigation is not null)
+            await Shell.Current.Navigation.PushAsync(page);
+        else
+            await Shell.Current.GoToAsync("//ArchitecturesPage");
+    }
+
+    private async void OnQuizClicked(object? sender, EventArgs e)
+    {
+        var pageType = Type.GetType("ArchiDesignPatterns.Mobile.Pages.QuizPage");
+        if (pageType is null)
+        {
+            await DisplayAlert("Navigation Error", "Could not find QuizPage type.", "OK");
+            return;
+        }
+        Page? page = null;
+        if (App.Current.Handler?.MauiContext?.Services is IServiceProvider services)
+        {
+            page = services.GetService(pageType) as Page;
+        }
+        page ??= Activator.CreateInstance(pageType) as Page;
+        if (page is not null && Shell.Current.Navigation is not null)
+            await Shell.Current.Navigation.PushAsync(page);
+        else
+            await Shell.Current.GoToAsync("//QuizPage");
     }
 }

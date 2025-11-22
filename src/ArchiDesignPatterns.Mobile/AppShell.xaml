@@ -1,16 +1,115 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell
     x:Class="ArchiDesignPatterns.Mobile.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ArchiDesignPatterns.Mobile"
-    xmlns:pages="clr-namespace:DesignPatterns.Mobile.Pages"
-    Title="ArchiDesignPatterns.Mobile">
+    xmlns:pages="clr-namespace:ArchiDesignPatterns.Mobile.Pages"
+    xmlns:dp="clr-namespace:ArchiDesignPatterns.Mobile.Pages.DesignPatterns"
+    xmlns:arch="clr-namespace:ArchiDesignPatterns.Mobile.Pages.Architectures"
+    Title="Design Patterns"
+    FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+    FlyoutWidth="300">
 
-    <TabBar>
-        <ShellContent Title="Accueil" 
-          ContentTemplate="{DataTemplate local:MainPage}" 
-          Route="MainPage" />
-    </TabBar>
+    <!-- Flyout Header -->
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid HeightRequest="180" Background="{StaticResource PrimaryGradient}">
+                <VerticalStackLayout Padding="20" VerticalOptions="Center" Spacing="8">
+                    <Image Source="dotnet_bot.png"
+                           HeightRequest="70"
+                           Aspect="AspectFit" />
+                    <Label Text="Design Patterns"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Learn by Example"
+                           FontSize="13"
+                           TextColor="White"
+                           Opacity="0.9"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <!-- Flyout Footer -->
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <Grid Padding="20,12" Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray800}}">
+                <Label Text="v1.0.0 • © 2025"
+                       FontSize="11"
+                       TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"
+                       HorizontalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+    <!-- Main Navigation -->
+    <FlyoutItem Title="🏠 Home" Route="MainPage">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="📋 All Patterns" Route="DesignPatternsPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:DesignPatternsPage}" />
+    </FlyoutItem>
+
+    <!-- Creational Patterns -->
+    <FlyoutItem Title="Creational Patterns" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="  Singleton" ContentTemplate="{DataTemplate dp:SingletonPatternPage}" Route="SingletonPatternPage" />
+        <ShellContent Title="  Factory" ContentTemplate="{DataTemplate dp:FactoryPatternPage}" Route="FactoryPatternPage" />
+        <ShellContent Title="  Abstract Factory" ContentTemplate="{DataTemplate dp:AbstractFactoryPatternPage}" Route="AbstractFactoryPatternPage" />
+        <ShellContent Title="  Builder" ContentTemplate="{DataTemplate dp:BuilderPatternPage}" Route="BuilderPatternPage" />
+        <ShellContent Title="  Prototype" ContentTemplate="{DataTemplate dp:PrototypePatternPage}" Route="PrototypePatternPage" />
+    </FlyoutItem>
+
+    <!-- Structural Patterns -->
+    <FlyoutItem Title="Structural Patterns" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="  Adapter" ContentTemplate="{DataTemplate dp:AdapterPatternPage}" Route="AdapterPatternPage" />
+        <ShellContent Title="  Bridge" ContentTemplate="{DataTemplate dp:BridgePatternPage}" Route="BridgePatternPage" />
+        <ShellContent Title="  Composite" ContentTemplate="{DataTemplate dp:CompositePatternPage}" Route="CompositePatternPage" />
+        <ShellContent Title="  Decorator" ContentTemplate="{DataTemplate dp:DecoratorPatternPage}" Route="DecoratorPatternPage" />
+        <ShellContent Title="  Facade" ContentTemplate="{DataTemplate dp:FacadePatternPage}" Route="FacadePatternPage" />
+        <ShellContent Title="  Flyweight" ContentTemplate="{DataTemplate dp:FlyweightPatternPage}" Route="FlyweightPatternPage" />
+        <ShellContent Title="  Proxy" ContentTemplate="{DataTemplate dp:ProxyPatternPage}" Route="ProxyPatternPage" />
+    </FlyoutItem>
+
+    <!-- Behavioral Patterns -->
+    <FlyoutItem Title="Behavioral Patterns" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="  Chain of Responsibility" ContentTemplate="{DataTemplate dp:ChainOfResponsibilityPatternPage}" Route="ChainOfResponsibilityPatternPage" />
+        <ShellContent Title="  Command" ContentTemplate="{DataTemplate dp:CommandPatternPage}" Route="CommandPatternPage" />
+        <ShellContent Title="  Interpreter" ContentTemplate="{DataTemplate dp:InterpreterPatternPage}" Route="InterpreterPatternPage" />
+        <ShellContent Title="  Iterator" ContentTemplate="{DataTemplate dp:IteratorPatternPage}" Route="IteratorPatternPage" />
+        <ShellContent Title="  Mediator" ContentTemplate="{DataTemplate dp:MediatorPatternPage}" Route="MediatorPatternPage" />
+        <ShellContent Title="  Memento" ContentTemplate="{DataTemplate dp:MementoPatternPage}" Route="MementoPatternPage" />
+        <ShellContent Title="  Observer" ContentTemplate="{DataTemplate dp:ObserverPatternPage}" Route="ObserverPatternPage" />
+        <ShellContent Title="  State" ContentTemplate="{DataTemplate dp:StatePatternPage}" Route="StatePatternPage" />
+        <ShellContent Title="  Strategy" ContentTemplate="{DataTemplate dp:StrategyPatternPage}" Route="StrategyPatternPage" />
+        <ShellContent Title="  Template Method" ContentTemplate="{DataTemplate dp:TemplateMethodPatternPage}" Route="TemplateMethodPatternPage" />
+        <ShellContent Title="  Visitor" ContentTemplate="{DataTemplate dp:VisitorPatternPage}" Route="VisitorPatternPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="🏛️ All Architectures" Route="ArchitecturesPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:ArchitecturesPage}" />
+    </FlyoutItem>
+
+    <!-- Architecture Patterns -->
+    <FlyoutItem Title="Architecture Patterns" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="  MVC" ContentTemplate="{DataTemplate arch:MVCArchitecturePage}" Route="MVCArchitecturePage" />
+        <ShellContent Title="  MVVM" ContentTemplate="{DataTemplate arch:MVVMArchitecturePage}" Route="MVVMArchitecturePage" />
+        <ShellContent Title="  Clean Architecture" ContentTemplate="{DataTemplate arch:CleanArchitecturePage}" Route="CleanArchitecturePage" />
+        <ShellContent Title="  Layered Architecture" ContentTemplate="{DataTemplate arch:LayeredArchitecturePage}" Route="LayeredArchitecturePage" />
+        <ShellContent Title="  Hexagonal Architecture" ContentTemplate="{DataTemplate arch:HexagonalArchitecturePage}" Route="HexagonalArchitecturePage" />
+        <ShellContent Title="  Microservices" ContentTemplate="{DataTemplate arch:MicroservicesArchitecturePage}" Route="MicroservicesArchitecturePage" />
+        <ShellContent Title="  Event-Driven" ContentTemplate="{DataTemplate arch:EventDrivenArchitecturePage}" Route="EventDrivenArchitecturePage" />
+        <ShellContent Title="  CQRS" ContentTemplate="{DataTemplate arch:CQRSArchitecturePage}" Route="CQRSArchitecturePage" />
+        <ShellContent Title="  Onion Architecture" ContentTemplate="{DataTemplate arch:OnionArchitecturePage}" Route="OnionArchitecturePage" />
+        <ShellContent Title="  DDD" ContentTemplate="{DataTemplate arch:DDDArchitecturePage}" Route="DDDArchitecturePage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="🎯 Quiz" Route="QuizPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:QuizPage}" />
+    </FlyoutItem>
 
 </Shell>

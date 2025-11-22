@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- =============================================== -->
+    <!-- Base Page Layout Styles -->
+    <!-- =============================================== -->
+    
+    <!-- Standard Page Layout -->
+    <Style x:Key="StandardPageLayout" TargetType="ScrollView">
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style x:Key="StandardPageContainer" TargetType="VerticalStackLayout">
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="Spacing" Value="20" />
+    </Style>
+
+    <!-- Pattern Detail Page Layout -->
+    <Style x:Key="PatternDetailContainer" TargetType="VerticalStackLayout">
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="Spacing" Value="24" />
+    </Style>
+
+    <!-- List Page Container -->
+    <Style x:Key="ListPageContainer" TargetType="VerticalStackLayout">
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="Spacing" Value="16" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Page Header Styles -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="PageHeader" TargetType="VerticalStackLayout">
+        <Setter Property="Spacing" Value="8" />
+        <Setter Property="Margin" Value="0,0,0,8" />
+    </Style>
+
+    <Style x:Key="PageTitle" TargetType="Label">
+        <Setter Property="Style" Value="{StaticResource Headline}" />
+        <Setter Property="Margin" Value="0,0,0,4" />
+    </Style>
+
+    <Style x:Key="PageSubtitle" TargetType="Label">
+        <Setter Property="Style" Value="{StaticResource BodyLarge}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Content Section Styles -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="ContentSection" TargetType="VerticalStackLayout">
+        <Setter Property="Spacing" Value="12" />
+        <Setter Property="Margin" Value="0,8,0,8" />
+    </Style>
+
+    <Style x:Key="SectionTitle" TargetType="Label">
+        <Setter Property="Style" Value="{StaticResource SubTitle}" />
+        <Setter Property="Margin" Value="0,8,0,4" />
+    </Style>
+
+    <Style x:Key="SectionDescription" TargetType="Label">
+        <Setter Property="Style" Value="{StaticResource BodyMedium}" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Feature Grid Styles -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="FeatureGrid" TargetType="Grid">
+        <Setter Property="ColumnSpacing" Value="12" />
+        <Setter Property="RowSpacing" Value="12" />
+        <Setter Property="Margin" Value="0,12" />
+    </Style>
+
+    <Style x:Key="FeatureCard" TargetType="Border">
+        <Setter Property="Style" Value="{StaticResource Card}" />
+        <Setter Property="Padding" Value="16" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Key Points List Style -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="KeyPointsList" TargetType="VerticalStackLayout">
+        <Setter Property="Spacing" Value="8" />
+        <Setter Property="Margin" Value="0,8" />
+    </Style>
+
+    <Style x:Key="KeyPointItem" TargetType="Grid">
+        <Setter Property="ColumnSpacing" Value="12" />
+        <Setter Property="Margin" Value="0,4" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Benefits/Drawbacks Section Styles -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="ProConContainer" TargetType="Grid">
+        <Setter Property="ColumnSpacing" Value="12" />
+        <Setter Property="RowSpacing" Value="12" />
+        <Setter Property="Margin" Value="0,12" />
+    </Style>
+
+    <Style x:Key="ProCard" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#F0FDF4, Dark=#14532D}" />
+        <Setter Property="Stroke" Value="{StaticResource Success}" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 12" />
+    </Style>
+
+    <Style x:Key="ConCard" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#FEF2F2, Dark=#7F1D1D}" />
+        <Setter Property="Stroke" Value="{StaticResource Error}" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 12" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Example Scenario Styles -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="ScenarioCard" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}" />
+        <Setter Property="Stroke" Value="{StaticResource Warning}" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="Margin" Value="0,8" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 12" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Related Patterns Section -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="RelatedPatternCard" TargetType="Border">
+        <Setter Property="Style" Value="{StaticResource OutlineCard}" />
+        <Setter Property="Padding" Value="12" />
+        <Setter Property="Margin" Value="0,6" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Quiz Section Styles -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="QuizContainer" TargetType="VerticalStackLayout">
+        <Setter Property="Spacing" Value="16" />
+        <Setter Property="Padding" Value="20" />
+    </Style>
+
+    <Style x:Key="QuizQuestionCard" TargetType="Border">
+        <Setter Property="Style" Value="{StaticResource ElevatedCard}" />
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="Margin" Value="0,12" />
+    </Style>
+
+    <Style x:Key="QuizOptionButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray50}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="16,12" />
+        <Setter Property="HorizontalOptions" Value="Fill" />
+        <Setter Property="Margin" Value="0,6" />
+    </Style>
+
+    <!-- =============================================== -->
+    <!-- Navigation Button Styles -->
+    <!-- =============================================== -->
+    
+    <Style x:Key="NavigationButtonsContainer" TargetType="Grid">
+        <Setter Property="ColumnSpacing" Value="12" />
+        <Setter Property="Margin" Value="0,20,0,0" />
+    </Style>
+
+    <Style x:Key="BackButton" TargetType="Button">
+        <Setter Property="Style" Value="{StaticResource SecondaryButton}" />
+        <Setter Property="Text" Value="? Back" />
+    </Style>
+
+    <Style x:Key="NextButton" TargetType="Button">
+        <Setter Property="Text" Value="Next ?" />
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,50 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.TemplateMethodPatternPage"
+             x:DataType="viewmodels:TemplateMethodPatternViewModel"
+             Title="Template Method">
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource BehavioralPattern}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="📝$3" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Template Method Pattern"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="Behavioral" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+        <!-- Body Content -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Template Method" FontSize="24" FontAttributes="Bold" />
+                <Label Text="Le pattern Template Method définit le squelette d'un algorithme dans une methode, en déléguant certaines etapes aux sous-classes." FontSize="16" />
+                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
+                        <Button Text="Executer la methode" Clicked="OnExecuteTemplateClicked" />
+                        <Label x:Name="ResultLabel" FontSize="14" />
+                    </VerticalStackLayout>
+                </Border>
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
+                <Label Text="Exemple de code :" FontAttributes="Bold" />
+                <Editor IsReadOnly="True" HeightRequest="120"
+                    Text="public abstract class Base { public string Template() => Step1() + Step2(); protected abstract string Step1(); protected abstract string Step2(); }\npublic class Concrete : Base { protected override string Step1() => 'A'; protected override string Step2() => 'B'; }" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

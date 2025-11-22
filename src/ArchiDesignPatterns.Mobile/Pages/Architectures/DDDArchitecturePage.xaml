@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.Architectures.DDDArchitecturePage"
+             Title="Domain-Driven Design (DDD)">
+    <ContentPage.BindingContext>
+        <viewmodels:DDDArchitectureViewModel />
+    </ContentPage.BindingContext>
+    
+    <Grid RowDefinitions="Auto,*">
+        
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource ArchitecturePattern}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="🏛️" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Domain-Driven Design"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="Architecture" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Domain-Driven Design (DDD) is an approach to software development that centers around the business domain and its logic. It emphasizes collaboration between technical and domain experts."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Core Building Blocks"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="10">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Border BackgroundColor="{StaticResource Primary}"
+                                        WidthRequest="32" HeightRequest="32"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16">
+                                    <Label Text="E" FontSize="16" TextColor="White" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Entities"
+                                           FontAttributes="Bold"
+                                           Style="{StaticResource BodyMedium}" />
+                                    <Label Text="Objects with unique identity"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{StaticResource Gray600}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                            
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Border BackgroundColor="{StaticResource Info}"
+                                        WidthRequest="32" HeightRequest="32"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16">
+                                    <Label Text="V" FontSize="16" TextColor="White" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Value Objects"
+                                           FontAttributes="Bold"
+                                           Style="{StaticResource BodyMedium}" />
+                                    <Label Text="Immutable objects defined by attributes"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{StaticResource Gray600}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                            
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Border BackgroundColor="{StaticResource Success}"
+                                        WidthRequest="32" HeightRequest="32"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16">
+                                    <Label Text="A" FontSize="16" TextColor="White" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Aggregates"
+                                           FontAttributes="Bold"
+                                           Style="{StaticResource BodyMedium}" />
+                                    <Label Text="Cluster of entities and value objects"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{StaticResource Gray600}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                            
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Border BackgroundColor="{StaticResource Warning}"
+                                        WidthRequest="32" HeightRequest="32"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16">
+                                    <Label Text="R" FontSize="16" TextColor="White" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Repositories"
+                                           FontAttributes="Bold"
+                                           Style="{StaticResource BodyMedium}" />
+                                    <Label Text="Encapsulate data access logic"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{StaticResource Gray600}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🗺️ Strategic Design Patterns"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        
+                        <Border BackgroundColor="{StaticResource Primary}"
+                                Padding="16,12" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="Bounded Context" TextColor="White"
+                                       FontAttributes="Bold" FontSize="14" />
+                                <Label Text="→ Clear model boundaries"
+                                       TextColor="White" FontSize="13" />
+                            </HorizontalStackLayout>
+                        </Border>
+                        
+                        <Border BackgroundColor="{StaticResource Info}"
+                                Padding="16,12" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="Ubiquitous Language" TextColor="White"
+                                       FontAttributes="Bold" FontSize="14" />
+                                <Label Text="→ Shared team vocabulary"
+                                       TextColor="White" FontSize="13" />
+                            </HorizontalStackLayout>
+                        </Border>
+                        
+                        <Border BackgroundColor="{StaticResource Success}"
+                                Padding="16,12" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="Context Mapping" TextColor="White"
+                                       FontAttributes="Bold" FontSize="14" />
+                                <Label Text="→ Relationships between contexts"
+                                       TextColor="White" FontSize="13" />
+                            </HorizontalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Interactive Example"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Execute a business rule in the domain model:"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                        <Button Text="Execute Business Rule"
+                                Clicked="OnExecuteBusinessRuleClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Code Example"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Entity&#x0a;public class Order&#x0a;{&#x0a;    public Guid Id { get; private set; }&#x0a;    public Money Total { get; private set; }&#x0a;    public OrderStatus Status { get; private set; }&#x0a;&#x0a;    // Business Logic&#x0a;    public void ApplyDiscount(Percentage discount)&#x0a;    {&#x0a;        if (Status != OrderStatus.Draft)&#x0a;            throw new InvalidOperationException();&#x0a;&#x0a;        Total = Total.ApplyDiscount(discount);&#x0a;    }&#x0a;}&#x0a;&#x0a;// Value Object&#x0a;public record Money(decimal Amount, string Currency)&#x0a;{&#x0a;    public Money ApplyDiscount(Percentage discount)&#x0a;        => new Money(&#x0a;            Amount * (1 - discount.Value),&#x0a;            Currency);&#x0a;}&#x0a;&#x0a;// Repository Interface&#x0a;public interface IOrderRepository&#x0a;{&#x0a;    Order GetById(Guid id);&#x0a;    void Save(Order order);&#x0a;}&#x0a;&#x0a;// Domain Service&#x0a;public class OrderService&#x0a;{&#x0a;    private readonly IOrderRepository _repository;&#x0a;&#x0a;    public void ProcessOrder(Guid orderId)&#x0a;    {&#x0a;        var order = _repository.GetById(orderId);&#x0a;        // Business logic&#x0a;        _repository.Save(order);&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Benefits" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Domain-focused code"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Better communication"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Flexible architecture"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Testable business logic"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Challenges" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Steep learning curve"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Requires domain expertise"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Time investment"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• May be overkill"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <Border BackgroundColor="{AppThemeBinding Light=#EFF6FF, Dark=#1E3A8A}"
+                        Stroke="{StaticResource Info}"
+                        StrokeThickness="2"
+                        Padding="20"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💡" FontSize="24" />
+                            <Label Text="Key Takeaway"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource Title}" />
+                        </HorizontalStackLayout>
+                        <Label Text="DDD helps tackle complex domains by placing the domain model at the center of the software design, fostering a shared understanding between developers and domain experts."
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

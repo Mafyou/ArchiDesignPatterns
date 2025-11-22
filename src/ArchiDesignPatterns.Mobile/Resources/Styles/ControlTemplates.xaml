@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:models="clr-namespace:ArchiDesignPatterns.Mobile.Models">
+
+    <!-- =============================================== -->
+    <!-- Pattern Card Data Template -->
+    <!-- =============================================== -->
+    
+    <DataTemplate x:Key="PatternCardTemplate" x:DataType="models:DesignPatternInfo">
+        <Border Style="{StaticResource ListItemBorder}" Margin="0,8">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer />
+            </Border.GestureRecognizers>
+            
+            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12" RowDefinitions="Auto,Auto">
+                <!-- Icon/Indicator -->
+                <Border Grid.Column="0" Grid.RowSpan="2"
+                        BackgroundColor="{StaticResource Primary}"
+                        WidthRequest="56" HeightRequest="56"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 12"
+                        VerticalOptions="Center">
+                    <Label Text="📐" FontSize="28" 
+                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Border>
+
+                <!-- Title -->
+                <Label Grid.Column="1" Grid.Row="0"
+                       Text="{Binding Name}"
+                       Style="{StaticResource SubTitle}"
+                       VerticalOptions="End" />
+
+                <!-- Category Badge -->
+                <Border Grid.Column="1" Grid.Row="1"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}"
+                        Padding="8,4" Margin="0,4,0,0"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 6"
+                        HorizontalOptions="Start">
+                    <Label Text="{Binding Category}"
+                           FontSize="11" FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}" />
+                </Border>
+
+                <!-- Arrow -->
+                <Label Grid.Column="2" Grid.RowSpan="2"
+                       Text="›" FontSize="32"
+                       TextColor="{StaticResource Primary}"
+                       VerticalOptions="Center" />
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <!-- =============================================== -->
+    <!-- Architecture Card Data Template -->
+    <!-- =============================================== -->
+    
+    <DataTemplate x:Key="ArchitectureCardTemplate" x:DataType="models:ArchitectureInfo">
+        <Border Style="{StaticResource ListItemBorder}" Margin="0,8">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer />
+            </Border.GestureRecognizers>
+            
+            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12" RowDefinitions="Auto,Auto">
+                <!-- Icon/Indicator -->
+                <Border Grid.Column="0" Grid.RowSpan="2"
+                        BackgroundColor="{StaticResource ArchitecturePattern}"
+                        WidthRequest="56" HeightRequest="56"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 12"
+                        VerticalOptions="Center">
+                    <Label Text="🏛️" FontSize="28" 
+                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Border>
+
+                <!-- Title -->
+                <Label Grid.Column="1" Grid.Row="0"
+                       Text="{Binding Name}"
+                       Style="{StaticResource SubTitle}"
+                       VerticalOptions="End" />
+
+                <!-- Type Badge -->
+                <Border Grid.Column="1" Grid.Row="1"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}"
+                        Padding="8,4" Margin="0,4,0,0"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 6"
+                        HorizontalOptions="Start">
+                    <Label Text="{Binding Type}"
+                           FontSize="11" FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}" />
+                </Border>
+
+                <!-- Arrow -->
+                <Label Grid.Column="2" Grid.RowSpan="2"
+                       Text="›" FontSize="32"
+                       TextColor="{StaticResource ArchitecturePattern}"
+                       VerticalOptions="Center" />
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <!-- =============================================== -->
+    <!-- Section Header Control Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="SectionHeaderTemplate">
+        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12" Margin="0,16,0,8">
+            <BoxView WidthRequest="4" BackgroundColor="{StaticResource Primary}"
+                     CornerRadius="2" HeightRequest="24" VerticalOptions="Center" />
+            <Label Grid.Column="1" 
+                   Text="{TemplateBinding Content}"
+                   Style="{StaticResource Title}" />
+        </Grid>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Info Box Control Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="InfoBoxTemplate">
+        <Border BackgroundColor="{AppThemeBinding Light=#EFF6FF, Dark=#1E3A8A}"
+                Stroke="{StaticResource Info}"
+                StrokeThickness="1"
+                Padding="16"
+                StrokeShape="RoundRectangle 12"
+                Margin="0,8">
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                <Label Text="ℹ️" FontSize="24" VerticalOptions="Start" />
+                <ContentPresenter Grid.Column="1" />
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Warning Box Control Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="WarningBoxTemplate">
+        <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                Stroke="{StaticResource Warning}"
+                StrokeThickness="1"
+                Padding="16"
+                StrokeShape="RoundRectangle 12"
+                Margin="0,8">
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                <Label Text="⚠️" FontSize="24" VerticalOptions="Start" />
+                <ContentPresenter Grid.Column="1" />
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Success Box Control Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="SuccessBoxTemplate">
+        <Border BackgroundColor="{AppThemeBinding Light=#F0FDF4, Dark=#14532D}"
+                Stroke="{StaticResource Success}"
+                StrokeThickness="1"
+                Padding="16"
+                StrokeShape="RoundRectangle 12"
+                Margin="0,8">
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                <Label Text="✅" FontSize="24" VerticalOptions="Start" />
+                <ContentPresenter Grid.Column="1" />
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Code Block Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="CodeBlockTemplate">
+        <Border Style="{StaticResource CodeSection}">
+            <VerticalStackLayout Spacing="8">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Code Example" 
+                           FontSize="12" FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                    <Label Grid.Column="1" Text="📋" FontSize="16" />
+                </Grid>
+                <BoxView Style="{StaticResource Divider}" Margin="0,4" />
+                <ContentPresenter />
+            </VerticalStackLayout>
+        </Border>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Interactive Example Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="InteractiveExampleTemplate">
+        <Border Style="{StaticResource InteractiveSection}">
+            <VerticalStackLayout Spacing="12">
+                <HorizontalStackLayout Spacing="8">
+                    <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                    <Label Text="Interactive Example" 
+                           FontSize="16" FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <BoxView Style="{StaticResource Divider}" Margin="0,4" />
+                <ContentPresenter />
+            </VerticalStackLayout>
+        </Border>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Feature List Item Template -->
+    <!-- =============================================== -->
+    
+    <DataTemplate x:Key="FeatureListItemTemplate">
+        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12" Margin="0,6">
+            <Border BackgroundColor="{StaticResource Success}"
+                    WidthRequest="24" HeightRequest="24"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 12">
+                <Label Text="✓" FontSize="14" TextColor="White"
+                       HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+            <Label Grid.Column="1" 
+                   Text="{Binding .}"
+                   Style="{StaticResource BodyMedium}"
+                   VerticalOptions="Center" />
+        </Grid>
+    </DataTemplate>
+
+    <!-- =============================================== -->
+    <!-- Hero Section Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="HeroSectionTemplate">
+        <Border Background="{StaticResource PrimaryGradient}"
+                Padding="24"
+                Margin="-20,0,-20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <ContentPresenter />
+            </VerticalStackLayout>
+        </Border>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Stat Card Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="StatCardTemplate">
+        <Border Style="{StaticResource Card}" Padding="20">
+            <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                <ContentPresenter />
+            </VerticalStackLayout>
+        </Border>
+    </ControlTemplate>
+
+    <!-- =============================================== -->
+    <!-- Empty State Template -->
+    <!-- =============================================== -->
+    
+    <ControlTemplate x:Key="EmptyStateTemplate">
+        <VerticalStackLayout Spacing="16" Padding="40" 
+                           HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="📭" FontSize="64" HorizontalOptions="Center" />
+            <ContentPresenter />
+        </VerticalStackLayout>
+    </ControlTemplate>
+
+</ResourceDictionary>

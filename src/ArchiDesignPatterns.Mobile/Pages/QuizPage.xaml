@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.QuizPage"
+             x:DataType="viewmodels:QuizViewModel"
+             Title="Quiz">
+    
+    <Grid RowDefinitions="Auto,*">
+        
+        <!-- Header Section -->
+        <Border Grid.Row="0"
+                Background="{StaticResource SuccessGradient}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="🎯" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Knowledge Quiz"
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               SemanticProperties.HeadingLevel="Level1" />
+                        <Label Text="Test your understanding"
+                               FontSize="14"
+                               TextColor="White"
+                               Opacity="0.9" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Quiz Content -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="24">
+
+                <!-- Topic Selection Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📚" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Choose a Topic"
+                                   Style="{StaticResource SubTitle}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Enter a pattern or architecture name:"
+                                   Style="{StaticResource BodyMedium}"
+                                   TextColor="{StaticResource Gray600}" />
+                            <Entry Keyboard="Chat"
+                                   Placeholder="e.g., Singleton, MVC, Clean Architecture..."
+                                   Text="{Binding Topic}"
+                                   HeightRequest="50" />
+                        </VerticalStackLayout>
+                        
+                        <Button Text="🎲 Generate Question"
+                                Command="{Binding GenerateCommand}"
+                                HorizontalOptions="Fill" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Example Topics Card -->
+                <Border BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray800}}"
+                        Stroke="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray700}}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💡" FontSize="16" VerticalOptions="Center" />
+                            <Label Text="Quick Topics"
+                                   FontSize="14" FontAttributes="Bold"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        
+                        <FlexLayout Wrap="Wrap" JustifyContent="Start"
+                                   AlignItems="Start">
+                            <Border BackgroundColor="{StaticResource CreationalPattern}"
+                                    Padding="10,6" Margin="4"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8">
+                                <Label Text="Singleton" FontSize="12"
+                                       FontAttributes="Bold" TextColor="White" />
+                            </Border>
+                            <Border BackgroundColor="{StaticResource StructuralPattern}"
+                                    Padding="10,6" Margin="4"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8">
+                                <Label Text="Adapter" FontSize="12"
+                                       FontAttributes="Bold" TextColor="White" />
+                            </Border>
+                            <Border BackgroundColor="{StaticResource BehavioralPattern}"
+                                    Padding="10,6" Margin="4"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8">
+                                <Label Text="Observer" FontSize="12"
+                                       FontAttributes="Bold" TextColor="White" />
+                            </Border>
+                            <Border BackgroundColor="{StaticResource ArchitecturePattern}"
+                                    Padding="10,6" Margin="4"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8">
+                                <Label Text="Clean" FontSize="12"
+                                       FontAttributes="Bold" TextColor="White" />
+                            </Border>
+                            <Border BackgroundColor="{StaticResource ArchitecturePattern}"
+                                    Padding="10,6" Margin="4"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 8">
+                                <Label Text="MVC" FontSize="12"
+                                       FontAttributes="Bold" TextColor="White" />
+                            </Border>
+                        </FlexLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Question Card -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="❓" FontSize="24" VerticalOptions="Center" />
+                            <Label Text="Question"
+                                   Style="{StaticResource Title}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        
+                        <Label Text="{Binding Question}"
+                               Style="{StaticResource BodyLarge}"
+                               FontAttributes="Bold"
+                               LineBreakMode="WordWrap"
+                               MinimumHeightRequest="60" />
+                        
+                        <VerticalStackLayout Spacing="12">
+                            <Label Text="Your Answer:"
+                                   Style="{StaticResource BodyMedium}"
+                                   TextColor="{StaticResource Gray600}" />
+                            <Entry Keyboard="Chat"
+                                   Placeholder="Enter A, B, C, or D"
+                                   Text="{Binding Answer}"
+                                   HeightRequest="50"
+                                   MaxLength="1" />
+                        </VerticalStackLayout>
+                        
+                        <Button Text="✓ Submit Answer"
+                                Command="{Binding EvaluateCommand}"
+                                BackgroundColor="{StaticResource Success}"
+                                HorizontalOptions="Fill" />
+                        
+                        <!-- Result Section -->
+                        <Border BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
+                                Padding="16"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12"
+                                IsVisible="{Binding Result, Converter={StaticResource StringToBoolConverter}}">
+                            <VerticalStackLayout Spacing="8">
+                                <HorizontalStackLayout Spacing="8">
+                                    <Label Text="📊" FontSize="20" VerticalOptions="Center" />
+                                    <Label Text="Result"
+                                           FontSize="16" FontAttributes="Bold"
+                                           VerticalOptions="Center" />
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding Result}"
+                                       Style="{StaticResource BodyMedium}"
+                                       LineBreakMode="WordWrap" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Tips Card -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                        <Label Text="💡" FontSize="24" VerticalOptions="Start" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="8">
+                            <Label Text="Quiz Tips"
+                                   FontSize="14" FontAttributes="Bold" />
+                            <Label Text="• Read each question carefully&#10;• Think about real-world applications&#10;• Review the pattern details if unsure&#10;• Practice makes perfect!"
+                                   Style="{StaticResource BodySmall}"
+                                   LineBreakMode="WordWrap" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

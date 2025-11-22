@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.Architectures.CleanArchitecturePage"
+             Title="Clean Architecture">
+    <ContentPage.BindingContext>
+        <viewmodels:CleanArchitectureViewModel />
+    </ContentPage.BindingContext>
+    
+    <Grid RowDefinitions="Auto,*">
+        
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource ArchitecturePattern}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <HorizontalStackLayout Spacing="12">
+                <Label Text="🏛️" FontSize="32" VerticalOptions="Center" />
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Clean Architecture"
+                           FontSize="28" FontAttributes="Bold"
+                           TextColor="White" />
+                    <Border BackgroundColor="White" Opacity="0.3"
+                            Padding="8,4" StrokeThickness="0"
+                            StrokeShape="RoundRectangle 6"
+                            HorizontalOptions="Start">
+                        <Label Text="Architecture" FontSize="11"
+                               FontAttributes="Bold" TextColor="White" />
+                    </Border>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </Border>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Clean Architecture organizes code into independent layers with clear boundaries and dependencies pointing inward. The inner layers contain business logic and are independent of frameworks, UI, and databases."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Core Principles"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="10">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Border BackgroundColor="{StaticResource Primary}"
+                                        WidthRequest="32" HeightRequest="32"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16">
+                                    <Label Text="1" FontSize="16" TextColor="White" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Independence"
+                                           FontAttributes="Bold"
+                                           Style="{StaticResource BodyMedium}" />
+                                    <Label Text="Business logic independent of frameworks"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{StaticResource Gray600}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                            
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Border BackgroundColor="{StaticResource Primary}"
+                                        WidthRequest="32" HeightRequest="32"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16">
+                                    <Label Text="2" FontSize="16" TextColor="White" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Testability"
+                                           FontAttributes="Bold"
+                                           Style="{StaticResource BodyMedium}" />
+                                    <Label Text="Easy to test without UI or database"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{StaticResource Gray600}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                            
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Border BackgroundColor="{StaticResource Primary}"
+                                        WidthRequest="32" HeightRequest="32"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16">
+                                    <Label Text="3" FontSize="16" TextColor="White" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Dependency Rule"
+                                           FontAttributes="Bold"
+                                           Style="{StaticResource BodyMedium}" />
+                                    <Label Text="Dependencies point inward only"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{StaticResource Gray600}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🔄 Architecture Layers"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        
+                        <Border BackgroundColor="{StaticResource Primary}"
+                                Padding="16,12" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="Core" TextColor="White"
+                                       FontAttributes="Bold" FontSize="14" />
+                                <Label Text="→ Entities, Business Rules"
+                                       TextColor="White" FontSize="13" />
+                            </HorizontalStackLayout>
+                        </Border>
+                        
+                        <Border BackgroundColor="{StaticResource Info}"
+                                Padding="16,12" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="Application" TextColor="White"
+                                       FontAttributes="Bold" FontSize="14" />
+                                <Label Text="→ Use Cases, Interfaces"
+                                       TextColor="White" FontSize="13" />
+                            </HorizontalStackLayout>
+                        </Border>
+                        
+                        <Border BackgroundColor="{StaticResource Warning}"
+                                Padding="16,12" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="Infrastructure" TextColor="White"
+                                       FontAttributes="Bold" FontSize="14" />
+                                <Label Text="→ Database, External Services"
+                                       TextColor="White" FontSize="13" />
+                            </HorizontalStackLayout>
+                        </Border>
+                        
+                        <Border BackgroundColor="{StaticResource Success}"
+                                Padding="16,12" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="Presentation" TextColor="White"
+                                       FontAttributes="Bold" FontSize="14" />
+                                <Label Text="→ UI, Controllers, ViewModels"
+                                       TextColor="White" FontSize="13" />
+                            </HorizontalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Interactive Example"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Simulate a service call through the layers:"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                        <Button Text="Execute Service Call"
+                                Clicked="OnSimulateServiceClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Code Structure"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Core Layer - Business Logic&#x0a;public interface IUserRepository&#x0a;{&#x0a;    User GetById(int id);&#x0a;}&#x0a;&#x0a;// Application Layer - Use Case&#x0a;public class GetUserUseCase&#x0a;{&#x0a;    private readonly IUserRepository _repo;&#x0a;    &#x0a;    public GetUserUseCase(IUserRepository repo)&#x0a;        => _repo = repo;&#x0a;    &#x0a;    public User Execute(int id)&#x0a;        => _repo.GetById(id);&#x0a;}&#x0a;&#x0a;// Infrastructure - Implementation&#x0a;public class UserRepository : IUserRepository&#x0a;{&#x0a;    public User GetById(int id)&#x0a;        => // Database access&#x0a;}&#x0a;&#x0a;// Presentation - Controller&#x0a;public class UserController&#x0a;{&#x0a;    private readonly GetUserUseCase _useCase;&#x0a;    &#x0a;    public User Get(int id)&#x0a;        => _useCase.Execute(id);&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Benefits" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Highly testable"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Technology independent"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Clear boundaries"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Easy to maintain"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Challenges" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Learning curve"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• More boilerplate"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Overkill for small apps"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Initial complexity"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <Border BackgroundColor="{AppThemeBinding Light=#EFF6FF, Dark=#1E3A8A}"
+                        Stroke="{StaticResource Info}"
+                        StrokeThickness="2"
+                        Padding="20"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💡" FontSize="24" />
+                            <Label Text="Key Takeaway"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource Title}" />
+                        </HorizontalStackLayout>
+                        <Label Text="Clean Architecture prioritizes separation of concerns and independence from external dependencies, making your codebase more maintainable, testable, and adaptable to change."
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

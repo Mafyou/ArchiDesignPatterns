@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.FlyweightPatternPage"
+             x:DataType="viewmodels:FlyweightPatternViewModel"
+             Title="Flyweight">
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource StructuralPattern}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="🪶" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Flyweight Pattern"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="Structural" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+        <!-- Body -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Flyweight" FontSize="24" FontAttributes="Bold" />
+                <Label Text="Le pattern Flyweight permet de partager des objets pour economiser de la memoire." FontSize="16" />
+                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
+                        <Button Text="Utiliser le Flyweight" Clicked="OnUseFlyweightClicked" />
+                        <Label x:Name="ResultLabel" FontSize="14" />
+                    </VerticalStackLayout>
+                </Border>
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
+                <Label Text="Exemple de code :" FontAttributes="Bold" />
+                <Editor IsReadOnly="True" HeightRequest="120"
+                    Text="public class Flyweight { public string Data; }\npublic class FlyweightFactory { private Dictionary&lt;string,Flyweight&gt; _cache = new(); public Flyweight Get(string key) =&gt; _cache.TryGetValue(key, out var f) ? f : (_cache[key]=new Flyweight{Data=key}); }" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.MediatorPatternPage"
+             x:DataType="viewmodels:MediatorPatternViewModel"
+             Title="Mediator">
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource BehavioralPattern}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="📝" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Mediator Pattern"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="Behavioral" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+        <!-- Content -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Mediator" FontSize="24" FontAttributes="Bold" />
+                <Label Text="Le pattern Mediator definit un objet qui encapsule la facon dont un ensemble d'objets interagit." FontSize="16" />
+                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
+                        <Button Text="Envoyer un message" Clicked="OnSendMessageClicked" />
+                        <Label x:Name="ResultLabel" FontSize="14" />
+                    </VerticalStackLayout>
+                </Border>
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
+                <Label Text="Exemple de code :" FontAttributes="Bold" />
+                <Editor IsReadOnly="True" HeightRequest="120"
+                    Text="public interface IMediator { void Notify(string msg); }\npublic class ConcreteMediator : IMediator { public void Notify(string msg) => Console.WriteLine(msg); }" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

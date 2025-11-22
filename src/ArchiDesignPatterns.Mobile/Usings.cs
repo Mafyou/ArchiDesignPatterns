@@ -1,1 +1,15 @@
-﻿global using Microsoft.Extensions.Logging;
+﻿global using CommunityToolkit.Maui;
+global using CommunityToolkit.Mvvm.ComponentModel;
+global using CommunityToolkit.Mvvm.Input;
+global using ArchiDesignPatterns.Mobile.Abstractions;
+global using ArchiDesignPatterns.Mobile.Extensions;
+global using ArchiDesignPatterns.Mobile.Models;
+global using ArchiDesignPatterns.Mobile.Pages;
+global using ArchiDesignPatterns.Mobile.Pages.DesignPatterns;
+global using ArchiDesignPatterns.Mobile.Services;
+global using ArchiDesignPatterns.Mobile.ViewModels;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.SemanticKernel;
+global using Microsoft.SemanticKernel.ChatCompletion;
+global using System.Collections.ObjectModel;
+global using System.Windows.Input;

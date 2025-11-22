@@ -1,14 +1,22 @@
-﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ArchiDesignPatterns.Mobile"
+             xmlns:converters="clr-namespace:ArchiDesignPatterns.Mobile.Converters"
              x:Class="ArchiDesignPatterns.Mobile.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/ControlTemplates.xaml" />
+                <ResourceDictionary Source="Resources/Styles/PageLayouts.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Converters -->
+            <converters:CategoryToColorConverter x:Key="CategoryToColorConverter" />
+            <converters:CategoryToIconConverter x:Key="CategoryToIconConverter" />
+            <converters:StringToBoolConverter x:Key="StringToBoolConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

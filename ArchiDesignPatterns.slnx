@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="src/ArchiDesignPatterns.Mobile/ArchiDesignPatterns.Mobile.csproj" />
+  <Project Path="src/ArchiDesignPatterns.Mobile/ArchiDesignPatterns.Mobile.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>

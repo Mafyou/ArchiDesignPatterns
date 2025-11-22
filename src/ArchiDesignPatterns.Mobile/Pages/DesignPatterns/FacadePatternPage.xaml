@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.FacadePatternPage"
+             x:DataType="viewmodels:FacadePatternViewModel"
+             Title="Facade">
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource StructuralPattern}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="🏢" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Facade Pattern"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="Structural" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+        <!-- Content -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Facade" FontSize="24" FontAttributes="Bold" />
+                <Label Text="Le pattern Facade fournit une interface simplifiee a un ensemble de sous-systemes." FontSize="16" />
+                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
+                        <Button Text="Utiliser la facade" Clicked="OnUseFacadeClicked" />
+                        <Label x:Name="ResultLabel" FontSize="14" />
+                    </VerticalStackLayout>
+                </Border>
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
+                <Label Text="Exemple de code :" FontAttributes="Bold" />
+                <Editor IsReadOnly="True" HeightRequest="120"
+                    Text="public class SubsystemA { public string OpA() => 'A'; }\npublic class SubsystemB { public string OpB() => 'B'; }\npublic class Facade { public string Operation() => new SubsystemA().OpA() + new SubsystemB().OpB(); }" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
