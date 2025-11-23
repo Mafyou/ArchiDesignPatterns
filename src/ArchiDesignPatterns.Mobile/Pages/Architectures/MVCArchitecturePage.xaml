@@ -15,7 +15,6 @@
                 StrokeThickness="0">
             <VerticalStackLayout Spacing="8">
                 <HorizontalStackLayout Spacing="12">
-                    <!-- Valid MVC emoji -->
                     <Label Text="📐" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
                         <Label Text="MVC Architecture"
@@ -34,20 +33,125 @@
         </Border>
         <!-- Body -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="MVC" FontSize="24" FontAttributes="Bold" />
-                <Label Text="L'architecture MVC separe l'application en trois composants : Modele, Vue et Controleur." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Simuler une action utilisateur" Clicked="OnSimulateActionClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="L'architecture MVC sépare l'application en trois composants : Modèle (données), Vue (interface utilisateur) et Contrôleur (logique de traitement). Le contrôleur gère les interactions entre le modèle et la vue."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de structure :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public class Model { public string Data = 'Hello'; }\npublic class View { public void Display(string d) =&gt; Console.WriteLine(d); }\npublic class Controller { public void Update(Model m, View v) { m.Data = 'Updated'; v.Display(m.Data); } }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour des applications web traditionnelles"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand la séparation UI/logique est nécessaire"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour des projets ASP.NET MVC"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Simulez une action utilisateur :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Simuler une action utilisateur"
+                                Clicked="OnSimulateActionClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de structure"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Model (Données)&#x0a;public class User&#x0a;{&#x0a;    public int Id { get; set; }&#x0a;    public string Name { get; set; }&#x0a;    public string Email { get; set; }&#x0a;}&#x0a;&#x0a;// View (Interface)&#x0a;public class UserView&#x0a;{&#x0a;    public void Display(User user)&#x0a;    {&#x0a;        Console.WriteLine($&quot;Utilisateur: {user.Name} ({user.Email})&quot;);&#x0a;    }&#x0a;}&#x0a;&#x0a;// Controller (Logique)&#x0a;public class UserController&#x0a;{&#x0a;    private readonly User _model;&#x0a;    private readonly UserView _view;&#x0a;&#x0a;    public UserController(User model, UserView view)&#x0a;    {&#x0a;        _model = model;&#x0a;        _view = view;&#x0a;    }&#x0a;&#x0a;    public void UpdateUser(string name, string email)&#x0a;    {&#x0a;        // Mise à jour du modèle&#x0a;        _model.Name = name;&#x0a;        _model.Email = email;&#x0a;&#x0a;        // Mise à jour de la vue&#x0a;        _view.Display(_model);&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Séparation claire des responsabilités"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Facilite les tests"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Développement parallèle"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Réutilisabilité du code"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Complexité pour petites apps"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Courbe d'apprentissage"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Contrôleurs peuvent grossir"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

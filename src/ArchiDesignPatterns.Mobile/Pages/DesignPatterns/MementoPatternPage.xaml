@@ -12,7 +12,7 @@
                 StrokeThickness="0">
             <VerticalStackLayout Spacing="8">
                 <HorizontalStackLayout Spacing="12">
-                    <Label Text="📝" FontSize="32" VerticalOptions="Center" />
+                    <Label Text="💾" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Memento Pattern"
                                FontSize="28" FontAttributes="Bold"
@@ -30,21 +30,128 @@
         </Border>
         <!-- Content -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Memento" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern Memento permet de sauvegarder et restaurer l'etat d'un objet sans violer l'encapsulation." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Sauvegarder l'etat" Clicked="OnSaveStateClicked" />
-                        <Button Text="Restaurer l'etat" Clicked="OnRestoreStateClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern Memento permet de sauvegarder et restaurer l'état d'un objet sans violer l'encapsulation, permettant ainsi l'implémentation de fonctionnalités d'annulation."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public class Memento { public string State; }\npublic class Originator { public string State; public Memento Save() => new Memento { State = State }; public void Restore(Memento m) => State = m.State; }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour implémenter des fonctionnalités d'annulation/rétablissement"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour sauvegarder un instantané de l'état d'un objet"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand l'accès direct à l'état violerait l'encapsulation"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Gérez l'état d'un objet :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Sauvegarder l'état"
+                                Clicked="OnSaveStateClicked"
+                                HorizontalOptions="Fill" />
+                        <Button Text="Restaurer l'état"
+                                Clicked="OnRestoreStateClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de code"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Memento&#x0a;public class Memento&#x0a;{&#x0a;    public string State { get; }&#x0a;    public Memento(string state) =&gt; State = state;&#x0a;}&#x0a;&#x0a;// Originator&#x0a;public class Originator&#x0a;{&#x0a;    public string State { get; set; }&#x0a;&#x0a;    public Memento Save() =&gt; new Memento(State);&#x0a;&#x0a;    public void Restore(Memento memento)&#x0a;    {&#x0a;        State = memento.State;&#x0a;    }&#x0a;}&#x0a;&#x0a;// Caretaker&#x0a;public class Caretaker&#x0a;{&#x0a;    private readonly Stack&lt;Memento&gt; _history = new();&#x0a;&#x0a;    public void Save(Originator originator)&#x0a;    {&#x0a;        _history.Push(originator.Save());&#x0a;    }&#x0a;&#x0a;    public void Undo(Originator originator)&#x0a;    {&#x0a;        if (_history.Count &gt; 0)&#x0a;            originator.Restore(_history.Pop());&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Préserve l'encapsulation"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Simplifie l'Originator"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Historique des états"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Undo/Redo facile"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Coût mémoire élevé"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Maintenance complexe"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Gestion de l'historique nécessaire"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

@@ -31,20 +31,125 @@
         </Border>
         <!-- Main Content -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="State" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern State permet à un objet de changer son comportement lorsque son état change." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Changer d'état" Clicked="OnChangeStateClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern State permet à un objet de changer son comportement lorsque son état interne change. L'objet semblera avoir changé de classe."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="// State interface&#x0a;public interface IState&#x0a;{&#x0a;    string Handle();&#x0a;}&#x0a;&#x0a;// Concrete States&#x0a;public class StateA : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;A&quot;;&#x0a;}&#x0a;public class StateB : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;B&quot;;&#x0a;}&#x0a;&#x0a;// Context&#x0a;public class Context&#x0a;{&#x0a;    public IState State;&#x0a;    public string Request() =&gt; State.Handle();&#x0a;}" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand un objet a un comportement différent selon son état"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour éviter les grandes instructions conditionnelles"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour faciliter l'ajout de nouveaux états"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Changez l'état de l'objet :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Changer d'état"
+                                Clicked="OnChangeStateClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de code"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Interface State&#x0a;public interface IState&#x0a;{&#x0a;    string Handle();&#x0a;}&#x0a;&#x0a;// États concrets&#x0a;public class StateA : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;État A actif&quot;;&#x0a;}&#x0a;&#x0a;public class StateB : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;État B actif&quot;;&#x0a;}&#x0a;&#x0a;// Contexte&#x0a;public class Context&#x0a;{&#x0a;    private IState _state;&#x0a;&#x0a;    public Context(IState state)&#x0a;    {&#x0a;        TransitionTo(state);&#x0a;    }&#x0a;&#x0a;    public void TransitionTo(IState state)&#x0a;    {&#x0a;        _state = state;&#x0a;        Console.WriteLine($&quot;Transition vers {state.GetType().Name}&quot;);&#x0a;    }&#x0a;&#x0a;    public string Request() =&gt; _state.Handle();&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Principe ouvert/fermé"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Simplifie le code complexe"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Responsabilité unique par état"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Facilite les transitions"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Surcharge pour peu d'états"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Augmente le nombre de classes"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Complexité si peu d'états"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

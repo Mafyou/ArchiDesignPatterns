@@ -13,7 +13,7 @@
                 StrokeThickness="0">
             <VerticalStackLayout Spacing="8">
                 <HorizontalStackLayout Spacing="12">
-                    <Label Text="📝" FontSize="32" VerticalOptions="Center" />
+                    <Label Text="🔤" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Interpreter Pattern"
                                FontSize="28" FontAttributes="Bold"
@@ -31,20 +31,125 @@
         </Border>
         <!-- Content -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Interpreter" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern Interpreter definit une representation pour une grammaire et un interprete pour traiter des phrases de cette grammaire." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Interpreter '1+2'" Clicked="OnInterpretClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern Interpreter définit une représentation pour une grammaire et un interprète pour traiter des phrases de cette grammaire."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public interface IExpression { int Interpret(); }\npublic class Number : IExpression { public int Value; public int Interpret() => Value; }\npublic class Add : IExpression { public IExpression Left, Right; public int Interpret() => Left.Interpret() + Right.Interpret(); }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour interpréter un langage simple ou une grammaire"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand la grammaire est simple et la performance n'est pas critique"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour évaluer des expressions ou des requêtes"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Interprétez une expression mathématique :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Interpréter '1+2'"
+                                Clicked="OnInterpretClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de code"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Interface Expression&#x0a;public interface IExpression&#x0a;{&#x0a;    int Interpret();&#x0a;}&#x0a;&#x0a;// Expression terminale&#x0a;public class Number : IExpression&#x0a;{&#x0a;    private readonly int _value;&#x0a;    public Number(int value) =&gt; _value = value;&#x0a;    public int Interpret() =&gt; _value;&#x0a;}&#x0a;&#x0a;// Expression non-terminale (Addition)&#x0a;public class Add : IExpression&#x0a;{&#x0a;    private readonly IExpression _left;&#x0a;    private readonly IExpression _right;&#x0a;&#x0a;    public Add(IExpression left, IExpression right)&#x0a;    {&#x0a;        _left = left;&#x0a;        _right = right;&#x0a;    }&#x0a;&#x0a;    public int Interpret() =&gt; _left.Interpret() + _right.Interpret();&#x0a;}&#x0a;&#x0a;// Utilisation: &quot;1 + 2&quot;&#x0a;var expression = new Add(new Number(1), new Number(2));&#x0a;var result = expression.Interpret(); // 3" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Grammaire facilement extensible"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Séparation claire des règles"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Facile à implémenter"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Flexibilité"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Grammaire complexe = nombreuses classes"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Performances limitées"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Maintenance difficile si large"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

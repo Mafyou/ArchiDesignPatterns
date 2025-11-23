@@ -31,20 +31,125 @@
         </Border>
         <!-- Contenu principal -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Event-Driven Architecture" FontSize="24" FontAttributes="Bold" />
-                <Label Text="L'architecture orientee evenements repose sur la communication par evenements entre composants." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Declencher un evenement" Clicked="OnTriggerEventClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="L'architecture orientée événements repose sur la communication par événements entre composants. Les producteurs émettent des événements et les consommateurs y réagissent de manière asynchrone."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de structure :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public class EventBus { public event Action&lt;string&gt; OnEvent; public void Trigger(string msg) =&gt; OnEvent?.Invoke(msg); }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour des systèmes réactifs et asynchrones"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand les composants doivent être découplés"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour gérer des flux de données en temps réel"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Déclenchez un événement :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Déclencher un événement"
+                                Clicked="OnTriggerEventClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de structure"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Event&#x0a;public class OrderCreatedEvent&#x0a;{&#x0a;    public Guid OrderId { get; set; }&#x0a;    public DateTime Timestamp { get; set; }&#x0a;    public string CustomerName { get; set; }&#x0a;}&#x0a;&#x0a;// Event Bus&#x0a;public class EventBus&#x0a;{&#x0a;    public event Action&lt;OrderCreatedEvent&gt; OnOrderCreated;&#x0a;&#x0a;    public void PublishOrderCreated(OrderCreatedEvent evt)&#x0a;    {&#x0a;        OnOrderCreated?.Invoke(evt);&#x0a;    }&#x0a;}&#x0a;&#x0a;// Event Handler (Subscriber)&#x0a;public class EmailNotificationHandler&#x0a;{&#x0a;    public EmailNotificationHandler(EventBus eventBus)&#x0a;    {&#x0a;        eventBus.OnOrderCreated += HandleOrderCreated;&#x0a;    }&#x0a;&#x0a;    private void HandleOrderCreated(OrderCreatedEvent evt)&#x0a;    {&#x0a;        // Envoyer notification email&#x0a;        Console.WriteLine($&quot;Email envoyé pour commande {evt.OrderId}&quot;);&#x0a;    }&#x0a;}&#x0a;&#x0a;// Event Publisher&#x0a;public class OrderService&#x0a;{&#x0a;    private readonly EventBus _eventBus;&#x0a;&#x0a;    public OrderService(EventBus eventBus)&#x0a;    {&#x0a;        _eventBus = eventBus;&#x0a;    }&#x0a;&#x0a;    public void CreateOrder(string customerName)&#x0a;    {&#x0a;        var orderEvent = new OrderCreatedEvent&#x0a;        {&#x0a;            OrderId = Guid.NewGuid(),&#x0a;            Timestamp = DateTime.Now,&#x0a;            CustomerName = customerName&#x0a;        };&#x0a;        _eventBus.PublishOrderCreated(orderEvent);&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Découplage fort"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Scalabilité élevée"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Traitement asynchrone"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Extensibilité"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Complexité du débogage"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Gestion de l'ordre des événements"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Traçabilité difficile"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

@@ -21,7 +21,7 @@ public partial class DesignPatternsViewModel : ObservableObject
             new DesignPatternInfo("Facade","Interface simplifiée.","Structural"),
             new DesignPatternInfo("Flyweight","Partage des objets pour l'efficacité.","Structural"),
             new DesignPatternInfo("Proxy","Fournit un substitut ou un espace réservé.","Structural"),
-            new DesignPatternInfo("Chain of Responsibility","Chaîne de gestionnaires de traitement.","Behavioral"),
+            new DesignPatternInfo("Chain Of Responsibility","Chaîne de gestionnaires de traitement.","Behavioral"),
             new DesignPatternInfo("Command","Encapsule une requête en tant qu'objet.","Behavioral"),
             new DesignPatternInfo("Interpreter","Interprète une grammaire ou un langage.","Behavioral"),
             new DesignPatternInfo("Iterator","Itère à travers une collection.","Behavioral"),

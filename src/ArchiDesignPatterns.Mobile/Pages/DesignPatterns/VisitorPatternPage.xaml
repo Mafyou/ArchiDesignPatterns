@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
@@ -31,13 +32,40 @@
 
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📋 Description" Style="{StaticResource SubTitle}" />
+                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Visitor permet de séparer un algorithme de la structure de l'objet sur lequel il opère."
+                        <Label Text="Le pattern Visitor permet de séparer un algorithme de la structure de l'objet sur lequel il opère, permettant d'ajouter de nouvelles opérations sans modifier les classes existantes."
                                Style="{StaticResource BodyLarge}" LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour ajouter des opérations sans modifier les classes"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand la structure d'objets est stable mais les opérations changent"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour séparer la logique métier de la structure de données"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
                     </VerticalStackLayout>
                 </Border>
 
@@ -54,8 +82,12 @@
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Label Text="Accepter le Visitor sur un élément :"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Accepter le Visitor" Clicked="OnAcceptVisitorClicked" HorizontalOptions="Fill" />
-                        <Label x:Name="ResultLabel" Style="{StaticResource ResultLabel}" LineBreakMode="WordWrap" />
+                        <Button Text="Accepter le Visitor" 
+                                Clicked="OnAcceptVisitorClicked" 
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel" 
+                               Style="{StaticResource ResultLabel}" 
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -64,13 +96,57 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="Exemple de code" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
-                                Text="// Visitor interface&#x0a;public interface IVisitor&#x0a;{&#x0a;    string Visit(Element e);&#x0a;}&#x0a;&#x0a;// Element&#x0a;public class Element&#x0a;{&#x0a;    public string Accept(IVisitor v) =&gt; v.Visit(this);&#x0a;}&#x0a;&#x0a;// Concrete Visitor&#x0a;public class ConcreteVisitor : IVisitor&#x0a;{&#x0a;    public string Visit(Element e) =&gt; &quot;Visited&quot;;&#x0a;}" />
+                                Text="// Interface Visitor&#x0a;public interface IVisitor&#x0a;{&#x0a;    string VisitElementA(ElementA element);&#x0a;    string VisitElementB(ElementB element);&#x0a;}&#x0a;&#x0a;// Interface Element&#x0a;public interface IElement&#x0a;{&#x0a;    string Accept(IVisitor visitor);&#x0a;}&#x0a;&#x0a;// Éléments concrets&#x0a;public class ElementA : IElement&#x0a;{&#x0a;    public string Accept(IVisitor visitor) =&gt; visitor.VisitElementA(this);&#x0a;}&#x0a;&#x0a;public class ElementB : IElement&#x0a;{&#x0a;    public string Accept(IVisitor visitor) =&gt; visitor.VisitElementB(this);&#x0a;}&#x0a;&#x0a;// Visitor concret&#x0a;public class ConcreteVisitor : IVisitor&#x0a;{&#x0a;    public string VisitElementA(ElementA element) =&gt; &quot;Visite A&quot;;&#x0a;    public string VisitElementB(ElementB element) =&gt; &quot;Visite B&quot;;&#x0a;}" />
                     </VerticalStackLayout>
                 </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Principe ouvert/fermé"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Séparation des responsabilités"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Facilite l'ajout d'opérations"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Centralise la logique"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Difficile d'ajouter de nouvelles classes"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Viole l'encapsulation"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Augmente la complexité"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

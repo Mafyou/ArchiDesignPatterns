@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
@@ -12,7 +13,7 @@
                 StrokeThickness="0">
             <VerticalStackLayout Spacing="8">
                 <HorizontalStackLayout Spacing="12">
-                    <Label Text="📝$3" FontSize="32" VerticalOptions="Center" />
+                    <Label Text="📝" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Template Method Pattern"
                                FontSize="28" FontAttributes="Bold"
@@ -30,20 +31,125 @@
         </Border>
         <!-- Body Content -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Template Method" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern Template Method définit le squelette d'un algorithme dans une methode, en déléguant certaines etapes aux sous-classes." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Executer la methode" Clicked="OnExecuteTemplateClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern Template Method définit le squelette d'un algorithme dans une méthode, en déléguant certaines étapes aux sous-classes sans changer la structure de l'algorithme."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public abstract class Base { public string Template() => Step1() + Step2(); protected abstract string Step1(); protected abstract string Step2(); }\npublic class Concrete : Base { protected override string Step1() => 'A'; protected override string Step2() => 'B'; }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand plusieurs classes ont des algorithmes similaires avec des variations"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour contrôler les points d'extension dans un algorithme"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour éviter la duplication de code en extrayant la logique commune"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Exécutez la méthode template :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Exécuter la méthode"
+                                Clicked="OnExecuteTemplateClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de code"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Classe abstraite avec méthode template&#x0a;public abstract class DataProcessor&#x0a;{&#x0a;    // Méthode template&#x0a;    public string ProcessData()&#x0a;    {&#x0a;        var data = ReadData();&#x0a;        var processed = Process(data);&#x0a;        SaveData(processed);&#x0a;        return processed;&#x0a;    }&#x0a;&#x0a;    protected abstract string ReadData();&#x0a;    protected abstract string Process(string data);&#x0a;    protected virtual void SaveData(string data)&#x0a;    {&#x0a;        Console.WriteLine($&quot;Sauvegarde: {data}&quot;);&#x0a;    }&#x0a;}&#x0a;&#x0a;// Implémentation concrète&#x0a;public class CsvProcessor : DataProcessor&#x0a;{&#x0a;    protected override string ReadData() =&gt; &quot;CSV Data&quot;;&#x0a;    protected override string Process(string data) =&gt; data.ToUpper();&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Réutilisation du code"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Contrôle de l'algorithme"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Évite la duplication"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Principe Hollywood"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Dépendance à l'héritage"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Violation du principe de Liskov"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Maintenance difficile"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

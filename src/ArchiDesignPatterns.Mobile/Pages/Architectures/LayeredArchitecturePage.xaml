@@ -33,20 +33,125 @@
         </Border>
         <!-- Body -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Layered Architecture" FontSize="24" FontAttributes="Bold" />
-                <Label Text="L'architecture en couches separe l'application en plusieurs niveaux (presentation, metier, donnees)." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Appeler le service metier" Clicked="OnCallServiceClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="L'architecture en couches sépare l'application en plusieurs niveaux (présentation, métier, données) où chaque couche a une responsabilité spécifique et communique uniquement avec la couche adjacente."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de structure :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public class DataLayer { public string GetData() => 'Donnee'; }\npublic class BusinessLayer { private DataLayer _dl = new(); public string Process() => _dl.GetData() + ' traitee'; }\npublic class PresentationLayer { public void Show(string d) => Console.WriteLine(d); }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour des applications traditionnelles bien structurées"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand la séparation des responsabilités est importante"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour faciliter la maintenance et l'évolutivité"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Appelez le service métier :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Appeler le service métier"
+                                Clicked="OnCallServiceClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de structure"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Couche Données (Data Layer)&#x0a;public class DataRepository&#x0a;{&#x0a;    public string GetData()&#x0a;    {&#x0a;        // Accès base de données&#x0a;        return &quot;Données brutes&quot;;&#x0a;    }&#x0a;}&#x0a;&#x0a;// Couche Métier (Business Layer)&#x0a;public class BusinessService&#x0a;{&#x0a;    private readonly DataRepository _repository = new();&#x0a;&#x0a;    public string ProcessData()&#x0a;    {&#x0a;        var data = _repository.GetData();&#x0a;        // Logique métier&#x0a;        return data + &quot; - Traité&quot;;&#x0a;    }&#x0a;}&#x0a;&#x0a;// Couche Présentation (Presentation Layer)&#x0a;public class PresentationController&#x0a;{&#x0a;    private readonly BusinessService _service = new();&#x0a;&#x0a;    public void DisplayData()&#x0a;    {&#x0a;        var result = _service.ProcessData();&#x0a;        Console.WriteLine(result);&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Séparation claire des responsabilités"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Facile à comprendre"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Testabilité par couche"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Réutilisabilité du code"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Couplage entre couches"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Difficulté de modification"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Peut devenir monolithique"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

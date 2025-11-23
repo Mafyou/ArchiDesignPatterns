@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
@@ -31,7 +32,7 @@
 
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
-                
+
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
                         <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
@@ -48,17 +49,17 @@
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
-                                <Label Text="?" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
                                 <Label Grid.Column="1" Text="La création d'objet est coûteuse"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
-                                <Label Text="?" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
                                 <Label Grid.Column="1" Text="Vous devez créer de nombreux objets similaires"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
-                                <Label Text="?" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
                                 <Label Grid.Column="1" Text="Éviter les sous-classes pour la création d'objets"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
@@ -91,11 +92,11 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="Exemple de code" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
-                                Text="// Prototype Interface&#x0a;public interface IPrototype&#x0a;{&#x0a;    IPrototype Clone();&#x0a;}&#x0a;&#x0a;// Concrete Prototype&#x0a;public class Document : IPrototype&#x0a;{&#x0a;    public string Title { get; set; }&#x0a;    public string Content { get; set; }&#x0a;    public DateTime Created { get; set; }&#x0a;&#x0a;    public IPrototype Clone()&#x0a;    {&#x0a;        return new Document&#x0a;        {&#x0a;            Title = this.Title,&#x0a;            Content = this.Content,&#x0a;            Created = DateTime.Now&#x0a;        };&#x0a;    }&#x0a;}&#x0a;&#x0a;// Usage&#x0a;var original = new Document&#x0a;{&#x0a;    Title = &quot;Original&quot;,&#x0a;    Content = &quot;Content&quot;&#x0a;};&#x0a;&#x0a;var clone = (Document)original.Clone();&#x0a;clone.Title = &quot;Copy&quot;;" />
+                                Text="// Interface Prototype&#x0a;public interface IPrototype&#x0a;{&#x0a;    IPrototype Clone();&#x0a;}&#x0a;&#x0a;// Prototype concret&#x0a;public class Document : IPrototype&#x0a;{&#x0a;    public string Title { get; set; }&#x0a;    public string Content { get; set; }&#x0a;    public DateTime Created { get; set; }&#x0a;&#x0a;    public IPrototype Clone()&#x0a;    {&#x0a;        return new Document&#x0a;        {&#x0a;            Title = this.Title,&#x0a;            Content = this.Content,&#x0a;            Created = DateTime.Now&#x0a;        };&#x0a;    }&#x0a;}&#x0a;&#x0a;// Utilisation&#x0a;var original = new Document&#x0a;{&#x0a;    Title = &quot;Original&quot;,&#x0a;    Content = &quot;Contenu&quot;&#x0a;};&#x0a;&#x0a;var clone = (Document)original.Clone();&#x0a;clone.Title = &quot;Copie&quot;;" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -122,7 +123,7 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Bénéfices" FontAttributes="Bold"
+                                <Label Text="Avantages" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
@@ -132,10 +133,12 @@
                                        Style="{StaticResource BodySmall}" />
                                 <Label Text="• Flexibilité à l'exécution"
                                        Style="{StaticResource BodySmall}" />
+                                <Label Text="• Performance améliorée"
+                                       Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
                     </Border>
-                    
+
                     <Border Style="{StaticResource ConCard}">
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">

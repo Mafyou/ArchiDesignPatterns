@@ -31,20 +31,125 @@
         </Border>
         <!-- Body -->
         <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="15">
-                <Label Text="Flyweight" FontSize="24" FontAttributes="Bold" />
-                <Label Text="Le pattern Flyweight permet de partager des objets pour economiser de la memoire." FontSize="16" />
-                <Border Stroke="Black" StrokeThickness="2" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="Exemple interactif :" FontAttributes="Bold" />
-                        <Button Text="Utiliser le Flyweight" Clicked="OnUseFlyweightClicked" />
-                        <Label x:Name="ResultLabel" FontSize="14" />
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le pattern Flyweight permet de partager des objets pour économiser de la mémoire en mutualisant les états intrinsèques communs entre plusieurs objets."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
-                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,10" />
-                <Label Text="Exemple de code :" FontAttributes="Bold" />
-                <Editor IsReadOnly="True" HeightRequest="120"
-                    Text="public class Flyweight { public string Data; }\npublic class FlyweightFactory { private Dictionary&lt;string,Flyweight&gt; _cache = new(); public Flyweight Get(string key) =&gt; _cache.TryGetValue(key, out var f) ? f : (_cache[key]=new Flyweight{Data=key}); }" />
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🎯 Quand l'utiliser"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand l'application utilise un grand nombre d'objets similaires"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Pour réduire la consommation mémoire"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Quand les objets ont des états intrinsèques partageables"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Utilisez le Flyweight pour partager des objets :"
+                               Style="{StaticResource BodyMedium}" />
+                        <Button Text="Utiliser le Flyweight"
+                                Clicked="OnUseFlyweightClicked"
+                                HorizontalOptions="Fill" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Code Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="💻" FontSize="20" />
+                            <Label Text="Exemple de code"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// Flyweight&#x0a;public class Flyweight&#x0a;{&#x0a;    public string IntrinsicState { get; set; }&#x0a;&#x0a;    public void Operation(string extrinsicState)&#x0a;    {&#x0a;        Console.WriteLine($&quot;Intrinsèque: {IntrinsicState}, Extrinsèque: {extrinsicState}&quot;);&#x0a;    }&#x0a;}&#x0a;&#x0a;// Factory&#x0a;public class FlyweightFactory&#x0a;{&#x0a;    private Dictionary&lt;string, Flyweight&gt; _cache = new();&#x0a;&#x0a;    public Flyweight GetFlyweight(string key)&#x0a;    {&#x0a;        if (!_cache.TryGetValue(key, out var flyweight))&#x0a;        {&#x0a;            flyweight = new Flyweight { IntrinsicState = key };&#x0a;            _cache[key] = flyweight;&#x0a;        }&#x0a;        return flyweight;&#x0a;    }&#x0a;&#x0a;    public int GetCacheSize() =&gt; _cache.Count;&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Économie de mémoire"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Amélioration des performances"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Gestion centralisée des objets"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Réduction de la duplication"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Complexité accrue du code"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Gestion de laConcurrency"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Séparation état intrinsèque/extrinsèque"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
