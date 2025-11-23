@@ -1800,9 +1800,6 @@
   <data name="SRP_Title" xml:space="preserve">
     <value>Single Responsibility Principle</value>
   </data>
-  <data name="SRP_Description" xml:space="preserve">
-    <value>A class should have only one reason to change.</value>
-  </data>
   <data name="SRP_KeyConcept1" xml:space="preserve">
     <value>One class = one responsibility</value>
   </data>
@@ -1841,9 +1838,6 @@
   </data>
   <data name="OCP_Title" xml:space="preserve">
     <value>Open/Closed Principle</value>
-  </data>
-  <data name="OCP_Description" xml:space="preserve">
-    <value>Software entities should be open for extension but closed for modification.</value>
   </data>
   <data name="OCP_KeyConcept1" xml:space="preserve">
     <value>Open for extension (inheritance, composition)</value>
@@ -1884,9 +1878,6 @@
   <data name="LSP_Title" xml:space="preserve">
     <value>Liskov Substitution Principle</value>
   </data>
-  <data name="LSP_Description" xml:space="preserve">
-    <value>Objects of a derived class should be able to replace objects of the base class.</value>
-  </data>
   <data name="LSP_KeyConcept1" xml:space="preserve">
     <value>Subtypes must be substitutable</value>
   </data>
@@ -1926,9 +1917,6 @@
   <data name="ISP_Title" xml:space="preserve">
     <value>Interface Segregation Principle</value>
   </data>
-  <data name="ISP_Description" xml:space="preserve">
-    <value>Clients should not be forced to depend on interfaces they do not use.</value>
-  </data>
   <data name="ISP_KeyConcept1" xml:space="preserve">
     <value>Small and specific interfaces</value>
   </data>
@@ -1967,9 +1955,6 @@
   </data>
   <data name="DIP_Title" xml:space="preserve">
     <value>Dependency Inversion Principle</value>
-  </data>
-  <data name="DIP_Description" xml:space="preserve">
-    <value>Depend on abstractions, not concrete implementations.</value>
   </data>
   <data name="DIP_KeyConcept1" xml:space="preserve">
     <value>Depend on abstractions (interfaces) not implementations</value>
@@ -2111,5 +2096,20 @@
   </data>
   <data name="DDD_Description" xml:space="preserve">
     <value>Domain-Driven Design.</value>
+  </data>
+  <data name="SRP_Description" xml:space="preserve">
+    <value>A class should have only one reason to change.</value>
+  </data>
+  <data name="OCP_Description" xml:space="preserve">
+    <value>Software entities should be open for extension but closed for modification.</value>
+  </data>
+  <data name="LSP_Description" xml:space="preserve">
+    <value>Objects of a derived class should be able to replace objects of the base class.</value>
+  </data>
+  <data name="ISP_Description" xml:space="preserve">
+    <value>Clients should not be forced to depend on interfaces they do not use.</value>
+  </data>
+  <data name="DIP_Description" xml:space="preserve">
+    <value>Depend on abstractions, not concrete implementations.</value>
   </data>
 </root>

@@ -1800,7 +1800,7 @@
 	<data name="SRP_Title" xml:space="preserve">
     <value>Single Responsibility Principle</value>
   </data>
-	<data name="SRP_Description" xml:space="preserve">
+	<data name="SRP_LongDescription" xml:space="preserve">
     <value>Le principe de responsabilité unique stipule qu'une classe ne devrait avoir qu'une seule raison de changer. Chaque classe devrait avoir une seule responsabilité ou un seul objectif.</value>
   </data>
 	<data name="SRP_KeyConcept1" xml:space="preserve">
@@ -1842,7 +1842,7 @@
 	<data name="OCP_Title" xml:space="preserve">
     <value>Open/Closed Principle</value>
   </data>
-	<data name="OCP_Description" xml:space="preserve">
+	<data name="OCP_LongDescription" xml:space="preserve">
     <value>Le principe ouvert/fermé stipule que les entités logicielles (classes, modules, fonctions) doivent être ouvertes à l'extension mais fermées à la modification.</value>
   </data>
 	<data name="OCP_KeyConcept1" xml:space="preserve">
@@ -1884,7 +1884,7 @@
 	<data name="LSP_Title" xml:space="preserve">
     <value>Liskov Substitution Principle</value>
   </data>
-	<data name="LSP_Description" xml:space="preserve">
+	<data name="LSP_LongDescription" xml:space="preserve">
     <value>Le principe de substitution de Liskov stipule que les objets d'une classe dérivée doivent pouvoir remplacer les objets de la classe de base sans altérer le comportement du programme.</value>
   </data>
 	<data name="LSP_KeyConcept1" xml:space="preserve">
@@ -1926,7 +1926,7 @@
 	<data name="ISP_Title" xml:space="preserve">
     <value>Interface Segregation Principle</value>
   </data>
-	<data name="ISP_Description" xml:space="preserve">
+	<data name="ISP_LongDescription" xml:space="preserve">
     <value>Le principe de ségrégation des interfaces stipule qu'aucun client ne devrait être forcé de dépendre de méthodes qu'il n'utilise pas. Préférez plusieurs interfaces spécifiques à une interface générale.</value>
   </data>
 	<data name="ISP_KeyConcept1" xml:space="preserve">
@@ -1968,7 +1968,7 @@
 	<data name="DIP_Title" xml:space="preserve">
     <value>Dependency Inversion Principle</value>
   </data>
-	<data name="DIP_Description" xml:space="preserve">
+	<data name="DIP_LongDescription" xml:space="preserve">
     <value>Le principe d'inversion de dépendances stipule que les modules de haut niveau ne doivent pas dépendre des modules de bas niveau. Les deux doivent dépendre d'abstractions. Les abstractions ne doivent pas dépendre des détails, mais les détails doivent dépendre des abstractions.</value>
   </data>
 	<data name="DIP_KeyConcept1" xml:space="preserve">

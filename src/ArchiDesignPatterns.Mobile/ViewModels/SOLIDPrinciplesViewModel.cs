@@ -9,11 +9,11 @@ public partial class SOLIDPrinciplesViewModel : ObservableObject
     private ObservableCollection<SOLIDPrincipleInfo> _principles = new(
         new[]
         {
-            new SOLIDPrincipleInfo("Single Responsibility", Strings.SRP_Description, "SOLID"),
-            new SOLIDPrincipleInfo("Open/Closed", Strings.OCP_Description, "SOLID"),
-            new SOLIDPrincipleInfo("Liskov Substitution", Strings.LSP_Description, "SOLID"),
-            new SOLIDPrincipleInfo("Interface Segregation", Strings.ISP_Description, "SOLID"),
-            new SOLIDPrincipleInfo("Dependency Inversion", Strings.DIP_Description, "SOLID"),
+            new SOLIDPrincipleInfo("Single Responsibility", Strings.SRP_LongDescription, "SOLID"),
+            new SOLIDPrincipleInfo("Open/Closed", Strings.OCP_LongDescription, "SOLID"),
+            new SOLIDPrincipleInfo("Liskov Substitution", Strings.LSP_LongDescription, "SOLID"),
+            new SOLIDPrincipleInfo("Interface Segregation", Strings.ISP_LongDescription, "SOLID"),
+            new SOLIDPrincipleInfo("Dependency Inversion", Strings.DIP_LongDescription, "SOLID"),
         });
 
     [ObservableProperty]
