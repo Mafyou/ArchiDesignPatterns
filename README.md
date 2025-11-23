@@ -7,7 +7,7 @@ ArchiDesignPatterns is a .NET MAUI mobile application demonstrating various soft
 - **Target Framework:** .NET 10 (Android)
 - **Output Type:** APK / AAB
 - **Root Namespace:** ArchiDesignPatterns.Mobile
-- **App Identifier:** fr.mafyou.archidesignpatterns
+- **App Identifier:** fr.mafyou.codepatterns
 - **Version:** 1.0
 
 ## Features
@@ -22,19 +22,26 @@ ArchiDesignPatterns is a .NET MAUI mobile application demonstrating various soft
   - MVC
   - MVVM
   - Onion Architecture
+- Demonstrates SOLID principles:
+  - Single Responsibility Principle
+  - Open/Closed Principle
+  - Liskov Substitution Principle
+  - Interface Segregation Principle
+  - Dependency Inversion Principle
 - Demonstrates classic design patterns:
   - Adapter, Bridge, Chain of Responsibility, Composite, Decorator, Facade, Flyweight, Interpreter, Iterator, Mediator, Memento, Observer, Proxy, Singleton, State, Strategy, Template Method, Visitor
 - Includes a quiz page for learning reinforcement
 - Integrates with Semantic Kernel for advanced AI capabilities
 
 ## Main Dependencies
-- [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm)
-- [CommunityToolkit.Maui](https://www.nuget.org/packages/CommunityToolkit.Maui)
-- [Microsoft.Extensions.Http](https://www.nuget.org/packages/Microsoft.Extensions.Http)
-- [Microsoft.Maui.Essentials](https://www.nuget.org/packages/Microsoft.Maui.Essentials)
-- [Microsoft.Maui.Controls](https://www.nuget.org/packages/Microsoft.Maui.Controls)
-- [Microsoft.Extensions.Logging.Debug](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Debug)
-- [Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel)
+- [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm) (v8.4.0)
+- [CommunityToolkit.Maui](https://www.nuget.org/packages/CommunityToolkit.Maui) (v13.0.0)
+- [Microsoft.Extensions.Configuration.Json](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.Json) (v10.0.0)
+- [Microsoft.Extensions.Http](https://www.nuget.org/packages/Microsoft.Extensions.Http) (v10.0.0)
+- [Microsoft.Extensions.Logging.Debug](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Debug) (v10.0.0)
+- [Microsoft.Maui.Controls](https://www.nuget.org/packages/Microsoft.Maui.Controls) (v10.0.10)
+- [Microsoft.Maui.Essentials](https://www.nuget.org/packages/Microsoft.Maui.Essentials) (v10.0.10)
+- [Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel) (v1.67.1)
 
 ## Getting Started
 1. Ensure you have the latest .NET 10 SDK and Android development tools installed.
