@@ -114,6 +114,38 @@
                         </Grid>
                     </Border>
 
+                    <!-- SOLID Principles Card -->
+                    <Border Style="{StaticResource ElevatedCard}">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSOLIDPrinciplesClicked" />
+                        </Border.GestureRecognizers>
+                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="16" Padding="20">
+                            <Border Grid.Column="0"
+                                    BackgroundColor="{StaticResource SOLIDPrinciple}"
+                                    WidthRequest="60" HeightRequest="60"
+                                    StrokeThickness="0"
+                                    VerticalOptions="Center">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="12" />
+                                </Border.StrokeShape>
+                                <Label Text="🔷" FontSize="32"
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Border>
+                            
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
+                                <Label Text="Principes SOLID"
+                                       Style="{StaticResource SubTitle}" />
+                                <Label Text="5 principes fondamentaux pour une conception robuste"
+                                       Style="{StaticResource BodySmall}"
+                                       TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                            </VerticalStackLayout>
+                            
+                            <Label Grid.Column="2" Text="›" FontSize="40"
+                                   TextColor="{StaticResource SOLIDPrinciple}"
+                                   VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+
                     <!-- Quiz Card -->
                     <Border Style="{StaticResource ElevatedCard}">
                         <Border.GestureRecognizers>
@@ -148,7 +180,7 @@
                 </VerticalStackLayout>
 
                 <!-- Feature Cards Grid -->
-                <Grid ColumnDefinitions="*,*" ColumnSpacing="12" RowSpacing="12">
+                <Grid ColumnDefinitions="*,*,*" ColumnSpacing="12" RowSpacing="12">
                     
                     <!-- Patterns Card -->
                     <Border Grid.Column="0" Style="{StaticResource Card}">
@@ -174,6 +206,21 @@
                                    TextColor="{StaticResource ArchitecturePattern}"
                                    HorizontalTextAlignment="Center" />
                             <Label Text="Architectures"
+                                   FontSize="12" FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <!-- SOLID Principles Card -->
+                    <Border Grid.Column="2" Style="{StaticResource Card}">
+                        <VerticalStackLayout Spacing="8" Padding="8">
+                            <Label Text="🔷" FontSize="40" HorizontalOptions="Center" />
+                            <Label Text="5" 
+                                   FontSize="32" FontAttributes="Bold"
+                                   TextColor="{StaticResource SOLIDPrinciple}"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="Principes SOLID"
                                    FontSize="12" FontAttributes="Bold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
@@ -254,6 +301,24 @@
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
                             <Label Text="Organisation de systèmes à grande échelle"
+                                   Style="{StaticResource Caption}" />
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <!-- Learning Item 5 -->
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                        <Border BackgroundColor="{StaticResource SOLIDPrinciple}"
+                                WidthRequest="32" HeightRequest="32"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 16">
+                            <Label Text="✓" FontSize="18" TextColor="White"
+                                   HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" Spacing="2">
+                            <Label Text="Principes SOLID"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyMedium}" />
+                            <Label Text="Fondations pour une conception orientée objet robuste"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>

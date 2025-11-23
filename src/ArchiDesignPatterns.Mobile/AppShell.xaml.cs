@@ -52,7 +52,7 @@ public partial class AppShell : Shell
 
     private async Task ConfirmExitAsync()
     {
-        bool shouldExit = await Application.Current!.MainPage!.DisplayAlertAsync(
+        bool shouldExit = await Application.Current!.Windows[0]!.Page.DisplayAlertAsync(
             "Exit App",
             "Do you want to exit the application?",
             "Yes",

@@ -32,7 +32,7 @@ public partial class MainPage : ContentPage
         var pageType = Type.GetType("ArchiDesignPatterns.Mobile.Pages.ArchitecturesPage");
         if (pageType is null)
         {
-            await DisplayAlert("Navigation Error", "Could not find ArchitecturesPage type.", "OK");
+            await DisplayAlertAsync("Navigation Error", "Could not find ArchitecturesPage type.", "OK");
             return;
         }
         Page? page = null;
@@ -45,6 +45,26 @@ public partial class MainPage : ContentPage
             await Shell.Current.Navigation.PushAsync(page);
         else
             await Shell.Current.GoToAsync("//ArchitecturesPage");
+    }
+
+    private async void OnSOLIDPrinciplesClicked(object? sender, EventArgs e)
+    {
+        var pageType = Type.GetType("ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciplesPage");
+        if (pageType is null)
+        {
+            await DisplayAlertAsync("Navigation Error", "Could not find SOLIDPrinciplesPage type.", "OK");
+            return;
+        }
+        Page? page = null;
+        if (App.Current.Handler?.MauiContext?.Services is IServiceProvider services)
+        {
+            page = services.GetService(pageType) as Page;
+        }
+        page ??= Activator.CreateInstance(pageType) as Page;
+        if (page is not null && Shell.Current.Navigation is not null)
+            await Shell.Current.Navigation.PushAsync(page);
+        else
+            await Shell.Current.GoToAsync("//SOLIDPrinciplesPage");
     }
 
     private async void OnQuizClicked(object? sender, EventArgs e)

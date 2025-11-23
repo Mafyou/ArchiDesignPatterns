@@ -140,6 +140,24 @@
     <MauiXaml Update="Pages\DesignPatterns\VisitorPatternPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\SOLIDPrinciplesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\SOLIDPrinciples\DependencyInversionPrinciplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\SOLIDPrinciples\InterfaceSegregationPrinciplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\SOLIDPrinciples\LiskovSubstitutionPrinciplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\SOLIDPrinciples\OpenClosedPrinciplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\SOLIDPrinciples\SingleResponsibilityPrinciplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Resources\Styles\ControlTemplates.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciples.InterfaceSegregationPrinciplePage"
+             x:DataType="viewmodels:InterfaceSegregationPrincipleViewModel"
+             Title="Interface Segregation">
+
+    <Grid RowDefinitions="Auto,*">
+        
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource SOLIDPrinciple}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="🔷" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Interface Segregation Principle"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="SOLID" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le principe de ségrégation des interfaces stipule que les clients ne doivent pas être forcés de dépendre d'interfaces qu'ils n'utilisent pas. Il vaut mieux avoir plusieurs interfaces spécifiques plutôt qu'une seule interface générale."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Key Concepts -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🔑 Concepts Clés"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Interfaces petites et cohésives"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Éviter les interfaces 'grasses' (fat interfaces)"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Les clients n'implémentent que ce qu'ils utilisent"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Réduire le couplage entre composants"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple Interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Comparez une interface monolithique avec des interfaces ségrégées :"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                        <Button Text="Voir l'Exemple ❌ (Violation)"
+                                Clicked="OnShowViolationClicked"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="{StaticResource Error}" />
+                        <Button Text="Voir l'Exemple ✓ (Respect de l'ISP)"
+                                Clicked="OnShowCorrectClicked"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="{StaticResource Success}" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Bad Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="❌" FontSize="20" />
+                            <Label Text="Mauvais Exemple (Violation)"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// ❌ Mauvais : Interface 'grasse'&#x0a;public interface IWorker&#x0a;{&#x0a;    void Work();&#x0a;    void Eat();&#x0a;    void Sleep();&#x0a;    void GetPaid();&#x0a;}&#x0a;&#x0a;// Problème : Un robot doit implémenter Eat() et Sleep() !&#x0a;public class Robot : IWorker&#x0a;{&#x0a;    public void Work() { /* travaille */ }&#x0a;    public void Eat() { throw new NotImplementedException(); }&#x0a;    public void Sleep() { throw new NotImplementedException(); }&#x0a;    public void GetPaid() { /* reçoit entretien */ }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Good Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="✅" FontSize="20" />
+                            <Label Text="Bon Exemple (Respect de l'ISP)"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// ✅ Bon : Interfaces ségrégées&#x0a;public interface IWorkable&#x0a;{&#x0a;    void Work();&#x0a;}&#x0a;&#x0a;public interface IFeedable&#x0a;{&#x0a;    void Eat();&#x0a;}&#x0a;&#x0a;public interface ISleepable&#x0a;{&#x0a;    void Sleep();&#x0a;}&#x0a;&#x0a;public interface IPayable&#x0a;{&#x0a;    void GetPaid();&#x0a;}&#x0a;&#x0a;// Humain implémente tout&#x0a;public class Human : IWorkable, IFeedable, ISleepable, IPayable&#x0a;{&#x0a;    public void Work() { }&#x0a;    public void Eat() { }&#x0a;    public void Sleep() { }&#x0a;    public void GetPaid() { }&#x0a;}&#x0a;&#x0a;// Robot n'implémente que ce qui a du sens&#x0a;public class Robot : IWorkable, IPayable&#x0a;{&#x0a;    public void Work() { }&#x0a;    public void GetPaid() { }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Code plus flexible"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Couplage réduit"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Meilleure maintenabilité"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Tests plus ciblés"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Points d'attention" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Plus d'interfaces à gérer"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Peut sembler complexe"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Nécessite une bonne granularité"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

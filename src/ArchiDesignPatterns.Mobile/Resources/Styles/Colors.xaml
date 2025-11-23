@@ -23,6 +23,7 @@
     <Color x:Key="StructuralPattern">#2563EB</Color>
     <Color x:Key="BehavioralPattern">#D97706</Color>
     <Color x:Key="ArchitecturePattern">#7C3AED</Color>
+    <Color x:Key="SOLIDPrinciple">#0891B2</Color>
     
     <!-- Semantic Colors -->
     <Color x:Key="Success">#059669</Color>

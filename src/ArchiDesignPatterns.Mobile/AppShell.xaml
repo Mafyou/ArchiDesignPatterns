@@ -7,6 +7,7 @@
     xmlns:pages="clr-namespace:ArchiDesignPatterns.Mobile.Pages"
     xmlns:dp="clr-namespace:ArchiDesignPatterns.Mobile.Pages.DesignPatterns"
     xmlns:arch="clr-namespace:ArchiDesignPatterns.Mobile.Pages.Architectures"
+    xmlns:solid="clr-namespace:ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciples"
     Title="Design Patterns"
     FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
     FlyoutWidth="300">
@@ -106,6 +107,19 @@
         <ShellContent Title="  CQRS" ContentTemplate="{DataTemplate arch:CQRSArchitecturePage}" Route="CQRSArchitecturePage" />
         <ShellContent Title="  Onion Architecture" ContentTemplate="{DataTemplate arch:OnionArchitecturePage}" Route="OnionArchitecturePage" />
         <ShellContent Title="  DDD" ContentTemplate="{DataTemplate arch:DDDArchitecturePage}" Route="DDDArchitecturePage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="🔷 Tous les Principes SOLID" Route="SOLIDPrinciplesPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:SOLIDPrinciplesPage}" />
+    </FlyoutItem>
+
+    <!-- SOLID Principles -->
+    <FlyoutItem Title="Principes SOLID" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="  Single Responsibility" ContentTemplate="{DataTemplate solid:SingleResponsibilityPrinciplePage}" Route="SingleResponsibilityPrinciplePage" />
+        <ShellContent Title="  Open/Closed" ContentTemplate="{DataTemplate solid:OpenClosedPrinciplePage}" Route="OpenClosedPrinciplePage" />
+        <ShellContent Title="  Liskov Substitution" ContentTemplate="{DataTemplate solid:LiskovSubstitutionPrinciplePage}" Route="LiskovSubstitutionPrinciplePage" />
+        <ShellContent Title="  Interface Segregation" ContentTemplate="{DataTemplate solid:InterfaceSegregationPrinciplePage}" Route="InterfaceSegregationPrinciplePage" />
+        <ShellContent Title="  Dependency Inversion" ContentTemplate="{DataTemplate solid:DependencyInversionPrinciplePage}" Route="DependencyInversionPrinciplePage" />
     </FlyoutItem>
 
     <FlyoutItem Title="🎯 Quiz" Route="QuizPage">

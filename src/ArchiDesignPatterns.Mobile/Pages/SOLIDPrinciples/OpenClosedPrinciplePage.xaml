@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciples.OpenClosedPrinciplePage"
+             x:DataType="viewmodels:OpenClosedPrincipleViewModel"
+             Title="Open/Closed">
+
+    <Grid RowDefinitions="Auto,*">
+        
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource SOLIDPrinciple}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="🔷" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Open/Closed Principle"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="SOLID" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le principe ouvert/fermé stipule que les entités logicielles (classes, modules, fonctions) doivent être ouvertes à l'extension mais fermées à la modification. Vous devez pouvoir étendre le comportement sans modifier le code existant."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Key Concepts -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🔑 Concepts Clés"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Ouvert à l'extension (ajout de nouvelles fonctionnalités)"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Fermé à la modification (code existant non touché)"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Utiliser l'abstraction et le polymorphisme"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Réduire les risques de régression"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple Interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Comparez l'ajout d'une nouvelle forme avec et sans OCP :"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                        <Button Text="Voir l'Exemple ❌ (Violation)"
+                                Clicked="OnShowViolationClicked"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="{StaticResource Error}" />
+                        <Button Text="Voir l'Exemple ✓ (Respect de l'OCP)"
+                                Clicked="OnShowCorrectClicked"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="{StaticResource Success}" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Bad Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="❌" FontSize="20" />
+                            <Label Text="Mauvais Exemple (Violation)"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// ❌ Mauvais : Modification requise&#x0a;public class AreaCalculator&#x0a;{&#x0a;    public double CalculateArea(object shape)&#x0a;    {&#x0a;        if (shape is Rectangle rect)&#x0a;            return rect.Width * rect.Height;&#x0a;        if (shape is Circle circle)&#x0a;            return Math.PI * circle.Radius * circle.Radius;&#x0a;        // Pour ajouter Triangle, on doit modifier cette méthode !&#x0a;        return 0;&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Good Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="✅" FontSize="20" />
+                            <Label Text="Bon Exemple (Respect de l'OCP)"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// ✅ Bon : Extension sans modification&#x0a;public interface IShape&#x0a;{&#x0a;    double CalculateArea();&#x0a;}&#x0a;&#x0a;public class Rectangle : IShape&#x0a;{&#x0a;    public double Width { get; set; }&#x0a;    public double Height { get; set; }&#x0a;    public double CalculateArea() => Width * Height;&#x0a;}&#x0a;&#x0a;public class Circle : IShape&#x0a;{&#x0a;    public double Radius { get; set; }&#x0a;    public double CalculateArea() => Math.PI * Radius * Radius;&#x0a;}&#x0a;&#x0a;// Ajouter Triangle ne nécessite aucune modification !&#x0a;public class Triangle : IShape&#x0a;{&#x0a;    public double Base { get; set; }&#x0a;    public double Height { get; set; }&#x0a;    public double CalculateArea() => (Base * Height) / 2;&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Extensibilité sans risque"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Code stable et robuste"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Moins de bugs de régression"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Facilite les tests"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Points d'attention" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Nécessite une bonne abstraction"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Peut augmenter la complexité"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Difficile à appliquer rétroactivement"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

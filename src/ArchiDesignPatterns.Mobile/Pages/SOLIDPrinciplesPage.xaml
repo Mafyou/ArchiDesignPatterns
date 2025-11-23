@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:models="clr-namespace:ArchiDesignPatterns.Mobile.Models"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciplesPage"
+             x:DataType="viewmodels:SOLIDPrinciplesViewModel"
+             Title="Principes SOLID">
+    <ContentPage.BindingContext>
+        <viewmodels:SOLIDPrinciplesViewModel />
+    </ContentPage.BindingContext>
+    
+    <Grid RowDefinitions="Auto,*">
+        
+        <!-- Header Section with Gradient -->
+        <Border Grid.Row="0"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="{StaticResource SOLIDPrinciple}" Offset="0.0" />
+                    <GradientStop Color="{StaticResource Primary}" Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Principes SOLID"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       SemanticProperties.HeadingLevel="Level1" />
+                <Label Text="5 principes fondamentaux pour une conception orientée objet robuste"
+                       FontSize="14"
+                       TextColor="White"
+                       Opacity="0.9" />
+                <SearchBar Placeholder="Rechercher des principes..."
+                           Text="{Binding SearchTerm}"
+                           BackgroundColor="White"
+                           PlaceholderColor="{StaticResource Gray400}"
+                           TextColor="{StaticResource Gray900}" />
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Principles List -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="16">
+
+                <!-- Principles Collection -->
+                <CollectionView ItemsSource="{Binding FilteredPrinciples}"
+                                SelectionMode="Single"
+                                SelectedItem="{Binding SelectedPrinciple}"
+                                SelectionChangedCommand="{Binding SelectedPrincipleChangedCommand}"
+                                SelectionChangedCommandParameter="{Binding SelectedPrinciple}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:SOLIDPrincipleInfo">
+                            <Border Style="{StaticResource ListItemBorder}">
+                                
+                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="16" RowDefinitions="Auto,Auto,Auto">
+                                    
+                                    <!-- Icon/Indicator -->
+                                    <Border Grid.Column="0" Grid.RowSpan="3"
+                                            BackgroundColor="{StaticResource SOLIDPrinciple}"
+                                            WidthRequest="60" HeightRequest="60"
+                                            StrokeThickness="0"
+                                            VerticalOptions="Center">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="12" />
+                                        </Border.StrokeShape>
+                                        <Label Text="🔷" FontSize="30"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center" />
+                                    </Border>
+
+                                    <!-- Title -->
+                                    <Label Grid.Column="1" Grid.Row="0"
+                                           Text="{Binding Name}"
+                                           Style="{StaticResource SubTitle}"
+                                           VerticalOptions="End" />
+
+                                    <!-- Description -->
+                                    <Label Grid.Column="1" Grid.Row="1"
+                                           Text="{Binding Description}"
+                                           Style="{StaticResource BodySmall}"
+                                           TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}"
+                                           LineBreakMode="WordWrap"
+                                           MaxLines="2"
+                                           Margin="0,4,0,0" />
+
+                                    <!-- Category Badge -->
+                                    <Border Grid.Column="1" Grid.Row="2"
+                                            BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray700}}"
+                                            Padding="10,5" Margin="0,6,0,0"
+                                            StrokeThickness="0"
+                                            HorizontalOptions="Start">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="6" />
+                                        </Border.StrokeShape>
+                                        <Label Text="{Binding Category}"
+                                               FontSize="11" FontAttributes="Bold"
+                                               TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}" />
+                                    </Border>
+
+                                    <!-- Arrow -->
+                                    <Label Grid.Column="2" Grid.RowSpan="3"
+                                           Text="›" FontSize="36"
+                                           TextColor="{StaticResource SOLIDPrinciple}"
+                                           VerticalOptions="Center" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    
+                    <CollectionView.EmptyView>
+                        <VerticalStackLayout Spacing="16" Padding="40"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center">
+                            <Label Text="🔷" FontSize="64" HorizontalOptions="Center" />
+                            <Label Text="Aucun principe trouvé"
+                                   Style="{StaticResource Title}"
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="Essayez d'ajuster votre terme de recherche"
+                                   Style="{StaticResource BodyMedium}"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="{StaticResource Gray500}" />
+                        </VerticalStackLayout>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciples.SingleResponsibilityPrinciplePage"
+             x:DataType="viewmodels:SingleResponsibilityPrincipleViewModel"
+             Title="Single Responsibility">
+
+    <Grid RowDefinitions="Auto,*">
+        
+        <!-- Header -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource SOLIDPrinciple}"
+                Padding="20,24,20,20"
+                StrokeThickness="0">
+            <VerticalStackLayout Spacing="8">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="🔷" FontSize="32" VerticalOptions="Center" />
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Single Responsibility Principle"
+                               FontSize="28" FontAttributes="Bold"
+                               TextColor="White" />
+                        <Border BackgroundColor="White" Opacity="0.3"
+                                Padding="8,4" StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                HorizontalOptions="Start">
+                            <Label Text="SOLID" FontSize="11"
+                                   FontAttributes="Bold" TextColor="White" />
+                        </Border>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
+                
+                <!-- Description Card -->
+                <Border Style="{StaticResource ElevatedCard}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="📖 Description"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Le principe de responsabilité unique stipule qu'une classe ne doit avoir qu'une seule raison de changer. Chaque classe doit avoir une responsabilité unique et bien définie."
+                               Style="{StaticResource BodyLarge}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Key Concepts -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="🔑 Concepts Clés"
+                               Style="{StaticResource SubTitle}" />
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Une seule responsabilité par classe"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Une seule raison de changer"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Haute cohésion, faible couplage"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="Facilite la maintenance et les tests"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Interactive Example -->
+                <Border Style="{StaticResource InteractiveSection}">
+                    <VerticalStackLayout Spacing="16">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
+                            <Label Text="Exemple Interactif"
+                                   Style="{StaticResource SubTitle}"
+                                   TextColor="{StaticResource Primary}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Label Text="Comparez une classe violant le SRP avec une classe respectant le principe :"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
+                        <Button Text="Voir l'Exemple ❌ (Violation)"
+                                Clicked="OnShowViolationClicked"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="{StaticResource Error}" />
+                        <Button Text="Voir l'Exemple ✓ (Respect du SRP)"
+                                Clicked="OnShowCorrectClicked"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="{StaticResource Success}" />
+                        <Label x:Name="ResultLabel"
+                               Style="{StaticResource ResultLabel}"
+                               LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Bad Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="❌" FontSize="20" />
+                            <Label Text="Mauvais Exemple (Violation)"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// ❌ Mauvais : Trop de responsabilités&#x0a;public class User&#x0a;{&#x0a;    public string Name { get; set; }&#x0a;    public string Email { get; set; }&#x0a;&#x0a;    // Logique métier&#x0a;    public void UpdateProfile(string name) { }&#x0a;&#x0a;    // Accès base de données&#x0a;    public void SaveToDatabase() { }&#x0a;&#x0a;    // Envoi d'email&#x0a;    public void SendWelcomeEmail() { }&#x0a;&#x0a;    // Journalisation&#x0a;    public void LogActivity() { }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Good Example -->
+                <Border Style="{StaticResource CodeSection}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="✅" FontSize="20" />
+                            <Label Text="Bon Exemple (Respect du SRP)"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <Editor Style="{StaticResource CodeEditor}"
+                                Text="// ✅ Bon : Responsabilités séparées&#x0a;public class User&#x0a;{&#x0a;    public string Name { get; set; }&#x0a;    public string Email { get; set; }&#x0a;    public void UpdateProfile(string name) { }&#x0a;}&#x0a;&#x0a;public class UserRepository&#x0a;{&#x0a;    public void Save(User user) { }&#x0a;}&#x0a;&#x0a;public class EmailService&#x0a;{&#x0a;    public void SendWelcomeEmail(User user) { }&#x0a;}&#x0a;&#x0a;public class ActivityLogger&#x0a;{&#x0a;    public void Log(string activity) { }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <!-- Pros -->
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="Avantages" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Code plus facile à comprendre"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Tests plus simples"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Maintenance facilitée"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Réutilisabilité accrue"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <!-- Cons -->
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="Points d'attention" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="• Plus de classes à gérer"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Peut sembler complexe au début"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="• Nécessite une bonne architecture"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
