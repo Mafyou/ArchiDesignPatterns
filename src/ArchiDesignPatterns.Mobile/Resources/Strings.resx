@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, ...</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, ...</value>
+  </resheader>
+  <data name="SingletonPattern_Title" xml:space="preserve">
+    <value>🏗️ Singleton Pattern</value>
+  </data>
+  <data name="SingletonPattern_DescriptionTitle" xml:space="preserve">
+    <value>📖 Description</value>
+  </data>
+  <data name="SingletonPattern_Description" xml:space="preserve">
+    <value>Le pattern Singleton assure qu'une classe n'ait qu'une seule instance et fournit un point d'accès global à cette instance.</value>
+  </data>
+  <data name="SingletonPattern_WhenToUseTitle" xml:space="preserve">
+    <value>🎯 Quand l'utiliser</value>
+  </data>
+  <data name="SingletonPattern_WhenToUse1" xml:space="preserve">
+    <value>Quand exactement une instance d'une classe est nécessaire</value>
+  </data>
+  <data name="SingletonPattern_WhenToUse2" xml:space="preserve">
+    <value>Pour les gestionnaires de configuration ou services de journalisation</value>
+  </data>
+  <data name="SingletonPattern_WhenToUse3" xml:space="preserve">
+    <value>Pour contrôler l'accès aux ressources partagées</value>
+  </data>
+  <data name="SingletonPattern_InteractiveTitle" xml:space="preserve">
+    <value>🎮 Exemple Interactif</value>
+  </data>
+  <data name="SingletonPattern_InteractiveDesc" xml:space="preserve">
+    <value>Cliquez sur le bouton pour créer une instance Singleton. Remarquez que plusieurs clics retournent toujours la même instance !</value>
+  </data>
+  <data name="SingletonPattern_InteractiveButton" xml:space="preserve">
+    <value>Créer une Instance Singleton</value>
+  </data>
+  <data name="SingletonPattern_CodeTitle" xml:space="preserve">
+    <value>💻 Exemple de Code</value>
+  </data>
+  <data name="SingletonPattern_ProsTitle" xml:space="preserve">
+    <value>✅ Avantages</value>
+  </data>
+  <data name="SingletonPattern_Pros1" xml:space="preserve">
+    <value>Garantie d'instance unique</value>
+  </data>
+  <data name="SingletonPattern_Pros2" xml:space="preserve">
+    <value>Point d'accès global</value>
+  </data>
+  <data name="SingletonPattern_Pros3" xml:space="preserve">
+    <value>Initialisation paresseuse</value>
+  </data>
+  <data name="SingletonPattern_ConsTitle" xml:space="preserve">
+    <value>⚠️ Inconvénients</value>
+  </data>
+  <data name="SingletonPattern_Cons1" xml:space="preserve">
+    <value>Difficile à tester</value>
+  </data>
+  <data name="SingletonPattern_Cons2" xml:space="preserve">
+    <value>Problèmes d'état global</value>
+  </data>
+  <data name="SingletonPattern_Cons3" xml:space="preserve">
+    <value>Préoccupations de sécurité de thread</value>
+  </data>
+  <data name="FactoryPattern_Title" xml:space="preserve">
+    <value>🏗️ Factory Pattern</value>
+  </data>
+  <data name="FactoryPattern_Creational" xml:space="preserve">
+    <value>Creational</value>
+  </data>
+  <data name="FactoryPattern_DescriptionTitle" xml:space="preserve">
+    <value>📖 Description</value>
+  </data>
+  <data name="FactoryPattern_Description" xml:space="preserve">
+    <value>Le pattern Factory fournit une interface pour créer des objets sans exposer la logique de création au client. Il délègue l'instanciation à des classes factory spécialisées.</value>
+  </data>
+  <data name="FactoryPattern_WhenToUseTitle" xml:space="preserve">
+    <value>🎯 Quand l'utiliser</value>
+  </data>
+  <data name="FactoryPattern_WhenToUse1" xml:space="preserve">
+    <value>Quand la logique de création d'objet est complexe</value>
+  </data>
+  <data name="FactoryPattern_WhenToUse2" xml:space="preserve">
+    <value>Quand vous devez découpler la création d'objet de l'utilisation</value>
+  </data>
+  <data name="FactoryPattern_WhenToUse3" xml:space="preserve">
+    <value>Pour créer des familles d'objets liés</value>
+  </data>
+  <data name="FactoryPattern_InteractiveTitle" xml:space="preserve">
+    <value>🎮 Exemple Interactif</value>
+  </data>
+  <data name="FactoryPattern_InteractiveDesc" xml:space="preserve">
+    <value>Sélectionnez un type de véhicule et créez-le en utilisant la factory :</value>
+  </data>
+  <data name="FactoryPattern_PickerTitle" xml:space="preserve">
+    <value>Choisissez un type de véhicule</value>
+  </data>
+  <data name="FactoryPattern_PickerCar" xml:space="preserve">
+    <value>Voiture (Car)</value>
+  </data>
+  <data name="FactoryPattern_PickerBike" xml:space="preserve">
+    <value>Vélo (Bike)</value>
+  </data>
+  <data name="FactoryPattern_PickerPlane" xml:space="preserve">
+    <value>Avion (Plane)</value>
+  </data>
+  <data name="FactoryPattern_InteractiveButton" xml:space="preserve">
+    <value>Créer un Véhicule</value>
+  </data>
+  <data name="FactoryPattern_CodeTitle" xml:space="preserve">
+    <value>💻 Exemple de Code</value>
+  </data>
+  <data name="FactoryPattern_RealWorldTitle" xml:space="preserve">
+    <value>Scénario Réel</value>
+  </data>
+  <data name="FactoryPattern_RealWorldDesc" xml:space="preserve">
+    <value>Création de documents dans un logiciel de bureautique : WordFactory crée des .docx, SpreadsheetFactory crée des .xlsx - même interface, implémentations différentes.</value>
+  </data>
+  <data name="FactoryPattern_ProsTitle" xml:space="preserve">
+    <value>✅ Avantages</value>
+  </data>
+  <data name="FactoryPattern_Pros1" xml:space="preserve">
+    <value>• Couplage faible</value>
+  </data>
+  <data name="FactoryPattern_Pros2" xml:space="preserve">
+    <value>• Facile à étendre</value>
+  </data>
+  <data name="FactoryPattern_Pros3" xml:space="preserve">
+    <value>• Création centralisée</value>
+  </data>
+  <data name="FactoryPattern_ConsTitle" xml:space="preserve">
+    <value>⚠️ Inconvénients</value>
+  </data>
+  <data name="FactoryPattern_Cons1" xml:space="preserve">
+    <value>• Plus de classes</value>
+  </data>
+  <data name="FactoryPattern_Cons2" xml:space="preserve">
+    <value>• Complexité augmente</value>
+  </data>
+  <data name="FactoryPattern_Cons3" xml:space="preserve">
+    <value>• Factory peut devenir grande</value>
+  </data>
+</root>

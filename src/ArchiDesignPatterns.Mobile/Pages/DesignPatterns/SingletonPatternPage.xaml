@@ -1,12 +1,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.SingletonPatternPage"
              x:DataType="viewmodels:SingletonPatternViewModel"
-             Title="Singleton">
+             Title="{x:Static resx:Strings.SingletonPattern_Title}">
 
     <Grid RowDefinitions="Auto,*">
-        
         <!-- Header -->
         <Border Grid.Row="0"
                 BackgroundColor="{StaticResource CreationalPattern}"
@@ -16,14 +16,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🏗️" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Singleton Pattern"
+                        <Label Text="{x:Static resx:Strings.SingletonPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Creational" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_Creational}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -33,14 +33,16 @@
 
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
-                
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
-                               Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Singleton assure qu'une classe n'ait qu'une seule instance et fournit un point d'accès global à cette instance."
+                        <Label Text="{x:Static resx:Strings.SingletonPattern_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -49,23 +51,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
-                               Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand exactement une instance d'une classe est nécessaire"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.SingletonPattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour les gestionnaires de configuration ou services de journalisation"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.SingletonPattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour contrôler l'accès aux ressources partagées"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.SingletonPattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -77,16 +82,16 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Cliquez sur le bouton pour créer une instance Singleton. Remarquez que plusieurs clics retournent toujours la même instance !"
+                        <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Créer une Instance Singleton"
+                        <Button Text="{x:Static resx:Strings.SingletonPattern_InteractiveButton}"
                                 Clicked="OnCreateSingletonClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -100,7 +105,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de Code"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -116,40 +121,38 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Garantie d'instance unique"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Point d'accès global"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Initialisation paresseuse"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
                     </Border>
-                    
                     <!-- Cons -->
                     <Border Style="{StaticResource ConCard}">
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Difficile à tester"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Problèmes d'état global"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Préoccupations de sécurité de thread"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
                     </Border>
                 </Grid>
-
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

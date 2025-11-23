@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.FactoryPatternPage"
              x:DataType="viewmodels:FactoryPatternViewModel"
-             Title="Factory">
+             Title="{x:Static resx:Strings.FactoryPattern_Title}">
     
     <Grid RowDefinitions="Auto,*">
-        
         <!-- Header -->
         <Border Grid.Row="0"
                 BackgroundColor="{StaticResource CreationalPattern}"
@@ -17,14 +17,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🏗️" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Factory Pattern"
+                        <Label Text="{x:Static resx:Strings.FactoryPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Creational" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.FactoryPattern_Creational}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -34,14 +34,16 @@
 
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Style="{StaticResource PatternDetailContainer}">
-                
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
-                               Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.FactoryPattern_DescriptionTitle}"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Factory fournit une interface pour créer des objets sans exposer la logique de création au client. Il délègue l'instanciation à des classes factory spécialisées."
+                        <Label Text="{x:Static resx:Strings.FactoryPattern_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -50,23 +52,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
-                               Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.FactoryPattern_WhenToUseTitle}"
+                                   Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand la logique de création d'objet est complexe"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.FactoryPattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand vous devez découpler la création d'objet de l'utilisation"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.FactoryPattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour créer des familles d'objets liés"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.FactoryPattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -78,27 +83,27 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.FactoryPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Sélectionnez un type de véhicule et créez-le en utilisant la factory :"
+                        <Label Text="{x:Static resx:Strings.FactoryPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                         <Picker x:Name="TypePicker"
-                                Title="Choisissez un type de véhicule"
+                                Title="{x:Static resx:Strings.FactoryPattern_PickerTitle}"
                                 SelectedIndexChanged="OnTypeSelected"
                                 BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray800}}"
                                 HeightRequest="50">
                             <Picker.Items>
-                                <x:String>Voiture (Car)</x:String>
-                                <x:String>Vélo (Bike)</x:String>
-                                <x:String>Avion (Plane)</x:String>
+                                <x:String>{x:Static resx:Strings.FactoryPattern_PickerCar}</x:String>
+                                <x:String>{x:Static resx:Strings.FactoryPattern_PickerBike}</x:String>
+                                <x:String>{x:Static resx:Strings.FactoryPattern_PickerPlane}</x:String>
                             </Picker.Items>
                         </Picker>
-                        <Button Text="Créer un Véhicule"
+                        <Button Text="{x:Static resx:Strings.FactoryPattern_InteractiveButton}"
                                 Clicked="OnCreateObjectClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -112,7 +117,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de Code"
+                            <Label Text="{x:Static resx:Strings.FactoryPattern_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -130,11 +135,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🌍" FontSize="20" />
-                            <Label Text="Scénario Réel"
+                            <Label Text="{x:Static resx:Strings.FactoryPattern_RealWorldTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="Création de documents dans un logiciel de bureautique : WordFactory crée des .docx, SpreadsheetFactory crée des .xlsx - même interface, implémentations différentes."
+                        <Label Text="{x:Static resx:Strings.FactoryPattern_RealWorldDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -147,40 +152,38 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Couplage faible"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Facile à étendre"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Création centralisée"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
                     </Border>
-                    
                     <!-- Cons -->
                     <Border Style="{StaticResource ConCard}">
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Plus de classes"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Complexité augmente"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Factory peut devenir grande"
+                                <Label Text="{x:Static resx:Strings.FactoryPattern_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
                     </Border>
                 </Grid>
-
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

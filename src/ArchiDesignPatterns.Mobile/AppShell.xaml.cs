@@ -9,6 +9,8 @@ public partial class AppShell : Shell
         // Add navigation event handlers
         this.Navigating += OnShellNavigating;
         this.Navigated += OnShellNavigated;
+
+        UpdateLanguageIcon();
     }
 
     private void OnShellNavigating(object? sender, ShellNavigatingEventArgs e)
@@ -37,7 +39,6 @@ public partial class AppShell : Shell
                     return;
                 }
             }
-
             // Allow all other back navigation (between pattern pages, from pattern to list, etc.)
             // Do not cancel - let it proceed normally
         }
@@ -62,5 +63,65 @@ public partial class AppShell : Shell
         {
             Application.Current?.Quit();
         }
+    }
+
+    private async void OnLanguageToolbarItemClicked(object sender, EventArgs e)
+    {
+        // Toggle between French and English
+        var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+        var newCulture = currentCulture == "fr" ? "en" : "fr";
+        SetCulture(newCulture);
+        UpdateLanguageIcon();
+        await ReloadCurrentPageAsync();
+    }
+
+    private static void SetCulture(string cultureCode)
+    {
+        var culture = new CultureInfo(cultureCode);
+        Thread.CurrentThread.CurrentUICulture = culture;
+        Thread.CurrentThread.CurrentCulture = culture;
+        CultureInfo.DefaultThreadCurrentCulture = culture;
+        CultureInfo.DefaultThreadCurrentUICulture = culture;
+    }
+
+    private void UpdateLanguageIcon()
+    {
+        if (LanguageToolbarItem is not null)
+        {
+            var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            LanguageToolbarItem.Text = currentCulture != "fr" ? "🇫🇷" : "🇬🇧";
+        }
+    }
+
+    private async Task ReloadCurrentPageAsync()
+    {
+        var nav = App.Current.Windows[0].Page.Navigation;
+        var currentPage = nav.NavigationStack.LastOrDefault();
+        if (currentPage is null)
+            return;
+
+        var pageType = currentPage.GetType();
+        object? newPage = null;
+
+        // Try to handle ViewModel if present
+        var viewModel = currentPage?.BindingContext;
+        if (viewModel is not null)
+        {
+            // Look for a constructor that takes the ViewModel type
+            var ctor = pageType.GetConstructor([viewModel.GetType()]);
+            if (ctor != null)
+            {
+                newPage = ctor.Invoke([viewModel]);
+            }
+        }
+
+        // Fallback to default constructor
+        newPage ??= Activator.CreateInstance(pageType);
+
+        if (newPage is not Page pageInstance)
+            return;
+
+        await nav.PopAsync();
+        await nav.PushAsync(pageInstance);
     }
 }

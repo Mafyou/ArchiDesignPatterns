@@ -15,5 +15,6 @@ global using Microsoft.Extensions.Logging;
 global using Microsoft.SemanticKernel;
 global using Microsoft.SemanticKernel.ChatCompletion;
 global using System.Collections.ObjectModel;
+global using System.Globalization;
 global using System.Reflection;
 global using System.Windows.Input;

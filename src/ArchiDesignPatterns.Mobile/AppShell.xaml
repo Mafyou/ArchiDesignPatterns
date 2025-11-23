@@ -12,6 +12,14 @@
     FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray900}}"
     FlyoutWidth="300">
 
+    <Shell.ToolbarItems>
+        <ToolbarItem x:Name="LanguageToolbarItem"
+             Text="🇫🇷"
+             Order="Primary"
+             Priority="0"
+             Clicked="OnLanguageToolbarItemClicked" />
+    </Shell.ToolbarItems>
+
     <!-- Flyout Header -->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>

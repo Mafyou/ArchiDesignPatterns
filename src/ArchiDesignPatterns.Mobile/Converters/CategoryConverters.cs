@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace ArchiDesignPatterns.Mobile.Converters;
+﻿namespace ArchiDesignPatterns.Mobile.Converters;
 
 public class CategoryToColorConverter : IMultiValueConverter
 {

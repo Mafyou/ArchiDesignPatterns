@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SingletonPattern_Title" xml:space="preserve">
+    <value>🏗️ Singleton Pattern</value>
+  </data>
+  <data name="SingletonPattern_DescriptionTitle" xml:space="preserve">
+    <value>📖 Description</value>
+  </data>
+  <data name="SingletonPattern_Description" xml:space="preserve">
+    <value>The Singleton pattern ensures a class has only one instance and provides a global point of access to it.</value>
+  </data>
+  <data name="SingletonPattern_WhenToUseTitle" xml:space="preserve">
+    <value>🎯 When to use</value>
+  </data>
+  <data name="SingletonPattern_WhenToUse1" xml:space="preserve">
+    <value>When exactly one instance of a class is needed</value>
+  </data>
+  <data name="SingletonPattern_WhenToUse2" xml:space="preserve">
+    <value>For configuration managers or logging services</value>
+  </data>
+  <data name="SingletonPattern_WhenToUse3" xml:space="preserve">
+    <value>To control access to shared resources</value>
+  </data>
+  <data name="SingletonPattern_InteractiveTitle" xml:space="preserve">
+    <value>🎮 Interactive Example</value>
+  </data>
+  <data name="SingletonPattern_InteractiveDesc" xml:space="preserve">
+    <value>Click the button to create a Singleton instance. Notice that multiple clicks always return the same instance!</value>
+  </data>
+  <data name="SingletonPattern_InteractiveButton" xml:space="preserve">
+    <value>Create Singleton Instance</value>
+  </data>
+  <data name="SingletonPattern_CodeTitle" xml:space="preserve">
+    <value>💻 Code Example</value>
+  </data>
+  <data name="SingletonPattern_ProsTitle" xml:space="preserve">
+    <value>✅ Pros</value>
+  </data>
+  <data name="SingletonPattern_Pros1" xml:space="preserve">
+    <value>Guarantees a single instance</value>
+  </data>
+  <data name="SingletonPattern_Pros2" xml:space="preserve">
+    <value>Global access point</value>
+  </data>
+  <data name="SingletonPattern_Pros3" xml:space="preserve">
+    <value>Lazy initialization</value>
+  </data>
+  <data name="SingletonPattern_ConsTitle" xml:space="preserve">
+    <value>⚠️ Cons</value>
+  </data>
+  <data name="SingletonPattern_Cons1" xml:space="preserve">
+    <value>Hard to test</value>
+  </data>
+  <data name="SingletonPattern_Cons2" xml:space="preserve">
+    <value>Global state issues</value>
+  </data>
+  <data name="SingletonPattern_Cons3" xml:space="preserve">
+    <value>Thread safety concerns</value>
+  </data>
+  <data name="FactoryPattern_Title" xml:space="preserve">
+    <value>🏗️ Factory Pattern</value>
+  </data>
+  <data name="FactoryPattern_Creational" xml:space="preserve">
+    <value>Creational</value>
+  </data>
+  <data name="FactoryPattern_DescriptionTitle" xml:space="preserve">
+    <value>📖 Description</value>
+  </data>
+  <data name="FactoryPattern_Description" xml:space="preserve">
+    <value>The Factory pattern provides an interface for creating objects without exposing the creation logic to the client. It delegates instantiation to specialized factory classes.</value>
+  </data>
+  <data name="FactoryPattern_WhenToUseTitle" xml:space="preserve">
+    <value>🎯 When to use</value>
+  </data>
+  <data name="FactoryPattern_WhenToUse1" xml:space="preserve">
+    <value>When object creation logic is complex</value>
+  </data>
+  <data name="FactoryPattern_WhenToUse2" xml:space="preserve">
+    <value>When you need to decouple object creation from usage</value>
+  </data>
+  <data name="FactoryPattern_WhenToUse3" xml:space="preserve">
+    <value>To create families of related objects</value>
+  </data>
+  <data name="FactoryPattern_InteractiveTitle" xml:space="preserve">
+    <value>🎮 Interactive Example</value>
+  </data>
+  <data name="FactoryPattern_InteractiveDesc" xml:space="preserve">
+    <value>Select a vehicle type and create it using the factory:</value>
+  </data>
+  <data name="FactoryPattern_PickerTitle" xml:space="preserve">
+    <value>Choose a vehicle type</value>
+  </data>
+  <data name="FactoryPattern_PickerCar" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="FactoryPattern_PickerBike" xml:space="preserve">
+    <value>Bike</value>
+  </data>
+  <data name="FactoryPattern_PickerPlane" xml:space="preserve">
+    <value>Plane</value>
+  </data>
+  <data name="FactoryPattern_InteractiveButton" xml:space="preserve">
+    <value>Create Vehicle</value>
+  </data>
+  <data name="FactoryPattern_CodeTitle" xml:space="preserve">
+    <value>💻 Code Example</value>
+  </data>
+  <data name="FactoryPattern_RealWorldTitle" xml:space="preserve">
+    <value>Real-World Scenario</value>
+  </data>
+  <data name="FactoryPattern_RealWorldDesc" xml:space="preserve">
+    <value>Creating documents in office software: WordFactory creates .docx, SpreadsheetFactory creates .xlsx - same interface, different implementations.</value>
+  </data>
+  <data name="FactoryPattern_ProsTitle" xml:space="preserve">
+    <value>✅ Pros</value>
+  </data>
+  <data name="FactoryPattern_Pros1" xml:space="preserve">
+    <value>• Low coupling</value>
+  </data>
+  <data name="FactoryPattern_Pros2" xml:space="preserve">
+    <value>• Easy to extend</value>
+  </data>
+  <data name="FactoryPattern_Pros3" xml:space="preserve">
+    <value>• Centralized creation</value>
+  </data>
+  <data name="FactoryPattern_ConsTitle" xml:space="preserve">
+    <value>⚠️ Cons</value>
+  </data>
+  <data name="FactoryPattern_Cons1" xml:space="preserve">
+    <value>• More classes</value>
+  </data>
+  <data name="FactoryPattern_Cons2" xml:space="preserve">
+    <value>• Increased complexity</value>
+  </data>
+  <data name="FactoryPattern_Cons3" xml:space="preserve">
+    <value>• Factory can become large</value>
+  </data>
+</root>
