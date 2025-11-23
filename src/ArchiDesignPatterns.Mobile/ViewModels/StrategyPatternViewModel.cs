@@ -1,6 +1,34 @@
 namespace ArchiDesignPatterns.Mobile.ViewModels;
 
-public class StrategyPatternViewModel : ObservableObject
+public partial class StrategyPatternViewModel : ObservableObject
 {
-    // Add properties and logic as needed for the Strategy pattern page
+    public ObservableCollection<string> Strategies { get; } = new()
+    {
+        "Stratégie A",
+        "Stratégie B",
+        "Stratégie C"
+    };
+
+    [ObservableProperty]
+    private string? selectedStrategy;
+
+    [ObservableProperty]
+    private string? result;
+
+    public StrategyPatternViewModel()
+    {
+        SelectedStrategy = Strategies.FirstOrDefault();
+    }
+
+    [RelayCommand]
+    private void ExecuteStrategy()
+    {
+        Result = SelectedStrategy switch
+        {
+            "Stratégie A" => "Stratégie A exécutée !",
+            "Stratégie B" => "Stratégie B exécutée !",
+            "Stratégie C" => "Stratégie C exécutée !",
+            _ => "Veuillez sélectionner une stratégie."
+        };
+    }
 }
