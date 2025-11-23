@@ -21,9 +21,4 @@ public partial class DesignPatternsPage : ContentPage
     {
         base.OnDisappearing();
     }
-
-    override protected void OnAppearing()
-    {
-        base.OnAppearing();
-    }
 }

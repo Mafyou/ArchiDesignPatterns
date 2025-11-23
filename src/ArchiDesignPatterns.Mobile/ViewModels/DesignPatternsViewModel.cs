@@ -1,4 +1,4 @@
-namespace ArchiDesignPatterns.Mobile.ViewModels;
+ï»¿namespace ArchiDesignPatterns.Mobile.ViewModels;
 
 public partial class DesignPatternsViewModel : ObservableObject
 {
@@ -7,32 +7,32 @@ public partial class DesignPatternsViewModel : ObservableObject
 
     [ObservableProperty]
     private ObservableCollection<DesignPatternInfo> _patterns = new(
-        new[]
-        {
-            new DesignPatternInfo("Singleton","Assure qu'une classe n'ait qu'une seule instance.","Creational"),
-            new DesignPatternInfo("Factory","Crée des objets sans exposer la logique de création.","Creational"),
-            new DesignPatternInfo("Abstract Factory","Crée des familles d'objets liés.","Creational"),
-            new DesignPatternInfo("Builder","Construit des objets complexes étape par étape.","Creational"),
-            new DesignPatternInfo("Prototype","Crée des objets par clonage.","Creational"),
-            new DesignPatternInfo("Adapter","Convertit l'interface d'une classe.","Structural"),
-            new DesignPatternInfo("Bridge","Sépare l'abstraction de l'implémentation.","Structural"),
-            new DesignPatternInfo("Composite","Structure arborescente d'objets.","Structural"),
-            new DesignPatternInfo("Decorator","Ajoute des fonctionnalités dynamiquement.","Structural"),
-            new DesignPatternInfo("Facade","Interface simplifiée.","Structural"),
-            new DesignPatternInfo("Flyweight","Partage des objets pour l'efficacité.","Structural"),
-            new DesignPatternInfo("Proxy","Fournit un substitut ou un espace réservé.","Structural"),
-            new DesignPatternInfo("Chain Of Responsibility","Chaîne de gestionnaires de traitement.","Behavioral"),
-            new DesignPatternInfo("Command","Encapsule une requête en tant qu'objet.","Behavioral"),
-            new DesignPatternInfo("Interpreter","Interprète une grammaire ou un langage.","Behavioral"),
-            new DesignPatternInfo("Iterator","Itère à travers une collection.","Behavioral"),
-            new DesignPatternInfo("Mediator","Communication centralisée.","Behavioral"),
-            new DesignPatternInfo("Memento","Sauvegarde et restaure l'état d'un objet.","Behavioral"),
-            new DesignPatternInfo("Observer","Notifie les observateurs des changements.","Behavioral"),
-            new DesignPatternInfo("State","Le comportement change avec l'état.","Behavioral"),
-            new DesignPatternInfo("Strategy","Algorithmes interchangeables.","Behavioral"),
-            new DesignPatternInfo("Template Method","Définit le squelette d'algorithme.","Behavioral"),
-            new DesignPatternInfo("Visitor","Sépare l'algorithme de la structure.","Behavioral"),
-        });
+            new[]
+            {
+                new DesignPatternInfo("Singleton",Strings.Singleton_Description, "Creational"),
+                new DesignPatternInfo("Factory", Strings.Factory_Description, "Creational"),
+                new DesignPatternInfo("Abstract Factory", Strings.AbstractFactory_Description, "Creational"),
+                new DesignPatternInfo("Builder", Strings.Builder_Description, "Creational"),
+                new DesignPatternInfo("Prototype", Strings.Prototype_Description, "Creational"),
+                new DesignPatternInfo("Adapter", Strings.Adapter_Description, "Structural"),
+                new DesignPatternInfo("Bridge", Strings.Bridge_Description, "Structural"),
+                new DesignPatternInfo("Composite", Strings.Composite_Description, "Structural"),
+                new DesignPatternInfo("Decorator", Strings.Decorator_Description, "Structural"),
+                new DesignPatternInfo("Facade", Strings.Facade_Description, "Structural"),
+                new DesignPatternInfo("Flyweight", Strings.Flyweight_Description, "Structural"),
+                new DesignPatternInfo("Proxy", Strings.Proxy_Description, "Structural"),
+                new DesignPatternInfo("Chain Of Responsibility", Strings.ChainOfResponsibility_Description, "Behavioral"),
+                new DesignPatternInfo("Command", Strings.Command_Description, "Behavioral"),
+                new DesignPatternInfo("Interpreter", Strings.Interpreter_Description, "Behavioral"),
+                new DesignPatternInfo("Iterator", Strings.Iterator_Description, "Behavioral"),
+                new DesignPatternInfo("Mediator", Strings.Mediator_Description, "Behavioral"),
+                new DesignPatternInfo("Memento", Strings.Memento_Description, "Behavioral"),
+                new DesignPatternInfo("Observer", Strings.Observer_Description, "Behavioral"),
+                new DesignPatternInfo("State", Strings.State_Description, "Behavioral"),
+                new DesignPatternInfo("Strategy", Strings.Strategy_Description, "Behavioral"),
+                new DesignPatternInfo("Template Method", Strings.TemplateMethod_Description, "Behavioral"),
+                new DesignPatternInfo("Visitor", Strings.Visitor_Description, "Behavioral"),
+            });
 
     [ObservableProperty]
     private ObservableCollection<DesignPatternInfo> _filteredPatterns = [];

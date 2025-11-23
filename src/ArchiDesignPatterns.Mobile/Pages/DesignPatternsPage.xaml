@@ -33,97 +33,109 @@
             </VerticalStackLayout>
         </Border>
 
-        <!-- Patterns List -->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="16">
+        <!-- Patterns List or Loading -->
+        <Grid Grid.Row="1">
+            <ScrollView>
+                <VerticalStackLayout Padding="20" Spacing="16">
 
-                <!-- Patterns Collection -->
-                <CollectionView ItemsSource="{Binding FilteredPatterns}"
-                                SelectionMode="Single"
-                                SelectionChangedCommand="{Binding SelectedPatternChangedCommand}"
-                                SelectionChangedCommandParameter="{Binding SelectedPattern}"
-                                SelectedItem="{Binding SelectedPattern}">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="models:DesignPatternInfo">
-                            <Border Style="{StaticResource ListItemBorder}">
+                    <!-- Patterns Collection -->
+                    <CollectionView ItemsSource="{Binding FilteredPatterns}"
+                                    SelectionMode="Single"
+                                    SelectionChangedCommand="{Binding SelectedPatternChangedCommand}"
+                                    SelectionChangedCommandParameter="{Binding SelectedPattern}"
+                                    SelectedItem="{Binding SelectedPattern}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:DesignPatternInfo">
+                                <Border Style="{StaticResource ListItemBorder}">
 
-                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="16" RowDefinitions="Auto,Auto">
-                                    
-                                    <!-- Icon/Indicator -->
-                                    <Border Grid.Column="0" Grid.RowSpan="2"
-                                            WidthRequest="60" HeightRequest="60"
-                                            StrokeThickness="0"
-                                            VerticalOptions="Center">
-                                        <Border.BackgroundColor>
-                                            <MultiBinding Converter="{StaticResource CategoryToColorConverter}">
-                                                <Binding Path="Category" />
-                                            </MultiBinding>
-                                        </Border.BackgroundColor>
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="12" />
-                                        </Border.StrokeShape>
-                                        <Label FontSize="30"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="Center">
-                                            <Label.Text>
-                                                <MultiBinding Converter="{StaticResource CategoryToIconConverter}">
+                                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="16" RowDefinitions="Auto,Auto,Auto">
+
+                                        <!-- Icon/Indicator -->
+                                        <Border Grid.Column="0" Grid.RowSpan="3"
+                                                WidthRequest="60" HeightRequest="60"
+                                                StrokeThickness="0"
+                                                VerticalOptions="Center">
+                                            <Border.BackgroundColor>
+                                                <MultiBinding Converter="{StaticResource CategoryToColorConverter}">
                                                     <Binding Path="Category" />
                                                 </MultiBinding>
-                                            </Label.Text>
-                                        </Label>
-                                    </Border>
+                                            </Border.BackgroundColor>
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="12" />
+                                            </Border.StrokeShape>
+                                            <Label FontSize="30"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center">
+                                                <Label.Text>
+                                                    <MultiBinding Converter="{StaticResource CategoryToIconConverter}">
+                                                        <Binding Path="Category" />
+                                                    </MultiBinding>
+                                                </Label.Text>
+                                            </Label>
+                                        </Border>
 
-                                    <!-- Title -->
-                                    <Label Grid.Column="1" Grid.Row="0"
-                                           Text="{Binding Name}"
-                                           Style="{StaticResource SubTitle}"
-                                           VerticalOptions="End" />
+                                        <!-- Title -->
+                                        <Label Grid.Column="1" Grid.Row="0"
+                                               Text="{Binding Name}"
+                                               Style="{StaticResource SubTitle}"
+                                               VerticalOptions="End" />
 
-                                    <!-- Category Badge -->
-                                    <Border Grid.Column="1" Grid.Row="1"
-                                            Padding="10,5" Margin="0,4,0,0"
-                                            StrokeThickness="0"
-                                            HorizontalOptions="Start">
-                                        <Border.BackgroundColor>
-                                            <MultiBinding Converter="{StaticResource CategoryToColorConverter}">
-                                                <Binding Path="Category" />
-                                            </MultiBinding>
-                                        </Border.BackgroundColor>
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="6" />
-                                        </Border.StrokeShape>
-                                        <Label Text="{Binding Category}"
-                                               FontSize="11" FontAttributes="Bold"
-                                               TextColor="White" />
-                                    </Border>
+                                        <!-- Description -->
+                                        <Label Grid.Column="1" Grid.Row="1"
+                                               Text="{Binding Description}"
+                                               Style="{StaticResource BodyMedium}"
+                                           TextColor="{StaticResource Gray400}"
+                                           FontAttributes="Italic"
+                                               LineBreakMode="WordWrap"
+                                               MaxLines="2"
+                                               VerticalOptions="Start" />
 
-                                    <!-- Arrow -->
-                                    <Label Grid.Column="2" Grid.RowSpan="2"
-                                           Text="›" FontSize="36"
-                                           TextColor="{StaticResource Primary}"
-                                           VerticalOptions="Center" />
-                                </Grid>
-                            </Border>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                    
-                    <CollectionView.EmptyView>
-                        <VerticalStackLayout Spacing="16" Padding="40"
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center">
-                            <Label Text="🔍" FontSize="64" HorizontalOptions="Center" />
-                            <Label Text="{x:Static resx:Strings.DesignPatternsPage_NoResultsTitle}"
-                                   Style="{StaticResource Title}"
-                                   HorizontalTextAlignment="Center" />
-                            <Label Text="{x:Static resx:Strings.DesignPatternsPage_NoResultsDesc}"
-                                   Style="{StaticResource BodyMedium}"
-                                   HorizontalTextAlignment="Center"
-                                   TextColor="{StaticResource Gray500}" />
-                        </VerticalStackLayout>
-                    </CollectionView.EmptyView>
-                </CollectionView>
+                                        <!-- Category Badge -->
+                                        <Border Grid.Column="1" Grid.Row="2"
+                                                Padding="10,5" Margin="0,4,0,0"
+                                                StrokeThickness="0"
+                                                HorizontalOptions="Start">
+                                            <Border.BackgroundColor>
+                                                <MultiBinding Converter="{StaticResource CategoryToColorConverter}">
+                                                    <Binding Path="Category" />
+                                                </MultiBinding>
+                                            </Border.BackgroundColor>
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="6" />
+                                            </Border.StrokeShape>
+                                            <Label Text="{Binding Category}"
+                                                   FontSize="11" FontAttributes="Bold"
+                                                   TextColor="White" />
+                                        </Border>
 
-            </VerticalStackLayout>
-        </ScrollView>
+                                        <!-- Arrow -->
+                                        <Label Grid.Column="2" Grid.RowSpan="3"
+                                               Text="›" FontSize="36"
+                                               TextColor="{StaticResource Primary}"
+                                               VerticalOptions="Center" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                        <CollectionView.EmptyView>
+                            <VerticalStackLayout Spacing="16" Padding="40"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center">
+                                <Label Text="🔍" FontSize="64" HorizontalOptions="Center" />
+                                <Label Text="{x:Static resx:Strings.DesignPatternsPage_NoResultsTitle}"
+                                       Style="{StaticResource Title}"
+                                       HorizontalTextAlignment="Center" />
+                                <Label Text="{x:Static resx:Strings.DesignPatternsPage_NoResultsDesc}"
+                                       Style="{StaticResource BodyMedium}"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="{StaticResource Gray500}" />
+                            </VerticalStackLayout>
+                        </CollectionView.EmptyView>
+                    </CollectionView>
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
     </Grid>
 </ContentPage>

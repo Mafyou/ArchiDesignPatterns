@@ -13,6 +13,20 @@ public partial class AppShell : Shell
         UpdateLanguageIcon();
     }
 
+    private void AddLocalization()
+    {
+        var root = Navigation.NavigationStack.Count;
+        if (root == 1)
+        {
+            ToolbarItems.Remove(LanguageToolbarItem);
+            return;
+        }
+        if (!ToolbarItems.Contains(LanguageToolbarItem))
+        {
+            ToolbarItems.Add(LanguageToolbarItem);
+        }
+    }
+
     private void OnShellNavigating(object? sender, ShellNavigatingEventArgs e)
     {
         // Log navigation attempts for debugging
@@ -46,6 +60,7 @@ public partial class AppShell : Shell
 
     private void OnShellNavigated(object? sender, ShellNavigatedEventArgs e)
     {
+        AddLocalization();
         // Log successful navigation
         System.Diagnostics.Debug.WriteLine($"[Navigation] Successfully navigated to: {e.Current.Location}");
         System.Diagnostics.Debug.WriteLine($"[Navigation] Previous location was: {e.Previous?.Location}");
@@ -68,7 +83,8 @@ public partial class AppShell : Shell
     private async void OnLanguageToolbarItemClicked(object sender, EventArgs e)
     {
         // Toggle between French and English
-        var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+        // var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+        var currentCulture = Preferences.Get("AppLanguage", "fr");
         var newCulture = currentCulture == "fr" ? "en" : "fr";
         SetCulture(newCulture);
         UpdateLanguageIcon();
@@ -82,14 +98,28 @@ public partial class AppShell : Shell
         Thread.CurrentThread.CurrentCulture = culture;
         CultureInfo.DefaultThreadCurrentCulture = culture;
         CultureInfo.DefaultThreadCurrentUICulture = culture;
+        CultureInfo.CurrentCulture = culture;
+        CultureInfo.CurrentUICulture = culture;
+        Preferences.Set("AppLanguage", cultureCode);
     }
 
     private void UpdateLanguageIcon()
     {
         if (LanguageToolbarItem is not null)
         {
-            var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-            LanguageToolbarItem.Text = currentCulture != "fr" ? "🇫🇷" : "🇬🇧";
+            var isNotFirstLaunch = Preferences.ContainsKey("AppLanguage");
+            if (!isNotFirstLaunch)
+            {
+                var currentCulture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+                SetCulture(currentCulture);
+                Preferences.Set("AppLanguage", currentCulture);
+            }
+            else
+            {
+                SetCulture(Preferences.Get("AppLanguage", "fr"));
+            }
+            var appLang = Preferences.Get("AppLanguage", "fr");
+            LanguageToolbarItem.Text = appLang != "fr" ? "🇫🇷" : "🇬🇧";
         }
     }
 
@@ -108,10 +138,12 @@ public partial class AppShell : Shell
         if (viewModel is not null)
         {
             // Look for a constructor that takes the ViewModel type
+
+            var newViewModel = Activator.CreateInstance(viewModel.GetType());
             var ctor = pageType.GetConstructor([viewModel.GetType()]);
-            if (ctor != null)
+            if (ctor is not null)
             {
-                newPage = ctor.Invoke([viewModel]);
+                newPage = ctor.Invoke([newViewModel]);
             }
         }
 

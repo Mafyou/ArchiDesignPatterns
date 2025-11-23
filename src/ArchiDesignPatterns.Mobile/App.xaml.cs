@@ -6,6 +6,9 @@ public partial class App : Application
     {
         InitializeComponent();
 
+        CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fr-FR");
+        CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("fr-FR");
+
         // Gestion des exceptions non gérées
         TaskScheduler.UnobservedTaskException += OnUnobservedTaskException;
         AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;

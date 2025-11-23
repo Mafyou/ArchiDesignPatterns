@@ -1,4 +1,4 @@
-namespace ArchiDesignPatterns.Mobile.ViewModels;
+ï»¿namespace ArchiDesignPatterns.Mobile.ViewModels;
 
 public partial class ArchitecturesViewModel : ObservableObject
 {
@@ -9,16 +9,16 @@ public partial class ArchitecturesViewModel : ObservableObject
     private ObservableCollection<ArchitectureInfo> _architectures = new(
         new[]
         {
-            new ArchitectureInfo("MVC","Modèle Modèle-Vue-Contrôleur.","Architectural Pattern"),
-            new ArchitectureInfo("MVVM","Modèle Modèle-Vue-VueModèle.","Architectural Pattern"),
-            new ArchitectureInfo("Clean","Séparation stricte des responsabilités.","Architecture"),
-            new ArchitectureInfo("Layered","Architecture en couches.","Architecture"),
-            new ArchitectureInfo("Hexagonal","Architecture Ports et Adaptateurs.","Architecture"),
-            new ArchitectureInfo("Microservices","Services distribués indépendants.","Architecture"),
-            new ArchitectureInfo("Event-Driven","Communication basée sur les événements.","Architecture"),
-            new ArchitectureInfo("CQRS","Ségrégation des responsabilités Commande-Requête.","Architecture"),
-            new ArchitectureInfo("Onion","Architecture en couches concentriques.","Architecture"),
-            new ArchitectureInfo("DDD","Conception pilotée par le domaine.","Architecture"),
+            new ArchitectureInfo("MVC", Strings.MVC_Description, "Architectural Pattern"),
+            new ArchitectureInfo("MVVM", Strings.MVVM_Description, "Architectural Pattern"),
+            new ArchitectureInfo("Clean", Strings.Clean_Description, "Architecture"),
+            new ArchitectureInfo("Layered", Strings.Layered_Description, "Architecture"),
+            new ArchitectureInfo("Hexagonal", Strings.Hexagonal_Description, "Architecture"),
+            new ArchitectureInfo("Microservices", Strings.Microservices_Description, "Architecture"),
+            new ArchitectureInfo("Event-Driven", Strings.EventDriven_Description, "Architecture"),
+            new ArchitectureInfo("CQRS", Strings.CQRS_Description, "Architecture"),
+            new ArchitectureInfo("Onion", Strings.Onion_Description, "Architecture"),
+            new ArchitectureInfo("DDD", Strings.DDD_Description, "Architecture"),
         });
 
     [ObservableProperty]

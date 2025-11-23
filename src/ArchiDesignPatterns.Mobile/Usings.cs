@@ -5,6 +5,7 @@ global using ArchiDesignPatterns.Mobile.Models;
 global using ArchiDesignPatterns.Mobile.Pages;
 global using ArchiDesignPatterns.Mobile.Pages.Architectures;
 global using ArchiDesignPatterns.Mobile.Pages.DesignPatterns;
+global using ArchiDesignPatterns.Mobile.Resources;
 global using ArchiDesignPatterns.Mobile.Services;
 global using ArchiDesignPatterns.Mobile.ViewModels;
 global using CommunityToolkit.Maui;

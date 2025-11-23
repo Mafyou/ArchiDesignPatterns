@@ -1801,7 +1801,7 @@
     <value>Single Responsibility Principle</value>
   </data>
   <data name="SRP_Description" xml:space="preserve">
-    <value>The Single Responsibility Principle states that a class should have only one reason to change. Each class should have a single responsibility or purpose.</value>
+    <value>A class should have only one reason to change.</value>
   </data>
   <data name="SRP_KeyConcept1" xml:space="preserve">
     <value>One class = one responsibility</value>
@@ -1843,7 +1843,7 @@
     <value>Open/Closed Principle</value>
   </data>
   <data name="OCP_Description" xml:space="preserve">
-    <value>The Open/Closed Principle states that software entities (classes, modules, functions) should be open for extension but closed for modification.</value>
+    <value>Software entities should be open for extension but closed for modification.</value>
   </data>
   <data name="OCP_KeyConcept1" xml:space="preserve">
     <value>Open for extension (inheritance, composition)</value>
@@ -1885,7 +1885,7 @@
     <value>Liskov Substitution Principle</value>
   </data>
   <data name="LSP_Description" xml:space="preserve">
-    <value>The Liskov Substitution Principle states that objects of a derived class must be able to replace objects of the base class without altering the program's behavior.</value>
+    <value>Objects of a derived class should be able to replace objects of the base class.</value>
   </data>
   <data name="LSP_KeyConcept1" xml:space="preserve">
     <value>Subtypes must be substitutable</value>
@@ -1927,7 +1927,7 @@
     <value>Interface Segregation Principle</value>
   </data>
   <data name="ISP_Description" xml:space="preserve">
-    <value>The Interface Segregation Principle states that no client should be forced to depend on methods it doesn't use. Prefer multiple specific interfaces over one general interface.</value>
+    <value>Clients should not be forced to depend on interfaces they do not use.</value>
   </data>
   <data name="ISP_KeyConcept1" xml:space="preserve">
     <value>Small and specific interfaces</value>
@@ -1969,7 +1969,7 @@
     <value>Dependency Inversion Principle</value>
   </data>
   <data name="DIP_Description" xml:space="preserve">
-    <value>The Dependency Inversion Principle states that high-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details, but details should depend on abstractions.</value>
+    <value>Depend on abstractions, not concrete implementations.</value>
   </data>
   <data name="DIP_KeyConcept1" xml:space="preserve">
     <value>Depend on abstractions (interfaces) not implementations</value>
@@ -2012,5 +2012,104 @@
   </data>
   <data name="DIP_Attention3" xml:space="preserve">
     <value>• Initial learning curve</value>
+  </data>
+  <data name="Singleton_Description" xml:space="preserve">
+    <value>Ensures a class has only one instance.</value>
+  </data>
+  <data name="Factory_Description" xml:space="preserve">
+    <value>Creates objects without exposing creation logic.</value>
+  </data>
+  <data name="AbstractFactory_Description" xml:space="preserve">
+    <value>Creates families of related objects.</value>
+  </data>
+  <data name="Builder_Description" xml:space="preserve">
+    <value>Builds complex objects step by step.</value>
+  </data>
+  <data name="Prototype_Description" xml:space="preserve">
+    <value>Creates objects by cloning.</value>
+  </data>
+  <data name="Adapter_Description" xml:space="preserve">
+    <value>Converts the interface of a class.</value>
+  </data>
+  <data name="Bridge_Description" xml:space="preserve">
+    <value>Separates abstraction from implementation.</value>
+  </data>
+  <data name="Composite_Description" xml:space="preserve">
+    <value>Tree structure of objects.</value>
+  </data>
+  <data name="Decorator_Description" xml:space="preserve">
+    <value>Adds functionality dynamically.</value>
+  </data>
+  <data name="Facade_Description" xml:space="preserve">
+    <value>Simplified interface.</value>
+  </data>
+  <data name="Flyweight_Description" xml:space="preserve">
+    <value>Shares objects for efficiency.</value>
+  </data>
+  <data name="Proxy_Description" xml:space="preserve">
+    <value>Provides a substitute or placeholder.</value>
+  </data>
+  <data name="ChainOfResponsibility_Description" xml:space="preserve">
+    <value>Chain of processing handlers.</value>
+  </data>
+  <data name="Command_Description" xml:space="preserve">
+    <value>Encapsulates a request as an object.</value>
+  </data>
+  <data name="Interpreter_Description" xml:space="preserve">
+    <value>Interprets a grammar or language.</value>
+  </data>
+  <data name="Iterator_Description" xml:space="preserve">
+    <value>Iterates through a collection.</value>
+  </data>
+  <data name="Mediator_Description" xml:space="preserve">
+    <value>Centralized communication.</value>
+  </data>
+  <data name="Memento_Description" xml:space="preserve">
+    <value>Saves and restores object state.</value>
+  </data>
+  <data name="Observer_Description" xml:space="preserve">
+    <value>Notifies observers of changes.</value>
+  </data>
+  <data name="State_Description" xml:space="preserve">
+    <value>Behavior changes with state.</value>
+  </data>
+  <data name="Strategy_Description" xml:space="preserve">
+    <value>Interchangeable algorithms.</value>
+  </data>
+  <data name="TemplateMethod_Description" xml:space="preserve">
+    <value>Defines algorithm skeleton.</value>
+  </data>
+  <data name="Visitor_Description" xml:space="preserve">
+    <value>Separates algorithm from structure.</value>
+  </data>
+  <data name="MVC_Description" xml:space="preserve">
+    <value>Model-View-Controller pattern.</value>
+  </data>
+  <data name="MVVM_Description" xml:space="preserve">
+    <value>Model-View-ViewModel pattern.</value>
+  </data>
+  <data name="Clean_Description" xml:space="preserve">
+    <value>Strict separation of responsibilities.</value>
+  </data>
+  <data name="Layered_Description" xml:space="preserve">
+    <value>Layered architecture.</value>
+  </data>
+  <data name="Hexagonal_Description" xml:space="preserve">
+    <value>Ports and Adapters architecture.</value>
+  </data>
+  <data name="Microservices_Description" xml:space="preserve">
+    <value>Independent distributed services.</value>
+  </data>
+  <data name="EventDriven_Description" xml:space="preserve">
+    <value>Event-based communication.</value>
+  </data>
+  <data name="CQRS_Description" xml:space="preserve">
+    <value>Command-Query Responsibility Segregation.</value>
+  </data>
+  <data name="Onion_Description" xml:space="preserve">
+    <value>Concentric layered architecture.</value>
+  </data>
+  <data name="DDD_Description" xml:space="preserve">
+    <value>Domain-Driven Design.</value>
   </data>
 </root>

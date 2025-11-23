@@ -1,4 +1,4 @@
-namespace ArchiDesignPatterns.Mobile.ViewModels;
+ï»¿namespace ArchiDesignPatterns.Mobile.ViewModels;
 
 public partial class SOLIDPrinciplesViewModel : ObservableObject
 {
@@ -9,11 +9,11 @@ public partial class SOLIDPrinciplesViewModel : ObservableObject
     private ObservableCollection<SOLIDPrincipleInfo> _principles = new(
         new[]
         {
-            new SOLIDPrincipleInfo("Single Responsibility", "Une classe ne doit avoir qu'une seule raison de changer.", "SOLID"),
-            new SOLIDPrincipleInfo("Open/Closed", "Les entités logicielles doivent être ouvertes à l'extension mais fermées à la modification.", "SOLID"),
-            new SOLIDPrincipleInfo("Liskov Substitution", "Les objets d'une classe dérivée doivent pouvoir remplacer les objets de la classe de base.", "SOLID"),
-            new SOLIDPrincipleInfo("Interface Segregation", "Les clients ne doivent pas être forcés de dépendre d'interfaces qu'ils n'utilisent pas.", "SOLID"),
-            new SOLIDPrincipleInfo("Dependency Inversion", "Dépendre des abstractions, pas des implémentations concrètes.", "SOLID"),
+            new SOLIDPrincipleInfo("Single Responsibility", Strings.SRP_Description, "SOLID"),
+            new SOLIDPrincipleInfo("Open/Closed", Strings.OCP_Description, "SOLID"),
+            new SOLIDPrincipleInfo("Liskov Substitution", Strings.LSP_Description, "SOLID"),
+            new SOLIDPrincipleInfo("Interface Segregation", Strings.ISP_Description, "SOLID"),
+            new SOLIDPrincipleInfo("Dependency Inversion", Strings.DIP_Description, "SOLID"),
         });
 
     [ObservableProperty]

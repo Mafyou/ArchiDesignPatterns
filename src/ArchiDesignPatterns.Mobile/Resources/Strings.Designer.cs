@@ -61,6 +61,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creates families of related objects..
+        /// </summary>
+        public static string AbstractFactory_Description {
+            get {
+                return ResourceManager.GetString("AbstractFactory_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Structure complexe.
         /// </summary>
         public static string AbstractFactoryPattern_Cons1 {
@@ -201,6 +210,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string AbstractFactoryPattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("AbstractFactoryPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Converts the interface of a class..
+        /// </summary>
+        public static string Adapter_Description {
+            get {
+                return ResourceManager.GetString("Adapter_Description", resourceCulture);
             }
         }
         
@@ -403,6 +421,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Separates abstraction from implementation..
+        /// </summary>
+        public static string Bridge_Description {
+            get {
+                return ResourceManager.GetString("Bridge_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Complexité accrue.
         /// </summary>
         public static string BridgePattern_Cons1 {
@@ -529,6 +556,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Builds complex objects step by step..
+        /// </summary>
+        public static string Builder_Description {
+            get {
+                return ResourceManager.GetString("Builder_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Plus de code.
         /// </summary>
         public static string BuilderPattern_Cons1 {
@@ -642,6 +678,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string BuilderPattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("BuilderPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chain of processing handlers..
+        /// </summary>
+        public static string ChainOfResponsibility_Description {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibility_Description", resourceCulture);
             }
         }
         
@@ -777,6 +822,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string ChainOfResponsibilityPattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("ChainOfResponsibilityPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strict separation of responsibilities..
+        /// </summary>
+        public static string Clean_Description {
+            get {
+                return ResourceManager.GetString("Clean_Description", resourceCulture);
             }
         }
         
@@ -1060,6 +1114,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Encapsulates a request as an object..
+        /// </summary>
+        public static string Command_Description {
+            get {
+                return ResourceManager.GetString("Command_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Nombre de classes accru.
         /// </summary>
         public static string CommandPattern_Cons1 {
@@ -1182,6 +1245,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string CommandPattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("CommandPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tree structure of objects..
+        /// </summary>
+        public static string Composite_Description {
+            get {
+                return ResourceManager.GetString("Composite_Description", resourceCulture);
             }
         }
         
@@ -1312,6 +1384,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Command-Query Responsibility Segregation..
+        /// </summary>
+        public static string CQRS_Description {
+            get {
+                return ResourceManager.GetString("CQRS_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Complexité accrue.
         /// </summary>
         public static string CQRSArchitecture_Cons1 {
@@ -1429,6 +1510,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Domain-Driven Design..
+        /// </summary>
+        public static string DDD_Description {
+            get {
+                return ResourceManager.GetString("DDD_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Courbe d&apos;apprentissage élevée.
         /// </summary>
         public static string DDDArchitecture_Cons1 {
@@ -1542,6 +1632,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string DDDArchitecture_WhenToUse3 {
             get {
                 return ResourceManager.GetString("DDDArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adds functionality dynamically..
+        /// </summary>
+        public static string Decorator_Description {
+            get {
+                return ResourceManager.GetString("Decorator_Description", resourceCulture);
             }
         }
         
@@ -1780,7 +1879,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le principe d&apos;inversion de dépendances stipule que les modules de haut niveau ne doivent pas dépendre des modules de bas niveau. Les deux doivent dépendre d&apos;abstractions. Les abstractions ne doivent pas dépendre des détails, mais les détails doivent dépendre des abstractions..
+        ///   Looks up a localized string similar to Depend on abstractions, not concrete implementations..
         /// </summary>
         public static string DIP_Description {
             get {
@@ -1857,6 +1956,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string DIP_Title {
             get {
                 return ResourceManager.GetString("DIP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event-based communication..
+        /// </summary>
+        public static string EventDriven_Description {
+            get {
+                return ResourceManager.GetString("EventDriven_Description", resourceCulture);
             }
         }
         
@@ -1974,6 +2082,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string EventDrivenArchitecture_WhenToUse3 {
             get {
                 return ResourceManager.GetString("EventDrivenArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simplified interface..
+        /// </summary>
+        public static string Facade_Description {
+            get {
+                return ResourceManager.GetString("Facade_Description", resourceCulture);
             }
         }
         
@@ -2100,6 +2217,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string FacadePattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("FacadePattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creates objects without exposing creation logic..
+        /// </summary>
+        public static string Factory_Description {
+            get {
+                return ResourceManager.GetString("Factory_Description", resourceCulture);
             }
         }
         
@@ -2338,6 +2464,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shares objects for efficiency..
+        /// </summary>
+        public static string Flyweight_Description {
+            get {
+                return ResourceManager.GetString("Flyweight_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Complexité accrue du code.
         /// </summary>
         public static string FlyweightPattern_Cons1 {
@@ -2464,6 +2599,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ports and Adapters architecture..
+        /// </summary>
+        public static string Hexagonal_Description {
+            get {
+                return ResourceManager.GetString("Hexagonal_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Complexité conceptuelle.
         /// </summary>
         public static string HexagonalArchitecture_Cons1 {
@@ -2577,6 +2721,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string HexagonalArchitecture_WhenToUse3 {
             get {
                 return ResourceManager.GetString("HexagonalArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interprets a grammar or language..
+        /// </summary>
+        public static string Interpreter_Description {
+            get {
+                return ResourceManager.GetString("Interpreter_Description", resourceCulture);
             }
         }
         
@@ -2770,7 +2923,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le principe de ségrégation des interfaces stipule qu&apos;aucun client ne devrait être forcé de dépendre de méthodes qu&apos;il n&apos;utilise pas. Préférez plusieurs interfaces spécifiques à une interface générale..
+        ///   Looks up a localized string similar to Clients should not be forced to depend on interfaces they do not use..
         /// </summary>
         public static string ISP_Description {
             get {
@@ -2829,6 +2982,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string ISP_Title {
             get {
                 return ResourceManager.GetString("ISP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterates through a collection..
+        /// </summary>
+        public static string Iterator_Description {
+            get {
+                return ResourceManager.GetString("Iterator_Description", resourceCulture);
             }
         }
         
@@ -2946,6 +3108,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string IteratorPattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("IteratorPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layered architecture..
+        /// </summary>
+        public static string Layered_Description {
+            get {
+                return ResourceManager.GetString("Layered_Description", resourceCulture);
             }
         }
         
@@ -3130,7 +3301,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le principe de substitution de Liskov stipule que les objets d&apos;une classe dérivée doivent pouvoir remplacer les objets de la classe de base sans altérer le comportement du programme..
+        ///   Looks up a localized string similar to Objects of a derived class should be able to replace objects of the base class..
         /// </summary>
         public static string LSP_Description {
             get {
@@ -3472,6 +3643,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Centralized communication..
+        /// </summary>
+        public static string Mediator_Description {
+            get {
+                return ResourceManager.GetString("Mediator_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Le médiateur peut devenir complexe.
         /// </summary>
         public static string MediatorPattern_Cons1 {
@@ -3585,6 +3765,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string MediatorPattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("MediatorPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saves and restores object state..
+        /// </summary>
+        public static string Memento_Description {
+            get {
+                return ResourceManager.GetString("Memento_Description", resourceCulture);
             }
         }
         
@@ -3706,6 +3895,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Independent distributed services..
+        /// </summary>
+        public static string Microservices_Description {
+            get {
+                return ResourceManager.GetString("Microservices_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Complexité opérationnelle.
         /// </summary>
         public static string MicroservicesArchitecture_Cons1 {
@@ -3823,6 +4021,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Model-View-Controller pattern..
+        /// </summary>
+        public static string MVC_Description {
+            get {
+                return ResourceManager.GetString("MVC_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Contrôleurs volumineux.
         /// </summary>
         public static string MVCArchitecture_Cons1 {
@@ -3936,6 +4143,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string MVCArchitecture_WhenToUse3 {
             get {
                 return ResourceManager.GetString("MVCArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model-View-ViewModel pattern..
+        /// </summary>
+        public static string MVVM_Description {
+            get {
+                return ResourceManager.GetString("MVVM_Description", resourceCulture);
             }
         }
         
@@ -4071,6 +4287,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string MVVMArchitecture_WhenToUse3 {
             get {
                 return ResourceManager.GetString("MVVMArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notifies observers of changes..
+        /// </summary>
+        public static string Observer_Description {
+            get {
+                return ResourceManager.GetString("Observer_Description", resourceCulture);
             }
         }
         
@@ -4255,7 +4480,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le principe ouvert/fermé stipule que les entités logicielles (classes, modules, fonctions) doivent être ouvertes à l&apos;extension mais fermées à la modification..
+        ///   Looks up a localized string similar to Software entities should be open for extension but closed for modification..
         /// </summary>
         public static string OCP_Description {
             get {
@@ -4314,6 +4539,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string OCP_Title {
             get {
                 return ResourceManager.GetString("OCP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Concentric layered architecture..
+        /// </summary>
+        public static string Onion_Description {
+            get {
+                return ResourceManager.GetString("Onion_Description", resourceCulture);
             }
         }
         
@@ -4431,6 +4665,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string OnionArchitecture_WhenToUse3 {
             get {
                 return ResourceManager.GetString("OnionArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creates objects by cloning..
+        /// </summary>
+        public static string Prototype_Description {
+            get {
+                return ResourceManager.GetString("Prototype_Description", resourceCulture);
             }
         }
         
@@ -4584,6 +4827,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string PrototypePattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("PrototypePattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provides a substitute or placeholder..
+        /// </summary>
+        public static string Proxy_Description {
+            get {
+                return ResourceManager.GetString("Proxy_Description", resourceCulture);
             }
         }
         
@@ -4839,6 +5091,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string QuizPage_YourAnswerLabel {
             get {
                 return ResourceManager.GetString("QuizPage_YourAnswerLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ensures a class has only one instance..
+        /// </summary>
+        public static string Singleton_Description {
+            get {
+                return ResourceManager.GetString("Singleton_Description", resourceCulture);
             }
         }
         
@@ -5212,7 +5473,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le principe de responsabilité unique stipule qu&apos;une classe ne devrait avoir qu&apos;une seule raison de changer. Chaque classe devrait avoir une seule responsabilité ou un seul objectif..
+        ///   Looks up a localized string similar to A class should have only one reason to change..
         /// </summary>
         public static string SRP_Description {
             get {
@@ -5271,6 +5532,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string SRP_Title {
             get {
                 return ResourceManager.GetString("SRP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Behavior changes with state..
+        /// </summary>
+        public static string State_Description {
+            get {
+                return ResourceManager.GetString("State_Description", resourceCulture);
             }
         }
         
@@ -5392,6 +5662,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Interchangeable algorithms..
+        /// </summary>
+        public static string Strategy_Description {
+            get {
+                return ResourceManager.GetString("Strategy_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Augmente le nombre de classes.
         /// </summary>
         public static string StrategyPattern_Cons1 {
@@ -5509,6 +5788,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Defines algorithm skeleton..
+        /// </summary>
+        public static string TemplateMethod_Description {
+            get {
+                return ResourceManager.GetString("TemplateMethod_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to • Limité par l&apos;héritage.
         /// </summary>
         public static string TemplateMethodPattern_Cons1 {
@@ -5622,6 +5910,15 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         public static string TemplateMethodPattern_WhenToUse3 {
             get {
                 return ResourceManager.GetString("TemplateMethodPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Separates algorithm from structure..
+        /// </summary>
+        public static string Visitor_Description {
+            get {
+                return ResourceManager.GetString("Visitor_Description", resourceCulture);
             }
         }
         
