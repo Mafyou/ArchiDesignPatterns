@@ -15,7 +15,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <!-- Display name -->
-    <ApplicationTitle>ArchiDesignPatterns</ApplicationTitle>
+    <ApplicationTitle>Code Patterns</ApplicationTitle>
     <!-- App Identifier -->
     <ApplicationId>fr.mafyou.codepatterns</ApplicationId>
     <!-- Versions -->
@@ -53,118 +53,5 @@
     <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.10" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
     <PackageReference Include="Microsoft.SemanticKernel" Version="1.67.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <MauiXaml Update="Pages\Architectures\CleanArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\DDDArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\AdapterPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\BridgePatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\ChainOfResponsibilityPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\CompositePatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\CQRSArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\DecoratorPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\EventDrivenArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\FacadePatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\HexagonalArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\FlyweightPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\InterpreterPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\IteratorPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\LayeredArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\MediatorPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\MementoPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\MicroservicesArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\MVCArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\MVVMArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Architectures\OnionArchitecturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\ObserverPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\ProxyPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\QuizPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\SingletonPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\StatePatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\StrategyPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\TemplateMethodPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\DesignPatterns\VisitorPatternPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\SOLIDPrinciplesPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\SOLIDPrinciples\DependencyInversionPrinciplePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\SOLIDPrinciples\InterfaceSegregationPrinciplePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\SOLIDPrinciples\LiskovSubstitutionPrinciplePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\SOLIDPrinciples\OpenClosedPrinciplePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\SOLIDPrinciples\SingleResponsibilityPrinciplePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\ControlTemplates.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\PageLayouts.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
   </ItemGroup>
 </Project>
