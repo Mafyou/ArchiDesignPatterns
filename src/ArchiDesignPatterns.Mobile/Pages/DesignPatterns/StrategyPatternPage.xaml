@@ -1,9 +1,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.StrategyPatternPage"
              x:DataType="viewmodels:StrategyPatternViewModel"
-             Title="Strategy">
+             Title="{x:Static resx:Strings.StrategyPattern_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -14,14 +15,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🎯" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Strategy Pattern"
+                        <Label Text="{x:Static resx:Strings.StrategyPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Behavioral" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Behavioral}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -34,9 +35,12 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Strategy permet de sélectionner le comportement d'un algorithme à l'exécution. Il définit une famille d'algorithmes, encapsule chacun d'eux et les rend interchangeables."
+                        <Label Text="{x:Static resx:Strings.StrategyPattern_Description}"
                                Style="{StaticResource BodyLarge}" LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
@@ -44,23 +48,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand vous avez plusieurs algorithmes pour une même tâche"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.StrategyPattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour éviter les instructions conditionnelles complexes"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.StrategyPattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour permettre le changement d'algorithme à l'exécution"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.StrategyPattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -72,18 +79,18 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Choisissez une stratégie et exécutez-la :"
+                        <Label Text="{x:Static resx:Strings.StrategyPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
                         <Picker ItemsSource="{Binding Strategies}" 
                                 SelectedItem="{Binding SelectedStrategy}"
                                 HorizontalOptions="Fill" />
-                        <Button Text="Exécuter la stratégie" 
+                        <Button Text="{x:Static resx:Strings.StrategyPattern_InteractiveButton}" 
                                 Command="{Binding ExecuteStrategyCommand}" 
                                 HorizontalOptions="Fill" />
                         <Label Text="{Binding Result}" 
@@ -97,11 +104,30 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de code" Style="{StaticResource SubTitle}" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
                                 Text="// Interface Strategy&#x0a;public interface IStrategy&#x0a;{&#x0a;    string Execute();&#x0a;}&#x0a;&#x0a;// Stratégies concrètes&#x0a;public class ConcreteStrategyA : IStrategy&#x0a;{&#x0a;    public string Execute() =&gt; &quot;Stratégie A exécutée&quot;;&#x0a;}&#x0a;&#x0a;public class ConcreteStrategyB : IStrategy&#x0a;{&#x0a;    public string Execute() =&gt; &quot;Stratégie B exécutée&quot;;&#x0a;}&#x0a;&#x0a;// Contexte&#x0a;public class Context&#x0a;{&#x0a;    private IStrategy _strategy;&#x0a;&#x0a;    public Context(IStrategy strategy)&#x0a;    {&#x0a;        _strategy = strategy;&#x0a;    }&#x0a;&#x0a;    public void SetStrategy(IStrategy strategy)&#x0a;    {&#x0a;        _strategy = strategy;&#x0a;    }&#x0a;&#x0a;    public string ExecuteStrategy() =&gt; _strategy.Execute();&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_RealWorldTitle}"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="{x:Static resx:Strings.StrategyPattern_RealWorldDesc}"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -112,17 +138,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Algorithmes interchangeables"
+                                <Label Text="{x:Static resx:Strings.StrategyPattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Évite les conditionnelles"
+                                <Label Text="{x:Static resx:Strings.StrategyPattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Principe ouvert/fermé"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Isolement du code"
+                                <Label Text="{x:Static resx:Strings.StrategyPattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -133,15 +157,13 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Augmente le nombre de classes"
+                                <Label Text="{x:Static resx:Strings.StrategyPattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Les clients doivent connaître les stratégies"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Surcharge pour peu d'algorithmes"
+                                <Label Text="{x:Static resx:Strings.StrategyPattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

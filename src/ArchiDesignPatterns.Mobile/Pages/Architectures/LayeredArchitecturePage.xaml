@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.Architectures.LayeredArchitecturePage"
-             Title="Layered Architecture">
+             Title="{x:Static resx:Strings.LayeredArchitecture_Title}">
     <ContentPage.BindingContext>
         <viewmodels:LayeredArchitectureViewModel />
     </ContentPage.BindingContext>
@@ -17,14 +18,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="📚" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Layered Architecture"
+                        <Label Text="{x:Static resx:Strings.LayeredArchitecture_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Architecture" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_Architecture}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -38,10 +39,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="L'architecture en couches sépare l'application en plusieurs niveaux (présentation, métier, données) où chaque couche a une responsabilité spécifique et communique uniquement avec la couche adjacente."
+                        <Label Text="{x:Static resx:Strings.LayeredArchitecture_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -50,23 +54,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour des applications traditionnelles bien structurées"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.LayeredArchitecture_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand la séparation des responsabilités est importante"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.LayeredArchitecture_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour faciliter la maintenance et l'évolutivité"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.LayeredArchitecture_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -78,15 +85,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Appelez le service métier :"
+                        <Label Text="{x:Static resx:Strings.LayeredArchitecture_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Appeler le service métier"
+                        <Button Text="{x:Static resx:Strings.LayeredArchitecture_InteractiveButton}"
                                 Clicked="OnCallServiceClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -100,7 +107,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de structure"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -116,17 +123,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Séparation claire des responsabilités"
+                                <Label Text="{x:Static resx:Strings.LayeredArchitecture_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Facile à comprendre"
+                                <Label Text="{x:Static resx:Strings.LayeredArchitecture_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Testabilité par couche"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Réutilisabilité du code"
+                                <Label Text="{x:Static resx:Strings.LayeredArchitecture_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -137,15 +142,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.Architecture_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Couplage entre couches"
+                                <Label Text="{x:Static resx:Strings.LayeredArchitecture_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Difficulté de modification"
+                                <Label Text="{x:Static resx:Strings.LayeredArchitecture_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Peut devenir monolithique"
+                                <Label Text="{x:Static resx:Strings.LayeredArchitecture_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

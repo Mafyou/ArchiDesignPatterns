@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciples.DependencyInversionPrinciplePage"
              x:DataType="viewmodels:DependencyInversionPrincipleViewModel"
-             Title="Dependency Inversion">
+             Title="{x:Static resx:Strings.DIP_Title}">
 
     <Grid RowDefinitions="Auto,*">
         
@@ -17,14 +18,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔷" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Dependency Inversion Principle"
+                        <Label Text="{x:Static resx:Strings.DIP_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="SOLID" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.SOLID_Category}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -38,10 +39,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le principe d'inversion de dépendances stipule que les modules de haut niveau ne doivent pas dépendre des modules de bas niveau. Les deux doivent dépendre d'abstractions. Les abstractions ne doivent pas dépendre des détails, mais les détails doivent dépendre des abstractions."
+                        <Label Text="{x:Static resx:Strings.DIP_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -50,28 +54,28 @@
                 <!-- Key Concepts -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🔑 Concepts Clés"
+                        <Label Text="{x:Static resx:Strings.SOLID_KeyConceptsTitle}"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Dépendre d'abstractions (interfaces) pas d'implémentations"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.DIP_KeyConcept1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Modules de haut niveau indépendants des détails"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.DIP_KeyConcept2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Injection de dépendances (DI) pour la flexibilité"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.DIP_KeyConcept3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Facilite les tests et le changement d'implémentations"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.DIP_KeyConcept4}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -83,20 +87,20 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.SOLID_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Comparez un couplage fort avec l'inversion de dépendances :"
+                        <Label Text="{x:Static resx:Strings.DIP_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Voir l'Exemple ❌ (Violation)"
+                        <Button Text="{x:Static resx:Strings.DIP_ShowViolationButton}"
                                 Clicked="OnShowViolationClicked"
                                 HorizontalOptions="Fill"
                                 BackgroundColor="{StaticResource Error}" />
-                        <Button Text="Voir l'Exemple ✓ (Respect du DIP)"
+                        <Button Text="{x:Static resx:Strings.DIP_ShowCorrectButton}"
                                 Clicked="OnShowCorrectClicked"
                                 HorizontalOptions="Fill"
                                 BackgroundColor="{StaticResource Success}" />
@@ -111,7 +115,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="❌" FontSize="20" />
-                            <Label Text="Mauvais Exemple (Violation)"
+                            <Label Text="{x:Static resx:Strings.SOLID_BadExampleTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -125,7 +129,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="✅" FontSize="20" />
-                            <Label Text="Bon Exemple (Respect du DIP)"
+                            <Label Text="{x:Static resx:Strings.SOLID_GoodExampleTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -141,17 +145,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SOLID_AdvantagesTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Couplage réduit"
+                                <Label Text="{x:Static resx:Strings.DIP_Advantage1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Flexibilité maximale"
+                                <Label Text="{x:Static resx:Strings.DIP_Advantage2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Tests facilités (mocking)"
+                                <Label Text="{x:Static resx:Strings.DIP_Advantage3}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Changements d'implémentation simples"
+                                <Label Text="{x:Static resx:Strings.DIP_Advantage4}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -162,15 +166,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Points d'attention" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SOLID_AttentionPointsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Nécessite un conteneur DI"
+                                <Label Text="{x:Static resx:Strings.DIP_Attention1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Plus d'abstractions à créer"
+                                <Label Text="{x:Static resx:Strings.DIP_Attention2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Courbe d'apprentissage initiale"
+                                <Label Text="{x:Static resx:Strings.DIP_Attention3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

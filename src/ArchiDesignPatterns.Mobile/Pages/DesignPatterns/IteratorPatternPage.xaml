@@ -1,9 +1,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.IteratorPatternPage"
              x:DataType="viewmodels:IteratorPatternViewModel"
-             Title="Iterator">
+             Title="{x:Static resx:Strings.IteratorPattern_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -14,14 +15,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔁" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Iterator Pattern"
+                        <Label Text="{x:Static resx:Strings.IteratorPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Comportemental" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.IteratorPattern_Behavioral}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -33,26 +34,58 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Iterator permet de parcourir une collection sans exposer sa structure interne."
+                        <Label Text="{x:Static resx:Strings.IteratorPattern_Description}"
                                Style="{StaticResource BodyLarge}" LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
+
+                <!-- When to Use -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
+                        <BoxView Style="{StaticResource Divider}" Margin="0,0" />
+                        <VerticalStackLayout Spacing="8">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.IteratorPattern_WhenToUse1}"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.IteratorPattern_WhenToUse2}"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.IteratorPattern_WhenToUse3}"
+                                       Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
                 <!-- Interactive Example -->
                 <Border Style="{StaticResource InteractiveSection}">
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Parcourir la collection :"
+                        <Label Text="{x:Static resx:Strings.IteratorPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Parcourir la collection" Command="{Binding IterateCommand}" HorizontalOptions="Fill" />
+                        <Button Text="{x:Static resx:Strings.IteratorPattern_InteractiveButton}" Command="{Binding IterateCommand}" HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel" Text="{Binding Result}" Style="{StaticResource ResultLabel}" LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
@@ -61,13 +94,50 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Code Example" Style="{StaticResource SubTitle}" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
                                 Text="// Collection personnalisée&#x0a;public class MyCollection&#x0a;{&#x0a;    public int[] Data = { 1, 2, 3 };&#x0a;    public IEnumerator&lt;int&gt; GetEnumerator() =&gt; ((IEnumerable&lt;int&gt;)Data).GetEnumerator();&#x0a;}" />
                     </VerticalStackLayout>
                 </Border>
+
+                <!-- Pros and Cons -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Border Style="{StaticResource ProCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="✅" FontSize="20" />
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="{x:Static resx:Strings.IteratorPattern_Pros1}"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="{x:Static resx:Strings.IteratorPattern_Pros2}"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="{x:Static resx:Strings.IteratorPattern_Pros3}"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Style="{StaticResource ConCard}">
+                        <VerticalStackLayout Spacing="12">
+                            <HorizontalStackLayout Spacing="8">
+                                <Label Text="⚠️" FontSize="20" />
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
+                                       Style="{StaticResource BodyLarge}" />
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="{x:Static resx:Strings.IteratorPattern_Cons1}"
+                                       Style="{StaticResource BodySmall}" />
+                                <Label Text="{x:Static resx:Strings.IteratorPattern_Cons2}"
+                                       Style="{StaticResource BodySmall}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
             </VerticalStackLayout>
         </ScrollView>
     </Grid>

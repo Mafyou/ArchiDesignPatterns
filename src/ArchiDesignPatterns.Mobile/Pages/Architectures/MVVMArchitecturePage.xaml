@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.Architectures.MVVMArchitecturePage"
-             Title="MVVM Architecture">
+             Title="{x:Static resx:Strings.MVVMArchitecture_Title}">
     <ContentPage.BindingContext>
         <viewmodels:MVVMArchitectureViewModel />
     </ContentPage.BindingContext>
@@ -17,14 +18,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔄" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="MVVM Architecture"
+                        <Label Text="{x:Static resx:Strings.MVVMArchitecture_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Architecture" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_Architecture}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -38,10 +39,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="L'architecture MVVM sépare l'application en Modèle, Vue et ViewModel pour faciliter la liaison de données, améliorer la testabilité et séparer la logique de présentation."
+                        <Label Text="{x:Static resx:Strings.MVVMArchitecture_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -50,23 +54,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour les applications avec data binding complexe"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.MVVMArchitecture_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Applications .NET MAUI, WPF, Xamarin"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.MVVMArchitecture_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand la séparation UI/logique est essentielle"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.MVVMArchitecture_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -78,15 +85,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Mettez à jour les données via le ViewModel :"
+                        <Label Text="{x:Static resx:Strings.MVVMArchitecture_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Mettre à jour via le ViewModel"
+                        <Button Text="{x:Static resx:Strings.MVVMArchitecture_InteractiveButton}"
                                 Clicked="OnUpdateClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -100,7 +107,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de structure"
+                            <Label Text="{x:Static resx:Strings.MVVMArchitecture_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -116,17 +123,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Séparation claire UI/logique"
+                                <Label Text="{x:Static resx:Strings.MVVMArchitecture_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Data binding puissant"
+                                <Label Text="{x:Static resx:Strings.MVVMArchitecture_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Testabilité élevée"
+                                <Label Text="{x:Static resx:Strings.MVVMArchitecture_Pros3}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Réutilisabilité du code"
+                                <Label Text="{x:Static resx:Strings.MVVMArchitecture_Pros4}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -137,15 +144,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.Architecture_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Code boilerplate important"
+                                <Label Text="{x:Static resx:Strings.MVVMArchitecture_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Courbe d'apprentissage"
+                                <Label Text="{x:Static resx:Strings.MVVMArchitecture_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Complexité pour petites apps"
+                                <Label Text="{x:Static resx:Strings.MVVMArchitecture_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

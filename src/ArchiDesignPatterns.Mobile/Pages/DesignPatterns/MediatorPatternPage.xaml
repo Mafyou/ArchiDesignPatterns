@@ -1,9 +1,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.MediatorPatternPage"
              x:DataType="viewmodels:MediatorPatternViewModel"
-             Title="Mediator">
+             Title="{x:Static resx:Strings.MediatorPattern_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -14,14 +15,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔗" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Mediator Pattern"
+                        <Label Text="{x:Static resx:Strings.MediatorPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Comportemental" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Behavioral}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -35,10 +36,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Mediator définit un objet qui encapsule la façon dont un ensemble d'objets interagit, favorisant un couplage faible en évitant aux objets de se référer explicitement les uns aux autres."
+                        <Label Text="{x:Static resx:Strings.MediatorPattern_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -47,23 +51,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand plusieurs objets communiquent de manière complexe"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.MediatorPattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour réduire le couplage entre composants"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.MediatorPattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour centraliser la logique de communication"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.MediatorPattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -75,15 +82,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Envoyez un message via le médiateur :"
+                        <Label Text="{x:Static resx:Strings.MediatorPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Envoyer un message"
+                        <Button Text="{x:Static resx:Strings.MediatorPattern_InteractiveButton}"
                                 Clicked="OnSendMessageClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -97,12 +104,31 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de code"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
                                 Text="// Interface Mediator&#x0a;public interface IMediator&#x0a;{&#x0a;    void Notify(object sender, string eventName);&#x0a;}&#x0a;&#x0a;// Composant de base&#x0a;public abstract class Component&#x0a;{&#x0a;    protected IMediator _mediator;&#x0a;    public Component(IMediator mediator) =&gt; _mediator = mediator;&#x0a;}&#x0a;&#x0a;// Composants concrets&#x0a;public class Button : Component&#x0a;{&#x0a;    public Button(IMediator mediator) : base(mediator) { }&#x0a;    public void Click() =&gt; _mediator.Notify(this, &quot;click&quot;);&#x0a;}&#x0a;&#x0a;public class TextBox : Component&#x0a;{&#x0a;    public TextBox(IMediator mediator) : base(mediator) { }&#x0a;    public string Text { get; set; }&#x0a;}&#x0a;&#x0a;// Médiateur concret&#x0a;public class Dialog : IMediator&#x0a;{&#x0a;    private Button _button;&#x0a;    private TextBox _textBox;&#x0a;&#x0a;    public Dialog(Button button, TextBox textBox)&#x0a;    {&#x0a;        _button = button;&#x0a;        _textBox = textBox;&#x0a;    }&#x0a;&#x0a;    public void Notify(object sender, string eventName)&#x0a;    {&#x0a;        if (sender == _button &amp;&amp; eventName == &quot;click&quot;)&#x0a;            Console.WriteLine($&quot;Texte: {_textBox.Text}&quot;);&#x0a;    }&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_RealWorldTitle}"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="{x:Static resx:Strings.MediatorPattern_RealWorldDesc}"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -113,17 +139,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Réduit le couplage"
+                                <Label Text="{x:Static resx:Strings.MediatorPattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Centralise la communication"
+                                <Label Text="{x:Static resx:Strings.MediatorPattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Simplifie les interactions"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Facilite la maintenance"
+                                <Label Text="{x:Static resx:Strings.MediatorPattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -134,15 +158,13 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Le médiateur peut devenir complexe"
+                                <Label Text="{x:Static resx:Strings.MediatorPattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Point unique de défaillance"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Peut violer le SRP"
+                                <Label Text="{x:Static resx:Strings.MediatorPattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

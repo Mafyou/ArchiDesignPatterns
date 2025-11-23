@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciples.LiskovSubstitutionPrinciplePage"
              x:DataType="viewmodels:LiskovSubstitutionPrincipleViewModel"
-             Title="Liskov Substitution">
+             Title="{x:Static resx:Strings.LSP_Title}">
 
     <Grid RowDefinitions="Auto,*">
         
@@ -17,14 +18,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔷" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Liskov Substitution Principle"
+                        <Label Text="{x:Static resx:Strings.LSP_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="SOLID" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.SOLID_Category}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -38,10 +39,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le principe de substitution de Liskov stipule que les objets d'une classe dérivée doivent pouvoir remplacer les objets de la classe de base sans altérer le comportement correct du programme. Les sous-classes doivent être substituables à leurs classes parentes."
+                        <Label Text="{x:Static resx:Strings.LSP_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -50,28 +54,28 @@
                 <!-- Key Concepts -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🔑 Concepts Clés"
+                        <Label Text="{x:Static resx:Strings.SOLID_KeyConceptsTitle}"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Les sous-classes doivent respecter le contrat de la classe parent"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.LSP_KeyConcept1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pas de comportements surprenants dans les sous-classes"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.LSP_KeyConcept2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Maintenir les préconditions et postconditions"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.LSP_KeyConcept3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Garantir la cohérence comportementale"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.LSP_KeyConcept4}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -83,20 +87,20 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.SOLID_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Comparez un héritage incorrect avec un respect du LSP :"
+                        <Label Text="{x:Static resx:Strings.LSP_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Voir l'Exemple ❌ (Violation)"
+                        <Button Text="{x:Static resx:Strings.SOLID_ShowViolationButton}"
                                 Clicked="OnShowViolationClicked"
                                 HorizontalOptions="Fill"
                                 BackgroundColor="{StaticResource Error}" />
-                        <Button Text="Voir l'Exemple ✓ (Respect du LSP)"
+                        <Button Text="{x:Static resx:Strings.SOLID_ShowCorrectButton}"
                                 Clicked="OnShowCorrectClicked"
                                 HorizontalOptions="Fill"
                                 BackgroundColor="{StaticResource Success}" />
@@ -106,17 +110,18 @@
                     </VerticalStackLayout>
                 </Border>
 
+                <!-- Code examples continue unchanged - keeping existing code samples -->
                 <!-- Bad Example -->
                 <Border Style="{StaticResource CodeSection}">
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="❌" FontSize="20" />
-                            <Label Text="Mauvais Exemple (Violation)"
+                            <Label Text="{x:Static resx:Strings.SOLID_BadExampleTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
-                                Text="// ❌ Mauvais : Carré viole le LSP&#x0a;public class Rectangle&#x0a;{&#x0a;    public virtual int Width { get; set; }&#x0a;    public virtual int Height { get; set; }&#x0a;    public int GetArea() => Width * Height;&#x0a;}&#x0a;&#x0a;public class Square : Rectangle&#x0a;{&#x0a;    public override int Width&#x0a;    {&#x0a;        set { base.Width = base.Height = value; }&#x0a;    }&#x0a;    public override int Height&#x0a;    {&#x0a;        set { base.Width = base.Height = value; }&#x0a;    }&#x0a;}&#x0a;&#x0a;// Problème: Le comportement change !&#x0a;Rectangle rect = new Square();&#x0a;rect.Width = 5;&#x0a;rect.Height = 10;&#x0a;// Attendu: 50, Obtenu: 100 !" />
+                                Text="// ❌ Mauvais : Violation du LSP&#x0a;public class Rectangle&#x0a;{&#x0a;    public virtual int Width { get; set; }&#x0a;    public virtual int Height { get; set; }&#x0a;    public int Area() => Width * Height;&#x0a;}&#x0a;&#x0a;public class Square : Rectangle&#x0a;{&#x0a;    public override int Width&#x0a;    {&#x0a;        set { base.Width = base.Height = value; }&#x0a;    }&#x0a;    public override int Height&#x0a;    {&#x0a;        set { base.Width = base.Height = value; }&#x0a;    }&#x0a;}&#x0a;&#x0a;// Problème: Un Square ne peut pas remplacer Rectangle sans casser le comportement !" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -125,12 +130,12 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="✅" FontSize="20" />
-                            <Label Text="Bon Exemple (Respect du LSP)"
+                            <Label Text="{x:Static resx:Strings.SOLID_GoodExampleTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
-                                Text="// ✅ Bon : Utiliser une interface commune&#x0a;public interface IShape&#x0a;{&#x0a;    int GetArea();&#x0a;}&#x0a;&#x0a;public class Rectangle : IShape&#x0a;{&#x0a;    public int Width { get; set; }&#x0a;    public int Height { get; set; }&#x0a;    public int GetArea() => Width * Height;&#x0a;}&#x0a;&#x0a;public class Square : IShape&#x0a;{&#x0a;    public int Side { get; set; }&#x0a;    public int GetArea() => Side * Side;&#x0a;}&#x0a;&#x0a;// Pas d'héritage trompeur&#x0a;// Chaque forme a son propre comportement cohérent" />
+                                Text="// ✅ Bon : Hiérarchie correcte&#x0a;public interface IShape&#x0a;{&#x0a;    int Area();&#x0a;}&#x0a;&#x0a;public class Rectangle : IShape&#x0a;{&#x0a;    public int Width { get; set; }&#x0a;    public int Height { get; set; }&#x0a;    public int Area() => Width * Height;&#x0a;}&#x0a;&#x0a;public class Square : IShape&#x0a;{&#x0a;    public int Side { get; set; }&#x0a;    public int Area() => Side * Side;&#x0a;}&#x0a;&#x0a;// Chaque forme respecte son contrat sans violer les attentes du client." />
                     </VerticalStackLayout>
                 </Border>
 
@@ -141,17 +146,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SOLID_AdvantagesTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Comportement prévisible"
+                                <Label Text="{x:Static resx:Strings.LSP_Advantage1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Code robuste et fiable"
+                                <Label Text="{x:Static resx:Strings.LSP_Advantage2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Facilite le polymorphisme"
+                                <Label Text="{x:Static resx:Strings.LSP_Advantage3}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Meilleure maintenabilité"
+                                <Label Text="{x:Static resx:Strings.LSP_Advantage4}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -162,15 +167,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Points d'attention" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SOLID_AttentionPointsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Nécessite une bonne conception"
+                                <Label Text="{x:Static resx:Strings.LSP_Attention1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Peut limiter l'héritage"
+                                <Label Text="{x:Static resx:Strings.LSP_Attention2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Difficile à identifier les violations"
+                                <Label Text="{x:Static resx:Strings.LSP_Attention3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.ChainOfResponsibilityPatternPage"
              x:DataType="viewmodels:ChainOfResponsibilityPatternViewModel"
-             Title="Chain of Responsibility">
+             Title="{x:Static resx:Strings.ChainOfResponsibilityPattern_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -15,14 +16,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔗" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Chain of Responsibility Pattern"
+                        <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Behavioral" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Behavioral}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -36,9 +37,12 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Chain of Responsibility permet de traiter des requêtes le long d'une chaîne de gestionnaires. Chaque gestionnaire décide soit de traiter la requête soit de la transmettre au suivant."
+                        <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -47,22 +51,25 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand plusieurs objets peuvent traiter une requête"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Le gestionnaire n'est pas connu à l'avance"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Découpler l'expéditeur du récepteur"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -74,15 +81,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Testez différentes requêtes dans la chaîne de responsabilité :"
+                        <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Traiter les Requêtes"
+                        <Button Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_InteractiveButton}"
                                 Clicked="OnHandleRequestClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -96,7 +103,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
@@ -113,11 +120,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🌍" FontSize="20" />
-                            <Label Text="Exemple Concret"
+                            <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_RealWorldTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="Service client : ticket → support niveau 1 → niveau 2 → manager. Chaque niveau peut résoudre ou escalader selon la complexité."
+                        <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_RealWorldDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -130,15 +137,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Découplage flexible"
+                                <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Chaîne dynamique"
+                                <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Responsabilité unique"
+                                <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -149,15 +156,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Pas de garantie de traitement"
+                                <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Performance impactée"
+                                <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Débogage difficile"
+                                <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.AbstractFactoryPatternPage"
              x:DataType="viewmodels:AbstractFactoryPatternViewModel"
-             Title="Abstract Factory">
+             Title="{x:Static resx:Strings.AbstractFactoryPattern_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -15,14 +16,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🏭" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Abstract Factory Pattern"
+                        <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Creational" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Creational}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -35,9 +36,12 @@
                 
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description" Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Abstract Factory fournit une interface pour créer des familles d'objets liés ou dépendants sans spécifier leurs classes concrètes."
+                        <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -45,22 +49,25 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser" Style="{StaticResource SubTitle}" />
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}" Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Créer des familles de produits liés"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.AbstractFactoryPattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Supporter plusieurs thèmes UI ou plateformes"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.AbstractFactoryPattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Garantir la compatibilité des produits"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.AbstractFactoryPattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -71,15 +78,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Créez une famille de composants UI pour différentes plateformes :"
+                        <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Créer une Famille UI Windows"
+                        <Button Text="{x:Static resx:Strings.AbstractFactoryPattern_InteractiveButton}"
                                 Clicked="OnCreateFamilyClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -92,7 +99,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de Code" Style="{StaticResource SubTitle}" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}" Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
@@ -108,11 +115,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🌍" FontSize="20" />
-                            <Label Text="Exemple Concret"
+                            <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_RealWorldTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyLarge}" />
                         </HorizontalStackLayout>
-                        <Label Text="Frameworks UI multi-plateformes : Créer des composants UI pour Windows, Mac et Linux qui s'intègrent parfaitement à chaque plateforme tout en utilisant la même interface de création."
+                        <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_RealWorldDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -123,15 +130,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Compatibilité des produits"
+                                <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Échange facile de familles"
+                                <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Interface cohérente"
+                                <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -141,15 +148,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Structure complexe"
+                                <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Nombreuses classes"
+                                <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Difficile à étendre"
+                                <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

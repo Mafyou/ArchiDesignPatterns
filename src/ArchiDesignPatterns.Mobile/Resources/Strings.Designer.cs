@@ -61,7 +61,2050 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 💻 Exemple de Code.
+        ///   Looks up a localized string similar to • Structure complexe.
+        /// </summary>
+        public static string AbstractFactoryPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Nombreuses classes.
+        /// </summary>
+        public static string AbstractFactoryPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Difficile à étendre.
+        /// </summary>
+        public static string AbstractFactoryPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creational.
+        /// </summary>
+        public static string AbstractFactoryPattern_Creational {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Creational", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Abstract Factory fournit une interface pour créer des familles d&apos;objets liés ou dépendants sans spécifier leurs classes concrètes..
+        /// </summary>
+        public static string AbstractFactoryPattern_Description {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Créer une Famille UI Windows.
+        /// </summary>
+        public static string AbstractFactoryPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Créez une famille de composants UI pour différentes plateformes :.
+        /// </summary>
+        public static string AbstractFactoryPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Compatibilité des produits.
+        /// </summary>
+        public static string AbstractFactoryPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Échange facile de familles.
+        /// </summary>
+        public static string AbstractFactoryPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Interface cohérente.
+        /// </summary>
+        public static string AbstractFactoryPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frameworks UI multi-plateformes : Créer des composants UI pour Windows, Mac et Linux qui s&apos;intègrent parfaitement à chaque plateforme tout en utilisant la même interface de création..
+        /// </summary>
+        public static string AbstractFactoryPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exemple Concret.
+        /// </summary>
+        public static string AbstractFactoryPattern_RealWorldTitle {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_RealWorldTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abstract Factory Pattern.
+        /// </summary>
+        public static string AbstractFactoryPattern_Title {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Créer des familles de produits liés.
+        /// </summary>
+        public static string AbstractFactoryPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supporter plusieurs thèmes UI ou plateformes.
+        /// </summary>
+        public static string AbstractFactoryPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Garantir la compatibilité des produits.
+        /// </summary>
+        public static string AbstractFactoryPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("AbstractFactoryPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Augmentation de la complexité.
+        /// </summary>
+        public static string AdapterPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Surcharge de performance.
+        /// </summary>
+        public static string AdapterPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Peut être plus simple de refactoriser.
+        /// </summary>
+        public static string AdapterPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Adapter convertit l&apos;interface d&apos;une classe en une autre interface que les clients attendent. Il permet aux interfaces incompatibles de fonctionner ensemble..
+        /// </summary>
+        public static string AdapterPattern_Description {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utiliser l&apos;Adapter.
+        /// </summary>
+        public static string AdapterPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("AdapterPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilisez un adapter pour faire fonctionner ensemble des interfaces incompatibles :.
+        /// </summary>
+        public static string AdapterPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("AdapterPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réutilise le code existant.
+        /// </summary>
+        public static string AdapterPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Responsabilité unique.
+        /// </summary>
+        public static string AdapterPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Principe ouvert/fermé.
+        /// </summary>
+        public static string AdapterPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adaptateurs de prise électrique : les appareils européens (220V) peuvent fonctionner avec des prises américaines (110V) grâce à un adaptateur qui convertit l&apos;interface tout en maintenant la fonctionnalité..
+        /// </summary>
+        public static string AdapterPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("AdapterPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Structural.
+        /// </summary>
+        public static string AdapterPattern_Structural {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Structural", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adapter Pattern.
+        /// </summary>
+        public static string AdapterPattern_Title {
+            get {
+                return ResourceManager.GetString("AdapterPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Intégrer du code legacy avec de nouveaux systèmes.
+        /// </summary>
+        public static string AdapterPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faire fonctionner ensemble des interfaces incompatibles.
+        /// </summary>
+        public static string AdapterPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utiliser des bibliothèques tierces avec des interfaces différentes.
+        /// </summary>
+        public static string AdapterPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("AdapterPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Défis.
+        /// </summary>
+        public static string Architecture_ConsTitle {
+            get {
+                return ResourceManager.GetString("Architecture_ConsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Point Clé.
+        /// </summary>
+        public static string Architecture_KeyPointTitle {
+            get {
+                return ResourceManager.GetString("Architecture_KeyPointTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Essayez d&apos;ajuster votre terme de recherche.
+        /// </summary>
+        public static string ArchitecturesPage_NoResultsDesc {
+            get {
+                return ResourceManager.GetString("ArchitecturesPage_NoResultsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aucune architecture trouvée.
+        /// </summary>
+        public static string ArchitecturesPage_NoResultsTitle {
+            get {
+                return ResourceManager.GetString("ArchitecturesPage_NoResultsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rechercher des architectures....
+        /// </summary>
+        public static string ArchitecturesPage_SearchPlaceholder {
+            get {
+                return ResourceManager.GetString("ArchitecturesPage_SearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10 patterns architecturaux pour des systèmes évolutifs.
+        /// </summary>
+        public static string ArchitecturesPage_Tagline {
+            get {
+                return ResourceManager.GetString("ArchitecturesPage_Tagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architectures Logicielles.
+        /// </summary>
+        public static string ArchitecturesPage_Title {
+            get {
+                return ResourceManager.GetString("ArchitecturesPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité accrue.
+        /// </summary>
+        public static string BridgePattern_Cons1 {
+            get {
+                return ResourceManager.GetString("BridgePattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Plus de classes.
+        /// </summary>
+        public static string BridgePattern_Cons2 {
+            get {
+                return ResourceManager.GetString("BridgePattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Surcharge d&apos;indirection.
+        /// </summary>
+        public static string BridgePattern_Cons3 {
+            get {
+                return ResourceManager.GetString("BridgePattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Bridge sépare une abstraction de son implémentation pour que les deux puissent varier indépendamment. Il utilise la composition plutôt que l&apos;héritage..
+        /// </summary>
+        public static string BridgePattern_Description {
+            get {
+                return ResourceManager.GetString("BridgePattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dessiner avec Bridge.
+        /// </summary>
+        public static string BridgePattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("BridgePattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dessinez des formes avec différentes implémentations de rendu :.
+        /// </summary>
+        public static string BridgePattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("BridgePattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Découple l&apos;interface de l&apos;implémentation.
+        /// </summary>
+        public static string BridgePattern_Pros1 {
+            get {
+                return ResourceManager.GetString("BridgePattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Liaison à l&apos;exécution.
+        /// </summary>
+        public static string BridgePattern_Pros2 {
+            get {
+                return ResourceManager.GetString("BridgePattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Extensions indépendantes.
+        /// </summary>
+        public static string BridgePattern_Pros3 {
+            get {
+                return ResourceManager.GetString("BridgePattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frameworks GUI : Séparer les abstractions de fenêtres (Window, Dialog) des implémentations de plateformes (API Windows, API macOS, Linux X11) - les mêmes types de fenêtres fonctionnent sur toutes les plateformes..
+        /// </summary>
+        public static string BridgePattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("BridgePattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bridge Pattern.
+        /// </summary>
+        public static string BridgePattern_Title {
+            get {
+                return ResourceManager.GetString("BridgePattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Éviter une liaison permanente entre abstraction et implémentation.
+        /// </summary>
+        public static string BridgePattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("BridgePattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to L&apos;abstraction et l&apos;implémentation doivent être extensibles.
+        /// </summary>
+        public static string BridgePattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("BridgePattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Les changements d&apos;implémentation ne doivent pas affecter les clients.
+        /// </summary>
+        public static string BridgePattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("BridgePattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Plus de code.
+        /// </summary>
+        public static string BuilderPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Excessif pour des objets simples.
+        /// </summary>
+        public static string BuilderPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Classe builder nécessaire.
+        /// </summary>
+        public static string BuilderPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Builder sépare la construction d&apos;un objet complexe de sa représentation, permettant au même processus de construction de créer différentes représentations..
+        /// </summary>
+        public static string BuilderPattern_Description {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Construire un Produit.
+        /// </summary>
+        public static string BuilderPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("BuilderPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Construisez un produit étape par étape :.
+        /// </summary>
+        public static string BuilderPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("BuilderPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Interface fluide.
+        /// </summary>
+        public static string BuilderPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Support de l&apos;immuabilité.
+        /// </summary>
+        public static string BuilderPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Construction claire.
+        /// </summary>
+        public static string BuilderPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Builder Pattern.
+        /// </summary>
+        public static string BuilderPattern_Title {
+            get {
+                return ResourceManager.GetString("BuilderPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lors de la création d&apos;objets complexes avec de nombreux paramètres.
+        /// </summary>
+        public static string BuilderPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand la construction d&apos;objet nécessite plusieurs étapes.
+        /// </summary>
+        public static string BuilderPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour éviter les constructeurs télescopiques.
+        /// </summary>
+        public static string BuilderPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("BuilderPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Behavioral.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Behavioral {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Behavioral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Pas de garantie de traitement.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Performance impactée.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Débogage difficile.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Chain of Responsibility permet de traiter des requêtes le long d&apos;une chaîne de gestionnaires. Chaque gestionnaire décide soit de traiter la requête soit de la transmettre au suivant..
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Description {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traiter les Requêtes.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Testez différentes requêtes dans la chaîne de responsabilité :.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Découplage flexible.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Chaîne dynamique.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Responsabilité unique.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service client : ticket → support niveau 1 → niveau 2 → manager. Chaque niveau peut résoudre ou escalader selon la complexité..
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chain of Responsibility Pattern.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_Title {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand plusieurs objets peuvent traiter une requête.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le gestionnaire n&apos;est pas connu à l&apos;avance.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Découpler l&apos;expéditeur du récepteur.
+        /// </summary>
+        public static string ChainOfResponsibilityPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibilityPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architecture.
+        /// </summary>
+        public static string CleanArchitecture_Architecture {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Architecture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Structure du Code.
+        /// </summary>
+        public static string CleanArchitecture_CodeTitle {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_CodeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Courbe d&apos;apprentissage.
+        /// </summary>
+        public static string CleanArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Plus de code standard.
+        /// </summary>
+        public static string CleanArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Excessif pour petites apps.
+        /// </summary>
+        public static string CleanArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité initiale.
+        /// </summary>
+        public static string CleanArchitecture_Cons4 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Cons4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clean Architecture organise le code en couches indépendantes avec des frontières claires et des dépendances pointant vers l&apos;intérieur. Les couches internes contiennent la logique métier et sont indépendantes des frameworks, de l&apos;UI et des bases de données..
+        /// </summary>
+        public static string CleanArchitecture_Description {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter l&apos;Appel de Service.
+        /// </summary>
+        public static string CleanArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simulez un appel de service à travers les couches :.
+        /// </summary>
+        public static string CleanArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clean Architecture privilégie la séparation des préoccupations et l&apos;indépendance des dépendances externes, rendant votre base de code plus maintenable, testable et adaptable aux changements..
+        /// </summary>
+        public static string CleanArchitecture_KeyPoint {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_KeyPoint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Core.
+        /// </summary>
+        public static string CleanArchitecture_Layer1 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Entités, Règles Métier.
+        /// </summary>
+        public static string CleanArchitecture_Layer1Desc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer1Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application.
+        /// </summary>
+        public static string CleanArchitecture_Layer2 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Cas d&apos;usage, Interfaces.
+        /// </summary>
+        public static string CleanArchitecture_Layer2Desc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer2Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infrastructure.
+        /// </summary>
+        public static string CleanArchitecture_Layer3 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Base de données, Services externes.
+        /// </summary>
+        public static string CleanArchitecture_Layer3Desc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer3Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Présentation.
+        /// </summary>
+        public static string CleanArchitecture_Layer4 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → UI, Contrôleurs, ViewModels.
+        /// </summary>
+        public static string CleanArchitecture_Layer4Desc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Layer4Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couches Architecturales.
+        /// </summary>
+        public static string CleanArchitecture_LayersTitle {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_LayersTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logique métier indépendante des frameworks.
+        /// </summary>
+        public static string CleanArchitecture_Principle1Desc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Principle1Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indépendance.
+        /// </summary>
+        public static string CleanArchitecture_Principle1Title {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Principle1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facile à tester sans UI ou base de données.
+        /// </summary>
+        public static string CleanArchitecture_Principle2Desc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Principle2Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Testabilité.
+        /// </summary>
+        public static string CleanArchitecture_Principle2Title {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Principle2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dépendances pointent seulement vers l&apos;intérieur.
+        /// </summary>
+        public static string CleanArchitecture_Principle3Desc {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Principle3Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Règle de Dépendance.
+        /// </summary>
+        public static string CleanArchitecture_Principle3Title {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Principle3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Principes Fondamentaux.
+        /// </summary>
+        public static string CleanArchitecture_PrinciplesTitle {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_PrinciplesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Hautement testable.
+        /// </summary>
+        public static string CleanArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Indépendant des technologies.
+        /// </summary>
+        public static string CleanArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Frontières claires.
+        /// </summary>
+        public static string CleanArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facile à maintenir.
+        /// </summary>
+        public static string CleanArchitecture_Pros4 {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clean Architecture.
+        /// </summary>
+        public static string CleanArchitecture_Title {
+            get {
+                return ResourceManager.GetString("CleanArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Nombre de classes accru.
+        /// </summary>
+        public static string CommandPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("CommandPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité additionnelle.
+        /// </summary>
+        public static string CommandPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("CommandPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Indirection.
+        /// </summary>
+        public static string CommandPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("CommandPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Command encapsule une requête en tant qu&apos;objet, permettant de paramétrer des actions, de les mettre en file d&apos;attente et de supporter les opérations d&apos;annulation..
+        /// </summary>
+        public static string CommandPattern_Description {
+            get {
+                return ResourceManager.GetString("CommandPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter les Commandes.
+        /// </summary>
+        public static string CommandPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("CommandPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contrôlez une lumière avec des commandes :.
+        /// </summary>
+        public static string CommandPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("CommandPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Découplage complet.
+        /// </summary>
+        public static string CommandPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("CommandPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Support undo/redo.
+        /// </summary>
+        public static string CommandPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("CommandPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Composition de commandes.
+        /// </summary>
+        public static string CommandPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("CommandPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Télécommande universelle : chaque bouton encapsule une commande (allumer TV, changer chaîne, ajuster volume) sans connaître les détails des appareils..
+        /// </summary>
+        public static string CommandPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("CommandPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command Pattern.
+        /// </summary>
+        public static string CommandPattern_Title {
+            get {
+                return ResourceManager.GetString("CommandPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Découpler l&apos;expéditeur du récepteur d&apos;une requête.
+        /// </summary>
+        public static string CommandPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("CommandPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supporter les opérations d&apos;annulation (undo/redo).
+        /// </summary>
+        public static string CommandPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("CommandPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Journaliser ou mettre en file d&apos;attente les requêtes.
+        /// </summary>
+        public static string CommandPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("CommandPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Interface peut être trop générale.
+        /// </summary>
+        public static string CompositePattern_Cons1 {
+            get {
+                return ResourceManager.GetString("CompositePattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Difficile de limiter les composants.
+        /// </summary>
+        public static string CompositePattern_Cons2 {
+            get {
+                return ResourceManager.GetString("CompositePattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité pour types simples.
+        /// </summary>
+        public static string CompositePattern_Cons3 {
+            get {
+                return ResourceManager.GetString("CompositePattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Composite permet de composer des objets en structures arborescentes pour représenter des hiérarchies partie-tout. Il traite les objets individuels et leurs compositions de manière uniforme..
+        /// </summary>
+        public static string CompositePattern_Description {
+            get {
+                return ResourceManager.GetString("CompositePattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Afficher la Structure.
+        /// </summary>
+        public static string CompositePattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("CompositePattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Construisez une structure arborescente composite :.
+        /// </summary>
+        public static string CompositePattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("CompositePattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Interface uniforme.
+        /// </summary>
+        public static string CompositePattern_Pros1 {
+            get {
+                return ResourceManager.GetString("CompositePattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Structures récursives naturelles.
+        /// </summary>
+        public static string CompositePattern_Pros2 {
+            get {
+                return ResourceManager.GetString("CompositePattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facilite l&apos;ajout d&apos;éléments.
+        /// </summary>
+        public static string CompositePattern_Pros3 {
+            get {
+                return ResourceManager.GetString("CompositePattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Système de fichiers : dossiers peuvent contenir fichiers ou autres dossiers. Même interface pour lister le contenu, que ce soit un fichier simple ou un dossier avec sous-éléments..
+        /// </summary>
+        public static string CompositePattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("CompositePattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Composite Pattern.
+        /// </summary>
+        public static string CompositePattern_Title {
+            get {
+                return ResourceManager.GetString("CompositePattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Représenter des hiérarchies partie-tout d&apos;objets.
+        /// </summary>
+        public static string CompositePattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("CompositePattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traiter uniformément objets individuels et compositions.
+        /// </summary>
+        public static string CompositePattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("CompositePattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Structures arborescentes complexes avec opérations récursives.
+        /// </summary>
+        public static string CompositePattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("CompositePattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité accrue.
+        /// </summary>
+        public static string CQRSArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Synchronisation des données.
+        /// </summary>
+        public static string CQRSArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Excessif pour apps simples.
+        /// </summary>
+        public static string CQRSArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CQRS (Command Query Responsibility Segregation) sépare les opérations de lecture et d&apos;écriture en utilisant des modèles distincts pour mettre à jour et interroger les données..
+        /// </summary>
+        public static string CQRSArchitecture_Description {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter CQRS.
+        /// </summary>
+        public static string CQRSArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter une commande et une requête :.
+        /// </summary>
+        public static string CQRSArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Scalabilité optimisée.
+        /// </summary>
+        public static string CQRSArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Séparation des préoccupations.
+        /// </summary>
+        public static string CQRSArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Performance améliorée.
+        /// </summary>
+        public static string CQRSArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CQRS Architecture.
+        /// </summary>
+        public static string CQRSArchitecture_Title {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Systèmes avec des charges de lecture/écriture différentes.
+        /// </summary>
+        public static string CQRSArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Domaines complexes nécessitant des modèles séparés.
+        /// </summary>
+        public static string CQRSArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications nécessitant une scalabilité indépendante.
+        /// </summary>
+        public static string CQRSArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("CQRSArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Courbe d&apos;apprentissage élevée.
+        /// </summary>
+        public static string DDDArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Nécessite expertise métier.
+        /// </summary>
+        public static string DDDArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité initiale.
+        /// </summary>
+        public static string DDDArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Domain-Driven Design se concentre sur la modélisation du domaine métier et utilise un langage ubiquitaire partagé entre développeurs et experts du domaine..
+        /// </summary>
+        public static string DDDArchitecture_Description {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter Logique Domaine.
+        /// </summary>
+        public static string DDDArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simuler une opération de domaine :.
+        /// </summary>
+        public static string DDDArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Alignement avec le métier.
+        /// </summary>
+        public static string DDDArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Langage ubiquitaire.
+        /// </summary>
+        public static string DDDArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Logique métier centralisée.
+        /// </summary>
+        public static string DDDArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DDD Architecture.
+        /// </summary>
+        public static string DDDArchitecture_Title {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Domaines métier complexes.
+        /// </summary>
+        public static string DDDArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collaboration étroite avec experts métier.
+        /// </summary>
+        public static string DDDArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Projets à long terme nécessitant évolutivité.
+        /// </summary>
+        public static string DDDArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("DDDArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Nombreuses petites classes.
+        /// </summary>
+        public static string DecoratorPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité du code.
+        /// </summary>
+        public static string DecoratorPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Ordre des décorateurs important.
+        /// </summary>
+        public static string DecoratorPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Decorator permet d&apos;ajouter dynamiquement des fonctionnalités à un objet en l&apos;enveloppant dans un objet décorateur..
+        /// </summary>
+        public static string DecoratorPattern_Description {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ajouter une décoration.
+        /// </summary>
+        public static string DecoratorPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ajoutez des décorations pour enrichir un objet :.
+        /// </summary>
+        public static string DecoratorPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Flexibilité d&apos;ajout de fonctionnalités.
+        /// </summary>
+        public static string DecoratorPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Alternative à l&apos;héritage.
+        /// </summary>
+        public static string DecoratorPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Combinaisons multiples possibles.
+        /// </summary>
+        public static string DecoratorPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Principe ouvert/fermé.
+        /// </summary>
+        public static string DecoratorPattern_Pros4 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decorator Pattern.
+        /// </summary>
+        public static string DecoratorPattern_Title {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour ajouter des responsabilités à des objets de manière dynamique.
+        /// </summary>
+        public static string DecoratorPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand l&apos;héritage n&apos;est pas pratique ou devient trop complexe.
+        /// </summary>
+        public static string DecoratorPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour créer des combinaisons flexibles de fonctionnalités.
+        /// </summary>
+        public static string DecoratorPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("DecoratorPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Essayez d&apos;ajuster votre terme de recherche.
+        /// </summary>
+        public static string DesignPatternsPage_NoResultsDesc {
+            get {
+                return ResourceManager.GetString("DesignPatternsPage_NoResultsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aucun pattern trouvé.
+        /// </summary>
+        public static string DesignPatternsPage_NoResultsTitle {
+            get {
+                return ResourceManager.GetString("DesignPatternsPage_NoResultsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rechercher des patterns....
+        /// </summary>
+        public static string DesignPatternsPage_SearchPlaceholder {
+            get {
+                return ResourceManager.GetString("DesignPatternsPage_SearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23 solutions éprouvées aux problèmes courants de conception logicielle.
+        /// </summary>
+        public static string DesignPatternsPage_Tagline {
+            get {
+                return ResourceManager.GetString("DesignPatternsPage_Tagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Design Patterns.
+        /// </summary>
+        public static string DesignPatternsPage_Title {
+            get {
+                return ResourceManager.GetString("DesignPatternsPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Couplage réduit.
+        /// </summary>
+        public static string DIP_Advantage1 {
+            get {
+                return ResourceManager.GetString("DIP_Advantage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Flexibilité maximale.
+        /// </summary>
+        public static string DIP_Advantage2 {
+            get {
+                return ResourceManager.GetString("DIP_Advantage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Tests facilités (mocking).
+        /// </summary>
+        public static string DIP_Advantage3 {
+            get {
+                return ResourceManager.GetString("DIP_Advantage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Changements d&apos;implémentation simples.
+        /// </summary>
+        public static string DIP_Advantage4 {
+            get {
+                return ResourceManager.GetString("DIP_Advantage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Nécessite un conteneur DI.
+        /// </summary>
+        public static string DIP_Attention1 {
+            get {
+                return ResourceManager.GetString("DIP_Attention1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Plus d&apos;abstractions à créer.
+        /// </summary>
+        public static string DIP_Attention2 {
+            get {
+                return ResourceManager.GetString("DIP_Attention2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Courbe d&apos;apprentissage initiale.
+        /// </summary>
+        public static string DIP_Attention3 {
+            get {
+                return ResourceManager.GetString("DIP_Attention3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le principe d&apos;inversion de dépendances stipule que les modules de haut niveau ne doivent pas dépendre des modules de bas niveau. Les deux doivent dépendre d&apos;abstractions. Les abstractions ne doivent pas dépendre des détails, mais les détails doivent dépendre des abstractions..
+        /// </summary>
+        public static string DIP_Description {
+            get {
+                return ResourceManager.GetString("DIP_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comparez un couplage fort avec l&apos;inversion de dépendances :.
+        /// </summary>
+        public static string DIP_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("DIP_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dépendre d&apos;abstractions (interfaces) pas d&apos;implémentations.
+        /// </summary>
+        public static string DIP_KeyConcept1 {
+            get {
+                return ResourceManager.GetString("DIP_KeyConcept1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modules de haut niveau indépendants des détails.
+        /// </summary>
+        public static string DIP_KeyConcept2 {
+            get {
+                return ResourceManager.GetString("DIP_KeyConcept2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Injection de dépendances (DI) pour la flexibilité.
+        /// </summary>
+        public static string DIP_KeyConcept3 {
+            get {
+                return ResourceManager.GetString("DIP_KeyConcept3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facilite les tests et le changement d&apos;implémentations.
+        /// </summary>
+        public static string DIP_KeyConcept4 {
+            get {
+                return ResourceManager.GetString("DIP_KeyConcept4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voir l&apos;Exemple ✓ (Respect du DIP).
+        /// </summary>
+        public static string DIP_ShowCorrectButton {
+            get {
+                return ResourceManager.GetString("DIP_ShowCorrectButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voir l&apos;Exemple ❌ (Violation).
+        /// </summary>
+        public static string DIP_ShowViolationButton {
+            get {
+                return ResourceManager.GetString("DIP_ShowViolationButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dependency Inversion Principle.
+        /// </summary>
+        public static string DIP_Title {
+            get {
+                return ResourceManager.GetString("DIP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Débogage complexe.
+        /// </summary>
+        public static string EventDrivenArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Gestion des événements délicate.
+        /// </summary>
+        public static string EventDrivenArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Cohérence éventuelle.
+        /// </summary>
+        public static string EventDrivenArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architecture orientée événements où les composants communiquent via la production, détection et consommation d&apos;événements asynchrones..
+        /// </summary>
+        public static string EventDrivenArchitecture_Description {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publier Événement.
+        /// </summary>
+        public static string EventDrivenArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publier et consommer un événement :.
+        /// </summary>
+        public static string EventDrivenArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Couplage faible.
+        /// </summary>
+        public static string EventDrivenArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Scalabilité élevée.
+        /// </summary>
+        public static string EventDrivenArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réactivité en temps réel.
+        /// </summary>
+        public static string EventDrivenArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event-Driven Architecture.
+        /// </summary>
+        public static string EventDrivenArchitecture_Title {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Systèmes nécessitant un couplage faible.
+        /// </summary>
+        public static string EventDrivenArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications en temps réel.
+        /// </summary>
+        public static string EventDrivenArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Microservices et systèmes distribués.
+        /// </summary>
+        public static string EventDrivenArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("EventDrivenArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Peut devenir un objet omniscient.
+        /// </summary>
+        public static string FacadePattern_Cons1 {
+            get {
+                return ResourceManager.GetString("FacadePattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Perte de flexibilité.
+        /// </summary>
+        public static string FacadePattern_Cons2 {
+            get {
+                return ResourceManager.GetString("FacadePattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Surcharge si mal utilisé.
+        /// </summary>
+        public static string FacadePattern_Cons3 {
+            get {
+                return ResourceManager.GetString("FacadePattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Facade fournit une interface simplifiée à un ensemble de sous-systèmes complexes, rendant le système plus facile à utiliser..
+        /// </summary>
+        public static string FacadePattern_Description {
+            get {
+                return ResourceManager.GetString("FacadePattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utiliser la facade.
+        /// </summary>
+        public static string FacadePattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("FacadePattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilisez la facade pour simplifier l&apos;accès :.
+        /// </summary>
+        public static string FacadePattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("FacadePattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Simplifie l&apos;interface.
+        /// </summary>
+        public static string FacadePattern_Pros1 {
+            get {
+                return ResourceManager.GetString("FacadePattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réduit le couplage.
+        /// </summary>
+        public static string FacadePattern_Pros2 {
+            get {
+                return ResourceManager.GetString("FacadePattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Isole la complexité.
+        /// </summary>
+        public static string FacadePattern_Pros3 {
+            get {
+                return ResourceManager.GetString("FacadePattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facilite l&apos;utilisation.
+        /// </summary>
+        public static string FacadePattern_Pros4 {
+            get {
+                return ResourceManager.GetString("FacadePattern_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facade Pattern.
+        /// </summary>
+        public static string FacadePattern_Title {
+            get {
+                return ResourceManager.GetString("FacadePattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour simplifier l&apos;accès à des sous-systèmes complexes.
+        /// </summary>
+        public static string FacadePattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("FacadePattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour réduire les dépendances entre les clients et les sous-systèmes.
+        /// </summary>
+        public static string FacadePattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("FacadePattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour créer des couches d&apos;abstraction.
+        /// </summary>
+        public static string FacadePattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("FacadePattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exemple de Code.
         /// </summary>
         public static string FactoryPattern_CodeTitle {
             get {
@@ -97,7 +2140,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ⚠️ Inconvénients.
+        ///   Looks up a localized string similar to Inconvénients.
         /// </summary>
         public static string FactoryPattern_ConsTitle {
             get {
@@ -124,7 +2167,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 📖 Description.
+        ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string FactoryPattern_DescriptionTitle {
             get {
@@ -151,7 +2194,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 🎮 Exemple Interactif.
+        ///   Looks up a localized string similar to Exemple Interactif.
         /// </summary>
         public static string FactoryPattern_InteractiveTitle {
             get {
@@ -223,7 +2266,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ✅ Avantages.
+        ///   Looks up a localized string similar to Avantages.
         /// </summary>
         public static string FactoryPattern_ProsTitle {
             get {
@@ -250,7 +2293,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 🏗️ Factory Pattern.
+        ///   Looks up a localized string similar to Factory Pattern.
         /// </summary>
         public static string FactoryPattern_Title {
             get {
@@ -286,7 +2329,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 🎯 Quand l&apos;utiliser.
+        ///   Looks up a localized string similar to Quand l&apos;utiliser.
         /// </summary>
         public static string FactoryPattern_WhenToUseTitle {
             get {
@@ -295,7 +2338,2512 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 💻 Exemple de Code.
+        ///   Looks up a localized string similar to • Complexité accrue du code.
+        /// </summary>
+        public static string FlyweightPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Gestion de la Concurrency.
+        /// </summary>
+        public static string FlyweightPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Séparation état intrinsèque/extrinsèque.
+        /// </summary>
+        public static string FlyweightPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Flyweight permet de partager des objets pour économiser de la mémoire en mutualisant les états intrinsèques communs entre plusieurs objets..
+        /// </summary>
+        public static string FlyweightPattern_Description {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utiliser le Flyweight.
+        /// </summary>
+        public static string FlyweightPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilisez le Flyweight pour partager des objets :.
+        /// </summary>
+        public static string FlyweightPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Économie de mémoire.
+        /// </summary>
+        public static string FlyweightPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Amélioration des performances.
+        /// </summary>
+        public static string FlyweightPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Gestion centralisée des objets.
+        /// </summary>
+        public static string FlyweightPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réduction de la duplication.
+        /// </summary>
+        public static string FlyweightPattern_Pros4 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flyweight Pattern.
+        /// </summary>
+        public static string FlyweightPattern_Title {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand l&apos;application utilise un grand nombre d&apos;objets similaires.
+        /// </summary>
+        public static string FlyweightPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour réduire la consommation mémoire.
+        /// </summary>
+        public static string FlyweightPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand les objets ont des états intrinsèques partageables.
+        /// </summary>
+        public static string FlyweightPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("FlyweightPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité conceptuelle.
+        /// </summary>
+        public static string HexagonalArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Plus de code structurel.
+        /// </summary>
+        public static string HexagonalArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Courbe d&apos;apprentissage.
+        /// </summary>
+        public static string HexagonalArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architecture hexagonale (Ports et Adaptateurs) isole la logique métier en définissant des ports et des adaptateurs pour les interactions externes..
+        /// </summary>
+        public static string HexagonalArchitecture_Description {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter via Adaptateur.
+        /// </summary>
+        public static string HexagonalArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interagir via ports et adaptateurs :.
+        /// </summary>
+        public static string HexagonalArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Indépendance technologique.
+        /// </summary>
+        public static string HexagonalArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Testabilité élevée.
+        /// </summary>
+        public static string HexagonalArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Adaptabilité.
+        /// </summary>
+        public static string HexagonalArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hexagonal Architecture.
+        /// </summary>
+        public static string HexagonalArchitecture_Title {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indépendance des technologies externes.
+        /// </summary>
+        public static string HexagonalArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications hautement testables.
+        /// </summary>
+        public static string HexagonalArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Systèmes avec multiples interfaces.
+        /// </summary>
+        public static string HexagonalArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("HexagonalArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Grammaire complexe = nombreuses classes.
+        /// </summary>
+        public static string InterpreterPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Performances limitées.
+        /// </summary>
+        public static string InterpreterPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Maintenance difficile si large.
+        /// </summary>
+        public static string InterpreterPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Interpreter définit une représentation pour une grammaire et un interprète pour traiter des phrases de cette grammaire..
+        /// </summary>
+        public static string InterpreterPattern_Description {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interpréter &apos;1+2&apos;.
+        /// </summary>
+        public static string InterpreterPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interprétez une expression mathématique :.
+        /// </summary>
+        public static string InterpreterPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Grammaire facilement extensible.
+        /// </summary>
+        public static string InterpreterPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Séparation claire des règles.
+        /// </summary>
+        public static string InterpreterPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facile à implémenter.
+        /// </summary>
+        public static string InterpreterPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Flexibilité.
+        /// </summary>
+        public static string InterpreterPattern_Pros4 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interpreter Pattern.
+        /// </summary>
+        public static string InterpreterPattern_Title {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour interpréter un langage simple ou une grammaire.
+        /// </summary>
+        public static string InterpreterPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand la grammaire est simple et la performance n&apos;est pas critique.
+        /// </summary>
+        public static string InterpreterPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour évaluer des expressions ou des requêtes.
+        /// </summary>
+        public static string InterpreterPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("InterpreterPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Couplage réduit.
+        /// </summary>
+        public static string ISP_Advantage1 {
+            get {
+                return ResourceManager.GetString("ISP_Advantage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Interfaces claires et ciblées.
+        /// </summary>
+        public static string ISP_Advantage2 {
+            get {
+                return ResourceManager.GetString("ISP_Advantage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Flexibilité accrue.
+        /// </summary>
+        public static string ISP_Advantage3 {
+            get {
+                return ResourceManager.GetString("ISP_Advantage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Implémentations plus simples.
+        /// </summary>
+        public static string ISP_Advantage4 {
+            get {
+                return ResourceManager.GetString("ISP_Advantage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Prolifération d&apos;interfaces.
+        /// </summary>
+        public static string ISP_Attention1 {
+            get {
+                return ResourceManager.GetString("ISP_Attention1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité de navigation.
+        /// </summary>
+        public static string ISP_Attention2 {
+            get {
+                return ResourceManager.GetString("ISP_Attention2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Équilibre à trouver.
+        /// </summary>
+        public static string ISP_Attention3 {
+            get {
+                return ResourceManager.GetString("ISP_Attention3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le principe de ségrégation des interfaces stipule qu&apos;aucun client ne devrait être forcé de dépendre de méthodes qu&apos;il n&apos;utilise pas. Préférez plusieurs interfaces spécifiques à une interface générale..
+        /// </summary>
+        public static string ISP_Description {
+            get {
+                return ResourceManager.GetString("ISP_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comparez une interface monolithique avec des interfaces ségrégées :.
+        /// </summary>
+        public static string ISP_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("ISP_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interfaces petites et spécifiques.
+        /// </summary>
+        public static string ISP_KeyConcept1 {
+            get {
+                return ResourceManager.GetString("ISP_KeyConcept1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Éviter les interfaces &quot;grasses&quot; (fat interfaces).
+        /// </summary>
+        public static string ISP_KeyConcept2 {
+            get {
+                return ResourceManager.GetString("ISP_KeyConcept2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clients dépendent seulement de ce dont ils ont besoin.
+        /// </summary>
+        public static string ISP_KeyConcept3 {
+            get {
+                return ResourceManager.GetString("ISP_KeyConcept3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réduit le couplage inutile.
+        /// </summary>
+        public static string ISP_KeyConcept4 {
+            get {
+                return ResourceManager.GetString("ISP_KeyConcept4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interface Segregation Principle.
+        /// </summary>
+        public static string ISP_Title {
+            get {
+                return ResourceManager.GetString("ISP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comportemental.
+        /// </summary>
+        public static string IteratorPattern_Behavioral {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Behavioral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Peut être excessif pour collections simples.
+        /// </summary>
+        public static string IteratorPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Moins efficace que l&apos;accès direct.
+        /// </summary>
+        public static string IteratorPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Iterator permet de parcourir une collection sans exposer sa structure interne..
+        /// </summary>
+        public static string IteratorPattern_Description {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parcourir la collection.
+        /// </summary>
+        public static string IteratorPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("IteratorPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parcourir la collection :.
+        /// </summary>
+        public static string IteratorPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("IteratorPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Responsabilité unique.
+        /// </summary>
+        public static string IteratorPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Principe ouvert/fermé.
+        /// </summary>
+        public static string IteratorPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Parcours simultanés.
+        /// </summary>
+        public static string IteratorPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterator Pattern.
+        /// </summary>
+        public static string IteratorPattern_Title {
+            get {
+                return ResourceManager.GetString("IteratorPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour parcourir des collections sans exposer leur structure.
+        /// </summary>
+        public static string IteratorPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supporter plusieurs types de parcours.
+        /// </summary>
+        public static string IteratorPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fournir une interface uniforme pour différentes collections.
+        /// </summary>
+        public static string IteratorPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("IteratorPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Dépendances monolithiques.
+        /// </summary>
+        public static string LayeredArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Modifications en cascade.
+        /// </summary>
+        public static string LayeredArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Couplage vertical possible.
+        /// </summary>
+        public static string LayeredArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architecture en couches organise le code en couches horizontales (présentation, métier, données) avec des dépendances unidirectionnelles..
+        /// </summary>
+        public static string LayeredArchitecture_Description {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter Appel en Couches.
+        /// </summary>
+        public static string LayeredArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Appeler à travers les couches :.
+        /// </summary>
+        public static string LayeredArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Simple à comprendre.
+        /// </summary>
+        public static string LayeredArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Séparation des responsabilités.
+        /// </summary>
+        public static string LayeredArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facile à implémenter.
+        /// </summary>
+        public static string LayeredArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Layered Architecture.
+        /// </summary>
+        public static string LayeredArchitecture_Title {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications traditionnelles n-tier.
+        /// </summary>
+        public static string LayeredArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Équipes avec responsabilités claires.
+        /// </summary>
+        public static string LayeredArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Projets nécessitant séparation simple.
+        /// </summary>
+        public static string LayeredArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("LayeredArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Polymorphisme fiable.
+        /// </summary>
+        public static string LSP_Advantage1 {
+            get {
+                return ResourceManager.GetString("LSP_Advantage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Comportement prévisible.
+        /// </summary>
+        public static string LSP_Advantage2 {
+            get {
+                return ResourceManager.GetString("LSP_Advantage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Hiérarchies robustes.
+        /// </summary>
+        public static string LSP_Advantage3 {
+            get {
+                return ResourceManager.GetString("LSP_Advantage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facilite les tests.
+        /// </summary>
+        public static string LSP_Advantage4 {
+            get {
+                return ResourceManager.GetString("LSP_Advantage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Difficile à identifier les violations.
+        /// </summary>
+        public static string LSP_Attention1 {
+            get {
+                return ResourceManager.GetString("LSP_Attention1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Nécessite une bonne conception.
+        /// </summary>
+        public static string LSP_Attention2 {
+            get {
+                return ResourceManager.GetString("LSP_Attention2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Peut limiter l&apos;héritage.
+        /// </summary>
+        public static string LSP_Attention3 {
+            get {
+                return ResourceManager.GetString("LSP_Attention3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le principe de substitution de Liskov stipule que les objets d&apos;une classe dérivée doivent pouvoir remplacer les objets de la classe de base sans altérer le comportement du programme..
+        /// </summary>
+        public static string LSP_Description {
+            get {
+                return ResourceManager.GetString("LSP_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comparez une hiérarchie correcte avec une violation du LSP :.
+        /// </summary>
+        public static string LSP_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("LSP_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Les sous-types doivent être substituables.
+        /// </summary>
+        public static string LSP_KeyConcept1 {
+            get {
+                return ResourceManager.GetString("LSP_KeyConcept1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Respecter les contrats de la classe de base.
+        /// </summary>
+        public static string LSP_KeyConcept2 {
+            get {
+                return ResourceManager.GetString("LSP_KeyConcept2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ne pas violer les attentes du client.
+        /// </summary>
+        public static string LSP_KeyConcept3 {
+            get {
+                return ResourceManager.GetString("LSP_KeyConcept3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Garantit la cohérence des hiérarchies.
+        /// </summary>
+        public static string LSP_KeyConcept4 {
+            get {
+                return ResourceManager.GetString("LSP_KeyConcept4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Liskov Substitution Principle.
+        /// </summary>
+        public static string LSP_Title {
+            get {
+                return ResourceManager.GetString("LSP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code Patterns.
+        /// </summary>
+        public static string MainPage_AppName {
+            get {
+                return ResourceManager.GetString("MainPage_AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architectures Logicielles.
+        /// </summary>
+        public static string MainPage_ArchitecturesCard {
+            get {
+                return ResourceManager.GetString("MainPage_ArchitecturesCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10.
+        /// </summary>
+        public static string MainPage_ArchitecturesCount {
+            get {
+                return ResourceManager.GetString("MainPage_ArchitecturesCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10 patterns architecturaux pour systèmes évolutifs.
+        /// </summary>
+        public static string MainPage_ArchitecturesDesc {
+            get {
+                return ResourceManager.GetString("MainPage_ArchitecturesDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architectures.
+        /// </summary>
+        public static string MainPage_ArchitecturesLabel {
+            get {
+                return ResourceManager.GetString("MainPage_ArchitecturesLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architectures Logicielles.
+        /// </summary>
+        public static string MainPage_ArchitecturesTitle {
+            get {
+                return ResourceManager.GetString("MainPage_ArchitecturesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Organisation de systèmes à grande échelle.
+        /// </summary>
+        public static string MainPage_ArchitecturesTitle2 {
+            get {
+                return ResourceManager.GetString("MainPage_ArchitecturesTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collaboration et responsabilités d&apos;objets.
+        /// </summary>
+        public static string MainPage_BehavioralPatternsDesc {
+            get {
+                return ResourceManager.GetString("MainPage_BehavioralPatternsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Patterns Comportementaux.
+        /// </summary>
+        public static string MainPage_BehavioralPatternsTitle {
+            get {
+                return ResourceManager.GetString("MainPage_BehavioralPatternsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mécanismes de création d&apos;objets.
+        /// </summary>
+        public static string MainPage_CreationalPatternsDesc {
+            get {
+                return ResourceManager.GetString("MainPage_CreationalPatternsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Patterns Créationnels.
+        /// </summary>
+        public static string MainPage_CreationalPatternsTitle {
+            get {
+                return ResourceManager.GetString("MainPage_CreationalPatternsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Design Patterns.
+        /// </summary>
+        public static string MainPage_DesignPatternsCard {
+            get {
+                return ResourceManager.GetString("MainPage_DesignPatternsCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23 solutions de conception logicielle éprouvées.
+        /// </summary>
+        public static string MainPage_DesignPatternsDesc {
+            get {
+                return ResourceManager.GetString("MainPage_DesignPatternsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23.
+        /// </summary>
+        public static string MainPage_PatternsCount {
+            get {
+                return ResourceManager.GetString("MainPage_PatternsCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Design Patterns.
+        /// </summary>
+        public static string MainPage_PatternsLabel {
+            get {
+                return ResourceManager.GetString("MainPage_PatternsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accès Rapide.
+        /// </summary>
+        public static string MainPage_QuickAccessTitle {
+            get {
+                return ResourceManager.GetString("MainPage_QuickAccessTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Testez vos Connaissances.
+        /// </summary>
+        public static string MainPage_QuizCard {
+            get {
+                return ResourceManager.GetString("MainPage_QuizCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quiz interactifs et défis.
+        /// </summary>
+        public static string MainPage_QuizDesc {
+            get {
+                return ResourceManager.GetString("MainPage_QuizDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Principes SOLID.
+        /// </summary>
+        public static string MainPage_SOLIDCard {
+            get {
+                return ResourceManager.GetString("MainPage_SOLIDCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5.
+        /// </summary>
+        public static string MainPage_SOLIDCount {
+            get {
+                return ResourceManager.GetString("MainPage_SOLIDCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 principes fondamentaux pour une conception robuste.
+        /// </summary>
+        public static string MainPage_SOLIDDesc {
+            get {
+                return ResourceManager.GetString("MainPage_SOLIDDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Principes SOLID.
+        /// </summary>
+        public static string MainPage_SOLIDLabel {
+            get {
+                return ResourceManager.GetString("MainPage_SOLIDLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Principes SOLID.
+        /// </summary>
+        public static string MainPage_SOLIDTitle {
+            get {
+                return ResourceManager.GetString("MainPage_SOLIDTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fondations pour une conception orientée objet robuste.
+        /// </summary>
+        public static string MainPage_SOLIDTitle2 {
+            get {
+                return ResourceManager.GetString("MainPage_SOLIDTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Composition de classes et objets.
+        /// </summary>
+        public static string MainPage_StructuralPatternsDesc {
+            get {
+                return ResourceManager.GetString("MainPage_StructuralPatternsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Patterns Structurels.
+        /// </summary>
+        public static string MainPage_StructuralPatternsTitle {
+            get {
+                return ResourceManager.GetString("MainPage_StructuralPatternsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maîtrisez l&apos;Architecture Logicielle, les Design Patterns &amp; les principes SOLID.
+        /// </summary>
+        public static string MainPage_Tagline {
+            get {
+                return ResourceManager.GetString("MainPage_Tagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bienvenue.
+        /// </summary>
+        public static string MainPage_Title {
+            get {
+                return ResourceManager.GetString("MainPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explorez les design patterns, les styles architecturaux et les principes SOLID complets utilisés dans le développement logiciel moderne. Apprenez à travers des exemples interactifs et des démonstrations de code pratiques..
+        /// </summary>
+        public static string MainPage_WelcomeDesc {
+            get {
+                return ResourceManager.GetString("MainPage_WelcomeDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bienvenue ! 👋.
+        /// </summary>
+        public static string MainPage_WelcomeTitle {
+            get {
+                return ResourceManager.GetString("MainPage_WelcomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ce que vous allez apprendre.
+        /// </summary>
+        public static string MainPage_WhatYouLearnTitle {
+            get {
+                return ResourceManager.GetString("MainPage_WhatYouLearnTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Le médiateur peut devenir complexe.
+        /// </summary>
+        public static string MediatorPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Point unique de défaillance.
+        /// </summary>
+        public static string MediatorPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Mediator réduit les dépendances entre objets en centralisant leurs communications via un médiateur..
+        /// </summary>
+        public static string MediatorPattern_Description {
+            get {
+                return ResourceManager.GetString("MediatorPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Envoyer un Message.
+        /// </summary>
+        public static string MediatorPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("MediatorPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Communiquer via le médiateur :.
+        /// </summary>
+        public static string MediatorPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("MediatorPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réduit le couplage.
+        /// </summary>
+        public static string MediatorPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Centralise les communications.
+        /// </summary>
+        public static string MediatorPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facilite la réutilisation.
+        /// </summary>
+        public static string MediatorPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tour de contrôle d&apos;aéroport : les avions ne communiquent pas directement entre eux, ils passent tous par la tour de contrôle qui coordonne les décollages et atterrissages..
+        /// </summary>
+        public static string MediatorPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("MediatorPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mediator Pattern.
+        /// </summary>
+        public static string MediatorPattern_Title {
+            get {
+                return ResourceManager.GetString("MediatorPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand les objets communiquent de manière complexe.
+        /// </summary>
+        public static string MediatorPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour réduire les dépendances entre composants.
+        /// </summary>
+        public static string MediatorPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour réutiliser des objets indépendamment.
+        /// </summary>
+        public static string MediatorPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("MediatorPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Consommation mémoire.
+        /// </summary>
+        public static string MementoPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("MementoPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Coût de création/restauration.
+        /// </summary>
+        public static string MementoPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("MementoPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Memento capture et externalise l&apos;état interne d&apos;un objet pour pouvoir le restaurer ultérieurement..
+        /// </summary>
+        public static string MementoPattern_Description {
+            get {
+                return ResourceManager.GetString("MementoPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modifier et Annuler.
+        /// </summary>
+        public static string MementoPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("MementoPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sauvegarder et restaurer l&apos;état :.
+        /// </summary>
+        public static string MementoPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("MementoPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Préserve l&apos;encapsulation.
+        /// </summary>
+        public static string MementoPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("MementoPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Simplifie l&apos;objet originel.
+        /// </summary>
+        public static string MementoPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("MementoPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Support undo/redo.
+        /// </summary>
+        public static string MementoPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("MementoPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Éditeur de texte : sauvegarde l&apos;état du document à chaque modification majeure pour permettre l&apos;annulation (Ctrl+Z) et revenir à un état précédent..
+        /// </summary>
+        public static string MementoPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("MementoPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Memento Pattern.
+        /// </summary>
+        public static string MementoPattern_Title {
+            get {
+                return ResourceManager.GetString("MementoPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour implémenter undo/redo.
+        /// </summary>
+        public static string MementoPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("MementoPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour sauvegarder et restaurer l&apos;état d&apos;un objet.
+        /// </summary>
+        public static string MementoPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("MementoPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand l&apos;accès direct violerait l&apos;encapsulation.
+        /// </summary>
+        public static string MementoPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("MementoPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité opérationnelle.
+        /// </summary>
+        public static string MicroservicesArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Communication réseau.
+        /// </summary>
+        public static string MicroservicesArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Cohérence des données difficile.
+        /// </summary>
+        public static string MicroservicesArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architecture microservices structure l&apos;application en services faiblement couplés, déployables indépendamment et organisés autour des capacités métier..
+        /// </summary>
+        public static string MicroservicesArchitecture_Description {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Appeler Service.
+        /// </summary>
+        public static string MicroservicesArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Communiquer entre services :.
+        /// </summary>
+        public static string MicroservicesArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Scalabilité indépendante.
+        /// </summary>
+        public static string MicroservicesArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Déploiements indépendants.
+        /// </summary>
+        public static string MicroservicesArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Technologies hétérogènes.
+        /// </summary>
+        public static string MicroservicesArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Microservices Architecture.
+        /// </summary>
+        public static string MicroservicesArchitecture_Title {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications complexes et larges.
+        /// </summary>
+        public static string MicroservicesArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Équipes multiples et autonomes.
+        /// </summary>
+        public static string MicroservicesArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Déploiements indépendants nécessaires.
+        /// </summary>
+        public static string MicroservicesArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("MicroservicesArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Contrôleurs volumineux.
+        /// </summary>
+        public static string MVCArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Courbe d&apos;apprentissage.
+        /// </summary>
+        public static string MVCArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité pour petites apps.
+        /// </summary>
+        public static string MVCArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model-View-Controller sépare l&apos;application en Modèle (données), Vue (UI) et Contrôleur (logique) pour une séparation claire des préoccupations..
+        /// </summary>
+        public static string MVCArchitecture_Description {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter Requête MVC.
+        /// </summary>
+        public static string MVCArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traiter une requête MVC :.
+        /// </summary>
+        public static string MVCArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Séparation claire.
+        /// </summary>
+        public static string MVCArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Testabilité.
+        /// </summary>
+        public static string MVCArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Développement parallèle.
+        /// </summary>
+        public static string MVCArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MVC Architecture.
+        /// </summary>
+        public static string MVCArchitecture_Title {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications web traditionnelles.
+        /// </summary>
+        public static string MVCArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Séparation UI/logique nécessaire.
+        /// </summary>
+        public static string MVCArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Développement web côté serveur.
+        /// </summary>
+        public static string MVCArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("MVCArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exemple de structure.
+        /// </summary>
+        public static string MVVMArchitecture_CodeTitle {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_CodeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Code boilerplate important.
+        /// </summary>
+        public static string MVVMArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Courbe d&apos;apprentissage.
+        /// </summary>
+        public static string MVVMArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité pour petites apps.
+        /// </summary>
+        public static string MVVMArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to L&apos;architecture MVVM sépare l&apos;application en Modèle, Vue et ViewModel pour faciliter la liaison de données, améliorer la testabilité et séparer la logique de présentation..
+        /// </summary>
+        public static string MVVMArchitecture_Description {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mettre à jour via le ViewModel.
+        /// </summary>
+        public static string MVVMArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mettez à jour les données via le ViewModel :.
+        /// </summary>
+        public static string MVVMArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Séparation claire UI/logique.
+        /// </summary>
+        public static string MVVMArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Data binding puissant.
+        /// </summary>
+        public static string MVVMArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Testabilité élevée.
+        /// </summary>
+        public static string MVVMArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réutilisabilité du code.
+        /// </summary>
+        public static string MVVMArchitecture_Pros4 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MVVM Architecture.
+        /// </summary>
+        public static string MVVMArchitecture_Title {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour les applications avec data binding complexe.
+        /// </summary>
+        public static string MVVMArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications .NET MAUI, WPF, Xamarin.
+        /// </summary>
+        public static string MVVMArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand la séparation UI/logique est essentielle.
+        /// </summary>
+        public static string MVVMArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("MVVMArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Notifications dans un ordre aléatoire.
+        /// </summary>
+        public static string ObserverPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Fuites mémoire potentielles.
+        /// </summary>
+        public static string ObserverPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Observer définit une dépendance un-à-plusieurs où plusieurs objets sont notifiés automatiquement des changements d&apos;état..
+        /// </summary>
+        public static string ObserverPattern_Description {
+            get {
+                return ResourceManager.GetString("ObserverPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Modifier la Valeur.
+        /// </summary>
+        public static string ObserverPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("ObserverPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Observer les changements :.
+        /// </summary>
+        public static string ObserverPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("ObserverPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Couplage faible.
+        /// </summary>
+        public static string ObserverPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Support de la diffusion.
+        /// </summary>
+        public static string ObserverPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Principe ouvert/fermé.
+        /// </summary>
+        public static string ObserverPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Newsletter : les abonnés (observateurs) sont automatiquement notifiés quand un nouvel article (sujet) est publié. Chacun peut s&apos;abonner ou se désabonner librement..
+        /// </summary>
+        public static string ObserverPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("ObserverPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Observer Pattern.
+        /// </summary>
+        public static string ObserverPattern_Title {
+            get {
+                return ResourceManager.GetString("ObserverPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand un changement nécessite des mises à jour multiples.
+        /// </summary>
+        public static string ObserverPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour implémenter des systèmes événementiels.
+        /// </summary>
+        public static string ObserverPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand les objets observés ne connaissent pas les observateurs.
+        /// </summary>
+        public static string ObserverPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("ObserverPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Extensibilité sans risque.
+        /// </summary>
+        public static string OCP_Advantage1 {
+            get {
+                return ResourceManager.GetString("OCP_Advantage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réduction des régressions.
+        /// </summary>
+        public static string OCP_Advantage2 {
+            get {
+                return ResourceManager.GetString("OCP_Advantage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Code stable et fiable.
+        /// </summary>
+        public static string OCP_Advantage3 {
+            get {
+                return ResourceManager.GetString("OCP_Advantage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facilite les nouvelles fonctionnalités.
+        /// </summary>
+        public static string OCP_Advantage4 {
+            get {
+                return ResourceManager.GetString("OCP_Advantage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Anticipation nécessaire.
+        /// </summary>
+        public static string OCP_Attention1 {
+            get {
+                return ResourceManager.GetString("OCP_Attention1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Plus d&apos;abstractions.
+        /// </summary>
+        public static string OCP_Attention2 {
+            get {
+                return ResourceManager.GetString("OCP_Attention2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité initiale accrue.
+        /// </summary>
+        public static string OCP_Attention3 {
+            get {
+                return ResourceManager.GetString("OCP_Attention3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le principe ouvert/fermé stipule que les entités logicielles (classes, modules, fonctions) doivent être ouvertes à l&apos;extension mais fermées à la modification..
+        /// </summary>
+        public static string OCP_Description {
+            get {
+                return ResourceManager.GetString("OCP_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comparez l&apos;ajout de nouvelles fonctionnalités avec/sans OCP :.
+        /// </summary>
+        public static string OCP_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("OCP_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ouvert à l&apos;extension (héritage, composition).
+        /// </summary>
+        public static string OCP_KeyConcept1 {
+            get {
+                return ResourceManager.GetString("OCP_KeyConcept1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fermé à la modification (code stable).
+        /// </summary>
+        public static string OCP_KeyConcept2 {
+            get {
+                return ResourceManager.GetString("OCP_KeyConcept2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utiliser l&apos;abstraction (interfaces, classes abstraites).
+        /// </summary>
+        public static string OCP_KeyConcept3 {
+            get {
+                return ResourceManager.GetString("OCP_KeyConcept3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Évite les régressions lors des changements.
+        /// </summary>
+        public static string OCP_KeyConcept4 {
+            get {
+                return ResourceManager.GetString("OCP_KeyConcept4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open/Closed Principle.
+        /// </summary>
+        public static string OCP_Title {
+            get {
+                return ResourceManager.GetString("OCP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité initiale.
+        /// </summary>
+        public static string OnionArchitecture_Cons1 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Courbe d&apos;apprentissage.
+        /// </summary>
+        public static string OnionArchitecture_Cons2 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Excessif pour apps simples.
+        /// </summary>
+        public static string OnionArchitecture_Cons3 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architecture en Oignon organise le code en couches concentriques avec le domaine au centre, évitant les dépendances vers l&apos;infrastructure..
+        /// </summary>
+        public static string OnionArchitecture_Description {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter via les Couches.
+        /// </summary>
+        public static string OnionArchitecture_InteractiveButton {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naviguer à travers les couches :.
+        /// </summary>
+        public static string OnionArchitecture_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Logique domaine isolée.
+        /// </summary>
+        public static string OnionArchitecture_Pros1 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Testabilité maximale.
+        /// </summary>
+        public static string OnionArchitecture_Pros2 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Dépendances claires.
+        /// </summary>
+        public static string OnionArchitecture_Pros3 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Onion Architecture.
+        /// </summary>
+        public static string OnionArchitecture_Title {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications centrées sur le domaine.
+        /// </summary>
+        public static string OnionArchitecture_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indépendance de l&apos;infrastructure nécessaire.
+        /// </summary>
+        public static string OnionArchitecture_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Testabilité et maintenabilité prioritaires.
+        /// </summary>
+        public static string OnionArchitecture_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("OnionArchitecture_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Complexité de la copie profonde.
+        /// </summary>
+        public static string PrototypePattern_Cons1 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Références circulaires.
+        /// </summary>
+        public static string PrototypePattern_Cons2 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Maintenance de la méthode de clonage.
+        /// </summary>
+        public static string PrototypePattern_Cons3 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Créationnel.
+        /// </summary>
+        public static string PrototypePattern_Creational {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Creational", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le patron Prototype crée de nouveaux objets en copiant un objet existant, appelé prototype. Ceci est utile lorsque la création d&apos;objet est coûteuse ou complexe..
+        /// </summary>
+        public static string PrototypePattern_Description {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloner l&apos;objet.
+        /// </summary>
+        public static string PrototypePattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("PrototypePattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloner un objet au lieu d&apos;en créer un nouveau :.
+        /// </summary>
+        public static string PrototypePattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("PrototypePattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Création d&apos;objet rapide.
+        /// </summary>
+        public static string PrototypePattern_Pros1 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réduit le recours aux sous-classes.
+        /// </summary>
+        public static string PrototypePattern_Pros2 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Flexibilité à l&apos;exécution.
+        /// </summary>
+        public static string PrototypePattern_Pros3 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Performance améliorée.
+        /// </summary>
+        public static string PrototypePattern_Pros4 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modèles de documents : Cloner un document modèle avec une mise en forme et des styles prédéfinis au lieu de repartir de zéro à chaque fois..
+        /// </summary>
+        public static string PrototypePattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("PrototypePattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exemple réel.
+        /// </summary>
+        public static string PrototypePattern_RealWorldTitle {
+            get {
+                return ResourceManager.GetString("PrototypePattern_RealWorldTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prototype Pattern.
+        /// </summary>
+        public static string PrototypePattern_Title {
+            get {
+                return ResourceManager.GetString("PrototypePattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La création d&apos;objet est coûteuse.
+        /// </summary>
+        public static string PrototypePattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vous devez créer de nombreux objets similaires.
+        /// </summary>
+        public static string PrototypePattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Éviter les sous-classes pour la création d&apos;objets.
+        /// </summary>
+        public static string PrototypePattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("PrototypePattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Augmente la complexité.
+        /// </summary>
+        public static string ProxyPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Peut ralentir les réponses.
+        /// </summary>
+        public static string ProxyPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Maintenance de deux classes.
+        /// </summary>
+        public static string ProxyPattern_Cons3 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Cons3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Proxy fournit un substitut ou un intermédiaire à un autre objet pour contrôler l&apos;accès, ajouter des fonctionnalités ou retarder l&apos;instanciation..
+        /// </summary>
+        public static string ProxyPattern_Description {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accéder via le proxy.
+        /// </summary>
+        public static string ProxyPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("ProxyPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accédez à l&apos;objet via le proxy :.
+        /// </summary>
+        public static string ProxyPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("ProxyPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Contrôle d&apos;accès.
+        /// </summary>
+        public static string ProxyPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Initialisation différée.
+        /// </summary>
+        public static string ProxyPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Ajout de fonctionnalités.
+        /// </summary>
+        public static string ProxyPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Protection de l&apos;objet réel.
+        /// </summary>
+        public static string ProxyPattern_Pros4 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Pros4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Proxy Pattern.
+        /// </summary>
+        public static string ProxyPattern_Title {
+            get {
+                return ResourceManager.GetString("ProxyPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour contrôler l&apos;accès à un objet coûteux.
+        /// </summary>
+        public static string ProxyPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour l&apos;initialisation différée (lazy loading).
+        /// </summary>
+        public static string ProxyPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour ajouter une couche de sécurité ou de logging.
+        /// </summary>
+        public static string ProxyPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("ProxyPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Entrez A, B, C, ou D.
+        /// </summary>
+        public static string QuizPage_AnswerPlaceholder {
+            get {
+                return ResourceManager.GetString("QuizPage_AnswerPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 🎲 Générer une Question.
+        /// </summary>
+        public static string QuizPage_GenerateButton {
+            get {
+                return ResourceManager.GetString("QuizPage_GenerateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        public static string QuizPage_QuestionTitle {
+            get {
+                return ResourceManager.GetString("QuizPage_QuestionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sujets Rapides.
+        /// </summary>
+        public static string QuizPage_QuickTopicsTitle {
+            get {
+                return ResourceManager.GetString("QuizPage_QuickTopicsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Résultat.
+        /// </summary>
+        public static string QuizPage_ResultTitle {
+            get {
+                return ResourceManager.GetString("QuizPage_ResultTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ✓ Soumettre la Réponse.
+        /// </summary>
+        public static string QuizPage_SubmitButton {
+            get {
+                return ResourceManager.GetString("QuizPage_SubmitButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Testez votre compréhension.
+        /// </summary>
+        public static string QuizPage_Tagline {
+            get {
+                return ResourceManager.GetString("QuizPage_Tagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Lisez chaque question attentivement
+        ///• Pensez aux applications du monde réel
+        ///• Révisez les détails des patterns si vous êtes incertain
+        ///• La pratique rend parfait !.
+        /// </summary>
+        public static string QuizPage_TipsContent {
+            get {
+                return ResourceManager.GetString("QuizPage_TipsContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conseils pour le Quiz.
+        /// </summary>
+        public static string QuizPage_TipsTitle {
+            get {
+                return ResourceManager.GetString("QuizPage_TipsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quiz de Connaissances.
+        /// </summary>
+        public static string QuizPage_Title {
+            get {
+                return ResourceManager.GetString("QuizPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Entrez le nom d&apos;un pattern ou d&apos;une architecture :.
+        /// </summary>
+        public static string QuizPage_TopicInputLabel {
+            get {
+                return ResourceManager.GetString("QuizPage_TopicInputLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ex: Singleton, MVC, Clean Architecture....
+        /// </summary>
+        public static string QuizPage_TopicInputPlaceholder {
+            get {
+                return ResourceManager.GetString("QuizPage_TopicInputPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choisissez un Sujet.
+        /// </summary>
+        public static string QuizPage_TopicSelectionTitle {
+            get {
+                return ResourceManager.GetString("QuizPage_TopicSelectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Votre Réponse :.
+        /// </summary>
+        public static string QuizPage_YourAnswerLabel {
+            get {
+                return ResourceManager.GetString("QuizPage_YourAnswerLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exemple de Code.
         /// </summary>
         public static string SingletonPattern_CodeTitle {
             get {
@@ -331,11 +4879,20 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ⚠️ Inconvénients.
+        ///   Looks up a localized string similar to Inconvénients.
         /// </summary>
         public static string SingletonPattern_ConsTitle {
             get {
                 return ResourceManager.GetString("SingletonPattern_ConsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creational.
+        /// </summary>
+        public static string SingletonPattern_Creational {
+            get {
+                return ResourceManager.GetString("SingletonPattern_Creational", resourceCulture);
             }
         }
         
@@ -349,7 +4906,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 📖 Description.
+        ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string SingletonPattern_DescriptionTitle {
             get {
@@ -412,7 +4969,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ✅ Avantages.
+        ///   Looks up a localized string similar to Avantages.
         /// </summary>
         public static string SingletonPattern_ProsTitle {
             get {
@@ -421,7 +4978,7 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 🏗️ Singleton Pattern.
+        ///   Looks up a localized string similar to Singleton Pattern.
         /// </summary>
         public static string SingletonPattern_Title {
             get {
@@ -457,11 +5014,731 @@ namespace ArchiDesignPatterns.Mobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 🎯 Quand l&apos;utiliser.
+        ///   Looks up a localized string similar to Quand l&apos;utiliser.
         /// </summary>
         public static string SingletonPattern_WhenToUseTitle {
             get {
                 return ResourceManager.GetString("SingletonPattern_WhenToUseTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avantages.
+        /// </summary>
+        public static string SOLID_AdvantagesTitle {
+            get {
+                return ResourceManager.GetString("SOLID_AdvantagesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Points d&apos;attention.
+        /// </summary>
+        public static string SOLID_AttentionPointsTitle {
+            get {
+                return ResourceManager.GetString("SOLID_AttentionPointsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mauvais Exemple (Violation).
+        /// </summary>
+        public static string SOLID_BadExampleTitle {
+            get {
+                return ResourceManager.GetString("SOLID_BadExampleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SOLID.
+        /// </summary>
+        public static string SOLID_Category {
+            get {
+                return ResourceManager.GetString("SOLID_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bon Exemple (Respect du Principe).
+        /// </summary>
+        public static string SOLID_GoodExampleTitle {
+            get {
+                return ResourceManager.GetString("SOLID_GoodExampleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exemple Interactif.
+        /// </summary>
+        public static string SOLID_InteractiveTitle {
+            get {
+                return ResourceManager.GetString("SOLID_InteractiveTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Concepts Clés.
+        /// </summary>
+        public static string SOLID_KeyConceptsTitle {
+            get {
+                return ResourceManager.GetString("SOLID_KeyConceptsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voir l&apos;Exemple ✓ (Respect).
+        /// </summary>
+        public static string SOLID_ShowCorrectButton {
+            get {
+                return ResourceManager.GetString("SOLID_ShowCorrectButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voir l&apos;Exemple ❌ (Violation).
+        /// </summary>
+        public static string SOLID_ShowViolationButton {
+            get {
+                return ResourceManager.GetString("SOLID_ShowViolationButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Essayez d&apos;ajuster votre terme de recherche.
+        /// </summary>
+        public static string SOLIDPrinciplesPage_NoResultsDesc {
+            get {
+                return ResourceManager.GetString("SOLIDPrinciplesPage_NoResultsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aucun principe trouvé.
+        /// </summary>
+        public static string SOLIDPrinciplesPage_NoResultsTitle {
+            get {
+                return ResourceManager.GetString("SOLIDPrinciplesPage_NoResultsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rechercher des principes....
+        /// </summary>
+        public static string SOLIDPrinciplesPage_SearchPlaceholder {
+            get {
+                return ResourceManager.GetString("SOLIDPrinciplesPage_SearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 principes fondamentaux pour une conception orientée objet robuste.
+        /// </summary>
+        public static string SOLIDPrinciplesPage_Tagline {
+            get {
+                return ResourceManager.GetString("SOLIDPrinciplesPage_Tagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Principes SOLID.
+        /// </summary>
+        public static string SOLIDPrinciplesPage_Title {
+            get {
+                return ResourceManager.GetString("SOLIDPrinciplesPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Code plus lisible.
+        /// </summary>
+        public static string SRP_Advantage1 {
+            get {
+                return ResourceManager.GetString("SRP_Advantage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Maintenance simplifiée.
+        /// </summary>
+        public static string SRP_Advantage2 {
+            get {
+                return ResourceManager.GetString("SRP_Advantage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Testabilité améliorée.
+        /// </summary>
+        public static string SRP_Advantage3 {
+            get {
+                return ResourceManager.GetString("SRP_Advantage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réutilisation facilitée.
+        /// </summary>
+        public static string SRP_Advantage4 {
+            get {
+                return ResourceManager.GetString("SRP_Advantage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Risque de sur-fragmentation.
+        /// </summary>
+        public static string SRP_Attention1 {
+            get {
+                return ResourceManager.GetString("SRP_Attention1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Plus de classes à gérer.
+        /// </summary>
+        public static string SRP_Attention2 {
+            get {
+                return ResourceManager.GetString("SRP_Attention2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Définir la &quot;responsabilité&quot; est subjectif.
+        /// </summary>
+        public static string SRP_Attention3 {
+            get {
+                return ResourceManager.GetString("SRP_Attention3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le principe de responsabilité unique stipule qu&apos;une classe ne devrait avoir qu&apos;une seule raison de changer. Chaque classe devrait avoir une seule responsabilité ou un seul objectif..
+        /// </summary>
+        public static string SRP_Description {
+            get {
+                return ResourceManager.GetString("SRP_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comparez une classe avec plusieurs responsabilités vs des classes séparées :.
+        /// </summary>
+        public static string SRP_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("SRP_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Une classe = une responsabilité.
+        /// </summary>
+        public static string SRP_KeyConcept1 {
+            get {
+                return ResourceManager.GetString("SRP_KeyConcept1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facilite la maintenance et la compréhension.
+        /// </summary>
+        public static string SRP_KeyConcept2 {
+            get {
+                return ResourceManager.GetString("SRP_KeyConcept2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réduit le couplage entre responsabilités.
+        /// </summary>
+        public static string SRP_KeyConcept3 {
+            get {
+                return ResourceManager.GetString("SRP_KeyConcept3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Améliore la réutilisabilité du code.
+        /// </summary>
+        public static string SRP_KeyConcept4 {
+            get {
+                return ResourceManager.GetString("SRP_KeyConcept4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single Responsibility Principle.
+        /// </summary>
+        public static string SRP_Title {
+            get {
+                return ResourceManager.GetString("SRP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Peut être excessif pour peu d&apos;états.
+        /// </summary>
+        public static string StatePattern_Cons1 {
+            get {
+                return ResourceManager.GetString("StatePattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Augmente le nombre de classes.
+        /// </summary>
+        public static string StatePattern_Cons2 {
+            get {
+                return ResourceManager.GetString("StatePattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern State permet à un objet de modifier son comportement quand son état interne change..
+        /// </summary>
+        public static string StatePattern_Description {
+            get {
+                return ResourceManager.GetString("StatePattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changer l&apos;État.
+        /// </summary>
+        public static string StatePattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("StatePattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changer l&apos;état :.
+        /// </summary>
+        public static string StatePattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("StatePattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Responsabilité unique.
+        /// </summary>
+        public static string StatePattern_Pros1 {
+            get {
+                return ResourceManager.GetString("StatePattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Principe ouvert/fermé.
+        /// </summary>
+        public static string StatePattern_Pros2 {
+            get {
+                return ResourceManager.GetString("StatePattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Simplifie le code complexe.
+        /// </summary>
+        public static string StatePattern_Pros3 {
+            get {
+                return ResourceManager.GetString("StatePattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Machine à états d&apos;une commande : Nouvelle → En préparation → Expédiée → Livrée. Chaque état a des actions spécifiques (annuler possible seulement si Nouvelle ou En préparation)..
+        /// </summary>
+        public static string StatePattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("StatePattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State Pattern.
+        /// </summary>
+        public static string StatePattern_Title {
+            get {
+                return ResourceManager.GetString("StatePattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand le comportement dépend de l&apos;état.
+        /// </summary>
+        public static string StatePattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("StatePattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour éviter de grandes instructions conditionnelles.
+        /// </summary>
+        public static string StatePattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("StatePattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand les transitions d&apos;état sont complexes.
+        /// </summary>
+        public static string StatePattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("StatePattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Augmente le nombre de classes.
+        /// </summary>
+        public static string StrategyPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Le client doit connaître les stratégies.
+        /// </summary>
+        public static string StrategyPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Strategy définit une famille d&apos;algorithmes, encapsule chacun et les rend interchangeables..
+        /// </summary>
+        public static string StrategyPattern_Description {
+            get {
+                return ResourceManager.GetString("StrategyPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Appliquer la Stratégie.
+        /// </summary>
+        public static string StrategyPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("StrategyPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choisir une stratégie :.
+        /// </summary>
+        public static string StrategyPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("StrategyPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Algorithmes interchangeables.
+        /// </summary>
+        public static string StrategyPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Isolation des détails.
+        /// </summary>
+        public static string StrategyPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Alternative à l&apos;héritage.
+        /// </summary>
+        public static string StrategyPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moyens de paiement : carte bancaire, PayPal, crypto-monnaie. Même interface de paiement, implémentations différentes selon la stratégie choisie..
+        /// </summary>
+        public static string StrategyPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("StrategyPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strategy Pattern.
+        /// </summary>
+        public static string StrategyPattern_Title {
+            get {
+                return ResourceManager.GetString("StrategyPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour utiliser différentes variantes d&apos;un algorithme.
+        /// </summary>
+        public static string StrategyPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand vous avez beaucoup de classes similaires.
+        /// </summary>
+        public static string StrategyPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour isoler la logique métier des détails d&apos;implémentation.
+        /// </summary>
+        public static string StrategyPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("StrategyPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Limité par l&apos;héritage.
+        /// </summary>
+        public static string TemplateMethodPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Peut violer le principe de substitution.
+        /// </summary>
+        public static string TemplateMethodPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Template Method définit le squelette d&apos;un algorithme dans une méthode, en déléguant certaines étapes aux sous-classes..
+        /// </summary>
+        public static string TemplateMethodPattern_Description {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter le Template.
+        /// </summary>
+        public static string TemplateMethodPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exécuter le template :.
+        /// </summary>
+        public static string TemplateMethodPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Réutilisation du code.
+        /// </summary>
+        public static string TemplateMethodPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Contrôle de l&apos;algorithme.
+        /// </summary>
+        public static string TemplateMethodPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Facile à comprendre.
+        /// </summary>
+        public static string TemplateMethodPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Préparation de boissons : thé et café suivent les mêmes étapes (bouillir eau, préparer, verser, ajouter condiments) mais les détails varient..
+        /// </summary>
+        public static string TemplateMethodPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template Method Pattern.
+        /// </summary>
+        public static string TemplateMethodPattern_Title {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand vous avez un algorithme avec des variations.
+        /// </summary>
+        public static string TemplateMethodPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour éviter la duplication de code.
+        /// </summary>
+        public static string TemplateMethodPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour contrôler les points d&apos;extension.
+        /// </summary>
+        public static string TemplateMethodPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("TemplateMethodPattern_WhenToUse3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Difficile si la structure change.
+        /// </summary>
+        public static string VisitorPattern_Cons1 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_Cons1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Accès aux membres privés.
+        /// </summary>
+        public static string VisitorPattern_Cons2 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_Cons2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le pattern Visitor permet d&apos;ajouter de nouvelles opérations à des objets sans modifier leurs classes..
+        /// </summary>
+        public static string VisitorPattern_Description {
+            get {
+                return ResourceManager.GetString("VisitorPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visiter les Éléments.
+        /// </summary>
+        public static string VisitorPattern_InteractiveButton {
+            get {
+                return ResourceManager.GetString("VisitorPattern_InteractiveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Appliquer le visiteur :.
+        /// </summary>
+        public static string VisitorPattern_InteractiveDesc {
+            get {
+                return ResourceManager.GetString("VisitorPattern_InteractiveDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Principe ouvert/fermé.
+        /// </summary>
+        public static string VisitorPattern_Pros1 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_Pros1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Responsabilité unique.
+        /// </summary>
+        public static string VisitorPattern_Pros2 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_Pros2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to • Accumulation d&apos;état.
+        /// </summary>
+        public static string VisitorPattern_Pros3 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_Pros3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calcul fiscal : différents types d&apos;actifs (actions, obligations, immobilier) acceptent un visiteur d&apos;inspection fiscale qui applique des règles spécifiques à chaque type..
+        /// </summary>
+        public static string VisitorPattern_RealWorldDesc {
+            get {
+                return ResourceManager.GetString("VisitorPattern_RealWorldDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visitor Pattern.
+        /// </summary>
+        public static string VisitorPattern_Title {
+            get {
+                return ResourceManager.GetString("VisitorPattern_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour ajouter des opérations à une structure d&apos;objets.
+        /// </summary>
+        public static string VisitorPattern_WhenToUse1 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_WhenToUse1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quand la structure est stable mais les opérations changent.
+        /// </summary>
+        public static string VisitorPattern_WhenToUse2 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_WhenToUse2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour séparer les algorithmes des objets.
+        /// </summary>
+        public static string VisitorPattern_WhenToUse3 {
+            get {
+                return ResourceManager.GetString("VisitorPattern_WhenToUse3", resourceCulture);
             }
         }
     }

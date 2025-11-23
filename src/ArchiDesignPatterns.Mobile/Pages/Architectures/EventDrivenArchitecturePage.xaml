@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.Architectures.EventDrivenArchitecturePage"
              x:DataType="viewmodels:EventDrivenArchitectureViewModel"
-             Title="Event Driven Architecture">
+             Title="{x:Static resx:Strings.EventDrivenArchitecture_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -15,14 +16,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="📢" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Event Driven Architecture"
+                        <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Architecture" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_Architecture}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -36,10 +37,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="L'architecture orientée événements repose sur la communication par événements entre composants. Les producteurs émettent des événements et les consommateurs y réagissent de manière asynchrone."
+                        <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -48,23 +52,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour des systèmes réactifs et asynchrones"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.EventDrivenArchitecture_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand les composants doivent être découplés"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.EventDrivenArchitecture_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour gérer des flux de données en temps réel"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.EventDrivenArchitecture_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -76,15 +83,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Déclenchez un événement :"
+                        <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Déclencher un événement"
+                        <Button Text="{x:Static resx:Strings.EventDrivenArchitecture_InteractiveButton}"
                                 Clicked="OnTriggerEventClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -98,7 +105,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de structure"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -114,17 +121,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Découplage fort"
+                                <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Scalabilité élevée"
+                                <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Traitement asynchrone"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Extensibilité"
+                                <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -135,15 +140,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.Architecture_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Complexité du débogage"
+                                <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Gestion de l'ordre des événements"
+                                <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Traçabilité difficile"
+                                <Label Text="{x:Static resx:Strings.EventDrivenArchitecture_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

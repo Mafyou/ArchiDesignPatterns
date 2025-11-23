@@ -118,16 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="SingletonPattern_Title" xml:space="preserve">
-    <value>🏗️ Singleton Pattern</value>
+    <value>Singleton Pattern</value>
+  </data>
+  <data name="SingletonPattern_Creational" xml:space="preserve">
+    <value>Création</value>
   </data>
   <data name="SingletonPattern_DescriptionTitle" xml:space="preserve">
-    <value>📖 Description</value>
+    <value>Description</value>
   </data>
   <data name="SingletonPattern_Description" xml:space="preserve">
     <value>The Singleton pattern ensures a class has only one instance and provides a global point of access to it.</value>
   </data>
   <data name="SingletonPattern_WhenToUseTitle" xml:space="preserve">
-    <value>🎯 When to use</value>
+    <value>When to use</value>
   </data>
   <data name="SingletonPattern_WhenToUse1" xml:space="preserve">
     <value>When exactly one instance of a class is needed</value>
@@ -148,10 +151,10 @@
     <value>Create Singleton Instance</value>
   </data>
   <data name="SingletonPattern_CodeTitle" xml:space="preserve">
-    <value>💻 Code Example</value>
+    <value>Code Example</value>
   </data>
   <data name="SingletonPattern_ProsTitle" xml:space="preserve">
-    <value>✅ Pros</value>
+    <value>Pros</value>
   </data>
   <data name="SingletonPattern_Pros1" xml:space="preserve">
     <value>Guarantees a single instance</value>
@@ -163,7 +166,7 @@
     <value>Lazy initialization</value>
   </data>
   <data name="SingletonPattern_ConsTitle" xml:space="preserve">
-    <value>⚠️ Cons</value>
+    <value>Cons</value>
   </data>
   <data name="SingletonPattern_Cons1" xml:space="preserve">
     <value>Hard to test</value>
@@ -175,19 +178,19 @@
     <value>Thread safety concerns</value>
   </data>
   <data name="FactoryPattern_Title" xml:space="preserve">
-    <value>🏗️ Factory Pattern</value>
+    <value>Factory Pattern</value>
   </data>
   <data name="FactoryPattern_Creational" xml:space="preserve">
     <value>Creational</value>
   </data>
   <data name="FactoryPattern_DescriptionTitle" xml:space="preserve">
-    <value>📖 Description</value>
+    <value>Description</value>
   </data>
   <data name="FactoryPattern_Description" xml:space="preserve">
     <value>The Factory pattern provides an interface for creating objects without exposing the creation logic to the client. It delegates instantiation to specialized factory classes.</value>
   </data>
   <data name="FactoryPattern_WhenToUseTitle" xml:space="preserve">
-    <value>🎯 When to use</value>
+    <value>When to use</value>
   </data>
   <data name="FactoryPattern_WhenToUse1" xml:space="preserve">
     <value>When object creation logic is complex</value>
@@ -199,7 +202,7 @@
     <value>To create families of related objects</value>
   </data>
   <data name="FactoryPattern_InteractiveTitle" xml:space="preserve">
-    <value>🎮 Interactive Example</value>
+    <value>Interactive Example</value>
   </data>
   <data name="FactoryPattern_InteractiveDesc" xml:space="preserve">
     <value>Select a vehicle type and create it using the factory:</value>
@@ -220,7 +223,7 @@
     <value>Create Vehicle</value>
   </data>
   <data name="FactoryPattern_CodeTitle" xml:space="preserve">
-    <value>💻 Code Example</value>
+    <value>Code Example</value>
   </data>
   <data name="FactoryPattern_RealWorldTitle" xml:space="preserve">
     <value>Real-World Scenario</value>
@@ -229,7 +232,7 @@
     <value>Creating documents in office software: WordFactory creates .docx, SpreadsheetFactory creates .xlsx - same interface, different implementations.</value>
   </data>
   <data name="FactoryPattern_ProsTitle" xml:space="preserve">
-    <value>✅ Pros</value>
+    <value>Pros</value>
   </data>
   <data name="FactoryPattern_Pros1" xml:space="preserve">
     <value>• Low coupling</value>
@@ -241,7 +244,7 @@
     <value>• Centralized creation</value>
   </data>
   <data name="FactoryPattern_ConsTitle" xml:space="preserve">
-    <value>⚠️ Cons</value>
+    <value>Cons</value>
   </data>
   <data name="FactoryPattern_Cons1" xml:space="preserve">
     <value>• More classes</value>
@@ -251,5 +254,1763 @@
   </data>
   <data name="FactoryPattern_Cons3" xml:space="preserve">
     <value>• Factory can become large</value>
+  </data>
+  <data name="AbstractFactoryPattern_Title" xml:space="preserve">
+    <value>Abstract Factory Pattern</value>
+  </data>
+  <data name="AbstractFactoryPattern_Creational" xml:space="preserve">
+    <value>Creational</value>
+  </data>
+  <data name="AbstractFactoryPattern_Description" xml:space="preserve">
+    <value>The Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.</value>
+  </data>
+  <data name="AbstractFactoryPattern_WhenToUse1" xml:space="preserve">
+    <value>Create families of related products</value>
+  </data>
+  <data name="AbstractFactoryPattern_WhenToUse2" xml:space="preserve">
+    <value>Support multiple UI themes or platforms</value>
+  </data>
+  <data name="AbstractFactoryPattern_WhenToUse3" xml:space="preserve">
+    <value>Ensure product compatibility</value>
+  </data>
+  <data name="AbstractFactoryPattern_InteractiveDesc" xml:space="preserve">
+    <value>Create a family of UI components for different platforms:</value>
+  </data>
+  <data name="AbstractFactoryPattern_InteractiveButton" xml:space="preserve">
+    <value>Create Windows UI Family</value>
+  </data>
+  <data name="AbstractFactoryPattern_RealWorldTitle" xml:space="preserve">
+    <value>Real-World Example</value>
+  </data>
+  <data name="AbstractFactoryPattern_RealWorldDesc" xml:space="preserve">
+    <value>Cross-platform UI frameworks: Create UI components for Windows, Mac, and Linux that integrate seamlessly with each platform while using the same creation interface.</value>
+  </data>
+  <data name="AbstractFactoryPattern_Pros1" xml:space="preserve">
+    <value>• Product compatibility</value>
+  </data>
+  <data name="AbstractFactoryPattern_Pros2" xml:space="preserve">
+    <value>• Easy family switching</value>
+  </data>
+  <data name="AbstractFactoryPattern_Pros3" xml:space="preserve">
+    <value>• Consistent interface</value>
+  </data>
+  <data name="AbstractFactoryPattern_Cons1" xml:space="preserve">
+    <value>• Complex structure</value>
+  </data>
+  <data name="AbstractFactoryPattern_Cons2" xml:space="preserve">
+    <value>• Many classes</value>
+  </data>
+  <data name="AbstractFactoryPattern_Cons3" xml:space="preserve">
+    <value>• Difficult to extend</value>
+  </data>
+  <data name="AdapterPattern_Title" xml:space="preserve">
+    <value>Adapter Pattern</value>
+  </data>
+  <data name="AdapterPattern_Structural" xml:space="preserve">
+    <value>Structural</value>
+  </data>
+  <data name="AdapterPattern_Description" xml:space="preserve">
+    <value>The Adapter pattern converts the interface of a class into another interface clients expect. It allows incompatible interfaces to work together.</value>
+  </data>
+  <data name="AdapterPattern_WhenToUse1" xml:space="preserve">
+    <value>Integrate legacy code with new systems</value>
+  </data>
+  <data name="AdapterPattern_WhenToUse2" xml:space="preserve">
+    <value>Make incompatible interfaces work together</value>
+  </data>
+  <data name="AdapterPattern_WhenToUse3" xml:space="preserve">
+    <value>Use third-party libraries with different interfaces</value>
+  </data>
+  <data name="AdapterPattern_InteractiveDesc" xml:space="preserve">
+    <value>Use an adapter to make incompatible interfaces work together:</value>
+  </data>
+  <data name="AdapterPattern_InteractiveButton" xml:space="preserve">
+    <value>Use Adapter</value>
+  </data>
+  <data name="AdapterPattern_RealWorldDesc" xml:space="preserve">
+    <value>Power plug adapters: European devices (220V) can work with American outlets (110V) through an adapter that converts the interface while maintaining functionality.</value>
+  </data>
+  <data name="AdapterPattern_Pros1" xml:space="preserve">
+    <value>• Reuses existing code</value>
+  </data>
+  <data name="AdapterPattern_Pros2" xml:space="preserve">
+    <value>• Single responsibility</value>
+  </data>
+  <data name="AdapterPattern_Pros3" xml:space="preserve">
+    <value>• Open/closed principle</value>
+  </data>
+  <data name="AdapterPattern_Cons1" xml:space="preserve">
+    <value>• Increased complexity</value>
+  </data>
+  <data name="AdapterPattern_Cons2" xml:space="preserve">
+    <value>• Performance overhead</value>
+  </data>
+  <data name="AdapterPattern_Cons3" xml:space="preserve">
+    <value>• May be simpler to refactor</value>
+  </data>
+  <data name="BuilderPattern_Title" xml:space="preserve">
+    <value>Builder Pattern</value>
+  </data>
+  <data name="BuilderPattern_Description" xml:space="preserve">
+    <value>The Builder pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations.</value>
+  </data>
+  <data name="BuilderPattern_WhenToUse1" xml:space="preserve">
+    <value>When creating complex objects with many parameters</value>
+  </data>
+  <data name="BuilderPattern_WhenToUse2" xml:space="preserve">
+    <value>When object construction requires multiple steps</value>
+  </data>
+  <data name="BuilderPattern_WhenToUse3" xml:space="preserve">
+    <value>To avoid telescoping constructors</value>
+  </data>
+  <data name="BuilderPattern_InteractiveDesc" xml:space="preserve">
+    <value>Build a product step by step:</value>
+  </data>
+  <data name="BuilderPattern_InteractiveButton" xml:space="preserve">
+    <value>Build Product</value>
+  </data>
+  <data name="BuilderPattern_Pros1" xml:space="preserve">
+    <value>• Fluent interface</value>
+  </data>
+  <data name="BuilderPattern_Pros2" xml:space="preserve">
+    <value>• Supports immutability</value>
+  </data>
+  <data name="BuilderPattern_Pros3" xml:space="preserve">
+    <value>• Clear construction</value>
+  </data>
+  <data name="BuilderPattern_Cons1" xml:space="preserve">
+    <value>• More code</value>
+  </data>
+  <data name="BuilderPattern_Cons2" xml:space="preserve">
+    <value>• Overkill for simple objects</value>
+  </data>
+  <data name="BuilderPattern_Cons3" xml:space="preserve">
+    <value>• Builder class needed</value>
+  </data>
+  <data name="BridgePattern_Title" xml:space="preserve">
+    <value>Bridge Pattern</value>
+  </data>
+  <data name="BridgePattern_Description" xml:space="preserve">
+    <value>The Bridge pattern separates an abstraction from its implementation so they can vary independently. It uses composition over inheritance.</value>
+  </data>
+  <data name="BridgePattern_WhenToUse1" xml:space="preserve">
+    <value>Avoid permanent binding between abstraction and implementation</value>
+  </data>
+  <data name="BridgePattern_WhenToUse2" xml:space="preserve">
+    <value>Both abstraction and implementation should be extensible</value>
+  </data>
+  <data name="BridgePattern_WhenToUse3" xml:space="preserve">
+    <value>Implementation changes shouldn't affect clients</value>
+  </data>
+  <data name="BridgePattern_InteractiveDesc" xml:space="preserve">
+    <value>Draw shapes with different rendering implementations:</value>
+  </data>
+  <data name="BridgePattern_InteractiveButton" xml:space="preserve">
+    <value>Draw with Bridge</value>
+  </data>
+  <data name="BridgePattern_RealWorldDesc" xml:space="preserve">
+    <value>GUI frameworks: Separate window abstractions (Window, Dialog) from platform implementations (Windows API, macOS API, Linux X11) - same window types work across all platforms.</value>
+  </data>
+  <data name="BridgePattern_Pros1" xml:space="preserve">
+    <value>• Decouples interface from implementation</value>
+  </data>
+  <data name="BridgePattern_Pros2" xml:space="preserve">
+    <value>• Runtime binding</value>
+  </data>
+  <data name="BridgePattern_Pros3" xml:space="preserve">
+    <value>• Independent extensions</value>
+  </data>
+  <data name="BridgePattern_Cons1" xml:space="preserve">
+    <value>• Increased complexity</value>
+  </data>
+  <data name="BridgePattern_Cons2" xml:space="preserve">
+    <value>• More classes</value>
+  </data>
+  <data name="BridgePattern_Cons3" xml:space="preserve">
+    <value>• Indirection overhead</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Title" xml:space="preserve">
+    <value>Chain of Responsibility Pattern</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Behavioral" xml:space="preserve">
+    <value>Behavioral</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Description" xml:space="preserve">
+    <value>The Chain of Responsibility pattern processes requests along a chain of handlers. Each handler decides to process the request or pass it to the next handler.</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_WhenToUse1" xml:space="preserve">
+    <value>When multiple objects can handle a request</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_WhenToUse2" xml:space="preserve">
+    <value>The handler isn't known in advance</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_WhenToUse3" xml:space="preserve">
+    <value>Decouple sender from receiver</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_InteractiveDesc" xml:space="preserve">
+    <value>Test different requests in the responsibility chain:</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_InteractiveButton" xml:space="preserve">
+    <value>Process Requests</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_RealWorldDesc" xml:space="preserve">
+    <value>Customer service: ticket → level 1 support → level 2 → manager. Each level can resolve or escalate based on complexity.</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Pros1" xml:space="preserve">
+    <value>• Flexible decoupling</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Pros2" xml:space="preserve">
+    <value>• Dynamic chain</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Pros3" xml:space="preserve">
+    <value>• Single responsibility</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Cons1" xml:space="preserve">
+    <value>• No handling guarantee</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Cons2" xml:space="preserve">
+    <value>• Performance impact</value>
+  </data>
+  <data name="ChainOfResponsibilityPattern_Cons3" xml:space="preserve">
+    <value>• Difficult debugging</value>
+  </data>
+  <data name="CommandPattern_Title" xml:space="preserve">
+    <value>Command Pattern</value>
+  </data>
+  <data name="CommandPattern_Description" xml:space="preserve">
+    <value>The Command pattern encapsulates a request as an object, allowing you to parameterize actions, queue them, and support undo operations.</value>
+  </data>
+  <data name="CommandPattern_WhenToUse1" xml:space="preserve">
+    <value>Decouple sender from receiver of a request</value>
+  </data>
+  <data name="CommandPattern_WhenToUse2" xml:space="preserve">
+    <value>Support undo/redo operations</value>
+  </data>
+  <data name="CommandPattern_WhenToUse3" xml:space="preserve">
+    <value>Log or queue requests</value>
+  </data>
+  <data name="CommandPattern_InteractiveDesc" xml:space="preserve">
+    <value>Control a light with commands:</value>
+  </data>
+  <data name="CommandPattern_InteractiveButton" xml:space="preserve">
+    <value>Execute Commands</value>
+  </data>
+  <data name="CommandPattern_RealWorldDesc" xml:space="preserve">
+    <value>Universal remote: each button encapsulates a command (turn on TV, change channel, adjust volume) without knowing device details.</value>
+  </data>
+  <data name="CommandPattern_Pros1" xml:space="preserve">
+    <value>• Complete decoupling</value>
+  </data>
+  <data name="CommandPattern_Pros2" xml:space="preserve">
+    <value>• Undo/redo support</value>
+  </data>
+  <data name="CommandPattern_Pros3" xml:space="preserve">
+    <value>• Command composition</value>
+  </data>
+  <data name="CommandPattern_Cons1" xml:space="preserve">
+    <value>• Increased class count</value>
+  </data>
+  <data name="CommandPattern_Cons2" xml:space="preserve">
+    <value>• Additional complexity</value>
+  </data>
+  <data name="CommandPattern_Cons3" xml:space="preserve">
+    <value>• Indirection</value>
+  </data>
+  <data name="CompositePattern_Title" xml:space="preserve">
+    <value>Composite Pattern</value>
+  </data>
+  <data name="CompositePattern_Description" xml:space="preserve">
+    <value>The Composite pattern composes objects into tree structures to represent part-whole hierarchies. It treats individual objects and compositions uniformly.</value>
+  </data>
+  <data name="CompositePattern_WhenToUse1" xml:space="preserve">
+    <value>Represent part-whole hierarchies of objects</value>
+  </data>
+  <data name="CompositePattern_WhenToUse2" xml:space="preserve">
+    <value>Treat individual objects and compositions uniformly</value>
+  </data>
+  <data name="CompositePattern_WhenToUse3" xml:space="preserve">
+    <value>Complex tree structures with recursive operations</value>
+  </data>
+  <data name="CompositePattern_InteractiveDesc" xml:space="preserve">
+    <value>Build a composite tree structure:</value>
+  </data>
+  <data name="CompositePattern_InteractiveButton" xml:space="preserve">
+    <value>Show Structure</value>
+  </data>
+  <data name="CompositePattern_RealWorldDesc" xml:space="preserve">
+    <value>File system: folders can contain files or other folders. Same interface to list contents, whether it's a simple file or a folder with sub-elements.</value>
+  </data>
+  <data name="CompositePattern_Pros1" xml:space="preserve">
+    <value>• Uniform interface</value>
+  </data>
+  <data name="CompositePattern_Pros2" xml:space="preserve">
+    <value>• Natural recursive structures</value>
+  </data>
+  <data name="CompositePattern_Pros3" xml:space="preserve">
+    <value>• Easy to add elements</value>
+  </data>
+  <data name="CompositePattern_Cons1" xml:space="preserve">
+    <value>• Interface may be too general</value>
+  </data>
+  <data name="CompositePattern_Cons2" xml:space="preserve">
+    <value>• Hard to restrict components</value>
+  </data>
+  <data name="CompositePattern_Cons3" xml:space="preserve">
+    <value>• Complexity for simple types</value>
+  </data>
+  <data name="DecoratorPattern_Title" xml:space="preserve">
+    <value>Decorator Pattern</value>
+  </data>
+  <data name="DecoratorPattern_Description" xml:space="preserve">
+    <value>The Decorator pattern dynamically adds functionality to an object by wrapping it in a decorator object.</value>
+  </data>
+  <data name="DecoratorPattern_WhenToUse1" xml:space="preserve">
+    <value>To dynamically add responsibilities to objects</value>
+  </data>
+  <data name="DecoratorPattern_WhenToUse2" xml:space="preserve">
+    <value>When inheritance isn't practical or becomes too complex</value>
+  </data>
+  <data name="DecoratorPattern_WhenToUse3" xml:space="preserve">
+    <value>To create flexible combinations of features</value>
+  </data>
+  <data name="DecoratorPattern_InteractiveDesc" xml:space="preserve">
+    <value>Add decorations to enrich an object:</value>
+  </data>
+  <data name="DecoratorPattern_InteractiveButton" xml:space="preserve">
+    <value>Add Decoration</value>
+  </data>
+  <data name="DecoratorPattern_Pros1" xml:space="preserve">
+    <value>• Flexible feature addition</value>
+  </data>
+  <data name="DecoratorPattern_Pros2" xml:space="preserve">
+    <value>• Alternative to inheritance</value>
+  </data>
+  <data name="DecoratorPattern_Pros3" xml:space="preserve">
+    <value>• Multiple combinations possible</value>
+  </data>
+  <data name="DecoratorPattern_Pros4" xml:space="preserve">
+    <value>• Open/closed principle</value>
+  </data>
+  <data name="DecoratorPattern_Cons1" xml:space="preserve">
+    <value>• Many small classes</value>
+  </data>
+  <data name="DecoratorPattern_Cons2" xml:space="preserve">
+    <value>• Code complexity</value>
+  </data>
+  <data name="DecoratorPattern_Cons3" xml:space="preserve">
+    <value>• Decorator order matters</value>
+  </data>
+  <data name="FacadePattern_Title" xml:space="preserve">
+    <value>Facade Pattern</value>
+  </data>
+  <data name="FacadePattern_Description" xml:space="preserve">
+    <value>The Facade pattern provides a simplified interface to a set of complex subsystems, making the system easier to use.</value>
+  </data>
+  <data name="FacadePattern_WhenToUse1" xml:space="preserve">
+    <value>To simplify access to complex subsystems</value>
+  </data>
+  <data name="FacadePattern_WhenToUse2" xml:space="preserve">
+    <value>To reduce dependencies between clients and subsystems</value>
+  </data>
+  <data name="FacadePattern_WhenToUse3" xml:space="preserve">
+    <value>To create abstraction layers</value>
+  </data>
+  <data name="FacadePattern_InteractiveDesc" xml:space="preserve">
+    <value>Use the facade to simplify access:</value>
+  </data>
+  <data name="FacadePattern_InteractiveButton" xml:space="preserve">
+    <value>Use Facade</value>
+  </data>
+  <data name="FacadePattern_Pros1" xml:space="preserve">
+    <value>• Simplifies interface</value>
+  </data>
+  <data name="FacadePattern_Pros2" xml:space="preserve">
+    <value>• Reduces coupling</value>
+  </data>
+  <data name="FacadePattern_Pros3" xml:space="preserve">
+    <value>• Isolates complexity</value>
+  </data>
+  <data name="FacadePattern_Pros4" xml:space="preserve">
+    <value>• Eases usage</value>
+  </data>
+  <data name="FacadePattern_Cons1" xml:space="preserve">
+    <value>• Can become a god object</value>
+  </data>
+  <data name="FacadePattern_Cons2" xml:space="preserve">
+    <value>• Loss of flexibility</value>
+  </data>
+  <data name="FacadePattern_Cons3" xml:space="preserve">
+    <value>• Overhead if misused</value>
+  </data>
+  <data name="FlyweightPattern_Title" xml:space="preserve">
+    <value>Flyweight Pattern</value>
+  </data>
+  <data name="FlyweightPattern_Description" xml:space="preserve">
+    <value>The Flyweight pattern shares objects to save memory by pooling common intrinsic state across multiple objects.</value>
+  </data>
+  <data name="FlyweightPattern_WhenToUse1" xml:space="preserve">
+    <value>When the application uses a large number of similar objects</value>
+  </data>
+  <data name="FlyweightPattern_WhenToUse2" xml:space="preserve">
+    <value>To reduce memory consumption</value>
+  </data>
+  <data name="FlyweightPattern_WhenToUse3" xml:space="preserve">
+    <value>When objects have shareable intrinsic state</value>
+  </data>
+  <data name="FlyweightPattern_InteractiveDesc" xml:space="preserve">
+    <value>Use Flyweight to share objects:</value>
+  </data>
+  <data name="FlyweightPattern_InteractiveButton" xml:space="preserve">
+    <value>Use Flyweight</value>
+  </data>
+  <data name="FlyweightPattern_Pros1" xml:space="preserve">
+    <value>• Memory savings</value>
+  </data>
+  <data name="FlyweightPattern_Pros2" xml:space="preserve">
+    <value>• Performance improvement</value>
+  </data>
+  <data name="FlyweightPattern_Pros3" xml:space="preserve">
+    <value>• Centralized object management</value>
+  </data>
+  <data name="FlyweightPattern_Pros4" xml:space="preserve">
+    <value>• Reduced duplication</value>
+  </data>
+  <data name="FlyweightPattern_Cons1" xml:space="preserve">
+    <value>• Increased code complexity</value>
+  </data>
+  <data name="FlyweightPattern_Cons2" xml:space="preserve">
+    <value>• Concurrency management</value>
+  </data>
+  <data name="FlyweightPattern_Cons3" xml:space="preserve">
+    <value>• Intrinsic/extrinsic state separation</value>
+  </data>
+  <data name="ProxyPattern_Title" xml:space="preserve">
+    <value>Proxy Pattern</value>
+  </data>
+  <data name="ProxyPattern_Description" xml:space="preserve">
+    <value>The Proxy pattern provides a substitute or intermediary for another object to control access, add features, or delay instantiation.</value>
+  </data>
+  <data name="ProxyPattern_WhenToUse1" xml:space="preserve">
+    <value>To control access to an expensive object</value>
+  </data>
+  <data name="ProxyPattern_WhenToUse2" xml:space="preserve">
+    <value>For lazy loading (deferred initialization)</value>
+  </data>
+  <data name="ProxyPattern_WhenToUse3" xml:space="preserve">
+    <value>To add a security or logging layer</value>
+  </data>
+  <data name="ProxyPattern_InteractiveDesc" xml:space="preserve">
+    <value>Access the object via the proxy:</value>
+  </data>
+  <data name="ProxyPattern_InteractiveButton" xml:space="preserve">
+    <value>Access via Proxy</value>
+  </data>
+  <data name="ProxyPattern_Pros1" xml:space="preserve">
+    <value>• Access control</value>
+  </data>
+  <data name="ProxyPattern_Pros2" xml:space="preserve">
+    <value>• Lazy initialization</value>
+  </data>
+  <data name="ProxyPattern_Pros3" xml:space="preserve">
+    <value>• Feature addition</value>
+  </data>
+  <data name="ProxyPattern_Pros4" xml:space="preserve">
+    <value>• Real object protection</value>
+  </data>
+  <data name="ProxyPattern_Cons1" xml:space="preserve">
+    <value>• Increases complexity</value>
+  </data>
+  <data name="ProxyPattern_Cons2" xml:space="preserve">
+    <value>• Can slow responses</value>
+  </data>
+  <data name="ProxyPattern_Cons3" xml:space="preserve">
+    <value>• Maintenance of two classes</value>
+  </data>
+  <data name="PrototypePattern_Title" xml:space="preserve">
+    <value>Prototype Pattern</value>
+  </data>
+  <data name="PrototypePattern_Creational" xml:space="preserve">
+    <value>Creational</value>
+  </data>
+  <data name="PrototypePattern_Description" xml:space="preserve">
+    <value>The Prototype pattern creates new objects by copying an existing object, called a prototype. This is useful when object creation is expensive or complex.</value>
+  </data>
+  <data name="PrototypePattern_WhenToUse1" xml:space="preserve">
+    <value>Object creation is expensive</value>
+  </data>
+  <data name="PrototypePattern_WhenToUse2" xml:space="preserve">
+    <value>You need to create many similar objects</value>
+  </data>
+  <data name="PrototypePattern_WhenToUse3" xml:space="preserve">
+    <value>Avoid subclasses for object creation</value>
+  </data>
+  <data name="PrototypePattern_InteractiveDesc" xml:space="preserve">
+    <value>Clone an object instead of creating a new one:</value>
+  </data>
+  <data name="PrototypePattern_InteractiveButton" xml:space="preserve">
+    <value>Clone Object</value>
+  </data>
+  <data name="PrototypePattern_RealWorldTitle" xml:space="preserve">
+    <value>Real-World Example</value>
+  </data>
+  <data name="PrototypePattern_RealWorldDesc" xml:space="preserve">
+    <value>Document templates: Clone a template document with predefined formatting and styles instead of starting from scratch each time.</value>
+  </data>
+  <data name="PrototypePattern_Pros1" xml:space="preserve">
+    <value>• Fast object creation</value>
+  </data>
+  <data name="PrototypePattern_Pros2" xml:space="preserve">
+    <value>• Reduces subclassing</value>
+  </data>
+  <data name="PrototypePattern_Pros3" xml:space="preserve">
+    <value>• Runtime flexibility</value>
+  </data>
+  <data name="PrototypePattern_Pros4" xml:space="preserve">
+    <value>• Improved performance</value>
+  </data>
+  <data name="PrototypePattern_Cons1" xml:space="preserve">
+    <value>• Deep copy complexity</value>
+  </data>
+  <data name="PrototypePattern_Cons2" xml:space="preserve">
+    <value>• Circular references</value>
+  </data>
+  <data name="PrototypePattern_Cons3" xml:space="preserve">
+    <value>• Clone method maintenance</value>
+  </data>
+  <data name="InterpreterPattern_Title" xml:space="preserve">
+    <value>Interpreter Pattern</value>
+  </data>
+  <data name="InterpreterPattern_Description" xml:space="preserve">
+    <value>The Interpreter pattern defines a representation for a grammar and an interpreter to process sentences in that grammar.</value>
+  </data>
+  <data name="InterpreterPattern_WhenToUse1" xml:space="preserve">
+    <value>To interpret a simple language or grammar</value>
+  </data>
+  <data name="InterpreterPattern_WhenToUse2" xml:space="preserve">
+    <value>When grammar is simple and performance is not critical</value>
+  </data>
+  <data name="InterpreterPattern_WhenToUse3" xml:space="preserve">
+    <value>To evaluate expressions or queries</value>
+  </data>
+  <data name="InterpreterPattern_InteractiveDesc" xml:space="preserve">
+    <value>Interpret a mathematical expression:</value>
+  </data>
+  <data name="InterpreterPattern_InteractiveButton" xml:space="preserve">
+    <value>Interpret '1+2'</value>
+  </data>
+  <data name="InterpreterPattern_Pros1" xml:space="preserve">
+    <value>• Easily extensible grammar</value>
+  </data>
+  <data name="InterpreterPattern_Pros2" xml:space="preserve">
+    <value>• Clear separation of rules</value>
+  </data>
+  <data name="InterpreterPattern_Pros3" xml:space="preserve">
+    <value>• Easy to implement</value>
+  </data>
+  <data name="InterpreterPattern_Pros4" xml:space="preserve">
+    <value>• Flexibility</value>
+  </data>
+  <data name="InterpreterPattern_Cons1" xml:space="preserve">
+    <value>• Complex grammar = many classes</value>
+  </data>
+  <data name="InterpreterPattern_Cons2" xml:space="preserve">
+    <value>• Limited performance</value>
+  </data>
+  <data name="InterpreterPattern_Cons3" xml:space="preserve">
+    <value>• Difficult maintenance if large</value>
+  </data>
+  <data name="IteratorPattern_Title" xml:space="preserve">
+    <value>Iterator Pattern</value>
+  </data>
+  <data name="IteratorPattern_Behavioral" xml:space="preserve">
+    <value>Behavioral</value>
+  </data>
+  <data name="IteratorPattern_Description" xml:space="preserve">
+    <value>The Iterator pattern allows traversing a collection without exposing its internal structure.</value>
+  </data>
+  <data name="IteratorPattern_WhenToUse1" xml:space="preserve">
+    <value>To traverse collections without exposing their structure</value>
+  </data>
+  <data name="IteratorPattern_WhenToUse2" xml:space="preserve">
+    <value>Support multiple traversal types</value>
+  </data>
+  <data name="IteratorPattern_WhenToUse3" xml:space="preserve">
+    <value>Provide a uniform interface for different collections</value>
+  </data>
+  <data name="IteratorPattern_InteractiveDesc" xml:space="preserve">
+    <value>Traverse the collection:</value>
+  </data>
+  <data name="IteratorPattern_InteractiveButton" xml:space="preserve">
+    <value>Traverse Collection</value>
+  </data>
+  <data name="IteratorPattern_Pros1" xml:space="preserve">
+    <value>• Single responsibility</value>
+  </data>
+  <data name="IteratorPattern_Pros2" xml:space="preserve">
+    <value>• Open/closed principle</value>
+  </data>
+  <data name="IteratorPattern_Pros3" xml:space="preserve">
+    <value>• Simultaneous traversals</value>
+  </data>
+  <data name="IteratorPattern_Cons1" xml:space="preserve">
+    <value>• Can be overkill for simple collections</value>
+  </data>
+  <data name="IteratorPattern_Cons2" xml:space="preserve">
+    <value>• Less efficient than direct access</value>
+  </data>
+  <data name="MediatorPattern_Title" xml:space="preserve">
+    <value>Mediator Pattern</value>
+  </data>
+  <data name="MediatorPattern_Description" xml:space="preserve">
+    <value>The Mediator pattern reduces dependencies between objects by centralizing their communications through a mediator.</value>
+  </data>
+  <data name="MediatorPattern_WhenToUse1" xml:space="preserve">
+    <value>When objects communicate in complex ways</value>
+  </data>
+  <data name="MediatorPattern_WhenToUse2" xml:space="preserve">
+    <value>To reduce dependencies between components</value>
+  </data>
+  <data name="MediatorPattern_WhenToUse3" xml:space="preserve">
+    <value>To reuse objects independently</value>
+  </data>
+  <data name="MediatorPattern_InteractiveDesc" xml:space="preserve">
+    <value>Communicate via mediator:</value>
+  </data>
+  <data name="MediatorPattern_InteractiveButton" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+  <data name="MediatorPattern_RealWorldDesc" xml:space="preserve">
+    <value>Airport control tower: aircraft don't communicate directly with each other, they all go through the control tower that coordinates takeoffs and landings.</value>
+  </data>
+  <data name="MediatorPattern_Pros1" xml:space="preserve">
+    <value>• Reduces coupling</value>
+  </data>
+  <data name="MediatorPattern_Pros2" xml:space="preserve">
+    <value>• Centralizes communications</value>
+  </data>
+  <data name="MediatorPattern_Pros3" xml:space="preserve">
+    <value>• Facilitates reuse</value>
+  </data>
+  <data name="MediatorPattern_Cons1" xml:space="preserve">
+    <value>• Mediator can become complex</value>
+  </data>
+  <data name="MediatorPattern_Cons2" xml:space="preserve">
+    <value>• Single point of failure</value>
+  </data>
+  <data name="MementoPattern_Title" xml:space="preserve">
+    <value>Memento Pattern</value>
+  </data>
+  <data name="MementoPattern_Description" xml:space="preserve">
+    <value>The Memento pattern captures and externalizes an object's internal state so it can be restored later.</value>
+  </data>
+  <data name="MementoPattern_WhenToUse1" xml:space="preserve">
+    <value>To implement undo/redo</value>
+  </data>
+  <data name="MementoPattern_WhenToUse2" xml:space="preserve">
+    <value>To save and restore object state</value>
+  </data>
+  <data name="MementoPattern_WhenToUse3" xml:space="preserve">
+    <value>When direct access would violate encapsulation</value>
+  </data>
+  <data name="MementoPattern_InteractiveDesc" xml:space="preserve">
+    <value>Save and restore state:</value>
+  </data>
+  <data name="MementoPattern_InteractiveButton" xml:space="preserve">
+    <value>Modify and Undo</value>
+  </data>
+  <data name="MementoPattern_RealWorldDesc" xml:space="preserve">
+    <value>Text editor: saves document state at each major modification to enable undo (Ctrl+Z) and return to a previous state.</value>
+  </data>
+  <data name="MementoPattern_Pros1" xml:space="preserve">
+    <value>• Preserves encapsulation</value>
+  </data>
+  <data name="MementoPattern_Pros2" xml:space="preserve">
+    <value>• Simplifies the originator</value>
+  </data>
+  <data name="MementoPattern_Pros3" xml:space="preserve">
+    <value>• Undo/redo support</value>
+  </data>
+  <data name="MementoPattern_Cons1" xml:space="preserve">
+    <value>• Memory consumption</value>
+  </data>
+  <data name="MementoPattern_Cons2" xml:space="preserve">
+    <value>• Creation/restoration cost</value>
+  </data>
+  <data name="ObserverPattern_Title" xml:space="preserve">
+    <value>Observer Pattern</value>
+  </data>
+  <data name="ObserverPattern_Description" xml:space="preserve">
+    <value>The Observer pattern defines a one-to-many dependency where multiple objects are automatically notified of state changes.</value>
+  </data>
+  <data name="ObserverPattern_WhenToUse1" xml:space="preserve">
+    <value>When a change requires multiple updates</value>
+  </data>
+  <data name="ObserverPattern_WhenToUse2" xml:space="preserve">
+    <value>To implement event-driven systems</value>
+  </data>
+  <data name="ObserverPattern_WhenToUse3" xml:space="preserve">
+    <value>When observed objects don't know observers</value>
+  </data>
+  <data name="ObserverPattern_InteractiveDesc" xml:space="preserve">
+    <value>Observe changes:</value>
+  </data>
+  <data name="ObserverPattern_InteractiveButton" xml:space="preserve">
+    <value>Modify Value</value>
+  </data>
+  <data name="ObserverPattern_RealWorldDesc" xml:space="preserve">
+    <value>Newsletter: subscribers (observers) are automatically notified when a new article (subject) is published. Each can subscribe or unsubscribe freely.</value>
+  </data>
+  <data name="ObserverPattern_Pros1" xml:space="preserve">
+    <value>• Loose coupling</value>
+  </data>
+  <data name="ObserverPattern_Pros2" xml:space="preserve">
+    <value>• Broadcast support</value>
+  </data>
+  <data name="ObserverPattern_Pros3" xml:space="preserve">
+    <value>• Open/closed principle</value>
+  </data>
+  <data name="ObserverPattern_Cons1" xml:space="preserve">
+    <value>• Random notification order</value>
+  </data>
+  <data name="ObserverPattern_Cons2" xml:space="preserve">
+    <value>• Potential memory leaks</value>
+  </data>
+  <data name="StatePattern_Title" xml:space="preserve">
+    <value>State Pattern</value>
+  </data>
+  <data name="StatePattern_Description" xml:space="preserve">
+    <value>The State pattern allows an object to alter its behavior when its internal state changes.</value>
+  </data>
+  <data name="StatePattern_WhenToUse1" xml:space="preserve">
+    <value>When behavior depends on state</value>
+  </data>
+  <data name="StatePattern_WhenToUse2" xml:space="preserve">
+    <value>To avoid large conditional statements</value>
+  </data>
+  <data name="StatePattern_WhenToUse3" xml:space="preserve">
+    <value>When state transitions are complex</value>
+  </data>
+  <data name="StatePattern_InteractiveDesc" xml:space="preserve">
+    <value>Change state:</value>
+  </data>
+  <data name="StatePattern_InteractiveButton" xml:space="preserve">
+    <value>Change State</value>
+  </data>
+  <data name="StatePattern_RealWorldDesc" xml:space="preserve">
+    <value>Order state machine: New → Processing → Shipped → Delivered. Each state has specific actions (cancel only possible if New or Processing).</value>
+  </data>
+  <data name="StatePattern_Pros1" xml:space="preserve">
+    <value>• Single responsibility</value>
+  </data>
+  <data name="StatePattern_Pros2" xml:space="preserve">
+    <value>• Open/closed principle</value>
+  </data>
+  <data name="StatePattern_Pros3" xml:space="preserve">
+    <value>• Simplifies complex code</value>
+  </data>
+  <data name="StatePattern_Cons1" xml:space="preserve">
+    <value>• Can be overkill for few states</value>
+  </data>
+  <data name="StatePattern_Cons2" xml:space="preserve">
+    <value>• Increases number of classes</value>
+  </data>
+  <data name="StrategyPattern_Title" xml:space="preserve">
+    <value>Strategy Pattern</value>
+  </data>
+  <data name="StrategyPattern_Description" xml:space="preserve">
+    <value>The Strategy pattern defines a family of algorithms, encapsulates each, and makes them interchangeable.</value>
+  </data>
+  <data name="StrategyPattern_WhenToUse1" xml:space="preserve">
+    <value>To use different variants of an algorithm</value>
+  </data>
+  <data name="StrategyPattern_WhenToUse2" xml:space="preserve">
+    <value>When you have many similar classes</value>
+  </data>
+  <data name="StrategyPattern_WhenToUse3" xml:space="preserve">
+    <value>To isolate business logic from implementation details</value>
+  </data>
+  <data name="StrategyPattern_InteractiveDesc" xml:space="preserve">
+    <value>Choose a strategy:</value>
+  </data>
+  <data name="StrategyPattern_InteractiveButton" xml:space="preserve">
+    <value>Apply Strategy</value>
+  </data>
+  <data name="StrategyPattern_RealWorldDesc" xml:space="preserve">
+    <value>Payment methods: credit card, PayPal, cryptocurrency. Same payment interface, different implementations depending on chosen strategy.</value>
+  </data>
+  <data name="StrategyPattern_Pros1" xml:space="preserve">
+    <value>• Interchangeable algorithms</value>
+  </data>
+  <data name="StrategyPattern_Pros2" xml:space="preserve">
+    <value>• Detail isolation</value>
+  </data>
+  <data name="StrategyPattern_Pros3" xml:space="preserve">
+    <value>• Alternative to inheritance</value>
+  </data>
+  <data name="StrategyPattern_Cons1" xml:space="preserve">
+    <value>• Increases number of classes</value>
+  </data>
+  <data name="StrategyPattern_Cons2" xml:space="preserve">
+    <value>• Client must know strategies</value>
+  </data>
+  <data name="TemplateMethodPattern_Title" xml:space="preserve">
+    <value>Template Method Pattern</value>
+  </data>
+  <data name="TemplateMethodPattern_Description" xml:space="preserve">
+    <value>The Template Method pattern defines the skeleton of an algorithm in a method, delegating some steps to subclasses.</value>
+  </data>
+  <data name="TemplateMethodPattern_WhenToUse1" xml:space="preserve">
+    <value>When you have an algorithm with variations</value>
+  </data>
+  <data name="TemplateMethodPattern_WhenToUse2" xml:space="preserve">
+    <value>To avoid code duplication</value>
+  </data>
+  <data name="TemplateMethodPattern_WhenToUse3" xml:space="preserve">
+    <value>To control extension points</value>
+  </data>
+  <data name="TemplateMethodPattern_InteractiveDesc" xml:space="preserve">
+    <value>Execute template:</value>
+  </data>
+  <data name="TemplateMethodPattern_InteractiveButton" xml:space="preserve">
+    <value>Execute Template</value>
+  </data>
+  <data name="TemplateMethodPattern_RealWorldDesc" xml:space="preserve">
+    <value>Beverage preparation: tea and coffee follow same steps (boil water, prepare, pour, add condiments) but details vary.</value>
+  </data>
+  <data name="TemplateMethodPattern_Pros1" xml:space="preserve">
+    <value>• Code reuse</value>
+  </data>
+  <data name="TemplateMethodPattern_Pros2" xml:space="preserve">
+    <value>• Algorithm control</value>
+  </data>
+  <data name="TemplateMethodPattern_Pros3" xml:space="preserve">
+    <value>• Easy to understand</value>
+  </data>
+  <data name="TemplateMethodPattern_Cons1" xml:space="preserve">
+    <value>• Limited by inheritance</value>
+  </data>
+  <data name="TemplateMethodPattern_Cons2" xml:space="preserve">
+    <value>• Can violate substitution principle</value>
+  </data>
+  <data name="VisitorPattern_Title" xml:space="preserve">
+    <value>Visitor Pattern</value>
+  </data>
+  <data name="VisitorPattern_Description" xml:space="preserve">
+    <value>The Visitor pattern allows adding new operations to objects without modifying their classes.</value>
+  </data>
+  <data name="VisitorPattern_WhenToUse1" xml:space="preserve">
+    <value>To add operations to an object structure</value>
+  </data>
+  <data name="VisitorPattern_WhenToUse2" xml:space="preserve">
+    <value>When structure is stable but operations change</value>
+  </data>
+  <data name="VisitorPattern_WhenToUse3" xml:space="preserve">
+    <value>To separate algorithms from objects</value>
+  </data>
+  <data name="VisitorPattern_InteractiveDesc" xml:space="preserve">
+    <value>Apply visitor:</value>
+  </data>
+  <data name="VisitorPattern_InteractiveButton" xml:space="preserve">
+    <value>Visit Elements</value>
+  </data>
+  <data name="VisitorPattern_RealWorldDesc" xml:space="preserve">
+    <value>Tax calculation: different asset types (stocks, bonds, real estate) accept a tax inspection visitor that applies specific rules to each type.</value>
+  </data>
+  <data name="VisitorPattern_Pros1" xml:space="preserve">
+    <value>• Open/closed principle</value>
+  </data>
+  <data name="VisitorPattern_Pros2" xml:space="preserve">
+    <value>• Single responsibility</value>
+  </data>
+  <data name="VisitorPattern_Pros3" xml:space="preserve">
+    <value>• State accumulation</value>
+  </data>
+  <data name="VisitorPattern_Cons1" xml:space="preserve">
+    <value>• Difficult if structure changes</value>
+  </data>
+  <data name="VisitorPattern_Cons2" xml:space="preserve">
+    <value>• Private member access</value>
+  </data>
+  <data name="CleanArchitecture_Title" xml:space="preserve">
+    <value>Clean Architecture</value>
+  </data>
+  <data name="CleanArchitecture_Architecture" xml:space="preserve">
+    <value>Architecture</value>
+  </data>
+  <data name="CleanArchitecture_Description" xml:space="preserve">
+    <value>Clean Architecture organizes code into independent layers with clear boundaries and dependencies pointing inward. Inner layers contain business logic and are independent of frameworks, UI, and databases.</value>
+  </data>
+  <data name="CleanArchitecture_PrinciplesTitle" xml:space="preserve">
+    <value>Core Principles</value>
+  </data>
+  <data name="CleanArchitecture_Principle1Title" xml:space="preserve">
+    <value>Independence</value>
+  </data>
+  <data name="CleanArchitecture_Principle1Desc" xml:space="preserve">
+    <value>Business logic independent of frameworks</value>
+  </data>
+  <data name="CleanArchitecture_Principle2Title" xml:space="preserve">
+    <value>Testability</value>
+  </data>
+  <data name="CleanArchitecture_Principle2Desc" xml:space="preserve">
+    <value>Easy to test without UI or database</value>
+  </data>
+  <data name="CleanArchitecture_Principle3Title" xml:space="preserve">
+    <value>Dependency Rule</value>
+  </data>
+  <data name="CleanArchitecture_Principle3Desc" xml:space="preserve">
+    <value>Dependencies point only inward</value>
+  </data>
+  <data name="CleanArchitecture_LayersTitle" xml:space="preserve">
+    <value>Architectural Layers</value>
+  </data>
+  <data name="CleanArchitecture_Layer1" xml:space="preserve">
+    <value>Core</value>
+  </data>
+  <data name="CleanArchitecture_Layer1Desc" xml:space="preserve">
+    <value>→ Entities, Business Rules</value>
+  </data>
+  <data name="CleanArchitecture_Layer2" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="CleanArchitecture_Layer2Desc" xml:space="preserve">
+    <value>→ Use Cases, Interfaces</value>
+  </data>
+  <data name="CleanArchitecture_Layer3" xml:space="preserve">
+    <value>Infrastructure</value>
+  </data>
+  <data name="CleanArchitecture_Layer3Desc" xml:space="preserve">
+    <value>→ Database, External Services</value>
+  </data>
+  <data name="CleanArchitecture_Layer4" xml:space="preserve">
+    <value>Presentation</value>
+  </data>
+  <data name="CleanArchitecture_Layer4Desc" xml:space="preserve">
+    <value>→ UI, Controllers, ViewModels</value>
+  </data>
+  <data name="CleanArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Simulate a service call through the layers:</value>
+  </data>
+  <data name="CleanArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Execute Service Call</value>
+  </data>
+  <data name="CleanArchitecture_CodeTitle" xml:space="preserve">
+    <value>Code Structure</value>
+  </data>
+  <data name="CleanArchitecture_Pros1" xml:space="preserve">
+    <value>• Highly testable</value>
+  </data>
+  <data name="CleanArchitecture_Pros2" xml:space="preserve">
+    <value>• Technology independent</value>
+  </data>
+  <data name="CleanArchitecture_Pros3" xml:space="preserve">
+    <value>• Clear boundaries</value>
+  </data>
+  <data name="CleanArchitecture_Pros4" xml:space="preserve">
+    <value>• Easy to maintain</value>
+  </data>
+  <data name="CleanArchitecture_Cons1" xml:space="preserve">
+    <value>• Learning curve</value>
+  </data>
+  <data name="CleanArchitecture_Cons2" xml:space="preserve">
+    <value>• More boilerplate code</value>
+  </data>
+  <data name="CleanArchitecture_Cons3" xml:space="preserve">
+    <value>• Overkill for small apps</value>
+  </data>
+  <data name="CleanArchitecture_Cons4" xml:space="preserve">
+    <value>• Initial complexity</value>
+  </data>
+  <data name="CleanArchitecture_KeyPoint" xml:space="preserve">
+    <value>Clean Architecture emphasizes separation of concerns and independence from external dependencies, making your codebase more maintainable, testable, and adaptable to change.</value>
+  </data>
+  <data name="Architecture_ConsTitle" xml:space="preserve">
+    <value>Challenges</value>
+  </data>
+  <data name="Architecture_KeyPointTitle" xml:space="preserve">
+    <value>Key Point</value>
+  </data>
+  <data name="CQRSArchitecture_Title" xml:space="preserve">
+    <value>CQRS Architecture</value>
+  </data>
+  <data name="CQRSArchitecture_Description" xml:space="preserve">
+    <value>CQRS (Command Query Responsibility Segregation) separates read and write operations using distinct models for updating and querying data.</value>
+  </data>
+  <data name="CQRSArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Systems with different read/write loads</value>
+  </data>
+  <data name="CQRSArchitecture_WhenToUse2" xml:space="preserve">
+    <value>Complex domains requiring separate models</value>
+  </data>
+  <data name="CQRSArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Applications needing independent scalability</value>
+  </data>
+  <data name="CQRSArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Execute a command and query:</value>
+  </data>
+  <data name="CQRSArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Execute CQRS</value>
+  </data>
+  <data name="CQRSArchitecture_Pros1" xml:space="preserve">
+    <value>• Optimized scalability</value>
+  </data>
+  <data name="CQRSArchitecture_Pros2" xml:space="preserve">
+    <value>• Separation of concerns</value>
+  </data>
+  <data name="CQRSArchitecture_Pros3" xml:space="preserve">
+    <value>• Improved performance</value>
+  </data>
+  <data name="CQRSArchitecture_Cons1" xml:space="preserve">
+    <value>• Increased complexity</value>
+  </data>
+  <data name="CQRSArchitecture_Cons2" xml:space="preserve">
+    <value>• Data synchronization</value>
+  </data>
+  <data name="CQRSArchitecture_Cons3" xml:space="preserve">
+    <value>• Overkill for simple apps</value>
+  </data>
+  <data name="DDDArchitecture_Title" xml:space="preserve">
+    <value>DDD Architecture</value>
+  </data>
+  <data name="DDDArchitecture_Description" xml:space="preserve">
+    <value>Domain-Driven Design focuses on modeling the business domain and uses ubiquitous language shared between developers and domain experts.</value>
+  </data>
+  <data name="DDDArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Complex business domains</value>
+  </data>
+  <data name="DDDArchitecture_WhenToUse2" xml:space="preserve">
+    <value>Close collaboration with domain experts</value>
+  </data>
+  <data name="DDDArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Long-term projects requiring scalability</value>
+  </data>
+  <data name="DDDArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Simulate domain operation:</value>
+  </data>
+  <data name="DDDArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Execute Domain Logic</value>
+  </data>
+  <data name="DDDArchitecture_Pros1" xml:space="preserve">
+    <value>• Business alignment</value>
+  </data>
+  <data name="DDDArchitecture_Pros2" xml:space="preserve">
+    <value>• Ubiquitous language</value>
+  </data>
+  <data name="DDDArchitecture_Pros3" xml:space="preserve">
+    <value>• Centralized business logic</value>
+  </data>
+  <data name="DDDArchitecture_Cons1" xml:space="preserve">
+    <value>• High learning curve</value>
+  </data>
+  <data name="DDDArchitecture_Cons2" xml:space="preserve">
+    <value>• Requires domain expertise</value>
+  </data>
+  <data name="DDDArchitecture_Cons3" xml:space="preserve">
+    <value>• Initial complexity</value>
+  </data>
+  <data name="EventDrivenArchitecture_Title" xml:space="preserve">
+    <value>Event-Driven Architecture</value>
+  </data>
+  <data name="EventDrivenArchitecture_Description" xml:space="preserve">
+    <value>Event-driven architecture where components communicate through producing, detecting, and consuming asynchronous events.</value>
+  </data>
+  <data name="EventDrivenArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Systems requiring loose coupling</value>
+  </data>
+  <data name="EventDrivenArchitecture_WhenToUse2" xml:space="preserve">
+    <value>Real-time applications</value>
+  </data>
+  <data name="EventDrivenArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Microservices and distributed systems</value>
+  </data>
+  <data name="EventDrivenArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Publish and consume an event:</value>
+  </data>
+  <data name="EventDrivenArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Publish Event</value>
+  </data>
+  <data name="EventDrivenArchitecture_Pros1" xml:space="preserve">
+    <value>• Loose coupling</value>
+  </data>
+  <data name="EventDrivenArchitecture_Pros2" xml:space="preserve">
+    <value>• High scalability</value>
+  </data>
+  <data name="EventDrivenArchitecture_Pros3" xml:space="preserve">
+    <value>• Real-time responsiveness</value>
+  </data>
+  <data name="EventDrivenArchitecture_Cons1" xml:space="preserve">
+    <value>• Complex debugging</value>
+  </data>
+  <data name="EventDrivenArchitecture_Cons2" xml:space="preserve">
+    <value>• Event management complexity</value>
+  </data>
+  <data name="EventDrivenArchitecture_Cons3" xml:space="preserve">
+    <value>• Eventual consistency</value>
+  </data>
+  <data name="HexagonalArchitecture_Title" xml:space="preserve">
+    <value>Hexagonal Architecture</value>
+  </data>
+  <data name="HexagonalArchitecture_Description" xml:space="preserve">
+    <value>Hexagonal Architecture (Ports and Adapters) isolates business logic by defining ports and adapters for external interactions.</value>
+  </data>
+  <data name="HexagonalArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Independence from external technologies</value>
+  </data>
+  <data name="HexagonalArchitecture_WhenToUse2" xml:space="preserve">
+    <value>Highly testable applications</value>
+  </data>
+  <data name="HexagonalArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Systems with multiple interfaces</value>
+  </data>
+  <data name="HexagonalArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Interact via ports and adapters:</value>
+  </data>
+  <data name="HexagonalArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Execute via Adapter</value>
+  </data>
+  <data name="HexagonalArchitecture_Pros1" xml:space="preserve">
+    <value>• Technology independence</value>
+  </data>
+  <data name="HexagonalArchitecture_Pros2" xml:space="preserve">
+    <value>• High testability</value>
+  </data>
+  <data name="HexagonalArchitecture_Pros3" xml:space="preserve">
+    <value>• Adaptability</value>
+  </data>
+  <data name="HexagonalArchitecture_Cons1" xml:space="preserve">
+    <value>• Conceptual complexity</value>
+  </data>
+  <data name="HexagonalArchitecture_Cons2" xml:space="preserve">
+    <value>• More structural code</value>
+  </data>
+  <data name="HexagonalArchitecture_Cons3" xml:space="preserve">
+    <value>• Learning curve</value>
+  </data>
+  <data name="LayeredArchitecture_Title" xml:space="preserve">
+    <value>Layered Architecture</value>
+  </data>
+  <data name="LayeredArchitecture_Description" xml:space="preserve">
+    <value>Layered Architecture organizes code into horizontal layers (presentation, business, data) with unidirectional dependencies.</value>
+  </data>
+  <data name="LayeredArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Traditional n-tier applications</value>
+  </data>
+  <data name="LayeredArchitecture_WhenToUse2" xml:space="preserve">
+    <value>Teams with clear responsibilities</value>
+  </data>
+  <data name="LayeredArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Projects requiring simple separation</value>
+  </data>
+  <data name="LayeredArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Call through layers:</value>
+  </data>
+  <data name="LayeredArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Execute Layered Call</value>
+  </data>
+  <data name="LayeredArchitecture_Pros1" xml:space="preserve">
+    <value>• Simple to understand</value>
+  </data>
+  <data name="LayeredArchitecture_Pros2" xml:space="preserve">
+    <value>• Separation of responsibilities</value>
+  </data>
+  <data name="LayeredArchitecture_Pros3" xml:space="preserve">
+    <value>• Easy to implement</value>
+  </data>
+  <data name="LayeredArchitecture_Cons1" xml:space="preserve">
+    <value>• Monolithic dependencies</value>
+  </data>
+  <data name="LayeredArchitecture_Cons2" xml:space="preserve">
+    <value>• Cascading changes</value>
+  </data>
+  <data name="LayeredArchitecture_Cons3" xml:space="preserve">
+    <value>• Possible vertical coupling</value>
+  </data>
+  <data name="MicroservicesArchitecture_Title" xml:space="preserve">
+    <value>Microservices Architecture</value>
+  </data>
+  <data name="MicroservicesArchitecture_Description" xml:space="preserve">
+    <value>Microservices Architecture structures applications as loosely coupled, independently deployable services organized around business capabilities.</value>
+  </data>
+  <data name="MicroservicesArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Complex and large applications</value>
+  </data>
+  <data name="MicroservicesArchitecture_WhenToUse2" xml:space="preserve">
+    <value>Multiple autonomous teams</value>
+  </data>
+  <data name="MicroservicesArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Independent deployments required</value>
+  </data>
+  <data name="MicroservicesArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Communicate between services:</value>
+  </data>
+  <data name="MicroservicesArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Call Service</value>
+  </data>
+  <data name="MicroservicesArchitecture_Pros1" xml:space="preserve">
+    <value>• Independent scalability</value>
+  </data>
+  <data name="MicroservicesArchitecture_Pros2" xml:space="preserve">
+    <value>• Independent deployments</value>
+  </data>
+  <data name="MicroservicesArchitecture_Pros3" xml:space="preserve">
+    <value>• Heterogeneous technologies</value>
+  </data>
+  <data name="MicroservicesArchitecture_Cons1" xml:space="preserve">
+    <value>• Operational complexity</value>
+  </data>
+  <data name="MicroservicesArchitecture_Cons2" xml:space="preserve">
+    <value>• Network communication</value>
+  </data>
+  <data name="MicroservicesArchitecture_Cons3" xml:space="preserve">
+    <value>• Data consistency challenges</value>
+  </data>
+  <data name="MVCArchitecture_Title" xml:space="preserve">
+    <value>MVC Architecture</value>
+  </data>
+  <data name="MVCArchitecture_Description" xml:space="preserve">
+    <value>Model-View-Controller separates applications into Model (data), View (UI), and Controller (logic) for clear separation of concerns.</value>
+  </data>
+  <data name="MVCArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Traditional web applications</value>
+  </data>
+  <data name="MVCArchitecture_WhenToUse2" xml:space="preserve">
+    <value>UI/logic separation required</value>
+  </data>
+  <data name="MVCArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Server-side web development</value>
+  </data>
+  <data name="MVCArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Process an MVC request:</value>
+  </data>
+  <data name="MVCArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Execute MVC Request</value>
+  </data>
+  <data name="MVCArchitecture_Pros1" xml:space="preserve">
+    <value>• Clear separation</value>
+  </data>
+  <data name="MVCArchitecture_Pros2" xml:space="preserve">
+    <value>• Testability</value>
+  </data>
+  <data name="MVCArchitecture_Pros3" xml:space="preserve">
+    <value>• Parallel development</value>
+  </data>
+  <data name="MVCArchitecture_Cons1" xml:space="preserve">
+    <value>• Fat controllers</value>
+  </data>
+  <data name="MVCArchitecture_Cons2" xml:space="preserve">
+    <value>• Learning curve</value>
+  </data>
+  <data name="MVCArchitecture_Cons3" xml:space="preserve">
+    <value>• Complexity for small apps</value>
+  </data>
+  <data name="MVVMArchitecture_Title" xml:space="preserve">
+    <value>MVVM Architecture</value>
+  </data>
+  <data name="MVVMArchitecture_Description" xml:space="preserve">
+    <value>MVVM Architecture separates applications into Model, View, and ViewModel to facilitate data binding, improve testability, and separate presentation logic.</value>
+  </data>
+  <data name="MVVMArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Applications with complex data binding</value>
+  </data>
+  <data name="MVVMArchitecture_WhenToUse2" xml:space="preserve">
+    <value>.NET MAUI, WPF, Xamarin applications</value>
+  </data>
+  <data name="MVVMArchitecture_WhenToUse3" xml:space="preserve">
+    <value>When UI/logic separation is essential</value>
+  </data>
+  <data name="MVVMArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Update data via ViewModel:</value>
+  </data>
+  <data name="MVVMArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Update via ViewModel</value>
+  </data>
+  <data name="MVVMArchitecture_CodeTitle" xml:space="preserve">
+    <value>Structure Example</value>
+  </data>
+  <data name="MVVMArchitecture_Pros1" xml:space="preserve">
+    <value>• Clear UI/logic separation</value>
+  </data>
+  <data name="MVVMArchitecture_Pros2" xml:space="preserve">
+    <value>• Powerful data binding</value>
+  </data>
+  <data name="MVVMArchitecture_Pros3" xml:space="preserve">
+    <value>• High testability</value>
+  </data>
+  <data name="MVVMArchitecture_Pros4" xml:space="preserve">
+    <value>• Code reusability</value>
+  </data>
+  <data name="MVVMArchitecture_Cons1" xml:space="preserve">
+    <value>• Significant boilerplate code</value>
+  </data>
+  <data name="MVVMArchitecture_Cons2" xml:space="preserve">
+    <value>• Learning curve</value>
+  </data>
+  <data name="MVVMArchitecture_Cons3" xml:space="preserve">
+    <value>• Complexity for small apps</value>
+  </data>
+  <data name="OnionArchitecture_Title" xml:space="preserve">
+    <value>Onion Architecture</value>
+  </data>
+  <data name="OnionArchitecture_Description" xml:space="preserve">
+    <value>Onion Architecture organizes code in concentric layers with the domain at the center, avoiding dependencies on infrastructure.</value>
+  </data>
+  <data name="OnionArchitecture_WhenToUse1" xml:space="preserve">
+    <value>Domain-centric applications</value>
+  </data>
+  <data name="OnionArchitecture_WhenToUse2" xml:space="preserve">
+    <value>Infrastructure independence required</value>
+  </data>
+  <data name="OnionArchitecture_WhenToUse3" xml:space="preserve">
+    <value>Testability and maintainability priorities</value>
+  </data>
+  <data name="OnionArchitecture_InteractiveDesc" xml:space="preserve">
+    <value>Navigate through layers:</value>
+  </data>
+  <data name="OnionArchitecture_InteractiveButton" xml:space="preserve">
+    <value>Execute Through Layers</value>
+  </data>
+  <data name="OnionArchitecture_Pros1" xml:space="preserve">
+    <value>• Isolated domain logic</value>
+  </data>
+  <data name="OnionArchitecture_Pros2" xml:space="preserve">
+    <value>• Maximum testability</value>
+  </data>
+  <data name="OnionArchitecture_Pros3" xml:space="preserve">
+    <value>• Clear dependencies</value>
+  </data>
+  <data name="OnionArchitecture_Cons1" xml:space="preserve">
+    <value>• Initial complexity</value>
+  </data>
+  <data name="OnionArchitecture_Cons2" xml:space="preserve">
+    <value>• Learning curve</value>
+  </data>
+  <data name="OnionArchitecture_Cons3" xml:space="preserve">
+    <value>• Overkill for simple apps</value>
+  </data>
+  <data name="MainPage_Title" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="MainPage_AppName" xml:space="preserve">
+    <value>Code Patterns</value>
+  </data>
+  <data name="MainPage_Tagline" xml:space="preserve">
+    <value>Master Software Architecture, Design Patterns &amp; SOLID Principles</value>
+  </data>
+  <data name="MainPage_WelcomeTitle" xml:space="preserve">
+    <value>Welcome! 👋</value>
+  </data>
+  <data name="MainPage_WelcomeDesc" xml:space="preserve">
+    <value>Explore comprehensive design patterns, architectural styles, and SOLID principles used in modern software development. Learn through interactive examples and practical code demonstrations.</value>
+  </data>
+  <data name="MainPage_QuickAccessTitle" xml:space="preserve">
+    <value>Quick Access</value>
+  </data>
+  <data name="MainPage_DesignPatternsCard" xml:space="preserve">
+    <value>Design Patterns</value>
+  </data>
+  <data name="MainPage_DesignPatternsDesc" xml:space="preserve">
+    <value>23 proven software design solutions</value>
+  </data>
+  <data name="MainPage_ArchitecturesCard" xml:space="preserve">
+    <value>Software Architectures</value>
+  </data>
+  <data name="MainPage_ArchitecturesDesc" xml:space="preserve">
+    <value>10 architectural patterns for scalable systems</value>
+  </data>
+  <data name="MainPage_SOLIDCard" xml:space="preserve">
+    <value>SOLID Principles</value>
+  </data>
+  <data name="MainPage_SOLIDDesc" xml:space="preserve">
+    <value>5 fundamental principles for robust design</value>
+  </data>
+  <data name="MainPage_QuizCard" xml:space="preserve">
+    <value>Test Your Knowledge</value>
+  </data>
+  <data name="MainPage_QuizDesc" xml:space="preserve">
+    <value>Interactive quizzes and challenges</value>
+  </data>
+  <data name="MainPage_PatternsCount" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="MainPage_PatternsLabel" xml:space="preserve">
+    <value>Design Patterns</value>
+  </data>
+  <data name="MainPage_ArchitecturesCount" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="MainPage_ArchitecturesLabel" xml:space="preserve">
+    <value>Architectures</value>
+  </data>
+  <data name="MainPage_SOLIDCount" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="MainPage_SOLIDLabel" xml:space="preserve">
+    <value>SOLID Principles</value>
+  </data>
+  <data name="MainPage_WhatYouLearnTitle" xml:space="preserve">
+    <value>What You'll Learn</value>
+  </data>
+  <data name="MainPage_CreationalPatternsTitle" xml:space="preserve">
+    <value>Creational Patterns</value>
+  </data>
+  <data name="MainPage_CreationalPatternsDesc" xml:space="preserve">
+    <value>Object creation mechanisms</value>
+  </data>
+  <data name="MainPage_StructuralPatternsTitle" xml:space="preserve">
+    <value>Structural Patterns</value>
+  </data>
+  <data name="MainPage_StructuralPatternsDesc" xml:space="preserve">
+    <value>Class and object composition</value>
+  </data>
+  <data name="MainPage_BehavioralPatternsTitle" xml:space="preserve">
+    <value>Behavioral Patterns</value>
+  </data>
+  <data name="MainPage_BehavioralPatternsDesc" xml:space="preserve">
+    <value>Object collaboration and responsibilities</value>
+  </data>
+  <data name="MainPage_ArchitecturesTitle" xml:space="preserve">
+    <value>Software Architectures</value>
+  </data>
+  <data name="MainPage_ArchitecturesTitle2" xml:space="preserve">
+    <value>Large-scale system organization</value>
+  </data>
+  <data name="MainPage_SOLIDTitle" xml:space="preserve">
+    <value>SOLID Principles</value>
+  </data>
+  <data name="MainPage_SOLIDTitle2" xml:space="preserve">
+    <value>Foundations for robust object-oriented design</value>
+  </data>
+  <data name="DesignPatternsPage_Title" xml:space="preserve">
+    <value>Design Patterns</value>
+  </data>
+  <data name="DesignPatternsPage_Tagline" xml:space="preserve">
+    <value>23 proven solutions to common software design problems</value>
+  </data>
+  <data name="DesignPatternsPage_SearchPlaceholder" xml:space="preserve">
+    <value>Search for patterns...</value>
+  </data>
+  <data name="DesignPatternsPage_NoResultsTitle" xml:space="preserve">
+    <value>No patterns found</value>
+  </data>
+  <data name="DesignPatternsPage_NoResultsDesc" xml:space="preserve">
+    <value>Try adjusting your search term</value>
+  </data>
+  <data name="ArchitecturesPage_Title" xml:space="preserve">
+    <value>Software Architectures</value>
+  </data>
+  <data name="ArchitecturesPage_Tagline" xml:space="preserve">
+    <value>10 architectural patterns for scalable systems</value>
+  </data>
+  <data name="ArchitecturesPage_SearchPlaceholder" xml:space="preserve">
+    <value>Search for architectures...</value>
+  </data>
+  <data name="ArchitecturesPage_NoResultsTitle" xml:space="preserve">
+    <value>No architectures found</value>
+  </data>
+  <data name="ArchitecturesPage_NoResultsDesc" xml:space="preserve">
+    <value>Try adjusting your search term</value>
+  </data>
+  <data name="QuizPage_Title" xml:space="preserve">
+    <value>Knowledge Quiz</value>
+  </data>
+  <data name="QuizPage_Tagline" xml:space="preserve">
+    <value>Test your understanding</value>
+  </data>
+  <data name="QuizPage_TopicSelectionTitle" xml:space="preserve">
+    <value>Choose a Topic</value>
+  </data>
+  <data name="QuizPage_TopicInputLabel" xml:space="preserve">
+    <value>Enter the name of a pattern or architecture:</value>
+  </data>
+  <data name="QuizPage_TopicInputPlaceholder" xml:space="preserve">
+    <value>e.g., Singleton, MVC, Clean Architecture...</value>
+  </data>
+  <data name="QuizPage_GenerateButton" xml:space="preserve">
+    <value>🎲 Generate Question</value>
+  </data>
+  <data name="QuizPage_QuickTopicsTitle" xml:space="preserve">
+    <value>Quick Topics</value>
+  </data>
+  <data name="QuizPage_QuestionTitle" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="QuizPage_YourAnswerLabel" xml:space="preserve">
+    <value>Your Answer:</value>
+  </data>
+  <data name="QuizPage_AnswerPlaceholder" xml:space="preserve">
+    <value>Enter A, B, C, or D</value>
+  </data>
+  <data name="QuizPage_SubmitButton" xml:space="preserve">
+    <value>✓ Submit Answer</value>
+  </data>
+  <data name="QuizPage_ResultTitle" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="QuizPage_TipsTitle" xml:space="preserve">
+    <value>Quiz Tips</value>
+  </data>
+  <data name="QuizPage_TipsContent" xml:space="preserve">
+    <value>• Read each question carefully
+• Think about real-world applications
+• Review pattern details if unsure
+• Practice makes perfect!</value>
+  </data>
+  <data name="SOLIDPrinciplesPage_Title" xml:space="preserve">
+    <value>SOLID Principles</value>
+  </data>
+  <data name="SOLIDPrinciplesPage_Tagline" xml:space="preserve">
+    <value>5 fundamental principles for robust object-oriented design</value>
+  </data>
+  <data name="SOLIDPrinciplesPage_SearchPlaceholder" xml:space="preserve">
+    <value>Search for principles...</value>
+  </data>
+  <data name="SOLIDPrinciplesPage_NoResultsTitle" xml:space="preserve">
+    <value>No principles found</value>
+  </data>
+  <data name="SOLIDPrinciplesPage_NoResultsDesc" xml:space="preserve">
+    <value>Try adjusting your search term</value>
+  </data>
+  <data name="SOLID_Category" xml:space="preserve">
+    <value>SOLID</value>
+  </data>
+  <data name="SOLID_KeyConceptsTitle" xml:space="preserve">
+    <value>Key Concepts</value>
+  </data>
+  <data name="SOLID_InteractiveTitle" xml:space="preserve">
+    <value>Interactive Example</value>
+  </data>
+  <data name="SOLID_BadExampleTitle" xml:space="preserve">
+    <value>Bad Example (Violation)</value>
+  </data>
+  <data name="SOLID_GoodExampleTitle" xml:space="preserve">
+    <value>Good Example (Follows Principle)</value>
+  </data>
+  <data name="SOLID_ShowViolationButton" xml:space="preserve">
+    <value>Show Example ❌ (Violation)</value>
+  </data>
+  <data name="SOLID_ShowCorrectButton" xml:space="preserve">
+    <value>Show Example ✓ (Correct)</value>
+  </data>
+  <data name="SOLID_AdvantagesTitle" xml:space="preserve">
+    <value>Advantages</value>
+  </data>
+  <data name="SOLID_AttentionPointsTitle" xml:space="preserve">
+    <value>Points of Attention</value>
+  </data>
+  <data name="SRP_Title" xml:space="preserve">
+    <value>Single Responsibility Principle</value>
+  </data>
+  <data name="SRP_Description" xml:space="preserve">
+    <value>The Single Responsibility Principle states that a class should have only one reason to change. Each class should have a single responsibility or purpose.</value>
+  </data>
+  <data name="SRP_KeyConcept1" xml:space="preserve">
+    <value>One class = one responsibility</value>
+  </data>
+  <data name="SRP_KeyConcept2" xml:space="preserve">
+    <value>Easier maintenance and understanding</value>
+  </data>
+  <data name="SRP_KeyConcept3" xml:space="preserve">
+    <value>Reduces coupling between responsibilities</value>
+  </data>
+  <data name="SRP_KeyConcept4" xml:space="preserve">
+    <value>Improves code reusability</value>
+  </data>
+  <data name="SRP_InteractiveDesc" xml:space="preserve">
+    <value>Compare a class with multiple responsibilities vs separate classes:</value>
+  </data>
+  <data name="SRP_Advantage1" xml:space="preserve">
+    <value>• More readable code</value>
+  </data>
+  <data name="SRP_Advantage2" xml:space="preserve">
+    <value>• Simplified maintenance</value>
+  </data>
+  <data name="SRP_Advantage3" xml:space="preserve">
+    <value>• Improved testability</value>
+  </data>
+  <data name="SRP_Advantage4" xml:space="preserve">
+    <value>• Easier reusability</value>
+  </data>
+  <data name="SRP_Attention1" xml:space="preserve">
+    <value>• Risk of over-fragmentation</value>
+  </data>
+  <data name="SRP_Attention2" xml:space="preserve">
+    <value>• More classes to manage</value>
+  </data>
+  <data name="SRP_Attention3" xml:space="preserve">
+    <value>• Defining "responsibility" is subjective</value>
+  </data>
+  <data name="OCP_Title" xml:space="preserve">
+    <value>Open/Closed Principle</value>
+  </data>
+  <data name="OCP_Description" xml:space="preserve">
+    <value>The Open/Closed Principle states that software entities (classes, modules, functions) should be open for extension but closed for modification.</value>
+  </data>
+  <data name="OCP_KeyConcept1" xml:space="preserve">
+    <value>Open for extension (inheritance, composition)</value>
+  </data>
+  <data name="OCP_KeyConcept2" xml:space="preserve">
+    <value>Closed for modification (stable code)</value>
+  </data>
+  <data name="OCP_KeyConcept3" xml:space="preserve">
+    <value>Use abstraction (interfaces, abstract classes)</value>
+  </data>
+  <data name="OCP_KeyConcept4" xml:space="preserve">
+    <value>Avoids regressions during changes</value>
+  </data>
+  <data name="OCP_InteractiveDesc" xml:space="preserve">
+    <value>Compare adding new features with/without OCP:</value>
+  </data>
+  <data name="OCP_Advantage1" xml:space="preserve">
+    <value>• Risk-free extensibility</value>
+  </data>
+  <data name="OCP_Advantage2" xml:space="preserve">
+    <value>• Reduced regressions</value>
+  </data>
+  <data name="OCP_Advantage3" xml:space="preserve">
+    <value>• Stable and reliable code</value>
+  </data>
+  <data name="OCP_Advantage4" xml:space="preserve">
+    <value>• Facilitates new features</value>
+  </data>
+  <data name="OCP_Attention1" xml:space="preserve">
+    <value>• Anticipation required</value>
+  </data>
+  <data name="OCP_Attention2" xml:space="preserve">
+    <value>• More abstractions</value>
+  </data>
+  <data name="OCP_Attention3" xml:space="preserve">
+    <value>• Increased initial complexity</value>
+  </data>
+  <data name="LSP_Title" xml:space="preserve">
+    <value>Liskov Substitution Principle</value>
+  </data>
+  <data name="LSP_Description" xml:space="preserve">
+    <value>The Liskov Substitution Principle states that objects of a derived class must be able to replace objects of the base class without altering the program's behavior.</value>
+  </data>
+  <data name="LSP_KeyConcept1" xml:space="preserve">
+    <value>Subtypes must be substitutable</value>
+  </data>
+  <data name="LSP_KeyConcept2" xml:space="preserve">
+    <value>Respect base class contracts</value>
+  </data>
+  <data name="LSP_KeyConcept3" xml:space="preserve">
+    <value>Don't violate client expectations</value>
+  </data>
+  <data name="LSP_KeyConcept4" xml:space="preserve">
+    <value>Ensures hierarchy consistency</value>
+  </data>
+  <data name="LSP_InteractiveDesc" xml:space="preserve">
+    <value>Compare a correct hierarchy with an LSP violation:</value>
+  </data>
+  <data name="LSP_Advantage1" xml:space="preserve">
+    <value>• Reliable polymorphism</value>
+  </data>
+  <data name="LSP_Advantage2" xml:space="preserve">
+    <value>• Predictable behavior</value>
+  </data>
+  <data name="LSP_Advantage3" xml:space="preserve">
+    <value>• Robust hierarchies</value>
+  </data>
+  <data name="LSP_Advantage4" xml:space="preserve">
+    <value>• Facilitates testing</value>
+  </data>
+  <data name="LSP_Attention1" xml:space="preserve">
+    <value>• Hard to identify violations</value>
+  </data>
+  <data name="LSP_Attention2" xml:space="preserve">
+    <value>• Requires good design</value>
+  </data>
+  <data name="LSP_Attention3" xml:space="preserve">
+    <value>• May limit inheritance</value>
+  </data>
+  <data name="ISP_Title" xml:space="preserve">
+    <value>Interface Segregation Principle</value>
+  </data>
+  <data name="ISP_Description" xml:space="preserve">
+    <value>The Interface Segregation Principle states that no client should be forced to depend on methods it doesn't use. Prefer multiple specific interfaces over one general interface.</value>
+  </data>
+  <data name="ISP_KeyConcept1" xml:space="preserve">
+    <value>Small and specific interfaces</value>
+  </data>
+  <data name="ISP_KeyConcept2" xml:space="preserve">
+    <value>Avoid fat interfaces</value>
+  </data>
+  <data name="ISP_KeyConcept3" xml:space="preserve">
+    <value>Clients depend only on what they need</value>
+  </data>
+  <data name="ISP_KeyConcept4" xml:space="preserve">
+    <value>Reduces unnecessary coupling</value>
+  </data>
+  <data name="ISP_InteractiveDesc" xml:space="preserve">
+    <value>Compare a monolithic interface with segregated interfaces:</value>
+  </data>
+  <data name="ISP_Advantage1" xml:space="preserve">
+    <value>• Reduced coupling</value>
+  </data>
+  <data name="ISP_Advantage2" xml:space="preserve">
+    <value>• Clear and focused interfaces</value>
+  </data>
+  <data name="ISP_Advantage3" xml:space="preserve">
+    <value>• Increased flexibility</value>
+  </data>
+  <data name="ISP_Advantage4" xml:space="preserve">
+    <value>• Simpler implementations</value>
+  </data>
+  <data name="ISP_Attention1" xml:space="preserve">
+    <value>• Interface proliferation</value>
+  </data>
+  <data name="ISP_Attention2" xml:space="preserve">
+    <value>• Navigation complexity</value>
+  </data>
+  <data name="ISP_Attention3" xml:space="preserve">
+    <value>• Balance to be found</value>
+  </data>
+  <data name="DIP_Title" xml:space="preserve">
+    <value>Dependency Inversion Principle</value>
+  </data>
+  <data name="DIP_Description" xml:space="preserve">
+    <value>The Dependency Inversion Principle states that high-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details, but details should depend on abstractions.</value>
+  </data>
+  <data name="DIP_KeyConcept1" xml:space="preserve">
+    <value>Depend on abstractions (interfaces) not implementations</value>
+  </data>
+  <data name="DIP_KeyConcept2" xml:space="preserve">
+    <value>High-level modules independent of details</value>
+  </data>
+  <data name="DIP_KeyConcept3" xml:space="preserve">
+    <value>Dependency Injection (DI) for flexibility</value>
+  </data>
+  <data name="DIP_KeyConcept4" xml:space="preserve">
+    <value>Facilitates testing and implementation changes</value>
+  </data>
+  <data name="DIP_InteractiveDesc" xml:space="preserve">
+    <value>Compare tight coupling with dependency inversion:</value>
+  </data>
+  <data name="DIP_ShowViolationButton" xml:space="preserve">
+    <value>Show Example ❌ (Violation)</value>
+  </data>
+  <data name="DIP_ShowCorrectButton" xml:space="preserve">
+    <value>Show Example ✓ (Follows DIP)</value>
+  </data>
+  <data name="DIP_Advantage1" xml:space="preserve">
+    <value>• Reduced coupling</value>
+  </data>
+  <data name="DIP_Advantage2" xml:space="preserve">
+    <value>• Maximum flexibility</value>
+  </data>
+  <data name="DIP_Advantage3" xml:space="preserve">
+    <value>• Easier testing (mocking)</value>
+  </data>
+  <data name="DIP_Advantage4" xml:space="preserve">
+    <value>• Simple implementation changes</value>
+  </data>
+  <data name="DIP_Attention1" xml:space="preserve">
+    <value>• Requires DI container</value>
+  </data>
+  <data name="DIP_Attention2" xml:space="preserve">
+    <value>• More abstractions to create</value>
+  </data>
+  <data name="DIP_Attention3" xml:space="preserve">
+    <value>• Initial learning curve</value>
   </data>
 </root>

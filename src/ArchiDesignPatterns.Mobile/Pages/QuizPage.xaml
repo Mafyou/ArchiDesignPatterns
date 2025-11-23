@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.QuizPage"
              x:DataType="viewmodels:QuizViewModel"
-             Title="Quiz">
+             Title="{x:Static resx:Strings.QuizPage_Title}">
     
     <Grid RowDefinitions="Auto,*">
         
@@ -17,12 +18,12 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🎯" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Quiz de Connaissances"
+                        <Label Text="{x:Static resx:Strings.QuizPage_Title}"
                                FontSize="28"
                                FontAttributes="Bold"
                                TextColor="White"
                                SemanticProperties.HeadingLevel="Level1" />
-                        <Label Text="Testez votre compréhension"
+                        <Label Text="{x:Static resx:Strings.QuizPage_Tagline}"
                                FontSize="14"
                                TextColor="White"
                                Opacity="0.9" />
@@ -40,7 +41,7 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="📚" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Choisissez un Sujet"
+                            <Label Text="{x:Static resx:Strings.QuizPage_TopicSelectionTitle}"
                                    Style="{StaticResource SubTitle}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
@@ -48,16 +49,16 @@
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         
                         <VerticalStackLayout Spacing="8">
-                            <Label Text="Entrez le nom d'un pattern ou d'une architecture :"
+                            <Label Text="{x:Static resx:Strings.QuizPage_TopicInputLabel}"
                                    Style="{StaticResource BodyMedium}"
                                    TextColor="{StaticResource Gray600}" />
                             <Entry Keyboard="Chat"
-                                   Placeholder="ex: Singleton, MVC, Clean Architecture..."
+                                   Placeholder="{x:Static resx:Strings.QuizPage_TopicInputPlaceholder}"
                                    Text="{Binding Topic}"
                                    HeightRequest="50" />
                         </VerticalStackLayout>
                         
-                        <Button Text="🎲 Générer une Question"
+                        <Button Text="{x:Static resx:Strings.QuizPage_GenerateButton}"
                                 Command="{Binding GenerateCommand}"
                                 HorizontalOptions="Fill" />
                     </VerticalStackLayout>
@@ -72,7 +73,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💡" FontSize="16" VerticalOptions="Center" />
-                            <Label Text="Sujets Rapides"
+                            <Label Text="{x:Static resx:Strings.QuizPage_QuickTopicsTitle}"
                                    FontSize="14" FontAttributes="Bold"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
@@ -123,7 +124,7 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="❓" FontSize="24" VerticalOptions="Center" />
-                            <Label Text="Question"
+                            <Label Text="{x:Static resx:Strings.QuizPage_QuestionTitle}"
                                    Style="{StaticResource Title}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
@@ -137,17 +138,17 @@
                                MinimumHeightRequest="60" />
                         
                         <VerticalStackLayout Spacing="12">
-                            <Label Text="Votre Réponse :"
+                            <Label Text="{x:Static resx:Strings.QuizPage_YourAnswerLabel}"
                                    Style="{StaticResource BodyMedium}"
                                    TextColor="{StaticResource Gray600}" />
                             <Entry Keyboard="Chat"
-                                   Placeholder="Entrez A, B, C, ou D"
+                                   Placeholder="{x:Static resx:Strings.QuizPage_AnswerPlaceholder}"
                                    Text="{Binding Answer}"
                                    HeightRequest="50"
                                    MaxLength="1" />
                         </VerticalStackLayout>
                         
-                        <Button Text="✓ Soumettre la Réponse"
+                        <Button Text="{x:Static resx:Strings.QuizPage_SubmitButton}"
                                 Command="{Binding EvaluateCommand}"
                                 BackgroundColor="{StaticResource Success}"
                                 HorizontalOptions="Fill" />
@@ -161,7 +162,7 @@
                             <VerticalStackLayout Spacing="8">
                                 <HorizontalStackLayout Spacing="8">
                                     <Label Text="📊" FontSize="20" VerticalOptions="Center" />
-                                    <Label Text="Résultat"
+                                    <Label Text="{x:Static resx:Strings.QuizPage_ResultTitle}"
                                            FontSize="16" FontAttributes="Bold"
                                            VerticalOptions="Center" />
                                 </HorizontalStackLayout>
@@ -182,9 +183,9 @@
                     <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                         <Label Text="💡" FontSize="24" VerticalOptions="Start" />
                         <VerticalStackLayout Grid.Column="1" Spacing="8">
-                            <Label Text="Conseils pour le Quiz"
+                            <Label Text="{x:Static resx:Strings.QuizPage_TipsTitle}"
                                    FontSize="14" FontAttributes="Bold" />
-                            <Label Text="• Lisez chaque question attentivement&#10;• Pensez aux applications du monde réel&#10;• Révisez les détails des patterns si vous êtes incertain&#10;• La pratique rend parfait !"
+                            <Label Text="{x:Static resx:Strings.QuizPage_TipsContent}"
                                    Style="{StaticResource BodySmall}"
                                    LineBreakMode="WordWrap" />
                         </VerticalStackLayout>

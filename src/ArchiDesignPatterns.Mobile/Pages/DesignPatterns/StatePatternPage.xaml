@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.StatePatternPage"
              x:DataType="viewmodels:StatePatternViewModel"
-             Title="State">
+             Title="{x:Static resx:Strings.StatePattern_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -15,14 +16,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔄" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="State Pattern"
+                        <Label Text="{x:Static resx:Strings.StatePattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Comportemental" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Behavioral}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -36,10 +37,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern State permet à un objet de changer son comportement lorsque son état interne change. L'objet semblera avoir changé de classe."
+                        <Label Text="{x:Static resx:Strings.StatePattern_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -48,23 +52,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand un objet a un comportement différent selon son état"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.StatePattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour éviter les grandes instructions conditionnelles"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.StatePattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour faciliter l'ajout de nouveaux états"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.StatePattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -76,15 +83,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Changez l'état de l'objet :"
+                        <Label Text="{x:Static resx:Strings.StatePattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Changer d'état"
+                        <Button Text="{x:Static resx:Strings.StatePattern_InteractiveButton}"
                                 Clicked="OnChangeStateClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -98,12 +105,31 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de code"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
                                 Text="// Interface State&#x0a;public interface IState&#x0a;{&#x0a;    string Handle();&#x0a;}&#x0a;&#x0a;// États concrets&#x0a;public class StateA : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;État A actif&quot;;&#x0a;}&#x0a;&#x0a;public class StateB : IState&#x0a;{&#x0a;    public string Handle() =&gt; &quot;État B actif&quot;;&#x0a;}&#x0a;&#x0a;// Contexte&#x0a;public class Context&#x0a;{&#x0a;    private IState _state;&#x0a;&#x0a;    public Context(IState state)&#x0a;    {&#x0a;        TransitionTo(state);&#x0a;    }&#x0a;&#x0a;    public void TransitionTo(IState state)&#x0a;    {&#x0a;        _state = state;&#x0a;        Console.WriteLine($&quot;Transition vers {state.GetType().Name}&quot;);&#x0a;    }&#x0a;&#x0a;    public string Request() =&gt; _state.Handle();&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_RealWorldTitle}"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="{x:Static resx:Strings.StatePattern_RealWorldDesc}"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -114,17 +140,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Principe ouvert/fermé"
+                                <Label Text="{x:Static resx:Strings.StatePattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Simplifie le code complexe"
+                                <Label Text="{x:Static resx:Strings.StatePattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Responsabilité unique par état"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Facilite les transitions"
+                                <Label Text="{x:Static resx:Strings.StatePattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -135,15 +159,13 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Surcharge pour peu d'états"
+                                <Label Text="{x:Static resx:Strings.StatePattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Augmente le nombre de classes"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Complexité si peu d'états"
+                                <Label Text="{x:Static resx:Strings.StatePattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

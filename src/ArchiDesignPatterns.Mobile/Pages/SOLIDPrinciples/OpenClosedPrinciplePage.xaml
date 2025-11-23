@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciples.OpenClosedPrinciplePage"
              x:DataType="viewmodels:OpenClosedPrincipleViewModel"
-             Title="Open/Closed">
+             Title="{x:Static resx:Strings.OCP_Title}">
 
     <Grid RowDefinitions="Auto,*">
         
@@ -17,14 +18,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🔷" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Open/Closed Principle"
+                        <Label Text="{x:Static resx:Strings.OCP_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="SOLID" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.SOLID_Category}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -38,10 +39,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le principe ouvert/fermé stipule que les entités logicielles (classes, modules, fonctions) doivent être ouvertes à l'extension mais fermées à la modification. Vous devez pouvoir étendre le comportement sans modifier le code existant."
+                        <Label Text="{x:Static resx:Strings.OCP_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -50,28 +54,28 @@
                 <!-- Key Concepts -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🔑 Concepts Clés"
+                        <Label Text="{x:Static resx:Strings.SOLID_KeyConceptsTitle}"
                                Style="{StaticResource SubTitle}" />
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Ouvert à l'extension (ajout de nouvelles fonctionnalités)"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.OCP_KeyConcept1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Fermé à la modification (code existant non touché)"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.OCP_KeyConcept2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Utiliser l'abstraction et le polymorphisme"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.OCP_KeyConcept3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Réduire les risques de régression"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.OCP_KeyConcept4}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -83,20 +87,20 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.SOLID_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Comparez l'ajout d'une nouvelle forme avec et sans OCP :"
+                        <Label Text="{x:Static resx:Strings.OCP_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Voir l'Exemple ❌ (Violation)"
+                        <Button Text="{x:Static resx:Strings.SOLID_ShowViolationButton}"
                                 Clicked="OnShowViolationClicked"
                                 HorizontalOptions="Fill"
                                 BackgroundColor="{StaticResource Error}" />
-                        <Button Text="Voir l'Exemple ✓ (Respect de l'OCP)"
+                        <Button Text="{x:Static resx:Strings.SOLID_ShowCorrectButton}"
                                 Clicked="OnShowCorrectClicked"
                                 HorizontalOptions="Fill"
                                 BackgroundColor="{StaticResource Success}" />
@@ -111,7 +115,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="❌" FontSize="20" />
-                            <Label Text="Mauvais Exemple (Violation)"
+                            <Label Text="{x:Static resx:Strings.SOLID_BadExampleTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -125,7 +129,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="✅" FontSize="20" />
-                            <Label Text="Bon Exemple (Respect de l'OCP)"
+                            <Label Text="{x:Static resx:Strings.SOLID_GoodExampleTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -141,17 +145,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SOLID_AdvantagesTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Extensibilité sans risque"
+                                <Label Text="{x:Static resx:Strings.OCP_Advantage1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Code stable et robuste"
+                                <Label Text="{x:Static resx:Strings.OCP_Advantage2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Moins de bugs de régression"
+                                <Label Text="{x:Static resx:Strings.OCP_Advantage3}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Facilite les tests"
+                                <Label Text="{x:Static resx:Strings.OCP_Advantage4}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -162,15 +166,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Points d'attention" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SOLID_AttentionPointsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Nécessite une bonne abstraction"
+                                <Label Text="{x:Static resx:Strings.OCP_Attention1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Peut augmenter la complexité"
+                                <Label Text="{x:Static resx:Strings.OCP_Attention2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Difficile à appliquer rétroactivement"
+                                <Label Text="{x:Static resx:Strings.OCP_Attention3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

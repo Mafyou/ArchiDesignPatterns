@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.Architectures.DDDArchitecturePage"
-             Title="Domain-Driven Design (DDD)">
+             Title="{x:Static resx:Strings.DDDArchitecture_Title}">
     <ContentPage.BindingContext>
         <viewmodels:DDDArchitectureViewModel />
     </ContentPage.BindingContext>
@@ -18,14 +19,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="🏛️" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Domain-Driven Design"
+                        <Label Text="{x:Static resx:Strings.DDDArchitecture_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Architecture" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_Architecture}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -38,10 +39,13 @@
                 
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le Domain-Driven Design (DDD) est une approche du développement logiciel qui place le domaine métier et sa logique au centre. Elle met l'accent sur la collaboration entre experts métier et techniques."
+                        <Label Text="{x:Static resx:Strings.DDDArchitecture_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -173,16 +177,16 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Exécutez une règle métier dans le modèle de domaine :"
+                        <Label Text="{x:Static resx:Strings.DDDArchitecture_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Exécuter la règle métier"
+                        <Button Text="{x:Static resx:Strings.DDDArchitecture_InteractiveButton}"
                                 Clicked="OnExecuteBusinessRuleClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -195,7 +199,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Aperçu du Code"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -209,17 +213,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Bénéfices" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Code centré sur le domaine"
+                                <Label Text="{x:Static resx:Strings.DDDArchitecture_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Meilleure communication"
+                                <Label Text="{x:Static resx:Strings.DDDArchitecture_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Architecture flexible"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Logique métier testable"
+                                <Label Text="{x:Static resx:Strings.DDDArchitecture_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -229,17 +231,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Défis" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.Architecture_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Courbe d'apprentissage élevée"
+                                <Label Text="{x:Static resx:Strings.DDDArchitecture_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Nécessite une expertise métier"
+                                <Label Text="{x:Static resx:Strings.DDDArchitecture_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Investissement en temps"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Peut être excessif selon le contexte"
+                                <Label Text="{x:Static resx:Strings.DDDArchitecture_Cons3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -254,7 +254,7 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💡" FontSize="24" />
-                            <Label Text="À retenir"
+                            <Label Text="{x:Static resx:Strings.Architecture_KeyPointTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource Title}" />
                         </HorizontalStackLayout>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.MainPage"
              Shell.NavBarIsVisible="True"
-             Title="Bienvenue">
+             Title="{x:Static resx:Strings.MainPage_Title}">
 
     <ScrollView>
         <VerticalStackLayout Spacing="0">
@@ -18,13 +19,13 @@
                            Aspect="AspectFit"
                            SemanticProperties.Description="Application d'apprentissage des Codes Patterns" />
                     
-                    <Label Text="Code Patterns"
+                    <Label Text="{x:Static resx:Strings.MainPage_AppName}"
                            FontSize="36"
                            FontAttributes="Bold"
                            TextColor="White"
                            HorizontalTextAlignment="Center" />
                     
-                    <Label Text="Maîtrisez l'Architecture Logicielle, les Design Patterns &amp; les principes SOLID"
+                    <Label Text="{x:Static resx:Strings.MainPage_Tagline}"
                            FontSize="18"
                            TextColor="White"
                            Opacity="0.9"
@@ -38,16 +39,16 @@
                 
                 <!-- Welcome Message -->
                 <VerticalStackLayout Spacing="8">
-                    <Label Text="Bienvenue ! 👋"
+                    <Label Text="{x:Static resx:Strings.MainPage_WelcomeTitle}"
                            Style="{StaticResource Title}" />
-                    <Label Text="Explorez les design patterns, les styles architecturaux et les principes SOLID complets utilisés dans le développement logiciel moderne. Apprenez à travers des exemples interactifs et des démonstrations de code pratiques."
+                    <Label Text="{x:Static resx:Strings.MainPage_WelcomeDesc}"
                            Style="{StaticResource BodyLarge}"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
 
                 <!-- Quick Access Navigation Cards -->
                 <VerticalStackLayout Spacing="16">
-                    <Label Text="Accès Rapide"
+                    <Label Text="{x:Static resx:Strings.MainPage_QuickAccessTitle}"
                            Style="{StaticResource SubTitle}" />
                     
                     <!-- Design Patterns Card -->
@@ -69,9 +70,9 @@
                             </Border>
                             
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
-                                <Label Text="Design Patterns"
+                                <Label Text="{x:Static resx:Strings.MainPage_DesignPatternsCard}"
                                        Style="{StaticResource SubTitle}" />
-                                <Label Text="23 solutions de conception logicielle éprouvées"
+                                <Label Text="{x:Static resx:Strings.MainPage_DesignPatternsDesc}"
                                        Style="{StaticResource BodySmall}"
                                        TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
                             </VerticalStackLayout>
@@ -101,9 +102,9 @@
                             </Border>
                             
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
-                                <Label Text="Architectures Logicielles"
+                                <Label Text="{x:Static resx:Strings.MainPage_ArchitecturesCard}"
                                        Style="{StaticResource SubTitle}" />
-                                <Label Text="10 patterns architecturaux pour systèmes évolutifs"
+                                <Label Text="{x:Static resx:Strings.MainPage_ArchitecturesDesc}"
                                        Style="{StaticResource BodySmall}"
                                        TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
                             </VerticalStackLayout>
@@ -133,9 +134,9 @@
                             </Border>
                             
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
-                                <Label Text="Principes SOLID"
+                                <Label Text="{x:Static resx:Strings.MainPage_SOLIDCard}"
                                        Style="{StaticResource SubTitle}" />
-                                <Label Text="5 principes fondamentaux pour une conception robuste"
+                                <Label Text="{x:Static resx:Strings.MainPage_SOLIDDesc}"
                                        Style="{StaticResource BodySmall}"
                                        TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
                             </VerticalStackLayout>
@@ -165,9 +166,9 @@
                             </Border>
                             
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="4">
-                                <Label Text="Testez vos Connaissances"
+                                <Label Text="{x:Static resx:Strings.MainPage_QuizCard}"
                                        Style="{StaticResource SubTitle}" />
-                                <Label Text="Quiz interactifs et défis"
+                                <Label Text="{x:Static resx:Strings.MainPage_QuizDesc}"
                                        Style="{StaticResource BodySmall}"
                                        TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
                             </VerticalStackLayout>
@@ -186,11 +187,11 @@
                     <Border Grid.Column="0" Style="{StaticResource Card}">
                         <VerticalStackLayout Spacing="8" Padding="8">
                             <Label Text="📐" FontSize="40" HorizontalOptions="Center" />
-                            <Label Text="23" 
+                            <Label Text="{x:Static resx:Strings.MainPage_PatternsCount}" 
                                    FontSize="32" FontAttributes="Bold"
                                    TextColor="{StaticResource Primary}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Design Patterns"
+                            <Label Text="{x:Static resx:Strings.MainPage_PatternsLabel}"
                                    FontSize="12" FontAttributes="Bold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
@@ -201,11 +202,11 @@
                     <Border Grid.Column="1" Style="{StaticResource Card}">
                         <VerticalStackLayout Spacing="8" Padding="8">
                             <Label Text="🏛️" FontSize="40" HorizontalOptions="Center" />
-                            <Label Text="10" 
+                            <Label Text="{x:Static resx:Strings.MainPage_ArchitecturesCount}" 
                                    FontSize="32" FontAttributes="Bold"
                                    TextColor="{StaticResource ArchitecturePattern}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Architectures"
+                            <Label Text="{x:Static resx:Strings.MainPage_ArchitecturesLabel}"
                                    FontSize="12" FontAttributes="Bold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
@@ -216,11 +217,11 @@
                     <Border Grid.Column="2" Style="{StaticResource Card}">
                         <VerticalStackLayout Spacing="8" Padding="8">
                             <Label Text="🔷" FontSize="40" HorizontalOptions="Center" />
-                            <Label Text="5" 
+                            <Label Text="{x:Static resx:Strings.MainPage_SOLIDCount}" 
                                    FontSize="32" FontAttributes="Bold"
                                    TextColor="{StaticResource SOLIDPrinciple}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Principes SOLID"
+                            <Label Text="{x:Static resx:Strings.MainPage_SOLIDLabel}"
                                    FontSize="12" FontAttributes="Bold"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
@@ -230,7 +231,7 @@
 
                 <!-- What You'll Learn Section -->
                 <VerticalStackLayout Spacing="12">
-                    <Label Text="Ce que vous allez apprendre"
+                    <Label Text="{x:Static resx:Strings.MainPage_WhatYouLearnTitle}"
                            Style="{StaticResource SubTitle}" />
                     
                     <!-- Learning Item 1 -->
@@ -243,10 +244,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Patterns Créationnels"
+                            <Label Text="{x:Static resx:Strings.MainPage_CreationalPatternsTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Mécanismes de création d'objets"
+                            <Label Text="{x:Static resx:Strings.MainPage_CreationalPatternsDesc}"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>
@@ -261,10 +262,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Patterns Structurels"
+                            <Label Text="{x:Static resx:Strings.MainPage_StructuralPatternsTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Composition de classes et objets"
+                            <Label Text="{x:Static resx:Strings.MainPage_StructuralPatternsDesc}"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>
@@ -279,10 +280,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Patterns Comportementaux"
+                            <Label Text="{x:Static resx:Strings.MainPage_BehavioralPatternsTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Collaboration et responsabilités d'objets"
+                            <Label Text="{x:Static resx:Strings.MainPage_BehavioralPatternsDesc}"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>
@@ -297,10 +298,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Architectures Logicielles"
+                            <Label Text="{x:Static resx:Strings.MainPage_ArchitecturesTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Organisation de systèmes à grande échelle"
+                            <Label Text="{x:Static resx:Strings.MainPage_ArchitecturesTitle2}"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>
@@ -315,10 +316,10 @@
                                    HorizontalOptions="Center" VerticalOptions="Center" />
                         </Border>
                         <VerticalStackLayout Grid.Column="1" Spacing="2">
-                            <Label Text="Principes SOLID"
+                            <Label Text="{x:Static resx:Strings.MainPage_SOLIDTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource BodyMedium}" />
-                            <Label Text="Fondations pour une conception orientée objet robuste"
+                            <Label Text="{x:Static resx:Strings.MainPage_SOLIDTitle2}"
                                    Style="{StaticResource Caption}" />
                         </VerticalStackLayout>
                     </Grid>

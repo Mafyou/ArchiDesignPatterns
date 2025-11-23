@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatterns.TemplateMethodPatternPage"
              x:DataType="viewmodels:TemplateMethodPatternViewModel"
-             Title="Template Method">
+             Title="{x:Static resx:Strings.TemplateMethodPattern_Title}">
     <Grid RowDefinitions="Auto,*">
         <!-- Header -->
         <Border Grid.Row="0"
@@ -15,14 +16,14 @@
                 <HorizontalStackLayout Spacing="12">
                     <Label Text="📝" FontSize="32" VerticalOptions="Center" />
                     <VerticalStackLayout Spacing="4">
-                        <Label Text="Template Method Pattern"
+                        <Label Text="{x:Static resx:Strings.TemplateMethodPattern_Title}"
                                FontSize="28" FontAttributes="Bold"
                                TextColor="White" />
                         <Border BackgroundColor="White" Opacity="0.3"
                                 Padding="8,4" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 6"
                                 HorizontalOptions="Start">
-                            <Label Text="Behavioral" FontSize="11"
+                            <Label Text="{x:Static resx:Strings.ChainOfResponsibilityPattern_Behavioral}" FontSize="11"
                                    FontAttributes="Bold" TextColor="White" />
                         </Border>
                     </VerticalStackLayout>
@@ -36,10 +37,13 @@
                 <!-- Description Card -->
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Le pattern Template Method définit le squelette d'un algorithme dans une méthode, en déléguant certaines étapes aux sous-classes sans changer la structure de l'algorithme."
+                        <Label Text="{x:Static resx:Strings.TemplateMethodPattern_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -48,23 +52,26 @@
                 <!-- When to Use -->
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Quand l'utiliser"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_WhenToUseTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="8">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Quand plusieurs classes ont des algorithmes similaires avec des variations"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.TemplateMethodPattern_WhenToUse1}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour contrôler les points d'extension dans un algorithme"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.TemplateMethodPattern_WhenToUse2}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
                                 <Label Text="✓" FontSize="18" TextColor="{StaticResource Success}" />
-                                <Label Grid.Column="1" Text="Pour éviter la duplication de code en extrayant la logique commune"
+                                <Label Grid.Column="1" Text="{x:Static resx:Strings.TemplateMethodPattern_WhenToUse3}"
                                        Style="{StaticResource BodyMedium}" LineBreakMode="WordWrap" />
                             </Grid>
                         </VerticalStackLayout>
@@ -76,15 +83,15 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Exécutez la méthode template :"
+                        <Label Text="{x:Static resx:Strings.TemplateMethodPattern_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}" />
-                        <Button Text="Exécuter la méthode"
+                        <Button Text="{x:Static resx:Strings.TemplateMethodPattern_InteractiveButton}"
                                 Clicked="OnExecuteTemplateClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -98,12 +105,31 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Exemple de code"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <Editor Style="{StaticResource CodeEditor}"
                                 Text="// Classe abstraite avec méthode template&#x0a;public abstract class DataProcessor&#x0a;{&#x0a;    // Méthode template&#x0a;    public string ProcessData()&#x0a;    {&#x0a;        var data = ReadData();&#x0a;        var processed = Process(data);&#x0a;        SaveData(processed);&#x0a;        return processed;&#x0a;    }&#x0a;&#x0a;    protected abstract string ReadData();&#x0a;    protected abstract string Process(string data);&#x0a;    protected virtual void SaveData(string data)&#x0a;    {&#x0a;        Console.WriteLine($&quot;Sauvegarde: {data}&quot;);&#x0a;    }&#x0a;}&#x0a;&#x0a;// Implémentation concrète&#x0a;public class CsvProcessor : DataProcessor&#x0a;{&#x0a;    protected override string ReadData() =&gt; &quot;CSV Data&quot;;&#x0a;    protected override string Process(string data) =&gt; data.ToUpper();&#x0a;}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Real-World Example -->
+                <Border BackgroundColor="{AppThemeBinding Light=#FFFBEB, Dark=#78350F}"
+                        Stroke="{StaticResource Warning}"
+                        StrokeThickness="1"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 12">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🌍" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.AbstractFactoryPattern_RealWorldTitle}"
+                                   FontAttributes="Bold"
+                                   Style="{StaticResource BodyLarge}" />
+                        </HorizontalStackLayout>
+                        <Label Text="{x:Static resx:Strings.TemplateMethodPattern_RealWorldDesc}"
+                               Style="{StaticResource BodyMedium}"
+                               LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -114,17 +140,15 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Réutilisation du code"
+                                <Label Text="{x:Static resx:Strings.TemplateMethodPattern_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Contrôle de l'algorithme"
+                                <Label Text="{x:Static resx:Strings.TemplateMethodPattern_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Évite la duplication"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Principe Hollywood"
+                                <Label Text="{x:Static resx:Strings.TemplateMethodPattern_Pros3}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -135,15 +159,13 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Inconvénients" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Dépendance à l'héritage"
+                                <Label Text="{x:Static resx:Strings.TemplateMethodPattern_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Violation du principe de Liskov"
-                                       Style="{StaticResource BodySmall}" />
-                                <Label Text="• Maintenance difficile"
+                                <Label Text="{x:Static resx:Strings.TemplateMethodPattern_Cons2}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>

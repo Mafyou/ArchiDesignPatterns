@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
              xmlns:models="clr-namespace:ArchiDesignPatterns.Mobile.Models"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.SOLIDPrinciplesPage"
              x:DataType="viewmodels:SOLIDPrinciplesViewModel"
-             Title="Principes SOLID">
+             Title="{x:Static resx:Strings.SOLIDPrinciplesPage_Title}">
     <ContentPage.BindingContext>
         <viewmodels:SOLIDPrinciplesViewModel />
     </ContentPage.BindingContext>
@@ -23,16 +24,16 @@
                 </LinearGradientBrush>
             </Border.Background>
             <VerticalStackLayout Spacing="12">
-                <Label Text="Principes SOLID"
+                <Label Text="{x:Static resx:Strings.SOLIDPrinciplesPage_Title}"
                        FontSize="32"
                        FontAttributes="Bold"
                        TextColor="White"
                        SemanticProperties.HeadingLevel="Level1" />
-                <Label Text="5 principes fondamentaux pour une conception orientée objet robuste"
+                <Label Text="{x:Static resx:Strings.SOLIDPrinciplesPage_Tagline}"
                        FontSize="14"
                        TextColor="White"
                        Opacity="0.9" />
-                <SearchBar Placeholder="Rechercher des principes..."
+                <SearchBar Placeholder="{x:Static resx:Strings.SOLIDPrinciplesPage_SearchPlaceholder}"
                            Text="{Binding SearchTerm}"
                            BackgroundColor="White"
                            PlaceholderColor="{StaticResource Gray400}"
@@ -114,10 +115,10 @@
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center">
                             <Label Text="🔷" FontSize="64" HorizontalOptions="Center" />
-                            <Label Text="Aucun principe trouvé"
+                            <Label Text="{x:Static resx:Strings.SOLIDPrinciplesPage_NoResultsTitle}"
                                    Style="{StaticResource Title}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Essayez d'ajuster votre terme de recherche"
+                            <Label Text="{x:Static resx:Strings.SOLIDPrinciplesPage_NoResultsDesc}"
                                    Style="{StaticResource BodyMedium}"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{StaticResource Gray500}" />

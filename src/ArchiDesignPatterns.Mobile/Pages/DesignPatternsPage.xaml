@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
              xmlns:models="clr-namespace:ArchiDesignPatterns.Mobile.Models"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.DesignPatternsPage"
              x:DataType="viewmodels:DesignPatternsViewModel"
              Title="{Binding Title}">
@@ -15,16 +16,16 @@
                 Padding="20,24,20,20"
                 StrokeThickness="0">
             <VerticalStackLayout Spacing="12">
-                <Label Text="Design Patterns"
+                <Label Text="{x:Static resx:Strings.DesignPatternsPage_Title}"
                        FontSize="32"
                        FontAttributes="Bold"
                        TextColor="White"
                        SemanticProperties.HeadingLevel="Level1" />
-                <Label Text="23 solutions éprouvées aux problèmes courants de conception logicielle"
+                <Label Text="{x:Static resx:Strings.DesignPatternsPage_Tagline}"
                        FontSize="14"
                        TextColor="White"
                        Opacity="0.9" />
-                <SearchBar Placeholder="Rechercher des patterns..."
+                <SearchBar Placeholder="{x:Static resx:Strings.DesignPatternsPage_SearchPlaceholder}"
                            Text="{Binding SearchTerm}"
                            BackgroundColor="White"
                            PlaceholderColor="{StaticResource Gray400}"
@@ -111,10 +112,10 @@
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center">
                             <Label Text="🔍" FontSize="64" HorizontalOptions="Center" />
-                            <Label Text="Aucun pattern trouvé"
+                            <Label Text="{x:Static resx:Strings.DesignPatternsPage_NoResultsTitle}"
                                    Style="{StaticResource Title}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Essayez d'ajuster votre terme de recherche"
+                            <Label Text="{x:Static resx:Strings.DesignPatternsPage_NoResultsDesc}"
                                    Style="{StaticResource BodyMedium}"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{StaticResource Gray500}" />

@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.Architectures.CleanArchitecturePage"
-             Title="Clean Architecture">
+             Title="{x:Static resx:Strings.CleanArchitecture_Title}">
     <ContentPage.BindingContext>
         <viewmodels:CleanArchitectureViewModel />
     </ContentPage.BindingContext>
@@ -17,14 +18,14 @@
             <HorizontalStackLayout Spacing="12">
                 <Label Text="🏛️" FontSize="32" VerticalOptions="Center" />
                 <VerticalStackLayout Spacing="4">
-                    <Label Text="Clean Architecture"
+                    <Label Text="{x:Static resx:Strings.CleanArchitecture_Title}"
                            FontSize="28" FontAttributes="Bold"
                            TextColor="White" />
                     <Border BackgroundColor="White" Opacity="0.3"
                             Padding="8,4" StrokeThickness="0"
                             StrokeShape="RoundRectangle 6"
                             HorizontalOptions="Start">
-                        <Label Text="Architecture" FontSize="11"
+                        <Label Text="{x:Static resx:Strings.CleanArchitecture_Architecture}" FontSize="11"
                                FontAttributes="Bold" TextColor="White" />
                     </Border>
                 </VerticalStackLayout>
@@ -36,10 +37,13 @@
                 
                 <Border Style="{StaticResource ElevatedCard}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="📖 Description"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="📖" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_DescriptionTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Clean Architecture organise le code en couches indépendantes avec des frontières claires et des dépendances pointant vers l'intérieur. Les couches internes contiennent la logique métier et sont indépendantes des frameworks, de l'UI et des bases de données."
+                        <Label Text="{x:Static resx:Strings.CleanArchitecture_Description}"
                                Style="{StaticResource BodyLarge}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>
@@ -47,8 +51,11 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🎯 Principes Fondamentaux"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🎯" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_PrinciplesTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         <VerticalStackLayout Spacing="10">
                             <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
@@ -60,10 +67,10 @@
                                            HorizontalOptions="Center" VerticalOptions="Center" />
                                 </Border>
                                 <VerticalStackLayout Grid.Column="1" Spacing="4">
-                                    <Label Text="Indépendance"
+                                    <Label Text="{x:Static resx:Strings.CleanArchitecture_Principle1Title}"
                                            FontAttributes="Bold"
                                            Style="{StaticResource BodyMedium}" />
-                                    <Label Text="Logique métier indépendante des frameworks"
+                                    <Label Text="{x:Static resx:Strings.CleanArchitecture_Principle1Desc}"
                                            Style="{StaticResource BodySmall}"
                                            TextColor="{StaticResource Gray600}" />
                                 </VerticalStackLayout>
@@ -78,10 +85,10 @@
                                            HorizontalOptions="Center" VerticalOptions="Center" />
                                 </Border>
                                 <VerticalStackLayout Grid.Column="1" Spacing="4">
-                                    <Label Text="Testabilité"
+                                    <Label Text="{x:Static resx:Strings.CleanArchitecture_Principle2Title}"
                                            FontAttributes="Bold"
                                            Style="{StaticResource BodyMedium}" />
-                                    <Label Text="Facile à tester sans UI ou base de données"
+                                    <Label Text="{x:Static resx:Strings.CleanArchitecture_Principle2Desc}"
                                            Style="{StaticResource BodySmall}"
                                            TextColor="{StaticResource Gray600}" />
                                 </VerticalStackLayout>
@@ -96,10 +103,10 @@
                                            HorizontalOptions="Center" VerticalOptions="Center" />
                                 </Border>
                                 <VerticalStackLayout Grid.Column="1" Spacing="4">
-                                    <Label Text="Règle de Dépendance"
+                                    <Label Text="{x:Static resx:Strings.CleanArchitecture_Principle3Title}"
                                            FontAttributes="Bold"
                                            Style="{StaticResource BodyMedium}" />
-                                    <Label Text="Dépendances pointent seulement vers l'intérieur"
+                                    <Label Text="{x:Static resx:Strings.CleanArchitecture_Principle3Desc}"
                                            Style="{StaticResource BodySmall}"
                                            TextColor="{StaticResource Gray600}" />
                                 </VerticalStackLayout>
@@ -110,17 +117,20 @@
 
                 <Border Style="{StaticResource Card}">
                     <VerticalStackLayout Spacing="12">
-                        <Label Text="🔄 Couches Architecturales"
+                        <HorizontalStackLayout Spacing="8">
+                            <Label Text="🔄" FontSize="20" />
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_LayersTitle}"
                                Style="{StaticResource SubTitle}" />
+                        </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
                         
                         <Border BackgroundColor="{StaticResource Primary}"
                                 Padding="16,12" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 12">
                             <HorizontalStackLayout Spacing="8">
-                                <Label Text="Core" TextColor="White"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer1}" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ Entités, Règles Métier"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer1Desc}"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -129,9 +139,9 @@
                                 Padding="16,12" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 12">
                             <HorizontalStackLayout Spacing="8">
-                                <Label Text="Application" TextColor="White"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer2}" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ Cas d'usage, Interfaces"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer2Desc}"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -140,9 +150,9 @@
                                 Padding="16,12" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 12">
                             <HorizontalStackLayout Spacing="8">
-                                <Label Text="Infrastructure" TextColor="White"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer3}" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ Base de données, Services externes"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer3Desc}"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -151,9 +161,9 @@
                                 Padding="16,12" StrokeThickness="0"
                                 StrokeShape="RoundRectangle 12">
                             <HorizontalStackLayout Spacing="8">
-                                <Label Text="Présentation" TextColor="White"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer4}" TextColor="White"
                                        FontAttributes="Bold" FontSize="14" />
-                                <Label Text="→ UI, Contrôleurs, ViewModels"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Layer4Desc}"
                                        TextColor="White" FontSize="13" />
                             </HorizontalStackLayout>
                         </Border>
@@ -164,16 +174,16 @@
                     <VerticalStackLayout Spacing="16">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="🎮" FontSize="20" VerticalOptions="Center" />
-                            <Label Text="Exemple Interactif"
+                            <Label Text="{x:Static resx:Strings.SingletonPattern_InteractiveTitle}"
                                    Style="{StaticResource SubTitle}"
                                    TextColor="{StaticResource Primary}"
                                    VerticalOptions="Center" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
-                        <Label Text="Simulez un appel de service à travers les couches :"
+                        <Label Text="{x:Static resx:Strings.CleanArchitecture_InteractiveDesc}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
-                        <Button Text="Exécuter l'Appel de Service"
+                        <Button Text="{x:Static resx:Strings.CleanArchitecture_InteractiveButton}"
                                 Clicked="OnSimulateServiceClicked"
                                 HorizontalOptions="Fill" />
                         <Label x:Name="ResultLabel"
@@ -186,7 +196,7 @@
                     <VerticalStackLayout Spacing="12">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💻" FontSize="20" />
-                            <Label Text="Structure du Code"
+                            <Label Text="{x:Static resx:Strings.CleanArchitecture_CodeTitle}"
                                    Style="{StaticResource SubTitle}" />
                         </HorizontalStackLayout>
                         <BoxView Style="{StaticResource Divider}" Margin="0,0" />
@@ -200,17 +210,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="✅" FontSize="20" />
-                                <Label Text="Avantages" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.SingletonPattern_ProsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Hautement testable"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Pros1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Indépendant des technologies"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Pros2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Frontières claires"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Pros3}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Facile à maintenir"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Pros4}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -220,17 +230,17 @@
                         <VerticalStackLayout Spacing="12">
                             <HorizontalStackLayout Spacing="8">
                                 <Label Text="⚠️" FontSize="20" />
-                                <Label Text="Défis" FontAttributes="Bold"
+                                <Label Text="{x:Static resx:Strings.Architecture_ConsTitle}" FontAttributes="Bold"
                                        Style="{StaticResource BodyLarge}" />
                             </HorizontalStackLayout>
                             <VerticalStackLayout Spacing="6">
-                                <Label Text="• Courbe d'apprentissage"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Cons1}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Plus de code standard"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Cons2}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Excessif pour petites apps"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Cons3}"
                                        Style="{StaticResource BodySmall}" />
-                                <Label Text="• Complexité initiale"
+                                <Label Text="{x:Static resx:Strings.CleanArchitecture_Cons4}"
                                        Style="{StaticResource BodySmall}" />
                             </VerticalStackLayout>
                         </VerticalStackLayout>
@@ -245,11 +255,11 @@
                     <VerticalStackLayout Spacing="8">
                         <HorizontalStackLayout Spacing="8">
                             <Label Text="💡" FontSize="24" />
-                            <Label Text="Point Clé"
+                            <Label Text="{x:Static resx:Strings.Architecture_KeyPointTitle}"
                                    FontAttributes="Bold"
                                    Style="{StaticResource Title}" />
                         </HorizontalStackLayout>
-                        <Label Text="Clean Architecture privilégie la séparation des préoccupations et l'indépendance des dépendances externes, rendant votre base de code plus maintenable, testable et adaptable aux changements."
+                        <Label Text="{x:Static resx:Strings.CleanArchitecture_KeyPoint}"
                                Style="{StaticResource BodyMedium}"
                                LineBreakMode="WordWrap" />
                     </VerticalStackLayout>

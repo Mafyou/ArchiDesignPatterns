@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:ArchiDesignPatterns.Mobile.ViewModels"
              xmlns:models="clr-namespace:ArchiDesignPatterns.Mobile.Models"
+             xmlns:resx="clr-namespace:ArchiDesignPatterns.Mobile.Resources"
              x:Class="ArchiDesignPatterns.Mobile.Pages.ArchitecturesPage"
              x:DataType="viewmodels:ArchitecturesViewModel"
-             Title="Architectures">
+             Title="{x:Static resx:Strings.ArchitecturesPage_Title}">
     <ContentPage.BindingContext>
         <viewmodels:ArchitecturesViewModel />
     </ContentPage.BindingContext>
@@ -23,16 +24,16 @@
                 </LinearGradientBrush>
             </Border.Background>
             <VerticalStackLayout Spacing="12">
-                <Label Text="Architectures Logicielles"
+                <Label Text="{x:Static resx:Strings.ArchitecturesPage_Title}"
                        FontSize="32"
                        FontAttributes="Bold"
                        TextColor="White"
                        SemanticProperties.HeadingLevel="Level1" />
-                <Label Text="10 patterns architecturaux pour des systèmes évolutifs"
+                <Label Text="{x:Static resx:Strings.ArchitecturesPage_Tagline}"
                        FontSize="14"
                        TextColor="White"
                        Opacity="0.9" />
-                <SearchBar Placeholder="Rechercher des architectures..."
+                <SearchBar Placeholder="{x:Static resx:Strings.ArchitecturesPage_SearchPlaceholder}"
                            Text="{Binding SearchTerm}"
                            BackgroundColor="White"
                            PlaceholderColor="{StaticResource Gray400}"
@@ -114,10 +115,10 @@
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center">
                             <Label Text="🔍" FontSize="64" HorizontalOptions="Center" />
-                            <Label Text="Aucune architecture trouvée"
+                            <Label Text="{x:Static resx:Strings.ArchitecturesPage_NoResultsTitle}"
                                    Style="{StaticResource Title}"
                                    HorizontalTextAlignment="Center" />
-                            <Label Text="Essayez d'ajuster votre terme de recherche"
+                            <Label Text="{x:Static resx:Strings.ArchitecturesPage_NoResultsDesc}"
                                    Style="{StaticResource BodyMedium}"
                                    HorizontalTextAlignment="Center"
                                    TextColor="{StaticResource Gray500}" />
