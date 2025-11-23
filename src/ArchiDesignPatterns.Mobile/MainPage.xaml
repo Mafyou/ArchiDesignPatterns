@@ -13,18 +13,18 @@
                     Padding="32,48,32,32"
                     StrokeThickness="0">
                 <VerticalStackLayout Spacing="16" HorizontalOptions="Center">
-                    <Image Source="dotnet_bot.png"
+                    <Image Source="code.png"
                            HeightRequest="120"
                            Aspect="AspectFit"
-                           SemanticProperties.Description="Application d'apprentissage des Design Patterns" />
+                           SemanticProperties.Description="Application d'apprentissage des Codes Patterns" />
                     
-                    <Label Text="Design Patterns"
+                    <Label Text="Code Patterns"
                            FontSize="36"
                            FontAttributes="Bold"
                            TextColor="White"
                            HorizontalTextAlignment="Center" />
                     
-                    <Label Text="Maîtrisez l'Architecture Logicielle &amp; les Patterns"
+                    <Label Text="Maîtrisez l'Architecture Logicielle, les Design Patterns &amp; les principes SOLID"
                            FontSize="18"
                            TextColor="White"
                            Opacity="0.9"
@@ -40,7 +40,7 @@
                 <VerticalStackLayout Spacing="8">
                     <Label Text="Bienvenue ! 👋"
                            Style="{StaticResource Title}" />
-                    <Label Text="Explorez les design patterns et styles architecturaux complets utilisés dans le développement logiciel moderne. Apprenez à travers des exemples interactifs et des démonstrations de code pratiques."
+                    <Label Text="Explorez les design patterns, les styles architecturaux et les principes SOLID complets utilisés dans le développement logiciel moderne. Apprenez à travers des exemples interactifs et des démonstrations de code pratiques."
                            Style="{StaticResource BodyLarge}"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
